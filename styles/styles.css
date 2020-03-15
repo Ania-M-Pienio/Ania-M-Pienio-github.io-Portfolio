@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Domine:400,700|Montserrat:700|Oswald&display=swap");
 article,
 aside,
 details,
@@ -205,4 +206,23 @@ input::-moz-focus-inner {
           clip-path: inset(100%);
   clip: rect(0 0 0);
   overflow: hidden;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  color: #191919;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
 }

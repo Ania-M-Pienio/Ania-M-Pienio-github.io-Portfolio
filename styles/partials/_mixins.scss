@@ -1,0 +1,32 @@
+@mixin Ossie($size, $weight, $color, $ltr-spacing, $ln-height, $align) {
+  font-family: "Oswald", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  letter-spacing: $ltr-spacing;
+  line-height: $ln-height;
+  text-align: $align;
+}
+
+@mixin Domi($size, $weight, $color, $ltr-spacing, $ln-height, $align) {
+  font-family: 'Domine', serif;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  letter-spacing: $ltr-spacing;
+  line-height: $ln-height;
+  text-align: $align;
+}
+
+@mixin Monti($size, $weight, $color, $ltr-spacing, $ln-height, $align) {
+  font-family: 'Montserrat', sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  letter-spacing: $ltr-spacing;
+  line-height: $ln-height;
+  text-align: $align;
+}
+
+
+

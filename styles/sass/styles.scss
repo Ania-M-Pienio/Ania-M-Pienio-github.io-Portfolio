@@ -1,1 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Domine:400,700|Montserrat:700|Oswald&display=swap');
 @import "../partials/setup";
+@import "../partials/variables";
+@import "../partials/mixins";
+
+
+
+    // font-family: 'Oswald', sans-serif;
+
+    // font-family: 'Domine', serif;
+
+    // font-family: 'Montserrat', sans-serif;
+
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  color: $font;
+}
+
+
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;  
+}
+
+// headings
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
