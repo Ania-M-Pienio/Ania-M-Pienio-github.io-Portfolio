@@ -1,0 +1,53 @@
+// GENERAL NAV
+nav {
+  height: 1073px;
+  background-color: $grey;
+}
+
+.nav.wrapper {
+  padding: 0 75px;
+  height: 100%;
+}
+
+// LOGO
+.navLogo {
+  height: 47px;
+  width: 92px;
+  position: absolute;
+  .logo {
+    height: 100%;
+    width: 100%;
+    padding: 1%;
+  }
+}
+
+// MENU
+
+
+
+// TITLE
+.navTitle {
+  height: 100%;
+  
+  &::before,
+  .title {
+    display: inline-block;
+    vertical-align: middle;  
+    border: 1px solid red;  
+  }
+  // positional element created only to align title to something 
+  &::before {
+    content: '';
+    width: 0;
+    height: 100%;
+  }
+}
+
+.title h1 {
+  @include Ossie(10rem, normal, $font, normal, 1, left);
+  text-transform: uppercase;
+  span {
+    display: block;
+    font-size: 15rem;
+  }
+}

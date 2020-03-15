@@ -1,7 +1,10 @@
+// tools
 @import url('https://fonts.googleapis.com/css?family=Domine:400,700|Montserrat:700|Oswald&display=swap');
 @import "../partials/setup";
 @import "../partials/variables";
 @import "../partials/mixins";
+// sections
+@import "../sections/nav";
 
 
 
@@ -32,4 +35,10 @@ h3,
 h4 {
   margin: 0;
   padding: 0;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
 }

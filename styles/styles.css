@@ -208,6 +208,61 @@ input::-moz-focus-inner {
   overflow: hidden;
 }
 
+nav {
+  height: 1073px;
+  background-color: #dcdcdc;
+}
+
+.nav.wrapper {
+  padding: 0 75px;
+  height: 100%;
+}
+
+.navLogo {
+  height: 47px;
+  width: 92px;
+  position: absolute;
+}
+
+.navLogo .logo {
+  height: 100%;
+  width: 100%;
+  padding: 1%;
+}
+
+.navTitle {
+  height: 100%;
+}
+
+.navTitle::before,
+.navTitle .title {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid red;
+}
+
+.navTitle::before {
+  content: '';
+  width: 0;
+  height: 100%;
+}
+
+.title h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 10rem;
+  font-weight: normal;
+  color: #191919;
+  letter-spacing: normal;
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.title h1 span {
+  display: block;
+  font-size: 15rem;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -225,4 +280,10 @@ h3,
 h4 {
   margin: 0;
   padding: 0;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
 }
