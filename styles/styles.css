@@ -214,31 +214,121 @@ nav {
 }
 
 .nav.wrapper {
-  padding: 0 75px;
+  padding: 0 80px;
   height: 100%;
+}
+
+.navMenuLogo {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  padding-top: 20px;
 }
 
 .navLogo {
-  height: 47px;
-  width: 92px;
+  height: 150px;
+  width: 100%;
   position: absolute;
 }
 
+.navLogo button:hover, .navLogo button:focus {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
 .navLogo .logo {
-  height: 100%;
+  position: relative;
+  display: inline-block;
+  height: 150px;
+  width: 200px;
+  z-index: 5000;
+}
+
+.navLogo .logo2 {
+  position: absolute;
+  top: 0;
+  height: 150px;
+  width: 200px;
+  z-index: 6000;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
+}
+
+.navLogo .logo3 {
+  position: absolute;
+  top: 0;
+  height: 150px;
+  width: 200px;
+  z-index: 7000;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
+}
+
+.navLogo .bars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navLogo .bar {
+  position: relative;
+  top: -18px;
+  display: inline-block;
+  width: 0;
+  height: 5px;
+  background: #3b3b3b;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+.navLogo span {
+  position: absolute;
+  opacity: 0;
+}
+
+.logo2.expand {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.logo3.expand {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.bar.expand {
+  width: 50%;
+}
+
+.navMenu {
+  position: absolute;
   width: 100%;
-  padding: 1%;
+}
+
+.navMenu .menu {
+  text-align: right;
+}
+
+.navMenu .menu i {
+  font-size: 8rem;
+  color: #191919;
 }
 
 .navTitle {
-  height: 100%;
+  height: calc(100% - 200px);
 }
 
 .navTitle::before,
 .navTitle .title {
   display: inline-block;
   vertical-align: middle;
-  border: 1px solid red;
 }
 
 .navTitle::before {
@@ -286,4 +376,13 @@ img {
   width: 100%;
   max-width: 100%;
   display: inline-block;
+}
+
+button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+button:hover, button:focus {
+  background-color: #f8f8f8;
 }

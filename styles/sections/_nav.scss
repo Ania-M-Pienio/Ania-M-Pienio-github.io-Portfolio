@@ -5,35 +5,121 @@ nav {
 }
 
 .nav.wrapper {
-  padding: 0 75px;
+  padding: 0 80px;
   height: 100%;
+  // border: 1px solid blue;
+}
+
+.navMenuLogo {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  padding-top: 20px;
 }
 
 // LOGO
 .navLogo {
-  height: 47px;
-  width: 92px;
+  height: 150px;
+  width: 100%;
   position: absolute;
+
+  button {
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+    &:hover .logo,
+    &:focus .logo{
+      // transform: scale(0.5);
+    }
+  }
+
   .logo {
-    height: 100%;
-    width: 100%;
-    padding: 1%;
+    position: relative;
+    display: inline-block;
+    height: 150px;
+    width: 200px;
+    z-index: 5000;
+  }
+
+  .logo2 {
+    position: absolute;
+    top: 0;
+    height: 150px;
+    width: 200px;
+    z-index: 6000;
+     transform: scale(0);
+    transition: transform 1.5s;
+  }
+
+  .logo3 {
+    position: absolute;
+    top: 0;
+    height: 150px;
+    width: 200px;
+    z-index: 7000;
+    transform: scale(0);
+    transition: transform 1.5s;
+  }
+
+  .bars {
+    display: flex;
+  }
+
+  .bar {
+    position: relative;
+    top: -18px;
+    display: inline-block;
+    width: 0;
+    height: 5px;
+    background: lighten($charcoal, 10);
+    transition: width 2s;
+  }
+
+  span {
+    position: absolute;
+    opacity: 0;
   }
 }
 
+.logo2.expand {
+  transform: scale(1.1);
+
+}
+
+.logo3.expand {
+  transform: scale(1.1);
+}
+
+.bar.expand {
+  width: 50%;
+}
+
+
 // MENU
+.navMenu {
+  position: absolute;
+  width: 100%;
+  .menu {
+    text-align: right;
+    i {
+      font-size: 8rem;
+      color: $font;
+    }
+  }
+}
 
 
 
 // TITLE
 .navTitle {
-  height: 100%;
+  height: calc(100% - 200px);
   
   &::before,
   .title {
     display: inline-block;
     vertical-align: middle;  
-    border: 1px solid red;  
+    // border: 1px solid red;  
   }
   // positional element created only to align title to something 
   &::before {
