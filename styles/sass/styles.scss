@@ -5,25 +5,18 @@
 @import "../partials/mixins";
 // sections
 @import "../sections/nav";
-
-
-
-    // font-family: 'Oswald', sans-serif;
-
-    // font-family: 'Domine', serif;
-
-    // font-family: 'Montserrat', sans-serif;
+@import "../sections/overview";
 
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  color: $font;
 }
 
 .wrapper {
   max-width: 1600px;
-  margin: 0 auto;  
+  margin: 0 auto; 
+  // border: 2px solid red; 
 }
 
 // headings
@@ -51,3 +44,11 @@ button {
      background-color: rgba(255, 255, 255, 0.02);
   }
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+

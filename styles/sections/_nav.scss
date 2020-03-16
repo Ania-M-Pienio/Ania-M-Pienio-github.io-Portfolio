@@ -3,15 +3,14 @@ nav {
   height: 100vh;
   background-color: $grey;
   background-image: url(../assets/ME19.png);
-  background-size: 70%;
+  background-size: 75%;
   background-repeat: no-repeat;
   background-position: bottom right;
 }
 
 .nav.wrapper {
-  padding: 0 80px;
+  padding: 20px 80px 0 80px;
   height: 100%;
-  // border-right: 6px solid $charcoal;
 }
 
 .navMenuLogo {
@@ -32,6 +31,10 @@ nav {
     &:focus .bar {
       background: lighten($charcoal, 40);
     }
+    &:hover .logo1,
+    &:focus .logo1 {
+      transform: scale(1.2);
+    }
   }
 
   .logo1 {
@@ -40,6 +43,7 @@ nav {
     height: 180px;
     width: 230px;
     z-index: 5000;
+    transition: transform 1.5s;
   }
 
   .logo2 {
@@ -61,11 +65,9 @@ nav {
     transform: scale(0);
     transition: transform 1.5s;
   }
-
   .bars {
     display: flex;
   }
-
   .bar {
     position: relative;
     top: -18px;
@@ -74,6 +76,7 @@ nav {
     height: 5px;
     background: lighten($charcoal, 10);
     transition: width 2s;
+    border-radius: 5px;
   }
 
   span {
@@ -93,7 +96,8 @@ nav {
 }
 
 .bar.expand {
-  width: 50%;
+  width: 100%;
+  margin-left: 5px;
 }
 
 // MENU
@@ -104,27 +108,77 @@ nav {
   .menu {
     text-align: right;
     height: 100%;
-    button {
-      height: 100%;
-      margin-top:-30px;
-      &:hover i,
-      &:focus i {
+    button.dropMenu {
+      position: relative;
+      height: auto;
+      transform: scale(0);
+      transition: transform 1.2s;
+      &:hover ion-icon,
+      &:focus ion-icon {
         color: lighten($charcoal, 40);
+        transform: scale(1.2);
       }
-      i {
+      ion-icon {
         font-size: 10rem;
         color: $font;
         padding: 0;
-        margin-top: -50px;
+        margin-right: -12px;
+        margin-top: -12px;
+        transition: transform 1s, margin-right 0.5s;
       }
     }
   }
+}
+
+.navMenu .menu .dropMenu.expand {
+  transform: scale(1);
+}
+
+// DROP MENU
+.navMenu .menu .drop {
+  position: absolute;
+  width: 200px;
+  right: 0;
+  top: 170px;
+  z-index: 1000;
+  button {
+    @include Domi(1.9rem, normal, rgba(255, 255, 255, 0), normal, 2.2, right);
+    text-transform: capitalize;
+    transition: color 1.5s, transform 0.5s, margin-right 0.5s;
+  }
+}
+// DROP MENU expanded
+.navMenu .menu .drop.expand li button {
+  color: $font;
+  &:hover,
+  &:focus {
+    color: lighten($charcoal, 40);
+    transform: scale(1.2);
+    margin-right: 8px;
+  }
+}
+
+// BAR above the drop menu
+.dropBar {
+  position: relative;
+  width: 0;
+  height: 5px;
+  background: lighten($charcoal, 10);
+  transition: width 2s;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+// BAR above the drop menu - expanded
+.dropBar.expand {
+  width: 100%;
 }
 
 // TITLE
 .navTitle {
   height: calc(100% - 230px);
   position: relative;
+  z-index: 500;
   &::before,
   .title {
     display: inline-block;
@@ -141,14 +195,30 @@ nav {
 .title h1 {
   @include Ossie(10rem, normal, $font, normal, 1, left);
   text-transform: uppercase;
-  span.pos1{
+  span.pos1 {
     display: block;
     font-size: 8rem;
     color: darken($grey, 50);
   }
-  span.pos2{
+  span.pos2 {
     display: block;
     font-size: 8rem;
     color: darken($grey, 50);
+  }
+}
+
+.navSocial {
+  position: absolute;
+  bottom: 30px;
+  z-index: 1500;
+  ul {
+    display: flex;
+    li {
+      margin-right: 20px;
+      ion-icon {
+        font-size: 3rem;
+        color: $font;
+      }
+    }
   }
 }

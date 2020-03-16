@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ania Pienio</title>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="./assets/1.png" />
+    <link rel="stylesheet" href="./icofont/icofont.min.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
@@ -28,8 +24,7 @@
                 <img src="assets/4.png" alt="Antlers" />
               </div>
               <div class="bars">
-                <div class="bar left"></div>
-                <div class="bar right"></div>
+                <div class="bar"></div>
               </div>
               <span>Home</span>
             </button>
@@ -38,9 +33,20 @@
           <!-- MENU -->
           <div class="navMenu">
             <div class="menu">
-              <button>
-                <i class="material-icons">menu</i>
+              <button class="dropMenu">
+                <ion-icon name="menu-outline"></ion-icon>
               </button>
+              <div class="drop">
+                <div class="dropBar"></div>
+                <ul>
+                  <li><button id="Overview">overview</button></li>
+                  <li><button id="About">about</button></li>
+                  <li><button id="Skills">skills</button></li>
+                  <li><button id="Projects">projects</button></li>
+                  <li><button id="Blog">blog</button></li>
+                  <li><button id="Contact">contact</button></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -53,15 +59,54 @@
               <span class="pos1">Front-End</span>
               <span class="pos2">Developer</span>
             </h1>
-            <div class="navHero"></div>
           </div>
+        </div>
+        <div class="navSocial" id="overview">
+          <ul>
+            <li>
+              <button>
+                <a href="https://www.linkedin.com/in/aniapienio"
+                  ><ion-icon name="logo-linkedin"
+                    ><span>linkedin</span></ion-icon
+                  ></a
+                >
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="https://twitter.com/AniaPienio"
+                  ><ion-icon name="logo-twitter"
+                    ><span>twitter</span></ion-icon
+                  ></a
+                >
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="https://www.facebook.com/ania.pienio"
+                  ><ion-icon name="logo-facebook"
+                    ><span>facebook</span></ion-icon
+                  ></a
+                >
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="https://www.facebook.com/ania.pienio"
+                  ><ion-icon name="logo-facebook"
+                    ><span>github</span></ion-icon
+                  ></a
+                >
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
 
     <main>
-      <section class="intro">
-        <div class="wrapper intro"></div>
+      <section class="overview">
+        <div class="wrapper overview"></div>
       </section>
 
       <section class="skills">
@@ -96,6 +141,7 @@
     <footer><div class="wrapper footer"></div></footer>
     <!-- rest goes here -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="scripts/script.js"></script>
   </body>
 </html>
