@@ -216,13 +216,17 @@ nav {
 .nav.wrapper {
   padding: 0 80px;
   height: 100%;
+  background-image: url(../assets/ME9.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 .navMenuLogo {
   position: relative;
   height: 200px;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .navLogo {
@@ -231,11 +235,12 @@ nav {
   position: absolute;
 }
 
-.navLogo button:hover, .navLogo button:focus {
-  background-color: rgba(255, 255, 255, 0.02);
+.navLogo button:hover .bar,
+.navLogo button:focus .bar {
+  background: #878787;
 }
 
-.navLogo .logo {
+.navLogo .logo1 {
   position: relative;
   display: inline-block;
   height: 150px;
@@ -310,19 +315,33 @@ nav {
 .navMenu {
   position: absolute;
   width: 100%;
+  height: 100%;
 }
 
 .navMenu .menu {
   text-align: right;
+  height: 100%;
 }
 
-.navMenu .menu i {
-  font-size: 8rem;
+.navMenu .menu button {
+  height: 100%;
+}
+
+.navMenu .menu button:hover i,
+.navMenu .menu button:focus i {
+  color: #878787;
+}
+
+.navMenu .menu button i {
+  font-size: 10rem;
   color: #191919;
+  padding: 0;
+  margin: 0;
 }
 
 .navTitle {
-  height: calc(100% - 200px);
+  height: calc(100% - 230px);
+  position: relative;
 }
 
 .navTitle::before,
@@ -332,9 +351,16 @@ nav {
 }
 
 .navTitle::before {
-  content: '';
+  content: "";
   width: 0;
   height: 100%;
+}
+
+.navHero {
+  height: 105.5%;
+  width: 45%;
+  min-width: 500px;
+  padding: 2%;
 }
 
 .title h1 {
@@ -360,7 +386,7 @@ html {
 }
 
 .wrapper {
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -381,8 +407,10 @@ img {
 button {
   border: none;
   background-color: rgba(255, 255, 255, 0);
+  margin: 0;
+  padding: 0;
 }
 
 button:hover, button:focus {
-  background-color: #f8f8f8;
+  background-color: rgba(255, 255, 255, 0.02);
 }

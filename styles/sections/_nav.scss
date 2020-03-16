@@ -7,14 +7,17 @@ nav {
 .nav.wrapper {
   padding: 0 80px;
   height: 100%;
-  // border: 1px solid blue;
+    background-image: url(../assets/ME9.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 .navMenuLogo {
   position: relative;
   height: 200px;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 // LOGO
@@ -24,17 +27,13 @@ nav {
   position: absolute;
 
   button {
-    &:hover,
-    &:focus {
-      background-color: rgba(255, 255, 255, 0.02);
-    }
-    &:hover .logo,
-    &:focus .logo{
-      // transform: scale(0.5);
+    &:hover .bar,
+    &:focus .bar {
+      background: lighten($charcoal, 40);
     }
   }
 
-  .logo {
+  .logo1 {
     position: relative;
     display: inline-block;
     height: 150px;
@@ -48,7 +47,7 @@ nav {
     height: 150px;
     width: 200px;
     z-index: 6000;
-     transform: scale(0);
+    transform: scale(0);
     transition: transform 1.5s;
   }
 
@@ -82,9 +81,10 @@ nav {
   }
 }
 
+// on load expands
+
 .logo2.expand {
   transform: scale(1.1);
-
 }
 
 .logo3.expand {
@@ -95,38 +95,53 @@ nav {
   width: 50%;
 }
 
-
 // MENU
 .navMenu {
   position: absolute;
   width: 100%;
+  height: 100%;
   .menu {
     text-align: right;
-    i {
-      font-size: 8rem;
-      color: $font;
+    height: 100%;
+    button {
+      height: 100%;
+      &:hover i,
+      &:focus i {
+        color: lighten($charcoal, 40);
+      }
+      i {
+        font-size: 10rem;
+        color: $font;
+        padding: 0;
+        margin: 0;
+      }
     }
   }
 }
 
-
-
 // TITLE
 .navTitle {
-  height: calc(100% - 200px);
-  
+  height: calc(100% - 230px);
+  position: relative;
   &::before,
   .title {
     display: inline-block;
-    vertical-align: middle;  
-    // border: 1px solid red;  
+    vertical-align: middle;
   }
-  // positional element created only to align title to something 
+  // positional element created only to align title to something
   &::before {
-    content: '';
+    content: "";
     width: 0;
     height: 100%;
   }
+}
+
+.navHero {
+  height: 105.5%;
+  width: 45%;
+  min-width: 500px;
+  padding: 2%;
+
 }
 
 .title h1 {
