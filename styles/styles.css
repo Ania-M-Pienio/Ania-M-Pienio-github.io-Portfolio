@@ -209,17 +209,17 @@ input::-moz-focus-inner {
 }
 
 nav {
-  height: 1073px;
+  height: 1000px;
   background-color: #dcdcdc;
+  background-image: url(../assets/ME19.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 .nav.wrapper {
   padding: 0 80px;
   height: 100%;
-  background-image: url(../assets/ME9.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom right;
 }
 
 .navMenuLogo {
@@ -243,16 +243,16 @@ nav {
 .navLogo .logo1 {
   position: relative;
   display: inline-block;
-  height: 150px;
-  width: 200px;
+  height: 180px;
+  width: 230px;
   z-index: 5000;
 }
 
 .navLogo .logo2 {
   position: absolute;
   top: 0;
-  height: 150px;
-  width: 200px;
+  height: 180px;
+  width: 230px;
   z-index: 6000;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -265,8 +265,8 @@ nav {
 .navLogo .logo3 {
   position: absolute;
   top: 0;
-  height: 150px;
-  width: 200px;
+  height: 180px;
+  width: 230px;
   z-index: 7000;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -374,9 +374,14 @@ nav {
   text-transform: uppercase;
 }
 
-.title h1 span {
+.title h1 span.pos1 {
   display: block;
-  font-size: 15rem;
+  font-size: 14rem;
+}
+
+.title h1 span.pos2 {
+  display: block;
+  font-size: 12rem;
 }
 
 html {

@@ -1,16 +1,16 @@
 // GENERAL NAV
 nav {
-  height: 1073px;
+  height: 1000px;
   background-color: $grey;
+  background-image: url(../assets/ME19.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 .nav.wrapper {
   padding: 0 80px;
   height: 100%;
-    background-image: url(../assets/ME9.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom right;
 }
 
 .navMenuLogo {
@@ -36,16 +36,16 @@ nav {
   .logo1 {
     position: relative;
     display: inline-block;
-    height: 150px;
-    width: 200px;
+    height: 180px;
+    width: 230px;
     z-index: 5000;
   }
 
   .logo2 {
     position: absolute;
     top: 0;
-    height: 150px;
-    width: 200px;
+    height: 180px;
+    width: 230px;
     z-index: 6000;
     transform: scale(0);
     transition: transform 1.5s;
@@ -54,8 +54,8 @@ nav {
   .logo3 {
     position: absolute;
     top: 0;
-    height: 150px;
-    width: 200px;
+    height: 180px;
+    width: 230px;
     z-index: 7000;
     transform: scale(0);
     transition: transform 1.5s;
@@ -141,14 +141,17 @@ nav {
   width: 45%;
   min-width: 500px;
   padding: 2%;
-
 }
 
 .title h1 {
   @include Ossie(10rem, normal, $font, normal, 1, left);
   text-transform: uppercase;
-  span {
+  span.pos1{
     display: block;
-    font-size: 15rem;
+    font-size: 14rem;
+  }
+  span.pos2{
+    display: block;
+    font-size: 12rem;
   }
 }
