@@ -31,4 +31,15 @@
 
 // MEDIA QUERIES
 
+@mixin table-land {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
 
+
+@mixin table-land {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
