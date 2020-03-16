@@ -209,10 +209,10 @@ input::-moz-focus-inner {
 }
 
 nav {
-  height: 1000px;
+  height: 100vh;
   background-color: #dcdcdc;
   background-image: url(../assets/ME19.png);
-  background-size: contain;
+  background-size: 70%;
   background-repeat: no-repeat;
   background-position: bottom right;
 }
@@ -325,6 +325,7 @@ nav {
 
 .navMenu .menu button {
   height: 100%;
+  margin-top: -30px;
 }
 
 .navMenu .menu button:hover i,
@@ -336,7 +337,7 @@ nav {
   font-size: 10rem;
   color: #191919;
   padding: 0;
-  margin: 0;
+  margin-top: -50px;
 }
 
 .navTitle {
@@ -356,16 +357,9 @@ nav {
   height: 100%;
 }
 
-.navHero {
-  height: 105.5%;
-  width: 45%;
-  min-width: 500px;
-  padding: 2%;
-}
-
 .title h1 {
   font-family: "Oswald", sans-serif;
-  font-size: 12rem;
+  font-size: 10rem;
   font-weight: normal;
   color: #191919;
   letter-spacing: normal;
@@ -376,13 +370,13 @@ nav {
 
 .title h1 span.pos1 {
   display: block;
-  font-size: 10rem;
+  font-size: 8rem;
   color: #5d5d5d;
 }
 
 .title h1 span.pos2 {
   display: block;
-  font-size: 10rem;
+  font-size: 8rem;
   color: #5d5d5d;
 }
 

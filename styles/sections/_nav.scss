@@ -1,9 +1,9 @@
 // GENERAL NAV
 nav {
-  height: 1000px;
+  height: 100vh;
   background-color: $grey;
   background-image: url(../assets/ME19.png);
-  background-size: contain;
+  background-size: 70%;
   background-repeat: no-repeat;
   background-position: bottom right;
 }
@@ -106,6 +106,7 @@ nav {
     height: 100%;
     button {
       height: 100%;
+      margin-top:-30px;
       &:hover i,
       &:focus i {
         color: lighten($charcoal, 40);
@@ -114,7 +115,7 @@ nav {
         font-size: 10rem;
         color: $font;
         padding: 0;
-        margin: 0;
+        margin-top: -50px;
       }
     }
   }
@@ -137,24 +138,18 @@ nav {
   }
 }
 
-.navHero {
-  height: 105.5%;
-  width: 45%;
-  min-width: 500px;
-  padding: 2%;
-}
 
 .title h1 {
-  @include Ossie(12rem, normal, $font, normal, 1, left);
+  @include Ossie(10rem, normal, $font, normal, 1, left);
   text-transform: uppercase;
   span.pos1{
     display: block;
-    font-size: 10rem;
+    font-size: 8rem;
     color: darken($grey, 50);
   }
   span.pos2{
     display: block;
-    font-size: 10rem;
+    font-size: 8rem;
     color: darken($grey, 50);
   }
 }
