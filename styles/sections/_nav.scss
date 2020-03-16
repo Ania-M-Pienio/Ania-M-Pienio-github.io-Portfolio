@@ -11,6 +11,7 @@ nav {
 .nav.wrapper {
   padding: 0 80px;
   height: 100%;
+  // border-right: 6px solid $charcoal;
 }
 
 .navMenuLogo {
@@ -144,14 +145,16 @@ nav {
 }
 
 .title h1 {
-  @include Ossie(10rem, normal, $font, normal, 1, left);
+  @include Ossie(12rem, normal, $font, normal, 1, left);
   text-transform: uppercase;
   span.pos1{
     display: block;
-    font-size: 14rem;
+    font-size: 10rem;
+    color: darken($grey, 50);
   }
   span.pos2{
     display: block;
-    font-size: 12rem;
+    font-size: 10rem;
+    color: darken($grey, 50);
   }
 }
