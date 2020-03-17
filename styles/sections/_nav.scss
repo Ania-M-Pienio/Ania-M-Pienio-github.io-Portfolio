@@ -193,8 +193,9 @@ nav {
 }
 
 .title h1 {
-  @include Ossie(10rem, normal, $font, normal, 1, left);
+  @include Ossie(10rem, normal, $font, normal, 1.2, left);
   text-transform: uppercase;
+  margin-left: -1px;
   span.pos1 {
     display: block;
     font-size: 8rem;
@@ -209,16 +210,34 @@ nav {
 
 .navSocial {
   position: absolute;
-  bottom: 30px;
+  bottom: 100px;
   z-index: 1500;
   ul {
     display: flex;
     li {
-      margin-right: 20px;
+      margin-right: 30px;
+      padding-top: 80px;
       ion-icon {
         font-size: 3rem;
         color: $font;
+        transition: transform 1.5s, color 1s;
       }
+    }
+  }
+}
+
+// SOCIAL ICONS
+.navSocial {
+  ul li a {
+    &:focus,
+    &:hover {
+      outline: 0;
+    }
+    &:focus ion-icon,
+    &:hover ion-icon {
+      transform: scale(1.5);
+      color: lighten($charcoal, 40);
+      border: 1px solid $accent;
     }
   }
 }

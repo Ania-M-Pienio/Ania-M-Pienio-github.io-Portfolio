@@ -1,6 +1,53 @@
 const app = {};
 
 app.isDropped = false;
+app.sections = {
+  overview: {
+    el: $("#overview"),
+    run: function() {
+      $("section.overview").addClass("expand");
+      $(".gallery.pic2 .galleryBar").addClass("expand");
+    }
+  }
+  // skills: { el: $("#skills"), run: app.skills },
+  // about: { el: $("#about"), run: app.about },
+  // quote: { el: $("#quote"), run: app.quote },
+  // projects: { el: $("#projects"), run: app.projects },
+  // education: { el: $("#education"), run: app.education },
+  // blog: { el: $("#blog"), run: app.blog },
+  // contact: { el: $("#contact"), run: app.contact }
+};
+app.logo = $("#navLogo");
+app.allWaypoints = $(".waypoint");
+app.currentWaypoint = app.sections.$logo;
+
+app.skills = function() {
+  console.log("skills");
+};
+
+app.about = function() {
+  console.log("about");
+};
+
+app.quote = function() {
+  console.log("quote");
+};
+
+app.projects = function() {
+  console.log("projects");
+};
+
+app.education = function() {
+  console.log("education");
+};
+
+app.blog = function() {
+  console.log("blog");
+};
+
+app.contact = function() {
+  console.log("contact");
+};
 
 /****************************************************************/
 /*****************          SETTERS           *******************/
@@ -11,7 +58,6 @@ app.animate = function() {
   setTimeout(() => {
     $(".logo3").addClass("expand");
   }, 1000);
-
   // bars expand on load
   setTimeout(() => {
     $(".bar").addClass("expand");
@@ -20,9 +66,43 @@ app.animate = function() {
   }, 1200);
 };
 
+app.resetAll = function($except) {
+  // scroll to top - resets all expands for all sections except for $except
+  app.allWaypoints.removeClass("expand");
+};
+
 /****************************************************************/
 /*****************          HANDLERS          *******************/
 /****************************************************************/
+
+// listeners manifest
+app.listeners = function() {
+  app.handleMenu();
+  app.handleWaypoints();
+};
+
+app.handleWaypoints = function() {
+  // SECTION WAYPOINTS
+
+  for (let section in app.sections) {
+    const $el = app.sections[section].el;
+    $el.waypoint(
+      function() {
+        console.log("waypoint hit");
+        app.sections[section].run();
+      },
+      { offset: "90%" }
+    );
+  }
+
+  // START WAYPOINT
+  app.logo.waypoint(
+    function(direction) {
+      direction === "up" ? app.resetAll() : "";
+    },
+    { offset: "5%" }
+  );
+};
 
 app.handleMenu = function() {
   // hovers and focus over logo
@@ -89,11 +169,11 @@ app.scrollToElem = function(id) {
   );
 };
 
-app.listeners = function() {
-  app.handleMenu();
-};
-
+/****************************************************************/
+/*****************           SETUP           ********************/
+/****************************************************************/
 app.init = function() {
+  app.resetAll();
   app.animate();
   app.listeners();
 };

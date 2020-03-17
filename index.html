@@ -12,7 +12,7 @@
       <div class="wrapper nav">
         <div class="navMenuLogo">
           <!-- LOGO -->
-          <div class="navLogo">
+          <div class="navLogo" id="navLogo">
             <button class="logo">
               <div class="logo1">
                 <img src="assets/2.png" alt="Ania Pienio Logo" />
@@ -61,43 +61,35 @@
             </h1>
           </div>
         </div>
-        <div class="navSocial" id="overview">
+
+        <!-- SOCIAL ICONS -->
+        <div class="navSocial">
           <ul>
             <li>
-              <button>
-                <a href="https://www.linkedin.com/in/aniapienio"
-                  ><ion-icon name="logo-linkedin"
-                    ><span>linkedin</span></ion-icon
-                  ></a
-                >
-              </button>
+              <a href="https://www.linkedin.com/in/aniapienio" target="_blank"
+                ><ion-icon name="logo-linkedin"
+                  ><span>linkedin</span></ion-icon
+                ></a
+              >
             </li>
             <li>
-              <button>
-                <a href="https://twitter.com/AniaPienio"
-                  ><ion-icon name="logo-twitter"
-                    ><span>twitter</span></ion-icon
-                  ></a
-                >
-              </button>
+              <a href="https://twitter.com/AniaPienio" target="_blank"
+                ><ion-icon name="logo-twitter"
+                  ><span>twitter</span></ion-icon
+                ></a
+              >
             </li>
             <li>
-              <button>
-                <a href="https://www.facebook.com/ania.pienio"
-                  ><ion-icon name="logo-facebook"
-                    ><span>facebook</span></ion-icon
-                  ></a
-                >
-              </button>
+              <a href="https://www.facebook.com/ania.pienio" target="_blank"
+                ><ion-icon name="logo-facebook"
+                  ><span>facebook</span></ion-icon
+                ></a
+              >
             </li>
             <li>
-              <button>
-                <a href="https://www.facebook.com/ania.pienio"
-                  ><ion-icon name="logo-facebook"
-                    ><span>github</span></ion-icon
-                  ></a
-                >
-              </button>
+              <a href="https://github.com/Ania-M-Pienio" target="_blank"
+                ><ion-icon name="logo-github"><span>github</span></ion-icon></a
+              >
             </li>
           </ul>
         </div>
@@ -105,35 +97,50 @@
     </nav>
 
     <main>
-      <section class="overview">
-        <div class="wrapper overview"></div>
+      <section class="overview waypoint" id="overview">
+        <div class="wrapper overview" >
+          <div class="overGallery gallery1">
+            <div class="gallery pic1">
+              <div class="box"></div>
+            </div>
+            <div class="gallery pic2">
+              <div class="galleryBar waypoint" id="galleryBar"></div>
+              <div class="box"></div>
+            </div>
+          </div>
+          <div class="overGallery gallery2">
+            <div class="gallery pic3">
+              <div class="box"></div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="skills">
+      <section class="skills waypoint" id="skills">
         <div class="wrapper skills"></div>
       </section>
 
-      <section class="about">
+      <section class="about waypoint" id="about">
         <div class="wrapper about"></div>
       </section>
 
-      <section class="quote">
+      <section class="quote waypoint" id="quote">
         <div class="wrapper quote"></div>
       </section>
 
-      <section class="projects">
+      <section class="projects waypoint" id="projects">
         <div class="wrapper projects"></div>
       </section>
 
-      <section class="education">
+      <section class="education waypoint" id="education">
         <div class="wrapper education"></div>
       </section>
 
-      <section class="blog">
+      <section class="blog waypoint" id="blog">
         <div class="wrapper blog"></div>
       </section>
 
-      <section class="contact">
+      <section class="contact waypoint" id="contact">
         <div class="wrapper contact"></div>
       </section>
     </main>
@@ -141,6 +148,7 @@
     <footer><div class="wrapper footer"></div></footer>
     <!-- rest goes here -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="scripts/jquery.waypoints.min.js"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="scripts/script.js"></script>
   </body>

@@ -1,8 +1,58 @@
-.overview {
-  height: 100vh;
+section.overview {
+  height: calc(100vh + 100px);
+  transition: margin-top 1.5s;
 }
 
-.wrapper.overview{
-  padding: 0 80px;
+.wrapper.overview {
   height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+section.overview.expand {
+  margin-top: -110px;
+}
+
+.overGallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-flow: column wrap;
+}
+
+.overGallery.gallery2 {
+  justify-content: flex-start;
+  margin-top: 130px;
+}
+
+.gallery {
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+  padding: 20px;
+  .box {
+    height: 100%;
+    width: 100%;
+    background-color: $tint;
+  }
+}
+
+.gallery.pic1 {
+  height: 400px;
+}
+
+.gallery.pic2 {
+  margin-top: 70px;
+  .galleryBar {
+    margin: 0;
+    height: 5px;
+    width: 0;
+    background: lighten($charcoal, 10);
+    border-radius: 5px;
+    transition: width 2s;
+  }
+}
+
+.gallery.pic2 .galleryBar.expand {
+  width: 100%;
 }

@@ -443,9 +443,10 @@ nav {
   font-weight: normal;
   color: #191919;
   letter-spacing: normal;
-  line-height: 1;
+  line-height: 1.2;
   text-align: left;
   text-transform: uppercase;
+  margin-left: -1px;
 }
 
 .title h1 span.pos1 {
@@ -462,7 +463,7 @@ nav {
 
 .navSocial {
   position: absolute;
-  bottom: 30px;
+  bottom: 100px;
   z-index: 1500;
 }
 
@@ -473,21 +474,106 @@ nav {
 }
 
 .navSocial ul li {
-  margin-right: 20px;
+  margin-right: 30px;
+  padding-top: 80px;
 }
 
 .navSocial ul li ion-icon {
   font-size: 3rem;
   color: #191919;
+  -webkit-transition: color 1s, -webkit-transform 1.5s;
+  transition: color 1s, -webkit-transform 1.5s;
+  transition: transform 1.5s, color 1s;
+  transition: transform 1.5s, color 1s, -webkit-transform 1.5s;
 }
 
-.overview {
-  height: 100vh;
+.navSocial ul li a:focus, .navSocial ul li a:hover {
+  outline: 0;
+}
+
+.navSocial ul li a:focus ion-icon,
+.navSocial ul li a:hover ion-icon {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  color: #878787;
+  border: 1px solid #f89010;
+}
+
+section.overview {
+  height: calc(100vh + 100px);
+  -webkit-transition: margin-top 1.5s;
+  transition: margin-top 1.5s;
 }
 
 .wrapper.overview {
-  padding: 0 80px;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.overview.expand {
+  margin-top: -110px;
+}
+
+.overGallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.overGallery.gallery2 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 130px;
+}
+
+.gallery {
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+  padding: 20px;
+}
+
+.gallery .box {
+  height: 100%;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.gallery.pic1 {
+  height: 400px;
+}
+
+.gallery.pic2 {
+  margin-top: 70px;
+}
+
+.gallery.pic2 .galleryBar {
+  margin: 0;
+  height: 5px;
+  width: 0;
+  background: #3b3b3b;
+  border-radius: 5px;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+.gallery.pic2 .galleryBar.expand {
+  width: 100%;
 }
 
 html {
