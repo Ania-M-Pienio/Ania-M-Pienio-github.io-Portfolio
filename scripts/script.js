@@ -100,7 +100,7 @@ app.handleWaypoints = function() {
     function(direction) {
       direction === "up" ? app.resetAll() : "";
     },
-    { offset: "5%" }
+    { offset: "0%" }
   );
 };
 

@@ -1,6 +1,6 @@
 // GENERAL NAV
 nav {
-  height: 100vh;
+  height: calc(100vh + 10px);
   background-color: $grey;
   background-image: url(../assets/ME19.png);
   background-size: 75%;

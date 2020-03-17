@@ -209,7 +209,7 @@ input::-moz-focus-inner {
 }
 
 nav {
-  height: 100vh;
+  height: calc(100vh + 10px);
   background-color: #dcdcdc;
   background-image: url(../assets/ME19.png);
   background-size: 75%;
@@ -500,7 +500,7 @@ nav {
 }
 
 section.overview {
-  height: calc(100vh + 100px);
+  height: 1100px;
   -webkit-transition: margin-top 1.5s;
   transition: margin-top 1.5s;
 }
