@@ -45,8 +45,8 @@ section.overview.expand {
     &:focus {
       border-bottom: 2px solid $charcoal;
     }
-    h2 {
-      @include Ossie(2rem, normal, $charcoal, normal, normal, left);
+    h3 {
+      @include Ossie(2.5rem, normal, $charcoal, normal, normal, left);
       text-transform: uppercase;
     }
   }

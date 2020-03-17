@@ -571,9 +571,9 @@ section.overview.expand {
   border-bottom: 2px solid #212121;
 }
 
-.overGallery .gallery button h2 {
+.overGallery .gallery button h3 {
   font-family: "Oswald", sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: normal;
   color: #212121;
   letter-spacing: normal;
@@ -697,6 +697,112 @@ section.overview.expand {
 
 .wrapper.skills.expand {
   padding-top: 0;
+}
+
+.about {
+  height: auto;
+}
+
+.wrapper.about {
+  max-width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+}
+
+.about article,
+.about aside {
+  width: 50%;
+  height: auto;
+}
+
+.about aside {
+  background-image: url(../assets/about/about.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: #E7E7E7;
+}
+
+.about article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about article .aboutTitle {
+  min-width: 100%;
+  padding: 40px;
+}
+
+.about article .aboutTitle h2 {
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 5rem;
+  font-weight: normal;
+  color: #191919;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+}
+
+.wrapper.aboutContent {
+  max-width: 800px;
+  padding-left: 80px;
+  padding-bottom: 40px;
+  padding-right: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aboutTeam {
+  width: 100%;
+  height: auto;
+}
+
+.aboutQuality,
+.aboutAgile {
+  height: auto;
+  width: 100%;
+}
+
+.aboutRest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+
+.aboutSection h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #212121;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.aboutSection p {
+  font-family: 'Domine', serif;
+  font-size: 1.7rem;
+  font-weight: normal;
+  color: #6e6e6e;
+  letter-spacing: 1.5;
+  line-height: 1.6;
+  text-align: left;
+  padding-right: 40px;
 }
 
 html {

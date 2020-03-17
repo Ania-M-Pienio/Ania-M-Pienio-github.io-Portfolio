@@ -1,0 +1,75 @@
+.about {
+  height: auto;
+}
+
+.wrapper.about {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.about article,
+.about aside {
+  width: 50%;
+  height: auto;
+}
+
+.about aside {
+  background-image: url(../assets/about/about.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: $grey2;
+}
+
+.about article {
+  display: flex;
+  .aboutTitle {
+    min-width: 100%;
+    padding: 40px;
+    h2 {
+      text-transform: uppercase;
+      @include Ossie(5rem, normal, $font, normal, normal, center);
+    }
+  }
+}
+
+.wrapper.aboutContent {
+  max-width: 800px;
+  padding-left: 80px;
+  padding-bottom: 40px;
+  padding-right: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutTeam {
+  width: 100%;
+  height: auto;
+}
+
+.aboutQuality,
+.aboutAgile {
+  height: auto;
+  width: 100%;
+}
+
+
+.aboutRest {
+  display: flex;
+  margin-top: 40px;
+}
+
+.aboutSection {
+  // border: 1px solid fuchsia;
+  h3 {
+    @include Ossie(2.5rem, normal, $charcoal, normal, normal, left);
+    text-transform: uppercase;
+  }
+  p {
+    @include Domi(1.7rem, normal, lighten($charcoal, 30), 1.5, 1.6, left);
+    padding-right: 40px;
+  }
+}
