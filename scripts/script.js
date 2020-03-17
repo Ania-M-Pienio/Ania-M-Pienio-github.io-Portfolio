@@ -12,7 +12,7 @@ app.sections = {
   skills: { el: $("#skills"), 
   run: function() {
      console.log("skills");
-     $(".skills ul").addClass("expand");
+     $(".skills.wrapper").addClass("expand");
   }
  },
   // about: { el: $("#about"), run: app.about },
