@@ -542,17 +542,28 @@ section.overview.expand {
   margin-top: 130px;
 }
 
-.gallery {
+.overGallery .gallery {
   width: 500px;
   height: 500px;
   padding: 20px;
   padding: 20px;
 }
 
-.gallery .box {
+.overGallery .gallery .box {
   height: 100%;
   width: 100%;
   background-color: #f8f8f8;
+}
+
+.overGallery .gallery h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #212121;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .gallery.pic1 {
@@ -587,7 +598,7 @@ section.overview.expand {
   font-family: 'Montserrat', sans-serif;
   font-size: 15rem;
   font-weight: normal;
-  color: #f8f8f8;
+  color: #f3f3f3;
   letter-spacing: normal;
   line-height: normal;
   text-align: left;
