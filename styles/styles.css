@@ -485,6 +485,11 @@ nav {
   transition: color 1s, -webkit-transform 1.5s;
   transition: transform 1.5s, color 1s;
   transition: transform 1.5s, color 1s, -webkit-transform 1.5s;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.navSocial ul li a {
+  outline: 0;
 }
 
 .navSocial ul li a:focus, .navSocial ul li a:hover {
@@ -496,16 +501,18 @@ nav {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   color: #878787;
-  border: 1px solid #f89010;
 }
 
 section.overview {
-  height: 1100px;
+  height: auto;
   -webkit-transition: margin-top 1.5s;
   transition: margin-top 1.5s;
+  margin-bottom: 100px;
 }
 
 .wrapper.overview {
+  max-width: 1600px;
+  padding: 0 80px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -555,7 +562,17 @@ section.overview.expand {
   background-color: #f8f8f8;
 }
 
-.overGallery .gallery h2 {
+.overGallery .gallery button {
+  border: 2px solid rgba(255, 255, 255, 0);
+  -webkit-transition: border-bottom 1s;
+  transition: border-bottom 1s;
+}
+
+.overGallery .gallery button:hover, .overGallery .gallery button:focus {
+  border-bottom: 2px solid #212121;
+}
+
+.overGallery .gallery button h2 {
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
   font-weight: normal;
@@ -602,6 +619,82 @@ section.overview.expand {
   letter-spacing: normal;
   line-height: normal;
   text-align: left;
+}
+
+.skills {
+  height: auto;
+  background-color: #f8f8f8;
+}
+
+.skills .wrapper {
+  padding: 0 80px;
+  height: 100%;
+}
+
+.skills ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 50px;
+}
+
+.skills ul li {
+  margin: 0 auto;
+  min-width: 200px;
+  width: 25%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.skills ul li ion-icon {
+  font-size: 8rem;
+  color: #878787;
+}
+
+.skills ul li img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  min-width: 80px;
+  width: 20%;
+  padding: 0;
+  margin: 0;
+}
+
+.skills ul li h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #878787;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+}
+
+.skillsTitle {
+  width: 100%;
+  padding: 40px;
+}
+
+.skillsTitle h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 5rem;
+  font-weight: normal;
+  color: #191919;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.skills .wrapper.skills.expand {
+  margin-top: 0;
 }
 
 html {

@@ -1,9 +1,12 @@
 section.overview {
-  height: 1100px;
+  height: auto;
   transition: margin-top 1.5s;
+  margin-bottom: 100px;
 }
 
 .wrapper.overview {
+  max-width: 1600px;
+  padding: 0 80px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -36,9 +39,17 @@ section.overview.expand {
     width: 100%;
     background-color: $tint;
   }
-  h2 {
-    @include Ossie(2rem, normal, $charcoal, normal, normal, left);
-    text-transform: uppercase;
+  button {
+    border: 2px solid rgba(255, 255, 255, 0);
+    transition: border-bottom 1s;
+    &:hover,
+    &:focus {
+      border-bottom: 2px solid $charcoal;
+    }
+    h2 {
+      @include Ossie(2rem, normal, $charcoal, normal, normal, left);
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -46,7 +57,7 @@ section.overview.expand {
   height: 400px;
 }
 
-.gallery.pic2 {  
+.gallery.pic2 {
   margin-top: 70px;
   .galleryBar {
     margin: 0;
@@ -65,9 +76,8 @@ section.overview.expand {
 .overTitle {
   position: absolute;
   top: 500px;
-  left: 0;  
+  left: 0;
   h1 {
     @include Monti(15rem, normal, darken($tint, 2), normal, normal, left);
-    
   }
 }

@@ -8,8 +8,13 @@ app.sections = {
       $("section.overview").addClass("expand");
       $(".gallery.pic2 .galleryBar").addClass("expand");
     }
+  },
+  skills: { el: $("#skills"), 
+  run: function() {
+     console.log("skills");
+     $(".skills ul").addClass("expand");
   }
-  // skills: { el: $("#skills"), run: app.skills },
+ },
   // about: { el: $("#about"), run: app.about },
   // quote: { el: $("#quote"), run: app.quote },
   // projects: { el: $("#projects"), run: app.projects },
@@ -88,7 +93,6 @@ app.handleWaypoints = function() {
     const $el = app.sections[section].el;
     $el.waypoint(
       function() {
-        console.log("waypoint hit");
         app.sections[section].run();
       },
       { offset: "90%" }
@@ -99,9 +103,7 @@ app.handleWaypoints = function() {
   app.logo.waypoint(
     function(direction) {
       direction === "up" ? app.resetAll() : "";
-    },
-    { offset: "0%" }
-  );
+    }, {offset: "0%"});
 };
 
 app.handleMenu = function() {

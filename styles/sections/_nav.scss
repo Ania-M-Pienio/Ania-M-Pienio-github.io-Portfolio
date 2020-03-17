@@ -218,9 +218,11 @@ nav {
       margin-right: 30px;
       padding-top: 80px;
       ion-icon {
+        
         font-size: 3rem;
         color: $font;
         transition: transform 1.5s, color 1s;
+        border: 1px solid rgba(255, 255, 255, 0);
       }
     }
   }
@@ -229,6 +231,7 @@ nav {
 // SOCIAL ICONS
 .navSocial {
   ul li a {
+    outline: 0;
     &:focus,
     &:hover {
       outline: 0;
@@ -237,7 +240,6 @@ nav {
     &:hover ion-icon {
       transform: scale(1.5);
       color: lighten($charcoal, 40);
-      border: 1px solid $accent;
     }
   }
 }

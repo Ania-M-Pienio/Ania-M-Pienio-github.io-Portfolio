@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
+    <!-- -------------------------------------------- -->
+    <!------------------- NAV & HERO ------------------->
+    <!-- -------------------------------------------- -->
     <nav>
-      <div class="wrapper nav">
+      <div class="wrapper nav" >
         <div class="navMenuLogo">
           <!-- LOGO -->
           <div class="navLogo" id="navLogo">
@@ -52,7 +55,7 @@
         </div>
 
         <!-- TITLE -->
-        <div class="navTitle">
+        <div class="navTitle" >
           <div class="title">
             <h1>
               Ania Pienio
@@ -97,29 +100,32 @@
     </nav>
 
     <main>
+      <!-- -------------------------------------------- -->
+      <!-------------------- OVERVIEW -------------------->
+      <!-- -------------------------------------------- -->
       <section class="overview waypoint" id="overview">
         <div class="wrapper overview">
           <div class="overGallery gallery1">
             <div class="gallery pic1">
               <div class="box">
-                <img src="assets/overview/skills.png" alt="about image"/>
+                <img src="assets/overview/skills.png" alt="about image" />
               </div>
-              <h2>skills</h2>
+              <button class="overBtn"><h2>skills</h2></button>
             </div>
             <div class="gallery pic2">
               <div class="galleryBar waypoint" id="galleryBar"></div>
               <div class="box">
-                <img src="assets/overview/projects.png" alt="about image"/>
+                <img src="assets/overview/projects.png" alt="about image" />
               </div>
-              <h2>projects showcase</h2>
+              <button class="overBtn"><h2>projects showcase</h2></button>
             </div>
           </div>
           <div class="overGallery gallery2">
             <div class="gallery pic3">
               <div class="box">
-                 <img src="assets/overview/about.png" alt="about image"/>
+                <img src="assets/overview/about.png" alt="about image" />
               </div>
-              <h2>about me</h2>
+              <button class="overBtn"><h2>about me</h2></button>
             </div>
             <div class="overTitle">
               <h1>overview</h1>
@@ -128,8 +134,86 @@
         </div>
       </section>
 
-      <section class="skills waypoint" id="skills">
-        <div class="wrapper skills"></div>
+      <!-- -------------------------------------------- -->
+      <!--------------------  SKILLS  -------------------->
+      <!-- -------------------------------------------- -->
+
+      <section class="skills waypoint" >
+        <div class="wrapper skills" id="skills">
+          <div class="skillsTitle">
+            <h2>skills</h2>
+          </div>
+          <ul>
+            <li>
+              <ion-icon name="logo-react"></ion-icon>
+              <h3>React</h3>
+            </li>
+            <li>
+              <ion-icon name="logo-vue"></ion-icon>
+              <h3>Vue</h3>
+            </li>
+            <li>
+              <ion-icon name="logo-angular"></ion-icon>
+              <h3>Angular</h3>
+            </li>
+            <li>
+              <ion-icon name="logo-html5"></ion-icon>
+              <h3>Html5</h3>
+            </li>
+            <li>
+              <ion-icon name="logo-css3"></ion-icon>
+              <h3>CSS3</h3>
+            </li>
+            <li>
+              <ion-icon name="logo-sass"></ion-icon>
+              <h3>Scss</h3>
+            </li>
+            <li>
+              <ion-icon name="logo-nodejs"></ion-icon>
+              <h3>Node.js/Express</h3>
+            </li>
+            <li>
+              <ion-icon name="logo-javascript"></ion-icon>
+              <h3>javaScript</h3>
+            </li>
+            <li>
+              <ion-icon name="logo-firebase"></ion-icon>
+              <h3>Firebase</h3>
+            </li>
+            <li>
+              <ion-icon name="logo-github"></ion-icon>
+              <h3>gitHub</h3>
+            </li>
+            <li>
+              <ion-icon name="logo-tux"></ion-icon>
+              <h3>Bash</h3>
+            </li>
+            <!-- mongo db -->
+            <li>
+              <img src="assets/icons/1.png" alt="MongoDB icon" />
+              <h3>MongoDB</h3>
+            </li>
+            <!-- git -->
+            <li>
+              <img src="assets/icons/3.png" alt="Git icon" />
+              <h3>Git</h3>
+            </li>
+            <!-- postgres -->
+            <li>
+              <img src="assets/icons/2.png" alt="PostgreSQL icon" />
+              <h3>PostgreSQL</h3>
+            </li>
+            <!-- jQuery -->
+            <li>
+              <img src="assets/icons/4.png" alt="jQuery icon" />
+              <h3>jQuery</h3>
+            </li>
+            <li>
+              <img src="assets/icons/5.png" alt="Bootstrap icon" />
+              <h3>Bootstrap</h3>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="about waypoint" id="about">
