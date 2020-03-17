@@ -21,6 +21,7 @@ section.overview.expand {
 }
 
 .overGallery.gallery2 {
+  position: relative;
   justify-content: flex-start;
   margin-top: 130px;
 }
@@ -42,6 +43,7 @@ section.overview.expand {
 }
 
 .gallery.pic2 {
+  
   margin-top: 70px;
   .galleryBar {
     margin: 0;
@@ -55,4 +57,15 @@ section.overview.expand {
 
 .gallery.pic2 .galleryBar.expand {
   width: 100%;
+}
+
+.overTitle {
+  position: absolute;
+  top: 500px;
+  left: 0;
+  
+  h1 {
+    @include Monti(15rem, normal, $tint, normal, normal, left);
+    
+  }
 }

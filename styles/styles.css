@@ -535,6 +535,7 @@ section.overview.expand {
 }
 
 .overGallery.gallery2 {
+  position: relative;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -576,9 +577,26 @@ section.overview.expand {
   width: 100%;
 }
 
+.overTitle {
+  position: absolute;
+  top: 500px;
+  left: 0;
+}
+
+.overTitle h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15rem;
+  font-weight: normal;
+  color: #f8f8f8;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .wrapper {
