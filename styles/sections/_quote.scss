@@ -1,11 +1,61 @@
 .quote {
   background-color: $charcoal;
-  height: 700px;
+  height: auto;
+  min-height: 400px;
 }
 
 .wrapper.quote {
-  padding: 50px 80px;
-  height: 100%;
+  padding: 60px 80px 40px 80px;
+  height: auto;
   width: 100%;
 }
 
+.quoteContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quotePhoto {
+  width: 900px;
+  height: auto;
+  img {
+    object-fit: cover;
+    max-width: 100%;
+  }
+}
+
+.quoteContentContainer {
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  // .quoteLogoContainer {  logo  }
+  .quoteContent {
+    width: 100%;
+    p {
+      position: relative;
+      margin-left: 20px;
+      @include Domi(2rem, normal, $grey2, normal, 1.6, left);
+      span {
+        position: absolute;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+span.open {
+  top: -10px;
+  left: -20px;
+  padding-right: 5px;
+}
+
+span.close {
+  bottom: -5px;
+  padding-left: 5px;
+}

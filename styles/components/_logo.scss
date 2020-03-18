@@ -73,7 +73,7 @@
 }
 
 .bar.expand {
-   width: 100%;
+  width: 100%;
 }
 
 .bar.expand:not(.quoteBar) {
@@ -81,10 +81,15 @@
 }
 
 // LOGO - quote
-
+.quoteLogoContainer {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
 .quoteLogoContainer .mainLogo {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100px;
   .logo {
     .logo1 {
@@ -102,20 +107,18 @@
   }
 }
 
-.bar.quoteBar {
-  width: 0;
-  background: $grey;
-  height: 2.5px;
-  border-radius: 2.5px;
-  top: 0px;
+.quoteLogoContainer .bars {
+  width: 100%;
 }
+
+.bar.quoteBar {
+    width: 0;
+    background: $grey;
+    height: 2.5px;
+    border-radius: 2.5px;
+    top: 0px;
+  }
 
 .bar.quoteBar.expand {
   width: 100%;
 }
-
-.quoteLogoContainer {
-  width: 100%;
-  position: relative;
-}
-

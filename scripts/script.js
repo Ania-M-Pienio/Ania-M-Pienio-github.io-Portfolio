@@ -12,19 +12,21 @@ app.sections = {
   },
   skills: {
     el: $("#skills"),
+    offset: 130,
     run: function() {
       $(".skills.wrapper").addClass("expand");
     }
   },
   about: {
     el: $("#about"),
-    offset: 800,
+    offset: 200,
     run: function() {
-      console.log("about is not defined");
+      // console.log("about is not defined");
     }
   },
   quote: {
     el: $("#quote"),
+    offset: 0,
     run: function() {
       app.animateLogo("quoteLogo");
     }
@@ -195,7 +197,7 @@ app.scrollToElem = function(id) {
     {
       scrollTop: $(`#${id}`).offset().top - app.sections[id].offset
     },
-    2000
+    1500
   );
 };
 

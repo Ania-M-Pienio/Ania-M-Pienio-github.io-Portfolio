@@ -22,6 +22,7 @@ html {
 .wrapper {
   max-width: 1600px;
   margin: 0 auto; 
+  // border: 1px solid fuchsia;
 }
 
 // headings
@@ -52,6 +53,11 @@ button {
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
   padding: 0;
   margin: 0;
 }
