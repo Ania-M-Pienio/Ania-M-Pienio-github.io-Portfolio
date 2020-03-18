@@ -701,6 +701,8 @@ section.overview.expand {
 
 .about {
   height: auto;
+  background-image: -webkit-gradient(linear, left top, right top, from(#9c9e9f00), color-stop(50%, #9c9e9f00), color-stop(50%, #E7E7E7), to(#E7E7E7));
+  background-image: linear-gradient(to right, #9c9e9f00 0%, #9c9e9f00 50%, #E7E7E7 50%, #E7E7E7 100%);
 }
 
 .wrapper.about {
