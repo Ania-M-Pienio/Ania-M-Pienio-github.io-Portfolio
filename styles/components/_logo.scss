@@ -1,0 +1,121 @@
+// LOGO - Generic
+.mainLogo {
+  height: 150px;
+  width: 100%;
+  position: absolute;
+
+  button {
+    &:hover .bar,
+    &:focus .bar {
+      background: lighten($charcoal, 40);
+    }
+    &:hover .logo1,
+    &:focus .logo1 {
+      transform: scale(1.2);
+    }
+  }
+
+  .logo1 {
+    position: relative;
+    display: inline-block;
+    height: 180px;
+    width: 230px;
+    z-index: 5000;
+    transition: transform 1.5s;
+  }
+
+  .logo2 {
+    position: absolute;
+    top: 0;
+    height: 180px;
+    width: 230px;
+    z-index: 6000;
+    transform: scale(0);
+    transition: transform 1.5s;
+  }
+
+  .logo3 {
+    position: absolute;
+    top: 0;
+    height: 180px;
+    width: 230px;
+    z-index: 7000;
+    transform: scale(0);
+    transition: transform 1.5s;
+  }
+  .bars {
+    display: flex;
+  }
+  .bar {
+    position: relative;
+    top: -18px;
+    display: inline-block;
+    width: 0;
+    height: 5px;
+    background: lighten($charcoal, 10);
+    transition: width 2s;
+    border-radius: 5px;
+  }
+  span {
+    position: absolute;
+    opacity: 0;
+  }
+}
+
+// on load expands
+
+.logo2.expand {
+  transform: scale(1.1);
+}
+
+.logo3.expand {
+  transform: scale(1.1);
+}
+
+.bar.expand {
+   width: 100%;
+}
+
+.bar.expand:not(.quoteBar) {
+  margin-left: 5px;
+}
+
+// LOGO - quote
+
+.quoteLogoContainer .mainLogo {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  .logo {
+    .logo1 {
+      height: 100px;
+      width: 130px;
+    }
+    .logo2 {
+      height: 100px;
+      width: 130px;
+    }
+    .logo3 {
+      height: 100px;
+      width: 130px;
+    }
+  }
+}
+
+.bar.quoteBar {
+  width: 0;
+  background: $grey;
+  height: 2.5px;
+  border-radius: 2.5px;
+  top: 0px;
+}
+
+.bar.quoteBar.expand {
+  width: 100%;
+}
+
+.quoteLogoContainer {
+  width: 100%;
+  position: relative;
+}
+

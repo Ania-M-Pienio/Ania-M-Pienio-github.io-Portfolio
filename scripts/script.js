@@ -4,31 +4,39 @@ app.isDropped = false;
 app.sections = {
   overview: {
     el: $("#overview"),
+    offset: 50,
     run: function() {
       $("section.overview").addClass("expand");
       $(".gallery.pic2 .galleryBar").addClass("expand");
     }
   },
-  skills: { el: $("#skills"), 
-  run: function() {
-     console.log("skills");
-     $(".skills.wrapper").addClass("expand");
+  skills: {
+    el: $("#skills"),
+    run: function() {
+      $(".skills.wrapper").addClass("expand");
+    }
+  },
+  about: {
+    el: $("#about"),
+    offset: 800,
+    run: function() {
+      console.log("about is not defined");
+    }
+  },
+  quote: {
+    el: $("#quote"),
+    run: function() {
+      app.animateLogo("quoteLogo");
+    }
   }
- },
-  // about: { el: $("#about"), run: app.about },
-  // quote: { el: $("#quote"), run: app.quote },
   // projects: { el: $("#projects"), run: app.projects },
   // education: { el: $("#education"), run: app.education },
   // blog: { el: $("#blog"), run: app.blog },
   // contact: { el: $("#contact"), run: app.contact }
 };
-app.logo = $("#navLogo");
-app.allWaypoints = $(".waypoint");
-app.currentWaypoint = app.sections.$logo;
 
-app.skills = function() {
-  console.log("skills");
-};
+app.logo = $("#navLogo");
+app.currentWaypoint = app.sections.$logo;
 
 app.about = function() {
   console.log("about");
@@ -55,25 +63,31 @@ app.contact = function() {
 };
 
 /****************************************************************/
-/*****************          SETTERS           *******************/
+/*****************          ANIMATORS         *******************/
 /****************************************************************/
-app.animate = function() {
-  // antlers expand on load
-  $(".logo2").addClass("expand");
+app.animateLogo = function(location) {
+  console.log("location: ", location);
+  // logo antlers expand
+  $(`#${location} .logo2`).addClass("expand");
   setTimeout(() => {
-    $(".logo3").addClass("expand");
+    $(`#${location} .logo3`).addClass("expand");
   }, 1000);
+  // logo bars expand
+  setTimeout(() => {
+    $(`#${location} .bar`).addClass("expand");
+  }, 1200);
+};
+
+app.animateMenu = function() {
   // bars expand on load
   setTimeout(() => {
-    $(".bar").addClass("expand");
     $("button.dropMenu").addClass("expand");
     $(".drop button").attr("disabled", true);
   }, 1200);
 };
 
-app.resetAll = function($except) {
-  // scroll to top - resets all expands for all sections except for $except
-  app.allWaypoints.removeClass("expand");
+app.resetAll = function() {
+  $("main *").removeClass("expand");
 };
 
 /****************************************************************/
@@ -82,13 +96,13 @@ app.resetAll = function($except) {
 
 // listeners manifest
 app.listeners = function() {
+  app.handleLogo();
   app.handleMenu();
   app.handleWaypoints();
 };
 
 app.handleWaypoints = function() {
-  // SECTION WAYPOINTS
-
+  // ALL WAYPOINTS
   for (let section in app.sections) {
     const $el = app.sections[section].el;
     $el.waypoint(
@@ -103,41 +117,55 @@ app.handleWaypoints = function() {
   app.logo.waypoint(
     function(direction) {
       direction === "up" ? app.resetAll() : "";
-    }, {offset: "0%"});
+    },
+    { offset: "0%" }
+  );
 };
 
-app.handleMenu = function() {
+app.handleLogo = function() {
   // hovers and focus over logo
   $(".logo").focus(function() {
-    $(".logo1 img").attr("src", "assets/hover/2.png");
-    $(".logo2 img").attr("src", "assets/hover/3.png");
-    $(".logo3 img").attr("src", "assets/hover/4.png");
+    const id = $(this).attr("id");
+    $(`#${id} .logo1 img`).attr("src", "assets/hover/2.png");
+    $(`#${id} .logo2 img`).attr("src", "assets/hover/3.png");
+    $(`#${id} .logo3 img`).attr("src", "assets/hover/4.png");
   });
 
   $(".logo").blur(function() {
-    $(".logo1 img").attr("src", "assets/2.png");
-    $(".logo2 img").attr("src", "assets/3.png");
-    $(".logo3 img").attr("src", "assets/4.png");
+    console.log("location id is: ", $(this).attr("id"));
+    const id = $(this).attr("id");
+    const folder = id === "n" ? "nav" : "quote";
+    // console.log("location is: ", folder);
+    $(`#${id} .logo1 img`).attr("src", `assets/${folder}/2.png`);
+    $(`#${id} .logo2 img`).attr("src", `assets/${folder}/3.png`);
+    $(`#${id} .logo3 img`).attr("src", `assets/${folder}/4.png`);
   });
 
   $(".logo").mouseover(function() {
-    $(".logo1 img").attr("src", "assets/hover/2.png");
-    $(".logo2 img").attr("src", "assets/hover/3.png");
-    $(".logo3 img").attr("src", "assets/hover/4.png");
+    const id = $(this).attr("id");
+    $(`#${id} .logo1 img`).attr("src", "assets/hover/2.png");
+    $(`#${id} .logo2 img`).attr("src", "assets/hover/3.png");
+    $(`#${id} .logo3 img`).attr("src", "assets/hover/4.png");
   });
 
   $(".logo").mouseleave(function() {
-    $(".logo1 img").attr("src", "assets/2.png");
-    $(".logo2 img").attr("src", "assets/3.png");
-    $(".logo3 img").attr("src", "assets/4.png");
+    console.log("location id is: ", $(this).attr("id"));
+    const id = $(this).attr("id");
+    const folder = id === "n" ? "nav" : "quote";
+    // console.log("location is: ", folder);
+    $(`#${id} .logo1 img`).attr("src", `assets/${folder}/2.png`);
+    $(`#${id} .logo2 img`).attr("src", `assets/${folder}/3.png`);
+    $(`#${id} .logo3 img`).attr("src", `assets/${folder}/4.png`);
     $(".logo").blur();
   });
+};
 
+app.handleMenu = function() {
   // menu icon
   $(".dropMenu").on("click", function() {
     $(".drop").toggleClass("expand");
     $(this).blur();
-    $(".bar").toggleClass("expand");
+    $("#navLogo .bar").toggleClass("expand");
     $(".dropBar").toggleClass("expand");
     if (app.isDropped) {
       $(".drop button").attr("disabled", true);
@@ -165,9 +193,9 @@ app.handleMenu = function() {
 app.scrollToElem = function(id) {
   $("html, body").animate(
     {
-      scrollTop: $(`#${id}`).offset().top
+      scrollTop: $(`#${id}`).offset().top - app.sections[id].offset
     },
-    1000
+    2000
   );
 };
 
@@ -176,7 +204,8 @@ app.scrollToElem = function(id) {
 /****************************************************************/
 app.init = function() {
   app.resetAll();
-  app.animate();
+  app.animateLogo("navLogo");
+  app.animateMenu();
   app.listeners();
 };
 

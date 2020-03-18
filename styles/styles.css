@@ -208,45 +208,24 @@ input::-moz-focus-inner {
   overflow: hidden;
 }
 
-nav {
-  height: calc(100vh);
-  background-color: #dcdcdc;
-  background-image: url(../assets/ME19.png);
-  background-size: 75%;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-}
-
-.nav.wrapper {
-  padding: 20px 80px 0 80px;
-  height: 100%;
-}
-
-.navMenuLogo {
-  position: relative;
-  height: 200px;
-  width: 100%;
-  padding-top: 30px;
-}
-
-.navLogo {
+.mainLogo {
   height: 150px;
   width: 100%;
   position: absolute;
 }
 
-.navLogo button:hover .bar,
-.navLogo button:focus .bar {
+.mainLogo button:hover .bar,
+.mainLogo button:focus .bar {
   background: #878787;
 }
 
-.navLogo button:hover .logo1,
-.navLogo button:focus .logo1 {
+.mainLogo button:hover .logo1,
+.mainLogo button:focus .logo1 {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.navLogo .logo1 {
+.mainLogo .logo1 {
   position: relative;
   display: inline-block;
   height: 180px;
@@ -258,7 +237,7 @@ nav {
   transition: transform 1.5s, -webkit-transform 1.5s;
 }
 
-.navLogo .logo2 {
+.mainLogo .logo2 {
   position: absolute;
   top: 0;
   height: 180px;
@@ -272,7 +251,7 @@ nav {
   transition: transform 1.5s, -webkit-transform 1.5s;
 }
 
-.navLogo .logo3 {
+.mainLogo .logo3 {
   position: absolute;
   top: 0;
   height: 180px;
@@ -286,13 +265,13 @@ nav {
   transition: transform 1.5s, -webkit-transform 1.5s;
 }
 
-.navLogo .bars {
+.mainLogo .bars {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.navLogo .bar {
+.mainLogo .bar {
   position: relative;
   top: -18px;
   display: inline-block;
@@ -304,7 +283,7 @@ nav {
   border-radius: 5px;
 }
 
-.navLogo span {
+.mainLogo span {
   position: absolute;
   opacity: 0;
 }
@@ -321,7 +300,73 @@ nav {
 
 .bar.expand {
   width: 100%;
+}
+
+.bar.expand:not(.quoteBar) {
   margin-left: 5px;
+}
+
+.quoteLogoContainer .mainLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100px;
+}
+
+.quoteLogoContainer .mainLogo .logo .logo1 {
+  height: 100px;
+  width: 130px;
+}
+
+.quoteLogoContainer .mainLogo .logo .logo2 {
+  height: 100px;
+  width: 130px;
+}
+
+.quoteLogoContainer .mainLogo .logo .logo3 {
+  height: 100px;
+  width: 130px;
+}
+
+.bar.quoteBar {
+  width: 0;
+  background: #dcdcdc;
+  height: 2.5px;
+  border-radius: 2.5px;
+  top: 0px;
+}
+
+.bar.quoteBar.expand {
+  width: 100%;
+}
+
+.quoteLogoContainer {
+  width: 100%;
+  position: relative;
+}
+
+nav {
+  height: calc(100vh);
+  background-color: #dcdcdc;
+  background-image: url(../assets/nav/ME19.png);
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.nav.wrapper {
+  padding: 20px 80px;
+  height: 100%;
+}
+
+.navMenuLogo {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  padding-top: 30px;
 }
 
 .navMenu {
@@ -727,7 +772,7 @@ section.overview.expand {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
-  background-color: #E7E7E7;
+  background-color: #e7e7e7;
 }
 
 .about article {
@@ -805,6 +850,17 @@ section.overview.expand {
   line-height: 1.6;
   text-align: left;
   padding-right: 40px;
+}
+
+.quote {
+  background-color: #212121;
+  height: 700px;
+}
+
+.wrapper.quote {
+  padding: 50px 80px;
+  height: 100%;
+  width: 100%;
 }
 
 html {

@@ -2,14 +2,14 @@
 nav {
   height: calc(100vh);
   background-color: $grey;
-  background-image: url(../assets/ME19.png);
+  background-image: url(../assets/nav/ME19.png);
   background-size: 75%;
   background-repeat: no-repeat;
   background-position: bottom right;
 }
 
 .nav.wrapper {
-  padding: 20px 80px 0 80px;
+  padding: 20px 80px;
   height: 100%;
 }
 
@@ -20,85 +20,6 @@ nav {
   padding-top: 30px;
 }
 
-// LOGO
-.navLogo {
-  height: 150px;
-  width: 100%;
-  position: absolute;
-
-  button {
-    &:hover .bar,
-    &:focus .bar {
-      background: lighten($charcoal, 40);
-    }
-    &:hover .logo1,
-    &:focus .logo1 {
-      transform: scale(1.2);
-    }
-  }
-
-  .logo1 {
-    position: relative;
-    display: inline-block;
-    height: 180px;
-    width: 230px;
-    z-index: 5000;
-    transition: transform 1.5s;
-  }
-
-  .logo2 {
-    position: absolute;
-    top: 0;
-    height: 180px;
-    width: 230px;
-    z-index: 6000;
-    transform: scale(0);
-    transition: transform 1.5s;
-  }
-
-  .logo3 {
-    position: absolute;
-    top: 0;
-    height: 180px;
-    width: 230px;
-    z-index: 7000;
-    transform: scale(0);
-    transition: transform 1.5s;
-  }
-  .bars {
-    display: flex;
-  }
-  .bar {
-    position: relative;
-    top: -18px;
-    display: inline-block;
-    width: 0;
-    height: 5px;
-    background: lighten($charcoal, 10);
-    transition: width 2s;
-    border-radius: 5px;
-  }
-
-  span {
-    position: absolute;
-    opacity: 0;
-  }
-}
-
-// on load expands
-
-.logo2.expand {
-  transform: scale(1.1);
-}
-
-.logo3.expand {
-  transform: scale(1.1);
-}
-
-.bar.expand {
-  width: 100%;
-  margin-left: 5px;
-}
 
 // MENU
 .navMenu {
