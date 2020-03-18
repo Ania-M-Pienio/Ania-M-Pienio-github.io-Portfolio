@@ -209,7 +209,7 @@ input::-moz-focus-inner {
 }
 
 nav {
-  height: calc(100vh + 10px);
+  height: calc(100vh);
   background-color: #dcdcdc;
   background-image: url(../assets/ME19.png);
   background-size: 75%;
@@ -522,7 +522,7 @@ section.overview {
 }
 
 section.overview.expand {
-  margin-top: -90px;
+  margin-top: -50px;
 }
 
 .overGallery {
@@ -626,7 +626,7 @@ section.overview.expand {
 }
 
 .skills .wrapper {
-  padding: 0 180px;
+  padding: 0 180px 50px 180px;
   padding-top: 300px;
   height: 100%;
   -webkit-transition: padding-top 1.5s;
@@ -704,7 +704,6 @@ section.overview.expand {
 }
 
 .wrapper.about {
-  max-width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -723,16 +722,18 @@ section.overview.expand {
 
 .about aside {
   background-image: url(../assets/about/about.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
   background-color: #E7E7E7;
 }
 
 .about article {
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-right: 40px;
 }
 
 .about article .aboutTitle {
@@ -755,7 +756,6 @@ section.overview.expand {
   max-width: 800px;
   padding-left: 80px;
   padding-bottom: 40px;
-  padding-right: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -771,7 +771,7 @@ section.overview.expand {
 }
 
 .aboutQuality,
-.aboutAgile {
+.aboutDocs {
   height: auto;
   width: 100%;
 }
