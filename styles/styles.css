@@ -664,83 +664,102 @@ section.overview.expand {
   text-align: left;
 }
 
-.skills {
+.quote {
+  background-color: #212121;
   height: auto;
-  background-color: #f8f8f8;
+  min-height: 400px;
 }
 
-.skills .wrapper {
-  padding: 0 180px 50px 180px;
-  padding-top: 300px;
-  height: 100%;
-  -webkit-transition: padding-top 2s;
-  transition: padding-top 2s;
+.wrapper.quote {
+  padding: 80px 80px;
+  height: auto;
+  width: 100%;
 }
 
-.skills ul {
+.quoteContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.quotePhoto {
+  width: 400px;
+  height: auto;
+}
+
+.quotePhoto img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+}
+
+.quoteContentContainer {
+  width: 100%;
+  padding-left: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.quoteContentContainer .quoteContent {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.skills ul li {
-  margin: 0 auto;
-  min-width: 200px;
-  width: 25%;
-  text-align: center;
-  margin-bottom: 100px;
-}
-
-.skills ul li ion-icon {
-  font-size: 8rem;
-  color: #878787;
-}
-
-.skills ul li img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  min-width: 80px;
-  width: 20%;
-  padding: 0;
-  margin: 0;
-}
-
-.skills ul li h3 {
-  font-family: "Oswald", sans-serif;
+.quoteContentContainer .quoteContent .quotePara {
+  width: auto;
+  padding: 5px;
+  font-family: 'Domine', serif;
   font-size: 2rem;
   font-weight: normal;
-  color: #878787;
+  color: #e7e7e7;
   letter-spacing: normal;
-  line-height: normal;
+  line-height: 1.6;
   text-align: center;
 }
 
-.skillsTitle {
-  width: 100%;
-  padding: 40px;
+.quoteContentContainer .quoteContent .quotation {
+  width: 20px;
+  position: relative;
 }
 
-.skillsTitle h2 {
-  font-family: "Oswald", sans-serif;
-  font-size: 5rem;
+.quoteContentContainer .quoteContent .quotation img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.quoteContentContainer h4 {
+  font-family: 'Domine', serif;
+  font-size: 1.4rem;
   font-weight: normal;
-  color: #191919;
+  color: #e7e7e7;
   letter-spacing: normal;
   line-height: normal;
   text-align: center;
-  width: 100%;
-  text-transform: uppercase;
+  margin-top: 10px;
 }
 
-.wrapper.skills.expand {
-  padding-top: 0;
+.quotation.open {
+  top: -10px;
+}
+
+.quotation.close {
+  bottom: -30px;
 }
 
 .about {
@@ -851,102 +870,83 @@ section.overview.expand {
   padding-right: 40px;
 }
 
-.quote {
-  background-color: #212121;
+.skills {
   height: auto;
-  min-height: 400px;
+  background-color: #f8f8f8;
 }
 
-.wrapper.quote {
-  padding: 80px 80px;
-  height: auto;
+.skills .wrapper {
+  padding: 0 180px 50px 180px;
+  padding-top: 300px;
+  height: 100%;
+  -webkit-transition: padding-top 2s;
+  transition: padding-top 2s;
+}
+
+.skills ul {
   width: 100%;
-}
-
-.quoteContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 50px;
 }
 
-.quotePhoto {
-  width: 400px;
-  height: auto;
-}
-
-.quotePhoto img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-width: 100%;
-}
-
-.quoteContentContainer {
-  width: 100%;
-  padding-left: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.quoteContentContainer .quoteContent {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.quoteContentContainer .quoteContent .quotePara {
-  width: auto;
-  padding: 5px;
-  font-family: 'Domine', serif;
-  font-size: 2rem;
-  font-weight: normal;
-  color: #e7e7e7;
-  letter-spacing: normal;
-  line-height: 1.6;
+.skills ul li {
+  margin: 0 auto;
+  min-width: 200px;
+  width: 25%;
   text-align: center;
+  margin-bottom: 100px;
 }
 
-.quoteContentContainer .quoteContent .quotation {
-  width: 20px;
-  position: relative;
+.skills ul li ion-icon {
+  font-size: 8rem;
+  color: #878787;
 }
 
-.quoteContentContainer .quoteContent .quotation img {
+.skills ul li img {
   -o-object-fit: contain;
      object-fit: contain;
+  min-width: 80px;
+  width: 20%;
+  padding: 0;
+  margin: 0;
 }
 
-.quoteContentContainer h4 {
-  font-family: 'Domine', serif;
-  font-size: 1.4rem;
+.skills ul li h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
   font-weight: normal;
-  color: #e7e7e7;
+  color: #878787;
   letter-spacing: normal;
   line-height: normal;
   text-align: center;
-  margin-top: 10px;
 }
 
-.quotation.open {
-  top: -10px;
+.skillsTitle {
+  width: 100%;
+  padding: 40px;
 }
 
-.quotation.close {
-  bottom: -30px;
+.skillsTitle h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 5rem;
+  font-weight: normal;
+  color: #191919;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.wrapper.skills.expand {
+  padding-top: 0;
 }
 
 .projects {
@@ -1120,7 +1120,6 @@ section.overview.expand {
   width: 100%;
   height: auto;
   padding: 5% 180px;
-  border: 1px solid fuchsia;
 }
 
 .eduBoxContainer {
@@ -1132,7 +1131,6 @@ section.overview.expand {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid yellow;
 }
 
 .eduBoxContainer .eduBox {
@@ -1147,6 +1145,11 @@ section.overview.expand {
 
 .eduBox:nth-child(2) {
   margin: 0 60px;
+}
+
+.blog {
+  height: 1000px;
+  background-color: white;
 }
 
 html {
