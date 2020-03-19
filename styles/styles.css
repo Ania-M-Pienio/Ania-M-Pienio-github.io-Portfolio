@@ -1010,6 +1010,11 @@ section.overview.expand {
   height: 100%;
 }
 
+.gallery1 .galleryPic a:hover,
+.gallery2 .galleryPic a:hover {
+  opacity: 0.3;
+}
+
 .gallery1 .galleryPic a img,
 .gallery2 .galleryPic a img {
   -webkit-transition: -webkit-transform 1.5s;
@@ -1102,6 +1107,33 @@ section.overview.expand {
 
 .projects .bar.projectBar.expand {
   width: 100%;
+}
+
+.education {
+  height: auto;
+  background-color: #212121;
+}
+
+.wrapper.education {
+  width: 100%;
+  padding: 80px 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.eduBox {
+  width: 500px;
+  height: 200px;
+}
+
+.eduBox img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 html {

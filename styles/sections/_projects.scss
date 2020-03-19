@@ -41,7 +41,9 @@
     display: flex;
     position: relative;
     height: 100%;
-
+    &:hover {
+      opacity: 0.3;
+    }
     img {
       transition: transform 1.5s;
     }
