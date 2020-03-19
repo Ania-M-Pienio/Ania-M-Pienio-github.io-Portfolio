@@ -129,6 +129,8 @@ nav {
   }
 }
 
+
+// SOCIAL ICONS
 .navSocial {
   position: absolute;
   bottom: 100px;
@@ -149,14 +151,9 @@ nav {
   }
 }
 
-// SOCIAL ICONS
+
 .navSocial {
   ul li a {
-    outline: 0;
-    &:focus,
-    &:hover {
-      outline: 0;
-    }
     &:focus ion-icon,
     &:hover ion-icon {
       transform: scale(1.5);

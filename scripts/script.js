@@ -5,6 +5,7 @@ app.sections = {
   overview: {
     el: $("#overview"),
     offset: 50,
+    delay: 1500,
     run: function() {
       $("section.overview").addClass("expand");
       $(".gallery.pic2 .galleryBar").addClass("expand");
@@ -13,6 +14,7 @@ app.sections = {
   skills: {
     el: $("#skills"),
     offset: 130,
+    delay: 1500,
     run: function() {
       $(".skills.wrapper").addClass("expand");
     }
@@ -20,6 +22,7 @@ app.sections = {
   about: {
     el: $("#about"),
     offset: 200,
+    delay: 1500,
     run: function() {
       // console.log("about is not defined");
     }
@@ -27,14 +30,17 @@ app.sections = {
   quote: {
     el: $("#quote"),
     offset: 0,
+    delay: 0,
     run: function() {
       app.animateLogo("quoteLogo");
     }
   },
   projects: {
     el: $("#projects"),
-    offset: 50,
+    offset: -1000,
+    delay: 1000,
     run: function() {
+      $(".projectGallery .galleryPic").addClass("expand");
       $(".projects .bar.projectBar").addClass("expand");
       $(".projectGallery").addClass("expand");
     }
@@ -75,7 +81,6 @@ app.contact = function() {
 /*****************          ANIMATORS         *******************/
 /****************************************************************/
 app.animateLogo = function(location) {
-  console.log("location: ", location);
   // logo antlers expand
   $(`#${location} .logo2`).addClass("expand");
   setTimeout(() => {
@@ -108,6 +113,7 @@ app.listeners = function() {
   app.handleLogo();
   app.handleMenu();
   app.handleWaypoints();
+  app.handleProjects();
 };
 
 app.handleWaypoints = function() {
@@ -144,7 +150,6 @@ app.handleLogo = function() {
     console.log("location id is: ", $(this).attr("id"));
     const id = $(this).attr("id");
     const folder = id === "n" ? "nav" : "quote";
-    // console.log("location is: ", folder);
     $(`#${id} .logo1 img`).attr("src", `assets/${folder}/2.png`);
     $(`#${id} .logo2 img`).attr("src", `assets/${folder}/3.png`);
     $(`#${id} .logo3 img`).attr("src", `assets/${folder}/4.png`);
@@ -161,11 +166,35 @@ app.handleLogo = function() {
     console.log("location id is: ", $(this).attr("id"));
     const id = $(this).attr("id");
     const folder = id === "n" ? "nav" : "quote";
-    // console.log("location is: ", folder);
     $(`#${id} .logo1 img`).attr("src", `assets/${folder}/2.png`);
     $(`#${id} .logo2 img`).attr("src", `assets/${folder}/3.png`);
     $(`#${id} .logo3 img`).attr("src", `assets/${folder}/4.png`);
     $(".logo").blur();
+  });
+};
+
+app.handleProjects = function() {
+  $(".galleryPic a").mouseover(function() {
+    const id = $(this).children()[0].id;
+    const img = id.charAt(1);
+    $(`img#${id}`).attr("src", `assets/projects/hover/${img}.png`);
+  });
+  $(".galleryPic a").focus(function() {
+    const id = $(this).children()[0].id;
+    const img = id.charAt(1);
+    $(`img#${id}`).attr("src", `assets/projects/hover/${img}.png`);
+  });
+
+  $(".galleryPic a").blur(function() {
+    const id = $(this).children()[0].id;
+    const img = id.charAt(1);
+    $(`img#${id}`).attr("src", `assets/projects/${img}.png`);
+  });
+  $(".galleryPic a").mouseleave(function() {
+    const id = $(this).children()[0].id;
+    const img = id.charAt(1);
+    $(`img#${id}`).attr("src", `assets/projects/${img}.png`);
+    $(".galleryPic a").blur();
   });
 };
 
@@ -204,7 +233,7 @@ app.scrollToElem = function(id) {
     {
       scrollTop: $(`#${id}`).offset().top - app.sections[id].offset
     },
-    1500
+    app.sections[id].delay
   );
 };
 

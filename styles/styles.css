@@ -539,14 +539,6 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0);
 }
 
-.navSocial ul li a {
-  outline: 0;
-}
-
-.navSocial ul li a:focus, .navSocial ul li a:hover {
-  outline: 0;
-}
-
 .navSocial ul li a:focus ion-icon,
 .navSocial ul li a:hover ion-icon {
   -webkit-transform: scale(1.5);
@@ -957,12 +949,12 @@ section.overview.expand {
 }
 
 .projects {
-  height: 1200px;
+  height: 1300px;
   background-color: #e7e7e7;
 }
 
 .wrapper.projects {
-  padding: 80px 80px;
+  padding: 60px 80px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1009,14 +1001,25 @@ section.overview.expand {
   padding: 15px;
 }
 
-.gallery1 .galleryPic button,
-.gallery2 .galleryPic button {
+.gallery1 .galleryPic a,
+.gallery2 .galleryPic a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
-  height: auto;
+  height: 100%;
 }
 
-.gallery1 .galleryPic button h3,
-.gallery2 .galleryPic button h3 {
+.gallery1 .galleryPic a img,
+.gallery2 .galleryPic a img {
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
+}
+
+.gallery1 .galleryPic a h3,
+.gallery2 .galleryPic a h3 {
   text-transform: uppercase;
   position: absolute;
   font-family: "Oswald", sans-serif;
@@ -1028,12 +1031,12 @@ section.overview.expand {
   text-align: left;
 }
 
-.gallery1 .galleryPic button h3 {
+.gallery1 .galleryPic h3 {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 
-.gallery2 .galleryPic button h3 {
+.gallery2 .galleryPic h3 {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -1146,4 +1149,13 @@ ul {
 p {
   padding: 0;
   margin: 0;
+}
+
+a {
+  cursor: pointer;
+  outline: 0;
+}
+
+a:focus, a:hover {
+  outline: 0;
 }

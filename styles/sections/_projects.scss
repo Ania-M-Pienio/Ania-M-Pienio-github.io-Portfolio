@@ -1,10 +1,10 @@
 .projects {
-  height: 1200px;
+  height: 1300px;
   background-color: $grey2;
 }
 
 .wrapper.projects {
-  padding: 80px 80px;
+  padding: 60px 80px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -37,9 +37,14 @@
 .gallery1 .galleryPic,
 .gallery2 .galleryPic {
   padding: 15px;
-  button {
+  a {
+    display: flex;
     position: relative;
-    height: auto;
+    height: 100%;
+
+    img {
+      transition: transform 1.5s;
+    }
     h3 {
       text-transform: uppercase;
       position: absolute;
@@ -48,11 +53,11 @@
   }
 }
 
-.gallery1 .galleryPic button h3 {
+.gallery1 .galleryPic h3 {
   transform: rotate(-90deg);
 }
 
-.gallery2 .galleryPic button h3 {
+.gallery2 .galleryPic h3 {
   transform: rotate(90deg);
 }
 
