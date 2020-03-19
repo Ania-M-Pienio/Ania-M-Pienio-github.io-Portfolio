@@ -36,11 +36,12 @@
 
 .gallery1 .galleryPic,
 .gallery2 .galleryPic {
-  padding: 15px;
+  margin: 20px;
+   background-color: white;
   a {
     display: flex;
     position: relative;
-    height: 100%;
+    height: 100%;   
     &:hover {
       opacity: 0.3;
     }
