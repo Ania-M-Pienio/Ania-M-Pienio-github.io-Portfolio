@@ -30,8 +30,15 @@ app.sections = {
     run: function() {
       app.animateLogo("quoteLogo");
     }
+  },
+  projects: {
+    el: $("#projects"),
+    offset: 50,
+    run: function() {
+      $(".projects .bar.projectBar").addClass("expand");
+      $(".projectGallery").addClass("expand");
+    }
   }
-  // projects: { el: $("#projects"), run: app.projects },
   // education: { el: $("#education"), run: app.education },
   // blog: { el: $("#blog"), run: app.blog },
   // contact: { el: $("#contact"), run: app.contact }

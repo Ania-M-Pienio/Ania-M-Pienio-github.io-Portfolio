@@ -1,0 +1,110 @@
+.projects {
+  height: 1200px;
+  background-color: $grey2;
+}
+
+.wrapper.projects {
+  padding: 80px 80px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.projectGallery {
+  width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.gallery1 {
+  margin-top: 100px;
+  transition: margin-top 1.5s;
+}
+
+.gallery1.expand {
+  margin-top: 0;
+}
+
+.gallery2 {
+  margin-bottom: -100px;
+  transition: margin-bottom 1.5s;
+}
+
+.gallery2.expand {
+  margin-bottom: 0;
+}
+
+.gallery1 .galleryPic,
+.gallery2 .galleryPic {
+  padding: 15px;
+  button {
+    position: relative;
+    height: auto;
+    h3 {
+      text-transform: uppercase;
+      position: absolute;
+      @include Ossie(2rem, normal, lighten($charcoal, 20), 1.5, normal, left);
+    }
+  }
+}
+
+.gallery1 .galleryPic button h3 {
+  transform: rotate(-90deg);
+}
+
+.gallery2 .galleryPic button h3 {
+  transform: rotate(90deg);
+}
+
+.gallery1 .pic1 h3 {
+  bottom: 65px;
+  left: -92px;
+}
+
+.gallery1 .pic2 h3 {
+  bottom: 85px;
+  left: -115px;
+}
+
+.gallery2 .pic1 h3 {
+  top: 65px;
+  right: -95px;
+}
+
+.gallery2 .pic2 h3 {
+  top: 85px;
+  right: -118px;
+}
+
+.projectGallery.gallery1 {
+  justify-content: flex-start;
+  .galleryPic.pic2 {
+    width: 300px;
+    align-self: flex-end;
+  }
+}
+
+.projectGallery.gallery2 {
+  justify-content: flex-end;
+  position: relative;
+  .splashTitle {
+    top: -10px;
+  }
+  .galleryPic.pic1 {
+    width: 300px;
+    align-self: flex-start;
+  }
+}
+
+.projects .bar.projectBar {
+  height: 5px;
+  width: 0;
+  margin: 0;
+  background-color: $font;
+  border-radius: 5px;
+  transition: width 2s;
+}
+
+.projects .bar.projectBar.expand {
+  width: 100%;
+}

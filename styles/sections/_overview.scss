@@ -12,7 +12,7 @@ section.overview {
 }
 
 section.overview.expand {
-  margin-top: -50px;
+  margin-top: -150px;
 }
 
 .overGallery {
@@ -72,11 +72,11 @@ section.overview.expand {
   width: 100%;
 }
 
-.overTitle {
+.splashTitle {
   position: absolute;
   top: 500px;
   left: 0;
   h1 {
-    @include Monti(15rem, normal, darken($tint, 2), normal, normal, left);
+    @include Monti(15rem, normal, $tint, normal, normal, left);
   }
 }

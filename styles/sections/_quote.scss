@@ -5,7 +5,7 @@
 }
 
 .wrapper.quote {
-  padding: 60px 80px 40px 80px;
+  padding: 80px 80px;
   height: auto;
   width: 100%;
 }
@@ -16,7 +16,7 @@
 }
 
 .quotePhoto {
-  width: 900px;
+  width: 400px;
   height: auto;
   img {
     object-fit: cover;
@@ -25,37 +25,39 @@
 }
 
 .quoteContentContainer {
+  width: 100%;
   padding-left: 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  // .quoteLogoContainer {  logo  }
+  // .quoteLogoContainer {  logo  } see _logo.scss
   .quoteContent {
     width: 100%;
-    p {
+    display: flex;
+    justify-content: center;
+    .quotePara {
+      width: auto;
+      padding: 5px;
+      @include Domi(2rem, normal, $grey2, normal, 1.6, center);
+    }
+    .quotation {
+      width: 20px;
       position: relative;
-      margin-left: 20px;
-      @include Domi(2rem, normal, $grey2, normal, 1.6, left);
-      span {
-        position: absolute;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        img {
-          object-fit: cover;
-        }
+      img {
+        object-fit: contain;
       }
     }
   }
+  h4 {
+    @include Domi(1.4rem, normal, $grey2, normal, normal, center);
+    margin-top: 10px;
+  }
 }
 
-span.open {
+.quotation.open {
   top: -10px;
-  left: -20px;
-  padding-right: 5px;
 }
 
-span.close {
-  bottom: -5px;
-  padding-left: 5px;
+.quotation.close {
+  bottom: -30px;
 }

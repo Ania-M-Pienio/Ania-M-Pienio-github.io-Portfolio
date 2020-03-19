@@ -317,9 +317,9 @@ input::-moz-focus-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100px;
 }
 
@@ -573,7 +573,7 @@ section.overview {
 }
 
 section.overview.expand {
-  margin-top: -50px;
+  margin-top: -150px;
 }
 
 .overGallery {
@@ -655,17 +655,17 @@ section.overview.expand {
   width: 100%;
 }
 
-.overTitle {
+.splashTitle {
   position: absolute;
   top: 500px;
   left: 0;
 }
 
-.overTitle h1 {
+.splashTitle h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 15rem;
   font-weight: normal;
-  color: #f3f3f3;
+  color: #f8f8f8;
   letter-spacing: normal;
   line-height: normal;
   text-align: left;
@@ -680,8 +680,8 @@ section.overview.expand {
   padding: 0 180px 50px 180px;
   padding-top: 300px;
   height: 100%;
-  -webkit-transition: padding-top 1.5s;
-  transition: padding-top 1.5s;
+  -webkit-transition: padding-top 2s;
+  transition: padding-top 2s;
 }
 
 .skills ul {
@@ -865,7 +865,7 @@ section.overview.expand {
 }
 
 .wrapper.quote {
-  padding: 60px 80px 40px 80px;
+  padding: 80px 80px;
   height: auto;
   width: 100%;
 }
@@ -880,7 +880,7 @@ section.overview.expand {
 }
 
 .quotePhoto {
-  width: 900px;
+  width: 400px;
   height: auto;
 }
 
@@ -891,6 +891,7 @@ section.overview.expand {
 }
 
 .quoteContentContainer {
+  width: 100%;
   padding-left: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -906,41 +907,198 @@ section.overview.expand {
 
 .quoteContentContainer .quoteContent {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.quoteContentContainer .quoteContent p {
-  position: relative;
-  margin-left: 20px;
+.quoteContentContainer .quoteContent .quotePara {
+  width: auto;
+  padding: 5px;
   font-family: 'Domine', serif;
   font-size: 2rem;
   font-weight: normal;
   color: #e7e7e7;
   letter-spacing: normal;
   line-height: 1.6;
+  text-align: center;
+}
+
+.quoteContentContainer .quoteContent .quotation {
+  width: 20px;
+  position: relative;
+}
+
+.quoteContentContainer .quoteContent .quotation img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.quoteContentContainer h4 {
+  font-family: 'Domine', serif;
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #e7e7e7;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.quotation.open {
+  top: -10px;
+}
+
+.quotation.close {
+  bottom: -30px;
+}
+
+.projects {
+  height: 1200px;
+  background-color: #e7e7e7;
+}
+
+.wrapper.projects {
+  padding: 80px 80px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projectGallery {
+  width: 500px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.gallery1 {
+  margin-top: 100px;
+  -webkit-transition: margin-top 1.5s;
+  transition: margin-top 1.5s;
+}
+
+.gallery1.expand {
+  margin-top: 0;
+}
+
+.gallery2 {
+  margin-bottom: -100px;
+  -webkit-transition: margin-bottom 1.5s;
+  transition: margin-bottom 1.5s;
+}
+
+.gallery2.expand {
+  margin-bottom: 0;
+}
+
+.gallery1 .galleryPic,
+.gallery2 .galleryPic {
+  padding: 15px;
+}
+
+.gallery1 .galleryPic button,
+.gallery2 .galleryPic button {
+  position: relative;
+  height: auto;
+}
+
+.gallery1 .galleryPic button h3,
+.gallery2 .galleryPic button h3 {
+  text-transform: uppercase;
+  position: absolute;
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #545454;
+  letter-spacing: 1.5;
+  line-height: normal;
   text-align: left;
 }
 
-.quoteContentContainer .quoteContent p span {
-  position: absolute;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
+.gallery1 .galleryPic button h3 {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
-.quoteContentContainer .quoteContent p span img {
-  -o-object-fit: cover;
-     object-fit: cover;
+.gallery2 .galleryPic button h3 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
-span.open {
+.gallery1 .pic1 h3 {
+  bottom: 65px;
+  left: -92px;
+}
+
+.gallery1 .pic2 h3 {
+  bottom: 85px;
+  left: -115px;
+}
+
+.gallery2 .pic1 h3 {
+  top: 65px;
+  right: -95px;
+}
+
+.gallery2 .pic2 h3 {
+  top: 85px;
+  right: -118px;
+}
+
+.projectGallery.gallery1 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.projectGallery.gallery1 .galleryPic.pic2 {
+  width: 300px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.projectGallery.gallery2 {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+}
+
+.projectGallery.gallery2 .splashTitle {
   top: -10px;
-  left: -20px;
-  padding-right: 5px;
 }
 
-span.close {
-  bottom: -5px;
-  padding-left: 5px;
+.projectGallery.gallery2 .galleryPic.pic1 {
+  width: 300px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.projects .bar.projectBar {
+  height: 5px;
+  width: 0;
+  margin: 0;
+  background-color: #191919;
+  border-radius: 5px;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+.projects .bar.projectBar.expand {
+  width: 100%;
 }
 
 html {
