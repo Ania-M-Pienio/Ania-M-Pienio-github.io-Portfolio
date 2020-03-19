@@ -40,19 +40,26 @@
 
 .gallery1 .galleryPic,
 .gallery2 .galleryPic {
-  margin: 20px;
+  margin: 30px;
   background-color: white;
+  box-shadow: 2px 2px 10px 1px black;
   a {
     display: flex;
     position: relative;
     height: 100%;
-    &:hover {
-      opacity: 0.3;
+    &:hover img,
+    &:focus img {
+      opacity: 0.25;
+      transform: scale(1.15);
+      border-left: 5px solid white;
     }
+
     img {
       transition: transform 1.5s;
     }
+
     h3 {
+      transition: transform 1.5s;
       text-transform: uppercase;
       position: absolute;
       @include Ossie(2.5rem, bold, $grey2, 1.5, normal, left);
@@ -101,6 +108,7 @@
   position: relative;
   .splashTitle {
     top: 150px;
+    left: 10px;
   }
   .galleryPic.pic1 {
     width: 300px;
@@ -109,10 +117,10 @@
 }
 
 .projects .bar.projectBar {
-  height: 5px;
+  height: 10px;
   width: 0;
   margin: 0;
-  background-color: $font;
+  background-color: lighten($charcoal, 30);
   transition: width 2s;
 }
 

@@ -668,6 +668,7 @@ section.overview.expand {
   background-color: #212121;
   height: auto;
   min-height: 400px;
+  margin-top: 200px;
 }
 
 .wrapper.quote {
@@ -1004,8 +1005,10 @@ section.overview.expand {
 
 .gallery1 .galleryPic,
 .gallery2 .galleryPic {
-  margin: 20px;
+  margin: 30px;
   background-color: white;
+  -webkit-box-shadow: 2px 2px 10px 1px black;
+          box-shadow: 2px 2px 10px 1px black;
 }
 
 .gallery1 .galleryPic a,
@@ -1017,9 +1020,14 @@ section.overview.expand {
   height: 100%;
 }
 
-.gallery1 .galleryPic a:hover,
-.gallery2 .galleryPic a:hover {
-  opacity: 0.3;
+.gallery1 .galleryPic a:hover img,
+.gallery1 .galleryPic a:focus img,
+.gallery2 .galleryPic a:hover img,
+.gallery2 .galleryPic a:focus img {
+  opacity: 0.25;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  border-left: 5px solid white;
 }
 
 .gallery1 .galleryPic a img,
@@ -1032,6 +1040,10 @@ section.overview.expand {
 
 .gallery1 .galleryPic a h3,
 .gallery2 .galleryPic a h3 {
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
   text-transform: uppercase;
   position: absolute;
   font-family: "Oswald", sans-serif;
@@ -1094,6 +1106,7 @@ section.overview.expand {
 
 .projectGallery.gallery2 .splashTitle {
   top: 150px;
+  left: 10px;
 }
 
 .projectGallery.gallery2 .galleryPic.pic1 {
@@ -1103,10 +1116,10 @@ section.overview.expand {
 }
 
 .projects .bar.projectBar {
-  height: 5px;
+  height: 10px;
   width: 0;
   margin: 0;
-  background-color: #191919;
+  background-color: #6e6e6e;
   -webkit-transition: width 2s;
   transition: width 2s;
 }

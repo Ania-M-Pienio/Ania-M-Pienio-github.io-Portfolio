@@ -37,7 +37,7 @@ app.sections = {
   },
   projects: {
     el: $("#projects"),
-    offset: 350,
+    offset: 400,
     delay: 400,
     run: function() {
       $(".projectGallery .galleryPic").addClass("expand");
