@@ -1,6 +1,10 @@
 .projects {
-  height: 1300px;
-  background-color: $grey2;
+  height: 1350px;
+  background-image: url(../assets/projects/strip.png);
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  box-shadow: 0px 5px 20px black inset;
 }
 
 .wrapper.projects {
@@ -37,11 +41,11 @@
 .gallery1 .galleryPic,
 .gallery2 .galleryPic {
   margin: 20px;
-   background-color: white;
+  background-color: white;
   a {
     display: flex;
     position: relative;
-    height: 100%;   
+    height: 100%;
     &:hover {
       opacity: 0.3;
     }
@@ -51,7 +55,7 @@
     h3 {
       text-transform: uppercase;
       position: absolute;
-      @include Ossie(2rem, normal, lighten($charcoal, 20), 1.5, normal, left);
+      @include Ossie(2.5rem, bold, $grey2, 1.5, normal, left);
     }
   }
 }
@@ -65,23 +69,23 @@
 }
 
 .gallery1 .pic1 h3 {
-  bottom: 65px;
-  left: -92px;
+  bottom: 80px;
+  left: -120px;
 }
 
 .gallery1 .pic2 h3 {
-  bottom: 85px;
-  left: -115px;
+  bottom: 110px;
+  left: -150px;
 }
 
 .gallery2 .pic1 h3 {
-  top: 65px;
-  right: -95px;
+  top: 80px;
+  right: -120px;
 }
 
 .gallery2 .pic2 h3 {
-  top: 85px;
-  right: -118px;
+  top: 110px;
+  right: -150px;
 }
 
 .projectGallery.gallery1 {
@@ -109,7 +113,6 @@
   width: 0;
   margin: 0;
   background-color: $font;
-  border-radius: 5px;
   transition: width 2s;
 }
 

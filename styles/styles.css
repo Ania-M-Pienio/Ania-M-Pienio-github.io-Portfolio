@@ -950,8 +950,13 @@ section.overview.expand {
 }
 
 .projects {
-  height: 1300px;
-  background-color: #e7e7e7;
+  height: 1350px;
+  background-image: url(../assets/projects/strip.png);
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 5px 20px black inset;
+          box-shadow: 0px 5px 20px black inset;
 }
 
 .wrapper.projects {
@@ -1030,9 +1035,9 @@ section.overview.expand {
   text-transform: uppercase;
   position: absolute;
   font-family: "Oswald", sans-serif;
-  font-size: 2rem;
-  font-weight: normal;
-  color: #545454;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #e7e7e7;
   letter-spacing: 1.5;
   line-height: normal;
   text-align: left;
@@ -1049,23 +1054,23 @@ section.overview.expand {
 }
 
 .gallery1 .pic1 h3 {
-  bottom: 65px;
-  left: -92px;
+  bottom: 80px;
+  left: -120px;
 }
 
 .gallery1 .pic2 h3 {
-  bottom: 85px;
-  left: -115px;
+  bottom: 110px;
+  left: -150px;
 }
 
 .gallery2 .pic1 h3 {
-  top: 65px;
-  right: -95px;
+  top: 80px;
+  right: -120px;
 }
 
 .gallery2 .pic2 h3 {
-  top: 85px;
-  right: -118px;
+  top: 110px;
+  right: -150px;
 }
 
 .projectGallery.gallery1 {
@@ -1102,7 +1107,6 @@ section.overview.expand {
   width: 0;
   margin: 0;
   background-color: #191919;
-  border-radius: 5px;
   -webkit-transition: width 2s;
   transition: width 2s;
 }
