@@ -13,7 +13,7 @@ app.sections = {
   },
   skills: {
     el: $("#skills"),
-    offset: 130,
+    offset: 30,
     delay: 1500,
     run: function() {
       $(".skills.wrapper").addClass("expand");
@@ -21,7 +21,7 @@ app.sections = {
   },
   about: {
     el: $("#about"),
-    offset: 200,
+    offset: 10,
     delay: 1500,
     run: function() {
       // console.log("about is not defined");
@@ -37,7 +37,7 @@ app.sections = {
   },
   projects: {
     el: $("#projects"),
-    offset: 450,
+    offset: 350,
     delay: 1000,
     run: function() {
       $(".projectGallery .galleryPic").addClass("expand");
