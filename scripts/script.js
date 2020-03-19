@@ -48,7 +48,7 @@ app.sections = {
   },
   blog: {
     el: $("#blog"),
-    offset: -500,
+    offset: 200,
     delay: 1000,
     run: function() {
       console.log("blog");
@@ -60,29 +60,7 @@ app.sections = {
 app.logo = $("#navLogo");
 app.currentWaypoint = app.sections.$logo;
 
-app.about = function() {
-  console.log("about");
-};
 
-app.quote = function() {
-  console.log("quote");
-};
-
-app.projects = function() {
-  console.log("projects");
-};
-
-app.education = function() {
-  console.log("education");
-};
-
-app.blog = function() {
-  console.log("blog");
-};
-
-app.contact = function() {
-  console.log("contact");
-};
 
 /****************************************************************/
 /*****************          ANIMATORS         *******************/
