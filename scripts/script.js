@@ -45,9 +45,15 @@ app.sections = {
       $(".projectGallery").addClass("expand");
       $(".themeStrip").addClass("expand");
     }
+  },
+  blog: {
+    el: $("#blog"),
+    offset: -500,
+    delay: 1000,
+    run: function() {
+      console.log("blog");
+    }
   }
-  // education: { el: $("#education"), run: app.education },
-  // blog: { el: $("#blog"), run: app.blog },
   // contact: { el: $("#contact"), run: app.contact }
 };
 
