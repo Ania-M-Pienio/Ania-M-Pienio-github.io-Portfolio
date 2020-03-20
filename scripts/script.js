@@ -40,10 +40,7 @@ app.sections = {
     offset: 300,
     delay: 400,
     run: function() {
-      $(".projectGallery .galleryPic").addClass("expand");
-      $(".projects .bar.projectBar").addClass("expand");
       $(".projectGallery").addClass("expand");
-      $(".themeStrip").addClass("expand");
     }
   },
   blog: {
