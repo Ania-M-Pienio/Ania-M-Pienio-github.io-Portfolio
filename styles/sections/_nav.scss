@@ -20,7 +20,6 @@ nav {
   padding-top: 30px;
 }
 
-
 // MENU
 .navMenu {
   position: absolute;
@@ -129,7 +128,6 @@ nav {
   }
 }
 
-
 // SOCIAL ICONS
 .navSocial {
   position: absolute;
@@ -141,7 +139,6 @@ nav {
       margin-right: 30px;
       padding-top: 80px;
       ion-icon {
-        
         font-size: 3rem;
         color: $font;
         transition: transform 1.5s, color 1s;
@@ -150,7 +147,6 @@ nav {
     }
   }
 }
-
 
 .navSocial {
   ul li a {
@@ -161,3 +157,4 @@ nav {
     }
   }
 }
+
