@@ -48,10 +48,10 @@ app.sections = {
   },
   blog: {
     el: $("#blog"),
-    offset: 200,
-    delay: 1000,
+    offset: 180,
+    delay: 500,
     run: function() {
-      console.log("blog");
+      $(".blogBar").addClass("expand");
     }
   }
   // contact: { el: $("#contact"), run: app.contact }

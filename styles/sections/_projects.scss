@@ -40,7 +40,7 @@
 
 .gallery1 .galleryPic,
 .gallery2 .galleryPic {
-  margin: 30px;
+  margin: 20px;
   background-color: white;
   box-shadow: 2px 2px 10px 1px black;
   a {
@@ -96,7 +96,7 @@
 .projectGallery.gallery1 {
   justify-content: flex-start;
   .galleryPic.pic2 {
-    width: 300px;
+    width: 270px;
     align-self: flex-end;
   }
 }
@@ -109,7 +109,7 @@
     left: 10px;
   }
   .galleryPic.pic1 {
-    width: 300px;
+    width: 400px;
     align-self: flex-start;
     img {
       border-top: none;
@@ -130,10 +130,12 @@
 }
 
 .theme {
-  width: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
   .themeImage {
-    width: 90%;
-    padding: 30px;
+    width: 75%;
+    padding: 20px;
     img {
       object-fit: contain;
       box-shadow: 2px 2px 10px 1px black;

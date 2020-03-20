@@ -65,6 +65,8 @@ p {
 }
 
 a {
+  text-emphasis: none;
+  text-decoration: none;
   cursor: pointer;
   outline: 0;
   &:focus,
