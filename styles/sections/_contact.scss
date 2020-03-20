@@ -1,12 +1,13 @@
 .contact {
   width: 100%;
-  height: 400px;
+  height: auto;
   background-color: $charcoal;
+  position: relative;
 }
 
 .wrapper.contact {
   width: 100%;
-  padding: 60px 80px 40px;
+  padding: 60px 80px 60px;
   display: flex;
   justify-content: space-between;
 }
@@ -22,7 +23,7 @@
   }
   ul {
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 30px;
     padding-left: 2%;
     @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
     li {
@@ -31,3 +32,22 @@
   }
 }
 
+.contactContainer li {
+  button {
+    color: $tint;
+    &:focus ion-icon,
+    &:hover ion-icon {
+      transform: scale(1.5);
+    }
+    ion-icon {
+      transition: transform 0.5s;
+      margin-right: 10px;
+      color: $tint;
+    }
+  }
+}
+
+.contact textarea {
+  position: absolute;
+  left: -2000px;
+}

@@ -877,7 +877,7 @@ section.overview.expand {
 }
 
 .skills .wrapper {
-  padding: 0 180px 150px 180px;
+  padding: 0 180px 100px 180px;
   padding-top: 300px;
   height: 100%;
   -webkit-transition: padding-top 2s;
@@ -968,7 +968,7 @@ section.overview.expand {
 }
 
 .wrapper.projects {
-  padding: 150px 80px 100px;
+  padding: 100px 80px;
   height: 100%;
 }
 
@@ -981,11 +981,11 @@ section.overview.expand {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
   margin-top: 300px;
   -webkit-transition: margin-top 2s;
   transition: margin-top 2s;
@@ -995,15 +995,103 @@ section.overview.expand {
   margin-top: 100px;
 }
 
-.projectGallery .galleryPic:nth-child(3),
-.projectGallery .galleryPic:nth-child(4) {
-  margin-top: 8%;
+.galleryPic {
+  width: 280px;
+  height: 280px;
+  margin: 30px;
+  margin-top: 90px;
+  position: relative;
+  background-color: #f8f8f8;
+  -webkit-box-shadow: 2px 2px 10px 1px black;
+          box-shadow: 2px 2px 10px 1px black;
+  z-index: 2000;
+}
+
+.galleryPic .hover:hover .picture,
+.galleryPic .hover:focus .picture {
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.galleryPic .hover:hover .title,
+.galleryPic .hover:focus .title {
+  color: #6e6e6e;
+  margin-left: -15px;
+}
+
+.galleryPic .hover:hover .title span,
+.galleryPic .hover:focus .title span {
+  visibility: hidden;
+}
+
+.galleryPic .hover:hover .projectDetails,
+.galleryPic .hover:focus .projectDetails {
+  z-index: 1000;
+  background: radial-gradient(rgba(255, 255, 255, 0), #f8f8f8, #f8f8f8);
+  -webkit-box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.555);
+          box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.555);
+}
+
+.galleryPic .hover:hover .projectDetails .underline,
+.galleryPic .hover:focus .projectDetails .underline {
+  width: 100%;
+}
+
+.galleryPic .hover:hover .projectDetails ul,
+.galleryPic .hover:focus .projectDetails ul {
+  margin-left: 0;
+  z-index: 7000;
+}
+
+.galleryPic .hover:hover .projectDetails .view,
+.galleryPic .hover:focus .projectDetails .view {
+  margin-left: 0;
+  visibility: visible;
+}
+
+.galleryPic .hover .picture {
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
+  border: 5px solid #7f6b53;
+  position: relative;
+  z-index: 2000;
+}
+
+.galleryPic .hover .title {
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  text-transform: uppercase;
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.7rem;
+  font-weight: bold;
+  color: #e7e7e7;
+  letter-spacing: 1.5;
+  line-height: normal;
+  text-align: left;
+  z-index: 6000;
+}
+
+.galleryPic .hover .title span {
+  padding-right: 10px;
+}
+
+.galleryPic .hover .title span ion-icon {
+  font-size: 5rem;
+  position: relative;
+  top: 10px;
 }
 
 .projectDetails {
+  cursor: default;
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 130%;
+  width: 110%;
+  padding-top: 40px;
   background-color: #fcfcfc00;
   z-index: 1000;
   top: -40px;
@@ -1013,28 +1101,37 @@ section.overview.expand {
 }
 
 .projectDetails .underline {
-  margin-top: 40px;
   height: 4px;
-  background-color: #6e6e6e;
+  background-color: #878787;
   width: 0;
   -webkit-transition: width 1.5s;
   transition: width 1.5s;
 }
 
 .projectDetails ul {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  height: 100%;
+  height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 10%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
   margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  -webkit-transition: margin-left 1.5s;
+  transition: margin-left 1.5s;
 }
 
 .projectDetails ul li {
-  width: 25%;
+  width: 75px;
   height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1045,12 +1142,13 @@ section.overview.expand {
           flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center;
+  margin: 10px;
 }
 
 .projectDetails ul li ion-icon {
-  width: 40px;
+  width: 100%;
   height: 40px;
-  color: #a1a1a1;
+  color: #bababa;
   font-size: 5.1rem;
 }
 
@@ -1058,6 +1156,9 @@ section.overview.expand {
   border: none;
   width: 35px;
   height: 35px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .projectDetails ul li h4 {
@@ -1068,73 +1169,43 @@ section.overview.expand {
   font-family: "Oswald", sans-serif;
   font-size: 1.6rem;
   font-weight: normal;
-  color: #6e6e6e;
+  color: #a1a1a1;
   letter-spacing: normal;
   line-height: normal;
   text-align: center;
 }
 
-.galleryPic {
+.projectDetails .view {
   position: relative;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 28%;
-  background-color: #f8f8f8;
-  -webkit-box-shadow: 2px 2px 10px 1px black;
-          box-shadow: 2px 2px 10px 1px black;
-  z-index: 2000;
-}
-
-.galleryPic a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
-.galleryPic a:hover img,
-.galleryPic a:focus img {
-  opacity: 0.25;
-}
-
-.galleryPic a:hover h3,
-.galleryPic a:focus h3 {
-  color: #6e6e6e;
-}
-
-.galleryPic a:hover .projectDetails,
-.galleryPic a:focus .projectDetails {
-  z-index: 1000;
-  background-color: #fcfcfcf1;
-}
-
-.galleryPic a:hover .projectDetails .underline,
-.galleryPic a:focus .projectDetails .underline {
+  z-index: 1;
   width: 100%;
+  text-align: left;
+  margin-left: 60px;
+  margin-top: 5px;
+  -webkit-transition: margin-left 1.5s;
+  transition: margin-left 1.5s;
+  visibility: hidden;
 }
 
-.galleryPic a img {
-  -webkit-transition: -webkit-transform 1.5s;
-  transition: -webkit-transform 1.5s;
-  transition: transform 1.5s;
-  transition: transform 1.5s, -webkit-transform 1.5s;
-  border: 5px solid #7f6b53;
-}
-
-.galleryPic a h3 {
-  -webkit-transition: color 1.5s;
-  transition: color 1.5s;
-  text-transform: uppercase;
-  position: absolute;
-  top: -40px;
+.projectDetails .view a {
   font-family: "Oswald", sans-serif;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #e7e7e7;
-  letter-spacing: 1.5;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #212121;
+  letter-spacing: normal;
   line-height: normal;
   text-align: left;
-  z-index: 6000;
+  text-transform: uppercase;
+  width: 200px;
+  -webkit-transition: -webkit-text-decoration 1.5s;
+  transition: -webkit-text-decoration 1.5s;
+  transition: text-decoration 1.5s;
+  transition: text-decoration 1.5s, -webkit-text-decoration 1.5s;
+  padding-left: 30px;
+}
+
+.projectDetails .view a:hover, .projectDetails .view a:focus {
+  text-decoration: underline;
 }
 
 .projects .bar.projectBar {
@@ -1320,13 +1391,14 @@ section.overview.expand {
 
 .contact {
   width: 100%;
-  height: 400px;
+  height: auto;
   background-color: #212121;
+  position: relative;
 }
 
 .wrapper.contact {
   width: 100%;
-  padding: 60px 80px 40px;
+  padding: 60px 80px 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1360,7 +1432,7 @@ section.overview.expand {
 
 .container ul {
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 30px;
   padding-left: 2%;
   font-family: 'Domine', serif;
   font-size: 1.8rem;
@@ -1373,6 +1445,30 @@ section.overview.expand {
 
 .container ul li {
   margin-top: 10px;
+}
+
+.contactContainer li button {
+  color: #f8f8f8;
+}
+
+.contactContainer li button:focus ion-icon,
+.contactContainer li button:hover ion-icon {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.contactContainer li button ion-icon {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  margin-right: 10px;
+  color: #f8f8f8;
+}
+
+.contact textarea {
+  position: absolute;
+  left: -2000px;
 }
 
 html {

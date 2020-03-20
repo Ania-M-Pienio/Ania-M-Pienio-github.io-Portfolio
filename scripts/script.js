@@ -53,10 +53,10 @@ app.sections = {
   },
   contact: {
     el: $("#contact"),
-    offset: -1000,
-    delay: 200,
+    offset: 0,
+    delay: 2000,
     run: function() {
-      console.log("hello");
+      // console.log("hello");
     }
   }
 };
@@ -101,6 +101,7 @@ app.listeners = function() {
   app.handleMenu();
   app.handleWaypoints();
   app.handleProjects();
+  app.handleContacts();
 };
 
 app.handleWaypoints = function() {
@@ -210,6 +211,13 @@ app.handleMenu = function() {
   });
 };
 
+app.handleContacts = function() {
+  $(".emailCopy").on("click", function() {
+    console.log("clicked copy email");
+    app.copyEmail();
+  });
+}
+
 /****************************************************************/
 /*****************           HELPERS          *******************/
 /****************************************************************/
@@ -222,6 +230,13 @@ app.scrollToElem = function(id) {
     },
     app.sections[id].delay
   );
+};
+
+app.copyEmail = function() {
+  const copyEmail = document.getElementById("email");
+  copyEmail.select();
+  copyEmail.setSelectionRange(0, 99999);
+  document.execCommand("copy");
 };
 
 /****************************************************************/

@@ -15,19 +15,18 @@
 }
 
 .wrapper.projects {
-  padding: 150px 80px 100px;
+  padding: 100px 80px;
   height: 100%;
 }
 
-.projectGallery {
-  // ul
+.projectGallery {  // ul main
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+  justify-content: space-evenly;
+  align-content: space-between;
   margin-top: 300px;
   transition: margin-top 2s;
 }
@@ -36,111 +35,168 @@
   margin-top: 100px;
 }
 
-.projectGallery .galleryPic:nth-child(3),
-.projectGallery .galleryPic:nth-child(4) {
-  margin-top: 8%;
+
+
+.galleryPic {
+  // li
+  width: 280px;
+  height: 280px;
+  margin: 30px;
+  margin-top: 90px;
+  position: relative;
+  background-color: $tint;
+  box-shadow: 2px 2px 10px 1px black;
+  z-index: 2000;
+  .hover {
+    // display: flex;
+    // position: relative;
+    
+    &:hover .picture,
+    &:focus .picture {
+      opacity: 0.25;
+      z-index: 0;
+    }
+    &:hover .title,
+    &:focus .title {
+      color: lighten($charcoal, 30);
+      margin-left: -15px;
+      span {
+        visibility: hidden;
+      }
+    }
+    &:hover .projectDetails,
+    &:focus .projectDetails {
+      z-index: 1000;
+      background: radial-gradient(rgba(255, 255, 255, 0), $tint, $tint);
+      box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.555);
+      .underline {
+        width: 100%;
+      }
+      ul {
+        margin-left: 0;
+        z-index: 7000;
+      }
+      .view {
+        margin-left: 0;
+        visibility: visible;
+      }
+    }
+    .picture {
+      transition: transform 1.5s;
+      border: 5px solid #7f6b53;
+      position: relative;
+      z-index: 2000;
+    }
+    .title {
+      transition: all 1.5s;
+      text-transform: uppercase;
+      position: absolute;
+      top: -60px;
+      left: -60px;
+      @include Ossie(2.7rem, bold, $grey2, 1.5, normal, left);
+      z-index: 6000;
+      span {
+        padding-right: 10px;
+        ion-icon {
+          font-size: 5rem;
+          position: relative;
+          top: 10px;
+        }
+      }
+    }
+  }
 }
 
+
+
+
 .projectDetails {
+  cursor: default;
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 130%;
+  width: 110%;
+  padding-top: 40px;
   background-color: #fcfcfc00;
   z-index: 1000;
   top: -40px;
   left: -40px;
   transition: background-color 1s;
   .underline {
-    margin-top: 40px;
     height: 4px;
-    background-color: lighten($charcoal, 30);
+    background-color: lighten($charcoal, 40);
     width: 0;
     transition: width 1.5s;
   }
-  ul {
+  ul {  // ul inside details            
+    position: relative;
+    z-index: 1;
     width: 100%;
-    height: 100%;
+    height: 70%;
     display: flex;
     flex-wrap: wrap;
-    padding: 10%;
+    justify-content: flex-start;
+    align-content: space-around;
     margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    transition: margin-left 1.5s;
     li {
-      width: 25%;
+      width: 75px;
       height: 60px;
       display: flex;
       flex-direction: column;
       align-content: center;
+      margin: 10px;
       ion-icon {
-        width: 40px;
+        width: 100%;
         height: 40px;
-        color: lighten($charcoal, 50);
+        color: lighten($charcoal, 60);
         font-size: 5.1rem;
       }
       img {
         border: none;
         width: 35px;
         height: 35px;
+        align-self: center;
       }
       h4 {
         width: 100%;
         align-self: center;
         @include Ossie(
-        1.6rem,
-        normal,
-        lighten($charcoal, 30),
-        normal,
-        normal,
-        center
-      );
+          1.6rem,
+          normal,
+          lighten($charcoal, 50),
+          normal,
+          normal,
+          center
+        );
       }
-
     }
   }
-  
-}
-
-.galleryPic {
-  // li
-  position: relative;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 28%;
-  background-color: $tint;
-  box-shadow: 2px 2px 10px 1px black;
-  z-index: 2000;
-  a {
-    display: flex;
+  .view {
     position: relative;
-    &:hover img,
-    &:focus img {
-      opacity: 0.25;
-    }
-    &:hover h3,
-    &:focus h3 {
-      color: lighten($charcoal, 30);      
-    }
-    &:hover .projectDetails,
-    &:focus .projectDetails {
-      z-index: 1000;
-      background-color: #fcfcfcf1;
-      .underline {
-        width: 100%;
-      }
-    }
-    img {
-      transition: transform 1.5s;
-      border: 5px solid #7f6b53;
-    }
-    h3 {
-      transition: color 1.5s;
+    z-index: 1;
+    width: 100%;
+    text-align: left;
+    margin-left: 60px;
+    margin-top: 5px;
+    transition: margin-left 1.5s;
+    visibility: hidden;
+    a {
+      @include Ossie(2rem, normal, $charcoal, normal, normal, left);
       text-transform: uppercase;
-      position: absolute;
-      top: -40px;
-      @include Ossie(2.5rem, bold, $grey2, 1.5, normal, left);
-      z-index: 6000;
+      width: 200px;
+      transition: text-decoration 1.5s;
+      padding-left: 30px;      
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
     }
   }
 }
+
+
 
 .projects .bar.projectBar {
   height: 5px;
