@@ -1,0 +1,38 @@
+.contact {
+  width: 100%;
+  height: 400px;
+  background-color: $charcoal;
+}
+
+.wrapper.contact {
+  width: 100%;
+  padding: 60px 80px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  width: 30%;
+  h3 {
+    width: 100%;
+    @include Ossie(3rem, normal, $tint, normal, normal, left);
+    text-transform: uppercase;
+  }
+  ul {
+    margin-top: 40px;
+    padding-left: 2%;
+    @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
+    li {
+      margin-top: 10px;
+    }
+  }
+}
+
+.menuContainer {
+  width: 40%;
+  padding-left: 130px;
+}
+
+.socialContainer {
+  padding-left: 100px;
+}

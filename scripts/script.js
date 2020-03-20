@@ -48,19 +48,24 @@ app.sections = {
   },
   blog: {
     el: $("#blog"),
-    offset: 180,
+    offset: 300,
     delay: 500,
     run: function() {
       $(".blogBar").addClass("expand");
     }
+  },
+  contact: {
+    el: $("#contact"),
+    offset: -1000,
+    delay: 200,
+    run: function() {
+      console.log("hello");
+    }
   }
-  // contact: { el: $("#contact"), run: app.contact }
 };
 
 app.logo = $("#navLogo");
 app.currentWaypoint = app.sections.$logo;
-
-
 
 /****************************************************************/
 /*****************          ANIMATORS         *******************/
@@ -118,7 +123,7 @@ app.handleWaypoints = function() {
     function(direction) {
       direction === "up" ? app.resetAll() : "";
     },
-    { offset: "0%" }
+    { offset: "2%" }
   );
 };
 

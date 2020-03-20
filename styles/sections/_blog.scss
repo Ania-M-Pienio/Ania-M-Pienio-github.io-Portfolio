@@ -36,7 +36,6 @@
   width: 40%;
   img {
     object-fit: cover;
-    padding: 1%;
   }
 }
 
@@ -74,7 +73,7 @@
 }
 
 .blogBar {
-  height: 3px;
+  height: 4px;
   border-radius: 3px;
   width: 0;
   background-color: lighten($charcoal, 20);
