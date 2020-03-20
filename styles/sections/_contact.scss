@@ -12,13 +12,16 @@
 }
 
 .container {
-  width: 30%;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
   h3 {
     width: 100%;
-    @include Ossie(3rem, normal, $tint, normal, normal, left);
+    @include Ossie(3rem, normal, $tint, normal, normal, center);
     text-transform: uppercase;
   }
   ul {
+    margin: 0 auto;
     margin-top: 40px;
     padding-left: 2%;
     @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
@@ -28,11 +31,3 @@
   }
 }
 
-.menuContainer {
-  width: 40%;
-  padding-left: 130px;
-}
-
-.socialContainer {
-  padding-left: 100px;
-}
