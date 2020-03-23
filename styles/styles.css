@@ -1101,6 +1101,7 @@ section.overview.expand {
 }
 
 .project .projectInfo .infoContent p {
+  margin-top: 20px;
   font-family: 'Domine', serif;
   font-size: 2rem;
   font-weight: normal;

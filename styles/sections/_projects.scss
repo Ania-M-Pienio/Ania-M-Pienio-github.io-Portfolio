@@ -98,6 +98,7 @@
       flex-direction: column;
       justify-content: space-between;
       p {
+        margin-top: 20px;
         @include Domi(2rem, normal, $tint, 1.5, 1.6, left);
       }
       a {
