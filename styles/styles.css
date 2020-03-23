@@ -911,12 +911,15 @@ section.overview.expand {
 }
 
 .skills ul li img {
+  margin: 0 auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   -o-object-fit: contain;
      object-fit: contain;
   min-width: 80px;
   width: 20%;
   padding: 0;
-  margin: 0;
 }
 
 .skills ul li h3 {
@@ -972,8 +975,7 @@ section.overview.expand {
   height: 100%;
 }
 
-.projectGallery {
-  position: relative;
+.projectContainer {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -991,148 +993,48 @@ section.overview.expand {
   transition: margin-top 2s;
 }
 
-.projectGallery.expand {
+.projectContainer.expand {
   margin-top: 100px;
 }
 
-.galleryPic {
-  width: 280px;
-  height: 280px;
-  margin: 30px;
-  margin-top: 90px;
-  position: relative;
-  background-color: #f8f8f8;
-  -webkit-box-shadow: 2px 2px 10px 1px black;
-          box-shadow: 2px 2px 10px 1px black;
-  z-index: 2000;
-}
-
-.galleryPic .hover:hover .picture,
-.galleryPic .hover:focus .picture {
-  opacity: 0.25;
-  z-index: 0;
-}
-
-.galleryPic .hover:hover .title,
-.galleryPic .hover:focus .title {
-  color: #6e6e6e;
-  margin-left: -15px;
-}
-
-.galleryPic .hover:hover .title span,
-.galleryPic .hover:focus .title span {
-  visibility: hidden;
-}
-
-.galleryPic .hover:hover .projectDetails,
-.galleryPic .hover:focus .projectDetails {
-  z-index: 1000;
-  background: radial-gradient(rgba(255, 255, 255, 0), #f8f8f8, #f8f8f8);
-  -webkit-box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.555);
-          box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.555);
-}
-
-.galleryPic .hover:hover .projectDetails .underline,
-.galleryPic .hover:focus .projectDetails .underline {
+.project {
   width: 100%;
-}
-
-.galleryPic .hover:hover .projectDetails ul,
-.galleryPic .hover:focus .projectDetails ul {
-  margin-left: 0;
-  z-index: 7000;
-}
-
-.galleryPic .hover:hover .projectDetails .view,
-.galleryPic .hover:focus .projectDetails .view {
-  margin-left: 0;
-  visibility: visible;
-}
-
-.galleryPic .hover .picture {
-  -webkit-transition: -webkit-transform 1.5s;
-  transition: -webkit-transform 1.5s;
-  transition: transform 1.5s;
-  transition: transform 1.5s, -webkit-transform 1.5s;
-  border: 5px solid #7f6b53;
-  position: relative;
-  z-index: 2000;
-}
-
-.galleryPic .hover .title {
-  -webkit-transition: all 1.5s;
-  transition: all 1.5s;
-  text-transform: uppercase;
-  position: absolute;
-  top: -60px;
-  left: -60px;
-  font-family: "Oswald", sans-serif;
-  font-size: 2.7rem;
-  font-weight: bold;
-  color: #e7e7e7;
-  letter-spacing: 1.5;
-  line-height: normal;
-  text-align: left;
-  z-index: 6000;
-}
-
-.galleryPic .hover .title span {
-  padding-right: 10px;
-}
-
-.galleryPic .hover .title span ion-icon {
-  font-size: 5rem;
-  position: relative;
-  top: 10px;
-}
-
-.projectDetails {
-  cursor: default;
-  position: absolute;
-  height: 130%;
-  width: 110%;
-  padding-top: 40px;
-  background-color: #fcfcfc00;
-  z-index: 1000;
-  top: -40px;
-  left: -40px;
-  -webkit-transition: background-color 1s;
-  transition: background-color 1s;
-}
-
-.projectDetails .underline {
-  height: 4px;
-  background-color: #878787;
-  width: 0;
-  -webkit-transition: width 1.5s;
-  transition: width 1.5s;
-}
-
-.projectDetails ul {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 70%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 30px;
-  -webkit-transition: margin-left 1.5s;
-  transition: margin-left 1.5s;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 50px;
 }
 
-.projectDetails ul li {
-  width: 75px;
-  height: 60px;
+.project .projectImage {
+  width: 400px;
+  margin-right: 10px;
+  margin-left: 10px;
+  -webkit-box-shadow: 2px 2px 10px 1px black;
+          box-shadow: 2px 2px 10px 1px black;
+  background-color: #f8f8f8;
+}
+
+.project .projectImage .picture {
+  -o-object-fit: contain;
+     object-fit: contain;
+  min-width: 100%;
+  height: 100%;
+  border: 5px solid #f8f8f8;
+  position: relative;
+}
+
+.project .projectInfo {
+  margin-right: 10px;
+  margin-left: 10px;
+  position: relative;
+  width: 800px;
+  height: 100%;
+  padding: 60px;
+  padding-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1140,72 +1042,101 @@ section.overview.expand {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin: 10px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-.projectDetails ul li ion-icon {
+.project .projectInfo .infoBar {
+  height: 4px;
   width: 100%;
-  height: 40px;
-  color: #bababa;
-  font-size: 5.1rem;
+  background-color: #f8f8f8;
+  -webkit-box-shadow: 2px 2px 10px 1px black;
+          box-shadow: 2px 2px 10px 1px black;
+  position: absolute;
 }
 
-.projectDetails ul li img {
-  border: none;
-  width: 35px;
-  height: 35px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.projectDetails ul li h4 {
-  width: 100%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  font-family: "Oswald", sans-serif;
-  font-size: 1.6rem;
-  font-weight: normal;
-  color: #a1a1a1;
-  letter-spacing: normal;
-  line-height: normal;
-  text-align: center;
-}
-
-.projectDetails .view {
+.project .projectInfo .infoTitle {
   position: relative;
-  z-index: 1;
-  width: 100%;
-  text-align: left;
-  margin-left: 60px;
-  margin-top: 5px;
-  -webkit-transition: margin-left 1.5s;
-  transition: margin-left 1.5s;
-  visibility: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
-.projectDetails .view a {
+.project .projectInfo .infoTitle .title {
+  text-transform: uppercase;
   font-family: "Oswald", sans-serif;
+  font-size: 4.2rem;
+  font-weight: bold;
+  color: #e7e7e7;
+  letter-spacing: 1.5;
+  line-height: normal;
+  text-align: left;
+}
+
+.project .projectInfo .infoTitle .title span {
+  padding-left: 5px;
+}
+
+.project .projectInfo .infoTitle .title span ion-icon {
+  font-size: 6rem;
+  position: absolute;
+  left: -60px;
+}
+
+.project .projectInfo .infoContent {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.project .projectInfo .infoContent p {
+  font-family: 'Domine', serif;
   font-size: 2rem;
   font-weight: normal;
-  color: #212121;
+  color: #f8f8f8;
+  letter-spacing: 1.5;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.project .projectInfo .infoContent a {
+  margin-top: 20px;
+  text-transform: uppercase;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.2rem;
+  font-weight: normal;
+  color: #f8f8f8;
   letter-spacing: normal;
   line-height: normal;
   text-align: left;
-  text-transform: uppercase;
-  width: 200px;
-  -webkit-transition: -webkit-text-decoration 1.5s;
-  transition: -webkit-text-decoration 1.5s;
-  transition: text-decoration 1.5s;
-  transition: text-decoration 1.5s, -webkit-text-decoration 1.5s;
-  padding-left: 30px;
 }
 
-.projectDetails .view a:hover, .projectDetails .view a:focus {
+.project .projectInfo .infoContent a:hover, .project .projectInfo .infoContent a:focus {
   text-decoration: underline;
+  font-size: 2.7rem;
+}
+
+.infoBar.top {
+  top: 0;
+  left: 0;
+}
+
+.infoBar.bottom {
+  bottom: 0;
+  left: 0;
 }
 
 .projects .bar.projectBar {
@@ -1493,7 +1424,7 @@ h4 {
 img {
   width: 100%;
   max-width: 100%;
-  display: inline-block;
+  display: block;
 }
 
 button {

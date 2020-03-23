@@ -19,8 +19,8 @@
   height: 100%;
 }
 
-.projectGallery {  // ul main
-  position: relative;
+.projectContainer {
+  // ul main
   width: 100%;
   height: 100%;
   display: flex;
@@ -31,172 +31,99 @@
   transition: margin-top 2s;
 }
 
-.projectGallery.expand {
+.projectContainer.expand {
   margin-top: 100px;
 }
 
-
-
-.galleryPic {
+.project {
   // li
-  width: 280px;
-  height: 280px;
-  margin: 30px;
-  margin-top: 90px;
-  position: relative;
-  background-color: $tint;
-  box-shadow: 2px 2px 10px 1px black;
-  z-index: 2000;
-  .hover {
-    // display: flex;
-    // position: relative;
-    
-    &:hover .picture,
-    &:focus .picture {
-      opacity: 0.25;
-      z-index: 0;
-    }
-    &:hover .title,
-    &:focus .title {
-      color: lighten($charcoal, 30);
-      margin-left: -15px;
-      span {
-        visibility: hidden;
-      }
-    }
-    &:hover .projectDetails,
-    &:focus .projectDetails {
-      z-index: 1000;
-      background: radial-gradient(rgba(255, 255, 255, 0), $tint, $tint);
-      box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.555);
-      .underline {
-        width: 100%;
-      }
-      ul {
-        margin-left: 0;
-        z-index: 7000;
-      }
-      .view {
-        margin-left: 0;
-        visibility: visible;
-      }
-    }
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  //[ 1 ]
+  .projectImage {
+    width: 400px;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: $shadow;
+    background-color: $tint;
     .picture {
-      transition: transform 1.5s;
-      border: 5px solid #7f6b53;
+      object-fit: contain;
+      min-width: 100%;
+      height: 100%;
+      border: 5px solid $tint;
       position: relative;
-      z-index: 2000;
     }
-    .title {
-      transition: all 1.5s;
-      text-transform: uppercase;
+  }
+  //[ 2 ]
+  .projectInfo {
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    width: 800px;
+    height: 100%;
+    padding: 60px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    .infoBar {
+      height: 4px;
+      width: 100%;
+      background-color: $tint;
+      box-shadow: $shadow;
       position: absolute;
-      top: -60px;
-      left: -60px;
-      @include Ossie(2.7rem, bold, $grey2, 1.5, normal, left);
-      z-index: 6000;
-      span {
-        padding-right: 10px;
-        ion-icon {
-          font-size: 5rem;
-          position: relative;
-          top: 10px;
+    }
+    .infoTitle {
+      position: relative;
+      flex: 1;
+      .title {
+        text-transform: uppercase;
+        @include Ossie(4.2rem, bold, $grey2, 1.5, normal, left);
+        span {
+          padding-left: 5px;
+          ion-icon {
+            font-size: 6rem;
+            position: absolute;
+            left: -60px;
+          }
+        }
+      }
+    }
+    .infoContent {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      p {
+        @include Domi(2rem, normal, $tint, 1.5, 1.6, left);
+      }
+      a {
+        margin-top: 20px;
+        text-transform: uppercase;
+        transition: all 1.5s;
+        @include Ossie(2.2rem, normal, $tint, normal, normal, left);
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+          font-size: 2.7rem;
         }
       }
     }
   }
 }
 
-
-
-
-.projectDetails {
-  cursor: default;
-  position: absolute;
-  height: 130%;
-  width: 110%;
-  padding-top: 40px;
-  background-color: #fcfcfc00;
-  z-index: 1000;
-  top: -40px;
-  left: -40px;
-  transition: background-color 1s;
-  .underline {
-    height: 4px;
-    background-color: lighten($charcoal, 40);
-    width: 0;
-    transition: width 1.5s;
-  }
-  ul {  // ul inside details            
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: space-around;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 30px;
-    transition: margin-left 1.5s;
-    li {
-      width: 75px;
-      height: 60px;
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      margin: 10px;
-      ion-icon {
-        width: 100%;
-        height: 40px;
-        color: lighten($charcoal, 60);
-        font-size: 5.1rem;
-      }
-      img {
-        border: none;
-        width: 35px;
-        height: 35px;
-        align-self: center;
-      }
-      h4 {
-        width: 100%;
-        align-self: center;
-        @include Ossie(
-          1.6rem,
-          normal,
-          lighten($charcoal, 50),
-          normal,
-          normal,
-          center
-        );
-      }
-    }
-  }
-  .view {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    text-align: left;
-    margin-left: 60px;
-    margin-top: 5px;
-    transition: margin-left 1.5s;
-    visibility: hidden;
-    a {
-      @include Ossie(2rem, normal, $charcoal, normal, normal, left);
-      text-transform: uppercase;
-      width: 200px;
-      transition: text-decoration 1.5s;
-      padding-left: 30px;      
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-      }
-    }
-  }
+.infoBar.top {
+  top: 0;
+  left: 0;
 }
 
-
+.infoBar.bottom {
+  bottom: 0;
+  left: 0;
+}
 
 .projects .bar.projectBar {
   height: 5px;
