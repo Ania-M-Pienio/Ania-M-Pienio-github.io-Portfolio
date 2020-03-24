@@ -31,15 +31,29 @@
 
 // MEDIA QUERIES
 
-@mixin table-land {
-  @media (max-width: 900px) {
+@mixin tablet-land {
+  @media (max-width: 1250px) {
     @content;
   }
 }
 
 
-@mixin table-land {
-  @media (max-width: 900px) {
+@mixin tablet-port {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+
+
+@mixin mobile-land {
+  @media (max-width: 680px) {
+    @content;
+  }
+}
+
+
+@mixin mobile-port {
+  @media (max-width: 350px) {
     @content;
   }
 }

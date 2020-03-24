@@ -1,6 +1,12 @@
 .about {
   height: auto;
-  background-image: linear-gradient(to right,  #9c9e9f00 0%,#9c9e9f00 50%, #E7E7E7 50%,#E7E7E7 100%)
+  background-image: linear-gradient(
+    to right,
+    #9c9e9f00 0%,
+    #9c9e9f00 50%,
+    #e7e7e7 50%,
+    #e7e7e7 100%
+  );
 }
 
 .wrapper.about {
@@ -8,12 +14,20 @@
   display: flex;
   justify-content: space-between;
   padding: 0;
+  @include tablet-port {
+    // 960
+    flex-direction: column;
+  }
 }
 
 .about article,
 .about aside {
   width: 50%;
   height: auto;
+  @include tablet-port {
+    // 960
+    width: 100%;
+  }
 }
 
 .about aside {
@@ -22,15 +36,36 @@
   background-repeat: no-repeat;
   background-position: left;
   background-color: $grey2;
+  @include tablet-port {
+    // 960
+    height: 500px;
+    background-position: center;
+  }
 }
 
 .about article {
   background-color: white;
   display: flex;
   padding-right: 40px;
+  @include tablet-port {
+    // 960
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
   .aboutTitle {
     min-width: 100%;
     padding: 40px;
+    @include tablet-land {
+      // 1250
+      padding-left: 0;
+    }
+    @include tablet-port {
+      // 960
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
     h2 {
       text-transform: uppercase;
       @include Ossie(5rem, normal, $font, normal, normal, center);
@@ -44,6 +79,13 @@
   padding-bottom: 40px;
   display: flex;
   flex-direction: column;
+  @include tablet-port {
+    // 960
+    max-width: 100%;
+    padding: 80px;
+    padding-top: 60px;
+    margin: 0;
+  }
 }
 
 .aboutTeam {
@@ -57,20 +99,34 @@
   width: 100%;
 }
 
-
 .aboutRest {
   display: flex;
   margin-top: 40px;
+  @include tablet-land {
+    // 1250
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0;
+  }
 }
 
 .aboutSection {
-  // border: 1px solid fuchsia;
+  @include tablet-land {
+    // 1250
+    margin-top: 40px;
+  }
   h3 {
     @include Ossie(2.5rem, normal, $charcoal, normal, normal, left);
     text-transform: uppercase;
+    margin-bottom: 15px;
   }
   p {
     @include Domi(1.7rem, normal, lighten($charcoal, 30), 1.5, 1.6, left);
     padding-right: 40px;
+    @include tablet-port {
+      // 960
+      padding: 0;
+      margin: 0;
+    }
   }
 }

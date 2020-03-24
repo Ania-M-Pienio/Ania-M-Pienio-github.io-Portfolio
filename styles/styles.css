@@ -765,8 +765,8 @@ section.overview.expand {
 
 .about {
   height: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(#9c9e9f00), color-stop(50%, #9c9e9f00), color-stop(50%, #E7E7E7), to(#E7E7E7));
-  background-image: linear-gradient(to right, #9c9e9f00 0%, #9c9e9f00 50%, #E7E7E7 50%, #E7E7E7 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#9c9e9f00), color-stop(50%, #9c9e9f00), color-stop(50%, #e7e7e7), to(#e7e7e7));
+  background-image: linear-gradient(to right, #9c9e9f00 0%, #9c9e9f00 50%, #e7e7e7 50%, #e7e7e7 100%);
 }
 
 .wrapper.about {
@@ -780,10 +780,26 @@ section.overview.expand {
   padding: 0;
 }
 
+@media (max-width: 960px) {
+  .wrapper.about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .about article,
 .about aside {
   width: 50%;
   height: auto;
+}
+
+@media (max-width: 960px) {
+  .about article,
+  .about aside {
+    width: 100%;
+  }
 }
 
 .about aside {
@@ -794,6 +810,13 @@ section.overview.expand {
   background-color: #e7e7e7;
 }
 
+@media (max-width: 960px) {
+  .about aside {
+    height: 500px;
+    background-position: center;
+  }
+}
+
 .about article {
   background-color: white;
   display: -webkit-box;
@@ -802,9 +825,31 @@ section.overview.expand {
   padding-right: 40px;
 }
 
+@media (max-width: 960px) {
+  .about article {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
 .about article .aboutTitle {
   min-width: 100%;
   padding: 40px;
+}
+
+@media (max-width: 1250px) {
+  .about article .aboutTitle {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .about article .aboutTitle {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
 .about article .aboutTitle h2 {
@@ -831,6 +876,15 @@ section.overview.expand {
           flex-direction: column;
 }
 
+@media (max-width: 960px) {
+  .wrapper.aboutContent {
+    max-width: 100%;
+    padding: 80px;
+    padding-top: 60px;
+    margin: 0;
+  }
+}
+
 .aboutTeam {
   width: 100%;
   height: auto;
@@ -849,6 +903,25 @@ section.overview.expand {
   margin-top: 40px;
 }
 
+@media (max-width: 1250px) {
+  .aboutRest {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1250px) {
+  .aboutSection {
+    margin-top: 40px;
+  }
+}
+
 .aboutSection h3 {
   font-family: "Oswald", sans-serif;
   font-size: 2.5rem;
@@ -858,6 +931,7 @@ section.overview.expand {
   line-height: normal;
   text-align: left;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .aboutSection p {
@@ -869,6 +943,13 @@ section.overview.expand {
   line-height: 1.6;
   text-align: left;
   padding-right: 40px;
+}
+
+@media (max-width: 960px) {
+  .aboutSection p {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .skills {
