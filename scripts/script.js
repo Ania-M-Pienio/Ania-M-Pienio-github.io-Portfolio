@@ -6,6 +6,7 @@ app.sections = {
     el: $("#home"),
     offset: 0,
     delay: 1000,
+    trigger: "90%",
     run: function() {
       // no animation
     }
@@ -15,6 +16,7 @@ app.sections = {
     el: $("#overview"),
     offset: 50,
     delay: 1500,
+    trigger: "80%",
     run: function() {
       $("section.overview").addClass("expand");
       $(".gallery.pic2 .galleryBar").addClass("expand");
@@ -24,6 +26,7 @@ app.sections = {
     el: $("#skills"),
     offset: 30,
     delay: 1500,
+    trigger: "90%",
     run: function() {
       $(".skills.wrapper").addClass("expand");
     }
@@ -32,6 +35,7 @@ app.sections = {
     el: $("#about"),
     offset: 10,
     delay: 1500,
+    trigger: "90%",
     run: function() {
       // no animation
     }
@@ -40,6 +44,7 @@ app.sections = {
     el: $("#quote"),
     offset: 0,
     delay: 0,
+    trigger: "90%",
     run: function() {
       app.animateLogo("quoteLogo");
     }
@@ -48,6 +53,7 @@ app.sections = {
     el: $("#projects"),
     offset: 300,
     delay: 400,
+    trigger: "90%",
     run: function() {
       $(".projectContainer").addClass("expand");
     }
@@ -56,14 +62,16 @@ app.sections = {
     el: $("#blog"),
     offset: 300,
     delay: 500,
+    trigger: "90%",
     run: function() {
       $(".blogBar").addClass("expand");
     }
   },
   contact: {
     el: $("#contact"),
-    offset: 0,
+    offset: -50,
     delay: 2000,
+    trigger: "100%",
     run: function() {
       app.animateLogo("contactLogo");
     }
@@ -121,7 +129,7 @@ app.handleWaypoints = function() {
       function() {
         app.sections[section].run();
       },
-      { offset: "90%" }
+      { offset: app.sections[section].trigger}
     );
   }
 
