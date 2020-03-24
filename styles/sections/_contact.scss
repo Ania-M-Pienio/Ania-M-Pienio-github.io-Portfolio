@@ -26,6 +26,8 @@
     margin-top: 30px;
     padding-left: 5%;
     padding-right: 5%;
+    display: flex;
+    flex-direction: column;
     li {
       margin-top: 15px;
       a {
@@ -67,4 +69,18 @@
 .contact textarea {
   position: absolute;
   left: -2000px;
+}
+
+li.copied {
+  display: block;
+  margin-top: -50px;
+  text-transform: uppercase;
+  @include Ossie(2rem, normal, $tint, normal, normal, center);
+  transform: scale(0);
+  transition: all 0.8s;
+}
+
+li.copied.expand {
+  transform: scale(1);
+  margin-top: 20px;
 }

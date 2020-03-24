@@ -306,13 +306,15 @@ input::-moz-focus-inner {
   margin-left: 5px;
 }
 
-.quoteLogoContainer {
+.quoteLogoContainer,
+.contactLogoContainer {
   width: 100%;
   height: 50%;
   position: relative;
 }
 
-.quoteLogoContainer .mainLogo {
+.quoteLogoContainer .mainLogo,
+.contactLogoContainer .mainLogo {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,22 +325,26 @@ input::-moz-focus-inner {
   height: 100px;
 }
 
-.quoteLogoContainer .mainLogo .logo .logo1 {
+.quoteLogoContainer .mainLogo .logo .logo1,
+.contactLogoContainer .mainLogo .logo .logo1 {
   height: 100px;
   width: 130px;
 }
 
-.quoteLogoContainer .mainLogo .logo .logo2 {
+.quoteLogoContainer .mainLogo .logo .logo2,
+.contactLogoContainer .mainLogo .logo .logo2 {
   height: 100px;
   width: 130px;
 }
 
-.quoteLogoContainer .mainLogo .logo .logo3 {
+.quoteLogoContainer .mainLogo .logo .logo3,
+.contactLogoContainer .mainLogo .logo .logo3 {
   height: 100px;
   width: 130px;
 }
 
-.quoteLogoContainer .bars {
+.quoteLogoContainer .bars,
+.contactLogoContainer .bars {
   width: 100%;
 }
 
@@ -352,6 +358,10 @@ input::-moz-focus-inner {
 
 .bar.quoteBar.expand {
   width: 100%;
+}
+
+.contactLogoContainer .mainLogo {
+  position: relative;
 }
 
 nav {
@@ -1443,11 +1453,11 @@ section.overview.expand {
 }
 
 .blogContent a {
-  margin-top: 10px;
+  margin-top: 20px;
   display: block;
-  width: 70px;
+  width: 90px;
   font-family: "Oswald", sans-serif;
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: normal;
   color: #212121;
   letter-spacing: normal;
@@ -1524,6 +1534,13 @@ section.overview.expand {
   margin-top: 30px;
   padding-left: 5%;
   padding-right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .container ul li {
@@ -1591,6 +1608,29 @@ section.overview.expand {
 .contact textarea {
   position: absolute;
   left: -2000px;
+}
+
+li.copied {
+  display: block;
+  margin-top: -50px;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #f8f8f8;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+li.copied.expand {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  margin-top: 20px;
 }
 
 html {

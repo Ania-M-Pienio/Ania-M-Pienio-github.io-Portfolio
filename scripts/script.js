@@ -2,13 +2,12 @@ const app = {};
 
 app.isDropped = false;
 app.sections = {
- 
   home: {
     el: $("#home"),
     offset: 0,
     delay: 1000,
     run: function() {
-      // no action
+      // no animation
     }
   },
 
@@ -34,7 +33,7 @@ app.sections = {
     offset: 10,
     delay: 1500,
     run: function() {
-      // console.log("about is not defined");
+      // no animation
     }
   },
   quote: {
@@ -66,7 +65,7 @@ app.sections = {
     offset: 0,
     delay: 2000,
     run: function() {
-      // console.log("hello");
+      app.animateLogo("contactLogo");
     }
   }
 };
@@ -145,7 +144,6 @@ app.handleLogo = function() {
   });
 
   $(".logo").blur(function() {
-    console.log("location id is: ", $(this).attr("id"));
     const id = $(this).attr("id");
     const folder = id === "n" ? "nav" : "quote";
     $(`#${id} .logo1 img`).attr("src", `assets/${folder}/2.png`);
@@ -161,7 +159,6 @@ app.handleLogo = function() {
   });
 
   $(".logo").mouseleave(function() {
-    console.log("location id is: ", $(this).attr("id"));
     const id = $(this).attr("id");
     const folder = id === "n" ? "nav" : "quote";
     $(`#${id} .logo1 img`).attr("src", `assets/${folder}/2.png`);
@@ -224,19 +221,30 @@ app.handleMenu = function() {
     $(this).blur();
     let id = $(this).attr("id");
     id = id.substring(2, id.length).toLowerCase();
-     setTimeout(() => {
-       app.scrollToElem(id);
-     }, 300);
+    setTimeout(() => {
+      app.scrollToElem(id);
+    }, 300);
   });
-
 };
 
 app.handleContacts = function() {
-  $(".emailCopy").on("click", function() {
-    console.log("clicked copy email");
+  $(".emailCopy").on("click", async function() {
     app.copyEmail();
+    app.showCopied().then(() => {
+      setTimeout(() => {
+        $("li.copied").removeClass("expand");
+      }, 1200);
+    });
   });
-}
+};
+
+app.showCopied = function() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve($("li.copied").addClass("expand"));
+    }, 300);
+  });
+};
 
 /****************************************************************/
 /*****************           HELPERS          *******************/
