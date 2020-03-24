@@ -2,6 +2,16 @@ const app = {};
 
 app.isDropped = false;
 app.sections = {
+ 
+  home: {
+    el: $("#home"),
+    offset: 0,
+    delay: 1000,
+    run: function() {
+      // no action
+    }
+  },
+
   overview: {
     el: $("#overview"),
     offset: 50,
@@ -209,6 +219,16 @@ app.handleMenu = function() {
       app.scrollToElem(id.toLowerCase());
     }, 300);
   });
+
+  $(".menuContainer li button").on("click", function() {
+    $(this).blur();
+    let id = $(this).attr("id");
+    id = id.substring(2, id.length).toLowerCase();
+     setTimeout(() => {
+       app.scrollToElem(id);
+     }, 300);
+  });
+
 };
 
 app.handleContacts = function() {

@@ -24,10 +24,27 @@
   ul {
     margin: 0 auto;
     margin-top: 30px;
-    padding-left: 2%;
-    @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
+    padding-left: 5%;
+    padding-right: 5%;
     li {
-      margin-top: 10px;
+      margin-top: 15px;
+      a {
+        transition: transform 0.5s;
+        display: inline-block;
+        @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
+        &:hover,
+        &:focus {
+          transform: scale(1.25);
+        }
+      }
+      button {
+        transition: transform 0.5s;
+        @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
+        &:hover,
+        &:focus {
+          transform: scale(1.25);
+        }
+      }
     }
   }
 }

@@ -1310,19 +1310,6 @@ section.overview.expand {
   left: 0;
 }
 
-.projects .bar.projectBar {
-  height: 5px;
-  width: 0;
-  margin: 0;
-  background-color: #7f6b53;
-  -webkit-transition: width 2s;
-  transition: width 2s;
-}
-
-.projects .bar.projectBar.expand {
-  width: 100%;
-}
-
 .education {
   height: auto;
   background-color: #212121;
@@ -1535,7 +1522,20 @@ section.overview.expand {
 .container ul {
   margin: 0 auto;
   margin-top: 30px;
-  padding-left: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.container ul li {
+  margin-top: 15px;
+}
+
+.container ul li a {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  display: inline-block;
   font-family: 'Domine', serif;
   font-size: 1.8rem;
   font-weight: normal;
@@ -1545,8 +1545,28 @@ section.overview.expand {
   text-align: left;
 }
 
-.container ul li {
-  margin-top: 10px;
+.container ul li a:hover, .container ul li a:focus {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.container ul li button {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  font-family: 'Domine', serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #f8f8f8;
+  letter-spacing: 1.5;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.container ul li button:hover, .container ul li button:focus {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 
 .contactContainer li button {
