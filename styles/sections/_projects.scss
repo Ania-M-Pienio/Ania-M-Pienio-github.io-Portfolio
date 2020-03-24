@@ -8,6 +8,7 @@
   box-shadow: 0px 5px 20px black inset;
 }
 
+// PROJECTS TITLE
 .projects .splashTitle {
   top: 10px;
   left: 0;
@@ -30,11 +31,12 @@
   margin-top: 300px;
   transition: margin-top 2s;
 }
-
+// ANIMATE ON SCROLL
 .projectContainer.expand {
   margin-top: 100px;
 }
 
+// EACH PROJECT
 .project {
   // li
   width: 100%;
@@ -67,7 +69,7 @@
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
-    background: linear-gradient(to left, #2121214d, #2121214f, rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, #2121214d, #2121214f, rgba(255, 255, 255, 0));
     z-index: 2000;
     .infoBar {
       height: 4px;
@@ -89,6 +91,7 @@
         justify-content: flex-end;
         @include Ossie(3.5rem, bold, $grey2, 1.5, normal, left);
       }
+      // PROJECT SKILLS
       .skillWrapper {
         width: 60%;
         height: 100%;
@@ -127,6 +130,7 @@
         }
       }
     }
+    // PROJECT DESCRIPTION
     .infoContent {
       flex: 2;
       display: flex;
@@ -151,8 +155,10 @@
   }
 }
 
+// EVERY OTHER PROJECT
 .projectInfo.alt {
   padding-left: 50px;
+  background: linear-gradient(to left, #2121214d, #2121214f, rgba(255, 255, 255, 0));
 }
 
 .infoBar.top {
@@ -163,16 +169,4 @@
 .infoBar.bottom {
   bottom: 0;
   left: 0;
-}
-
-.projects .bar.projectBar {
-  height: 5px;
-  width: 0;
-  margin: 0;
-  background-color: #7f6b53;
-  transition: width 2s;
-}
-
-.projects .bar.projectBar.expand {
-  width: 100%;
 }

@@ -1128,8 +1128,8 @@ section.overview.expand {
       -ms-flex-pack: start;
           justify-content: flex-start;
   position: relative;
-  background: -webkit-gradient(linear, right top, left top, from(#2121214d), color-stop(#2121214f), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to left, #2121214d, #2121214f, rgba(255, 255, 255, 0));
+  background: -webkit-gradient(linear, left top, right top, from(#2121214d), color-stop(#2121214f), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, #2121214d, #2121214f, rgba(255, 255, 255, 0));
   z-index: 2000;
 }
 
@@ -1296,6 +1296,8 @@ section.overview.expand {
 
 .projectInfo.alt {
   padding-left: 50px;
+  background: -webkit-gradient(linear, right top, left top, from(#2121214d), color-stop(#2121214f), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to left, #2121214d, #2121214f, rgba(255, 255, 255, 0));
 }
 
 .infoBar.top {
