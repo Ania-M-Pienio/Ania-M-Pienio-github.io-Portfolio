@@ -1127,7 +1127,9 @@ section.overview.expand {
 
 .project .projectInfo .infoContent a:hover, .project .projectInfo .infoContent a:focus {
   text-decoration: underline;
-  font-size: 2.7rem;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  margin-left: 90px;
 }
 
 .infoBar.top {
