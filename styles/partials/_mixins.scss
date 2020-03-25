@@ -31,6 +31,8 @@
 
 // MEDIA QUERIES
 
+// horizontal x-axis
+
 @mixin tablet-land {
   @media (max-width: 1250px) {
     @content;
@@ -58,6 +60,8 @@
   }
 }
 
+// vertical y-axis
+
 @mixin mobile-land-h {
   @media (max-height: 1000px) {
     @content;
@@ -65,13 +69,19 @@
 }
 
 @mixin mobile-port-h {
-  @media (max-height: 860px) {
+  @media (max-height: 820px) {
+    @content;
+  }
+}
+
+@mixin mobile-port-h2 {
+  @media (max-height: 650px) {
     @content;
   }
 }
 
 @mixin mobile-port-hh {
-  @media (max-height: 600px) {
+  @media (max-height: 500px) {
     @content;
   }
 }

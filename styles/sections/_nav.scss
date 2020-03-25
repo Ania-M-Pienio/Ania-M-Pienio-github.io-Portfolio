@@ -1,16 +1,38 @@
 // GENERAL NAV
 nav {
+  transition: all 1s;
   height: calc(100vh);
   background-color: $grey;
   background-image: url(../assets/nav/ME19.png);
-  background-size: 75%;
+  background-size: 70%;
   background-repeat: no-repeat;
   background-position: bottom right;
+  @include mobile-land-h {
+    background-size: 65%;
+  }
+  @include mobile-port-h {
+    background-size: 35%;
+  }
+  @include mobile-port-h2 {
+    background-size: 30%;
+  }
+  @include mobile-port-hh {
+    background-image: none;
+  }
 }
 
 .nav.wrapper {
   padding: 20px 80px;
   height: 100%;
+  @include mobile-port-h {
+    // 860
+    padding: 15px 60px;
+  }
+  @include mobile-land {
+    // 680 
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 
 .navMenuLogo {
@@ -32,6 +54,7 @@ nav {
   .menu {
     text-align: right;
     height: 100%;
+    // [ 1 ]
     button.dropMenu {
       position: relative;
       height: auto;
@@ -53,21 +76,6 @@ nav {
     }
   }
 }
-.navMenu .menu .drop.expand {
-  @include mobile-port-h {
-    background: linear-gradient(
-      to left,
-      rgb(241, 241, 241),
-      rgba(241, 241, 241, 0.733),
-      rgba(241, 241, 241, 0.507),
-      rgba(241, 241, 241, 0)
-    );
-  }
-  @include mobile-port-hh {
-    width: 250px;
-    height: 200px;
-  }
-}
 
 .navMenu .menu .dropMenu.expand {
   transform: scale(1);
@@ -77,20 +85,48 @@ nav {
 .navMenu .menu .drop {
   position: absolute;
   width: 200px;
+  height: 500px;
   right: 0;
   top: 170px;
   z-index: 1000;
   @include mobile-port-hh {
     top: 120px;
   }
-  button {
-    @include Domi(1.9rem, normal, rgba(255, 255, 255, 0), normal, 2.2, right);
-    text-transform: capitalize;
-    transition: color 1.5s, transform 0.5s, margin-right 0.5s;
+  @include mobile-port-h2 {
+    width: 290px;
+    height: 150px;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    align-content: flex-start;
+    li {
+      @include mobile-port-h2 {
+        padding-right: 30px;
+        width: 130px;
+      }
+      button {
+        @include Domi(
+          1.9rem,
+          normal,
+          rgba(255, 255, 255, 0),
+          normal,
+          2.2,
+          right
+        );
+        text-transform: capitalize;
+        transition: color 1.5s, transform 0.5s, margin-right 0.5s;
+      }
+    }
   }
 }
 // DROP MENU expanded
 .navMenu .menu .drop.expand {
+  @include mobile-port-h2 {
+    width: 290px;
+    height: 150px;
+  }
   ul {
     width: 100%;
     height: 100%;
@@ -99,8 +135,9 @@ nav {
     flex-wrap: wrap-reverse;
     align-content: flex-start;
     li {
-      @include mobile-port-h {
-        padding-right: 30px;   
+      @include mobile-port-h2 {
+        padding-right: 30px;
+        width: 130px;
       }
       button {
         color: $font;
@@ -140,6 +177,7 @@ nav {
   position: relative;
   z-index: 500;
   transition: all 1s;
+  margin-top: 30px;
   @include mobile-land-h {
     // 1000vh
     height: 30%;
@@ -164,15 +202,32 @@ nav {
 
 .title .titleContainer {
   transition: all 1s;
+  @include mobile-land-h {
+    // 1000
+    transform: scale(0.7);
+    margin-left: -60px;
+    margin-top: -20px;
+  }
   @include mobile-port-h {
+    // 820
+    transform: scale(0.65);
+    margin-left: -60px;
+    margin-top: -30px;
+  }
+
+  @include mobile-port-hh {
+    // 8650
     transform: scale(0.65);
     margin-left: -80px;
-    margin-top: -20px;
+    margin-top: -30px;
   }
   h1 {
     @include Ossie(10rem, normal, $font, normal, 1.2, left);
     text-transform: uppercase;
     margin-left: -1px;
+    @include mobile-land-h {
+      font-size: 8rem;
+    }
     @include mobile-port-hh {
       font-size: 7rem;
     }
@@ -182,6 +237,9 @@ nav {
     @include Ossie(8rem, normal, darken($grey, 50), normal, 1.2, left);
     text-transform: uppercase;
     transition: all 1s;
+    @include mobile-port-h {
+      font-size: 6rem;
+    }
     @include mobile-port-hh {
       font-size: 5rem;
       display: inline;
