@@ -417,6 +417,14 @@ nav {
 @media (max-height: 500px) {
   nav {
     background-image: none;
+    height: auto;
+  }
+}
+
+@media (max-width: 690px) {
+  nav {
+    background-image: none;
+    height: auto;
   }
 }
 
@@ -431,14 +439,18 @@ nav {
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 690px) {
   .nav.wrapper {
+    padding: 15px 40px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -457,15 +469,61 @@ nav {
   }
 }
 
+@media (max-width: 690px) {
+  .navMenuLogo {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 690px) {
+  .navMenuLogo .mainLogo {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .navMenu {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
+@media (max-width: 690px) {
+  .navMenu {
+    position: static;
+    padding: 0;
+    margin-top: 50px;
+  }
+}
+
 .navMenu .menu {
   text-align: right;
-  height: 100%;
+  height: 300px;
+}
+
+@media (max-width: 690px) {
+  .navMenu .menu {
+    text-align: center;
+    height: 100px;
+  }
 }
 
 .navMenu .menu button.dropMenu {
@@ -473,10 +531,14 @@ nav {
   height: auto;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: -webkit-transform 1.2s;
-  transition: -webkit-transform 1.2s;
-  transition: transform 1.2s;
-  transition: transform 1.2s, -webkit-transform 1.2s;
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
+}
+
+@media (max-width: 690px) {
+  .navMenu .menu button.dropMenu {
+    position: static;
+  }
 }
 
 .navMenu .menu button.dropMenu:hover ion-icon,
@@ -512,12 +574,6 @@ nav {
   z-index: 1000;
 }
 
-@media (max-height: 500px) {
-  .navMenu .menu .drop {
-    top: 120px;
-  }
-}
-
 @media (max-height: 650px) {
   .navMenu .menu .drop {
     width: 290px;
@@ -525,7 +581,20 @@ nav {
   }
 }
 
+@media (max-height: 500px) {
+  .navMenu .menu .drop {
+    top: 120px;
+  }
+}
+
+@media (max-width: 690px) {
+  .navMenu .menu .drop {
+    height: 0;
+  }
+}
+
 .navMenu .menu .drop ul {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -638,6 +707,14 @@ nav {
   }
 }
 
+@media (max-width: 690px) {
+  .navTitle {
+    position: static;
+    margin-top: -20px;
+    height: auto;
+  }
+}
+
 .navTitle::before,
 .navTitle .title {
   display: inline-block;
@@ -648,6 +725,14 @@ nav {
   .navTitle::before,
   .navTitle .title {
     vertical-align: bottom;
+  }
+}
+
+@media (max-width: 690px) {
+  .navTitle::before,
+  .navTitle .title {
+    width: 100%;
+    display: block;
   }
 }
 
@@ -682,14 +767,22 @@ nav {
 
 @media (max-height: 500px) {
   .title .titleContainer {
-    -webkit-transform: scale(0.65);
-            transform: scale(0.65);
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
     margin-left: -80px;
     margin-top: -30px;
   }
 }
 
-.title .titleContainer h1 {
+@media (max-width: 690px) {
+  .title .titleContainer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.title .titleContainer h1.pos0 {
   font-family: "Oswald", sans-serif;
   font-size: 10rem;
   font-weight: normal;
@@ -702,14 +795,21 @@ nav {
 }
 
 @media (max-height: 1000px) {
-  .title .titleContainer h1 {
+  .title .titleContainer h1.pos0 {
     font-size: 8rem;
   }
 }
 
 @media (max-height: 500px) {
-  .title .titleContainer h1 {
+  .title .titleContainer h1.pos0 {
     font-size: 7rem;
+  }
+}
+
+@media (max-width: 690px) {
+  .title .titleContainer h1.pos0 {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -742,6 +842,14 @@ nav {
   }
 }
 
+@media (max-width: 690px) {
+  .title .titleContainer h2.pos1,
+  .title .titleContainer h2.pos2 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .navSocial {
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -764,6 +872,13 @@ nav {
   }
 }
 
+@media (max-width: 690px) {
+  .navSocial {
+    position: relative;
+    margin-top: 20px;
+  }
+}
+
 .navSocial ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -776,6 +891,14 @@ nav {
   }
 }
 
+@media (max-width: 690px) {
+  .navSocial ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .navSocial ul li {
   margin-right: 30px;
   padding-top: 80px;
@@ -784,6 +907,12 @@ nav {
 @media (max-height: 500px) {
   .navSocial ul li {
     padding-top: 0;
+  }
+}
+
+@media (max-width: 690px) {
+  .navSocial ul li {
+    margin: 0 15px;
   }
 }
 
