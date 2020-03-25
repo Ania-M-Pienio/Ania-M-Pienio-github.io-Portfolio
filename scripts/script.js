@@ -1,6 +1,7 @@
 const app = {};
 
 app.isDropped = false;
+
 app.sections = {
   home: {
     el: $("#home"),
@@ -84,6 +85,7 @@ app.currentWaypoint = app.sections.$logo;
 /****************************************************************/
 /*****************          ANIMATORS         *******************/
 /****************************************************************/
+
 app.animateLogo = function(location) {
   // logo antlers expand
   $(`#${location} .logo2`).addClass("expand");
@@ -218,6 +220,10 @@ app.handleMenu = function() {
     setTimeout(() => {
       app.scrollToElem(id);
     }, 300);
+  });
+
+  $(".socialContainer a").on("click", function() {
+    $(this).blur();    
   });
 
 
