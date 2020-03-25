@@ -176,31 +176,6 @@ app.handleLogo = function() {
   });
 };
 
-app.handleProjects = function() {
-  $(".galleryPic a").mouseover(function() {
-    const id = $(this).children()[0].id;
-    const img = id.charAt(1);
-    $(`img#${id}`).attr("src", `assets/projects/hover/${img}.png`);
-  });
-  $(".galleryPic a").focus(function() {
-    const id = $(this).children()[0].id;
-    const img = id.charAt(1);
-    $(`img#${id}`).attr("src", `assets/projects/hover/${img}.png`);
-  });
-
-  $(".galleryPic a").blur(function() {
-    const id = $(this).children()[0].id;
-    const img = id.charAt(1);
-    $(`img#${id}`).attr("src", `assets/projects/${img}.png`);
-  });
-  $(".galleryPic a").mouseleave(function() {
-    const id = $(this).children()[0].id;
-    const img = id.charAt(1);
-    $(`img#${id}`).attr("src", `assets/projects/${img}.png`);
-    $(".galleryPic a").blur();
-  });
-};
-
 app.handleMenu = function() {
   // menu icon
   $(".dropMenu").on("click", function() {
