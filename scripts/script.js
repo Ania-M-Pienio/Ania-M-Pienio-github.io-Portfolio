@@ -184,6 +184,7 @@ app.handleMenu = function() {
     $(this).blur();
     $("#navLogo .bar").toggleClass("expand");
     $(".dropBar").toggleClass("expand");
+    $(".navMenuLogo").toggleClass("expand");
     if (app.isDropped) {
       $(".drop button").attr("disabled", true);
     } else {

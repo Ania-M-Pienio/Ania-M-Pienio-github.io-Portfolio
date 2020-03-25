@@ -479,9 +479,6 @@ nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -500,6 +497,12 @@ nav {
   }
 }
 
+@media (max-width: 690px) {
+  .navMenuLogo.expand {
+    height: 650px;
+  }
+}
+
 .navMenu {
   position: absolute;
   width: 100%;
@@ -508,6 +511,7 @@ nav {
 
 @media (max-width: 690px) {
   .navMenu {
+    height: auto;
     position: static;
     padding: 0;
     margin-top: 50px;
@@ -521,8 +525,16 @@ nav {
 
 @media (max-width: 690px) {
   .navMenu .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
     height: 100px;
+    position: static;
   }
 }
 
@@ -538,6 +550,7 @@ nav {
 @media (max-width: 690px) {
   .navMenu .menu button.dropMenu {
     position: static;
+    height: auto;
   }
 }
 
@@ -589,7 +602,8 @@ nav {
 
 @media (max-width: 690px) {
   .navMenu .menu .drop {
-    height: 0;
+    position: static;
+    height: 300px;
   }
 }
 
@@ -637,6 +651,14 @@ nav {
   }
 }
 
+@media (max-width: 690px) {
+  .navMenu .menu .drop.expand {
+    position: static;
+    height: 300px;
+    margin: 10px auto;
+  }
+}
+
 .navMenu .menu .drop.expand ul {
   width: 100%;
   height: 100%;
@@ -653,10 +675,24 @@ nav {
       align-content: flex-start;
 }
 
+@media (max-width: 690px) {
+  .navMenu .menu .drop.expand ul {
+    margin-top: 20px;
+  }
+}
+
 @media (max-height: 650px) {
   .navMenu .menu .drop.expand ul li {
     padding-right: 30px;
     width: 130px;
+  }
+}
+
+@media (max-width: 690px) {
+  .navMenu .menu .drop.expand ul li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -710,7 +746,6 @@ nav {
 @media (max-width: 690px) {
   .navTitle {
     position: static;
-    margin-top: -20px;
     height: auto;
   }
 }
@@ -874,7 +909,7 @@ nav {
 
 @media (max-width: 690px) {
   .navSocial {
-    position: relative;
+    position: static;
     margin-top: 20px;
   }
 }
@@ -896,6 +931,7 @@ nav {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    height: 50px;
   }
 }
 
@@ -913,6 +949,7 @@ nav {
 @media (max-width: 690px) {
   .navSocial ul li {
     margin: 0 15px;
+    padding: 0;
   }
 }
 
