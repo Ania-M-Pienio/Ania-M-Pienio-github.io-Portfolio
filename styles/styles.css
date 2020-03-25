@@ -231,10 +231,15 @@ input::-moz-focus-inner {
   height: 180px;
   width: 230px;
   z-index: 5000;
-  -webkit-transition: -webkit-transform 1.5s;
-  transition: -webkit-transform 1.5s;
-  transition: transform 1.5s;
-  transition: transform 1.5s, -webkit-transform 1.5s;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+}
+
+@media (max-height: 600px) {
+  .mainLogo .logo1 {
+    height: 110px;
+    width: 160px;
+  }
 }
 
 .mainLogo .logo2 {
@@ -245,10 +250,15 @@ input::-moz-focus-inner {
   z-index: 6000;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: -webkit-transform 1.5s;
-  transition: -webkit-transform 1.5s;
-  transition: transform 1.5s;
-  transition: transform 1.5s, -webkit-transform 1.5s;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+}
+
+@media (max-height: 600px) {
+  .mainLogo .logo2 {
+    height: 110px;
+    width: 160px;
+  }
 }
 
 .mainLogo .logo3 {
@@ -259,10 +269,15 @@ input::-moz-focus-inner {
   z-index: 7000;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: -webkit-transform 1.5s;
-  transition: -webkit-transform 1.5s;
-  transition: transform 1.5s;
-  transition: transform 1.5s, -webkit-transform 1.5s;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+}
+
+@media (max-height: 600px) {
+  .mainLogo .logo3 {
+    height: 110px;
+    width: 160px;
+  }
 }
 
 .mainLogo .bars {
@@ -278,9 +293,15 @@ input::-moz-focus-inner {
   width: 0;
   height: 5px;
   background: #3b3b3b;
-  -webkit-transition: width 2s;
-  transition: width 2s;
+  -webkit-transition: all 2s;
+  transition: all 2s;
   border-radius: 5px;
+}
+
+@media (max-height: 600px) {
+  .mainLogo .bar {
+    margin-top: 25px;
+  }
 }
 
 .mainLogo span {
@@ -302,7 +323,7 @@ input::-moz-focus-inner {
   width: 100%;
 }
 
-.bar.expand:not(.quoteBar) {
+.bar.expand:not(.quoteBar):not(.contactBar) {
   margin-left: 5px;
 }
 
@@ -379,10 +400,18 @@ nav {
 }
 
 .navMenuLogo {
+  -webkit-transition: all 1s;
+  transition: all 1s;
   position: relative;
   height: 200px;
   width: 100%;
   padding-top: 30px;
+}
+
+@media (max-height: 600px) {
+  .navMenuLogo {
+    padding-top: 20px;
+  }
 }
 
 .navMenu {
@@ -426,6 +455,20 @@ nav {
   transition: transform 1s, margin-right 0.5s, -webkit-transform 1s;
 }
 
+@media (max-height: 860px) {
+  .navMenu .menu .drop.expand {
+    background: -webkit-gradient(linear, right top, left top, from(#f1f1f1), color-stop(rgba(241, 241, 241, 0.733)), color-stop(rgba(241, 241, 241, 0.507)), to(rgba(241, 241, 241, 0)));
+    background: linear-gradient(to left, #f1f1f1, rgba(241, 241, 241, 0.733), rgba(241, 241, 241, 0.507), rgba(241, 241, 241, 0));
+  }
+}
+
+@media (max-height: 600px) {
+  .navMenu .menu .drop.expand {
+    width: 250px;
+    height: 200px;
+  }
+}
+
 .navMenu .menu .dropMenu.expand {
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -437,6 +480,12 @@ nav {
   right: 0;
   top: 170px;
   z-index: 1000;
+}
+
+@media (max-height: 600px) {
+  .navMenu .menu .drop {
+    top: 120px;
+  }
 }
 
 .navMenu .menu .drop button {
@@ -454,11 +503,33 @@ nav {
   transition: color 1.5s, transform 0.5s, margin-right 0.5s, -webkit-transform 0.5s;
 }
 
-.navMenu .menu .drop.expand li button {
+.navMenu .menu .drop.expand ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+@media (max-height: 860px) {
+  .navMenu .menu .drop.expand ul li {
+    padding-right: 30px;
+  }
+}
+
+.navMenu .menu .drop.expand ul li button {
   color: #191919;
 }
 
-.navMenu .menu .drop.expand li button:hover, .navMenu .menu .drop.expand li button:focus {
+.navMenu .menu .drop.expand ul li button:hover, .navMenu .menu .drop.expand ul li button:focus {
   color: #878787;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -476,6 +547,12 @@ nav {
   margin-bottom: 10px;
 }
 
+@media (max-height: 860px) {
+  .dropBar {
+    border-radius: 0;
+  }
+}
+
 .dropBar.expand {
   width: 100%;
 }
@@ -488,15 +565,22 @@ nav {
   transition: all 1s;
 }
 
+@media (max-height: 1000px) {
+  .navTitle {
+    height: 30%;
+  }
+}
+
 .navTitle::before,
 .navTitle .title {
   display: inline-block;
   vertical-align: middle;
 }
 
-@media (max-height: 1000px) {
-  .navTitle {
-    height: 50%;
+@media (max-height: 600px) {
+  .navTitle::before,
+  .navTitle .title {
+    vertical-align: bottom;
   }
 }
 
@@ -506,9 +590,21 @@ nav {
   height: 100%;
 }
 
-.title h1 {
+.title .titleContainer {
   -webkit-transition: all 1s;
   transition: all 1s;
+}
+
+@media (max-height: 860px) {
+  .title .titleContainer {
+    -webkit-transform: scale(0.65);
+            transform: scale(0.65);
+    margin-left: -80px;
+    margin-top: -20px;
+  }
+}
+
+.title .titleContainer h1 {
   font-family: "Oswald", sans-serif;
   font-size: 10rem;
   font-weight: normal;
@@ -520,25 +616,32 @@ nav {
   margin-left: -1px;
 }
 
-@media (max-height: 860px) {
-  .title h1 {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-    margin-left: -80px;
-    margin-top: -20px;
+@media (max-height: 600px) {
+  .title .titleContainer h1 {
+    font-size: 7rem;
   }
 }
 
-.title h1 span.pos1 {
-  display: block;
+.title .titleContainer h2.pos1,
+.title .titleContainer h2.pos2 {
+  font-family: "Oswald", sans-serif;
   font-size: 8rem;
+  font-weight: normal;
   color: #5d5d5d;
+  letter-spacing: normal;
+  line-height: 1.2;
+  text-align: left;
+  text-transform: uppercase;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
-.title h1 span.pos2 {
-  display: block;
-  font-size: 8rem;
-  color: #5d5d5d;
+@media (max-height: 600px) {
+  .title .titleContainer h2.pos1,
+  .title .titleContainer h2.pos2 {
+    font-size: 5rem;
+    display: inline;
+  }
 }
 
 .navSocial {
@@ -555,15 +658,35 @@ nav {
   }
 }
 
+@media (max-height: 600px) {
+  .navSocial {
+    position: static;
+    margin: -1px;
+    margin-top: -20px;
+  }
+}
+
 .navSocial ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+@media (max-height: 600px) {
+  .navSocial ul {
+    height: 100%;
+  }
+}
+
 .navSocial ul li {
   margin-right: 30px;
   padding-top: 80px;
+}
+
+@media (max-height: 600px) {
+  .navSocial ul li {
+    padding-top: 0;
+  }
 }
 
 .navSocial ul li ion-icon {
@@ -628,6 +751,12 @@ section.overview.expand {
 @media (max-width: 960px) {
   section.overview.expand {
     margin-top: -50px;
+  }
+}
+
+@media (max-height: 860px) {
+  section.overview.expand {
+    margin-top: -10px;
   }
 }
 

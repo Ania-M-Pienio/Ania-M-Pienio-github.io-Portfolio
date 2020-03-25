@@ -21,7 +21,11 @@
     height: 180px;
     width: 230px;
     z-index: 5000;
-    transition: transform 1.5s;
+    transition: all 1.5s;
+    @include mobile-port-hh {
+      height: 110px;
+      width: 160px;
+    }
   }
 
   .logo2 {
@@ -31,7 +35,11 @@
     width: 230px;
     z-index: 6000;
     transform: scale(0);
-    transition: transform 1.5s;
+    transition: all 1.5s;
+    @include mobile-port-hh {
+      height: 110px;
+      width: 160px;
+    }
   }
 
   .logo3 {
@@ -41,7 +49,11 @@
     width: 230px;
     z-index: 7000;
     transform: scale(0);
-    transition: transform 1.5s;
+    transition: all 1.5s;
+    @include mobile-port-hh {
+      height: 110px;
+      width: 160px;
+    }
   }
   .bars {
     display: flex;
@@ -53,8 +65,11 @@
     width: 0;
     height: 5px;
     background: lighten($charcoal, 10);
-    transition: width 2s;
+    transition: all 2s;
     border-radius: 5px;
+    @include mobile-port-hh {
+      margin-top: 25px;
+    }
   }
   span {
     position: absolute;
@@ -76,11 +91,9 @@
   width: 100%;
 }
 
-.bar.expand:not(.quoteBar) {
+.bar.expand:not(.quoteBar):not(.contactBar) {
   margin-left: 5px;
 }
-
-
 
 // LOGO - quote
 .quoteLogoContainer,
@@ -90,7 +103,7 @@
   position: relative;
 }
 .quoteLogoContainer .mainLogo,
-.contactLogoContainer .mainLogo  {
+.contactLogoContainer .mainLogo {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -117,12 +130,12 @@
 }
 
 .bar.quoteBar {
-    width: 0;
-    background: $grey;
-    height: 2.5px;
-    border-radius: 2.5px;
-    top: 0px;
-  }
+  width: 0;
+  background: $grey;
+  height: 2.5px;
+  border-radius: 2.5px;
+  top: 0px;
+}
 
 .bar.quoteBar.expand {
   width: 100%;

@@ -14,10 +14,14 @@ nav {
 }
 
 .navMenuLogo {
+  transition: all 1s;
   position: relative;
   height: 200px;
   width: 100%;
   padding-top: 30px;
+  @include mobile-port-hh {
+    padding-top: 20px;
+  }
 }
 
 // MENU
@@ -49,6 +53,21 @@ nav {
     }
   }
 }
+.navMenu .menu .drop.expand {
+  @include mobile-port-h {
+    background: linear-gradient(
+      to left,
+      rgb(241, 241, 241),
+      rgba(241, 241, 241, 0.733),
+      rgba(241, 241, 241, 0.507),
+      rgba(241, 241, 241, 0)
+    );
+  }
+  @include mobile-port-hh {
+    width: 250px;
+    height: 200px;
+  }
+}
 
 .navMenu .menu .dropMenu.expand {
   transform: scale(1);
@@ -61,6 +80,9 @@ nav {
   right: 0;
   top: 170px;
   z-index: 1000;
+  @include mobile-port-hh {
+    top: 120px;
+  }
   button {
     @include Domi(1.9rem, normal, rgba(255, 255, 255, 0), normal, 2.2, right);
     text-transform: capitalize;
@@ -68,13 +90,28 @@ nav {
   }
 }
 // DROP MENU expanded
-.navMenu .menu .drop.expand li button {
-  color: $font;
-  &:hover,
-  &:focus {
-    color: lighten($charcoal, 40);
-    transform: scale(1.2);
-    margin-right: 8px;
+.navMenu .menu .drop.expand {
+  ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    align-content: flex-start;
+    li {
+      @include mobile-port-h {
+        padding-right: 30px;   
+      }
+      button {
+        color: $font;
+        &:hover,
+        &:focus {
+          color: lighten($charcoal, 40);
+          transform: scale(1.2);
+          margin-right: 8px;
+        }
+      }
+    }
   }
 }
 
@@ -87,6 +124,9 @@ nav {
   transition: width 2s;
   border-radius: 5px;
   margin-bottom: 10px;
+  @include mobile-port-h {
+    border-radius: 0;
+  }
 }
 
 // BAR above the drop menu - expanded
@@ -100,15 +140,20 @@ nav {
   position: relative;
   z-index: 500;
   transition: all 1s;
+  @include mobile-land-h {
+    // 1000vh
+    height: 30%;
+  }
   &::before,
   .title {
     display: inline-block;
     vertical-align: middle;
+    @include mobile-port-hh {
+      // 600vh
+      vertical-align: bottom;
+    }
   }
-  @include mobile-land-h {
-    // 1000vh
-    height: 50%;
-  }
+
   // positional element created only to align title to something
   &::before {
     content: "";
@@ -117,25 +162,30 @@ nav {
   }
 }
 
-.title h1 {
+.title .titleContainer {
   transition: all 1s;
-  @include Ossie(10rem, normal, $font, normal, 1.2, left);
-  text-transform: uppercase;
-  margin-left: -1px;
   @include mobile-port-h {
-    transform: scale(0.7);
+    transform: scale(0.65);
     margin-left: -80px;
     margin-top: -20px;
   }
-  span.pos1 {
-    display: block;
-    font-size: 8rem;
-    color: darken($grey, 50);
+  h1 {
+    @include Ossie(10rem, normal, $font, normal, 1.2, left);
+    text-transform: uppercase;
+    margin-left: -1px;
+    @include mobile-port-hh {
+      font-size: 7rem;
+    }
   }
-  span.pos2 {
-    display: block;
-    font-size: 8rem;
-    color: darken($grey, 50);
+  h2.pos1,
+  h2.pos2 {
+    @include Ossie(8rem, normal, darken($grey, 50), normal, 1.2, left);
+    text-transform: uppercase;
+    transition: all 1s;
+    @include mobile-port-hh {
+      font-size: 5rem;
+      display: inline;
+    }
   }
 }
 
@@ -148,11 +198,22 @@ nav {
   @include mobile-port-h {
     bottom: 50px;
   }
+  @include mobile-port-hh {
+    position: static;
+    margin: -1px;
+    margin-top: -20px;
+  }
   ul {
     display: flex;
+    @include mobile-port-hh {
+      height: 100%;
+    }
     li {
       margin-right: 30px;
       padding-top: 80px;
+      @include mobile-port-hh {
+        padding-top: 0;
+      }
       ion-icon {
         font-size: 3rem;
         color: $font;
