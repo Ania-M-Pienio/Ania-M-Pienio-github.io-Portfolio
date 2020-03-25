@@ -57,3 +57,15 @@
     @content;
   }
 }
+
+@mixin mobile-land-h {
+  @media (max-height: 1000px) {
+    @content;
+  }
+}
+
+@mixin mobile-port-h {
+  @media (max-height: 860px) {
+    @content;
+  }
+}

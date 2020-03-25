@@ -99,10 +99,15 @@ nav {
   height: calc(100% - 230px);
   position: relative;
   z-index: 500;
+  transition: all 1s;
   &::before,
   .title {
     display: inline-block;
     vertical-align: middle;
+  }
+  @include mobile-land-h {
+    // 1000vh
+    height: 50%;
   }
   // positional element created only to align title to something
   &::before {
@@ -113,9 +118,15 @@ nav {
 }
 
 .title h1 {
+  transition: all 1s;
   @include Ossie(10rem, normal, $font, normal, 1.2, left);
   text-transform: uppercase;
   margin-left: -1px;
+  @include mobile-port-h {
+    transform: scale(0.7);
+    margin-left: -80px;
+    margin-top: -20px;
+  }
   span.pos1 {
     display: block;
     font-size: 8rem;
@@ -130,9 +141,13 @@ nav {
 
 // SOCIAL ICONS
 .navSocial {
+  transition: all 1s;
   position: absolute;
   bottom: 100px;
   z-index: 1500;
+  @include mobile-port-h {
+    bottom: 50px;
+  }
   ul {
     display: flex;
     li {
@@ -157,4 +172,3 @@ nav {
     }
   }
 }
-

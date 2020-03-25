@@ -484,12 +484,20 @@ nav {
   height: calc(100% - 230px);
   position: relative;
   z-index: 500;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .navTitle::before,
 .navTitle .title {
   display: inline-block;
   vertical-align: middle;
+}
+
+@media (max-height: 1000px) {
+  .navTitle {
+    height: 50%;
+  }
 }
 
 .navTitle::before {
@@ -499,6 +507,8 @@ nav {
 }
 
 .title h1 {
+  -webkit-transition: all 1s;
+  transition: all 1s;
   font-family: "Oswald", sans-serif;
   font-size: 10rem;
   font-weight: normal;
@@ -508,6 +518,15 @@ nav {
   text-align: left;
   text-transform: uppercase;
   margin-left: -1px;
+}
+
+@media (max-height: 860px) {
+  .title h1 {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    margin-left: -80px;
+    margin-top: -20px;
+  }
 }
 
 .title h1 span.pos1 {
@@ -523,9 +542,17 @@ nav {
 }
 
 .navSocial {
+  -webkit-transition: all 1s;
+  transition: all 1s;
   position: absolute;
   bottom: 100px;
   z-index: 1500;
+}
+
+@media (max-height: 860px) {
+  .navSocial {
+    bottom: 50px;
+  }
 }
 
 .navSocial ul {
