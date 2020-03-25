@@ -129,7 +129,7 @@ app.handleWaypoints = function() {
       function() {
         app.sections[section].run();
       },
-      { offset: app.sections[section].trigger}
+      { offset: app.sections[section].trigger }
     );
   }
 
@@ -225,6 +225,7 @@ app.handleMenu = function() {
     }, 300);
   });
 
+  // contact menu
   $(".menuContainer li button").on("click", function() {
     $(this).blur();
     let id = $(this).attr("id");
@@ -233,7 +234,19 @@ app.handleMenu = function() {
       app.scrollToElem(id);
     }, 300);
   });
-};
+
+  // overview menu
+  $(".overBtn").on("click", function() {
+    $(this).blur();
+    let id = $(this).attr("id");
+    id = id.substring(2, id.length).toLowerCase();
+    setTimeout(() => {
+      app.scrollToElem(id);
+    }, 300);
+  });
+
+
+}; // end of menu handlers
 
 app.handleContacts = function() {
   $(".emailCopy").on("click", async function() {
