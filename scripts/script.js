@@ -12,7 +12,6 @@ app.sections = {
       // no animation
     }
   },
-
   overview: {
     el: $("#overview"),
     offset: 50,
@@ -108,6 +107,7 @@ app.animateMenu = function() {
 
 app.resetAll = function() {
   $("main *").removeClass("expand");
+  $("footer *").removeClass("expand");
 };
 
 /****************************************************************/
