@@ -119,7 +119,6 @@ app.listeners = function() {
   app.handleLogo();
   app.handleMenu();
   app.handleWaypoints();
-  app.handleProjects();
   app.handleContacts();
 };
 

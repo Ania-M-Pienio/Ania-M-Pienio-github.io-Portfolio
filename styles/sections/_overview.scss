@@ -2,6 +2,9 @@ section.overview {
   height: auto;
   transition: margin-top 1.5s;
   margin-bottom: 100px;
+  @include tablet-port {
+    margin-bottom: -40px;
+  }
 }
 
 .wrapper.overview {
@@ -9,10 +12,21 @@ section.overview {
   height: 100%;
   display: flex;
   justify-content: center;
+  @include tablet-port {
+    // 960
+    flex-direction: column;
+    align-content: center;
+    padding: 0;
+    margin-top: 180px;
+    position: relative;
+  }
 }
 
 section.overview.expand {
   margin-top: -100px;
+  @include tablet-port {
+    margin-top: -50px;
+  }
 }
 
 .overGallery {
@@ -22,10 +36,17 @@ section.overview.expand {
   flex-flow: column wrap;
 }
 
+// [ 2 ]
 .overGallery.gallery2 {
   position: relative;
   justify-content: flex-start;
   margin-top: 130px;
+  @include tablet-port {
+    // 960
+    flex-direction: column;
+    margin-top: 70px;
+    position: static;
+  }
 }
 
 .overGallery .gallery {
@@ -33,10 +54,33 @@ section.overview.expand {
   height: 500px;
   padding: 20px;
   padding: 20px;
+  transition: all 1s;
+  @include tablet-land {
+    // 1250
+    width: 400px;
+    height: 400px;
+  }
+  @include tablet-port {
+    // 960
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
   .box {
     height: 100%;
     width: 100%;
     background-color: $tint;
+    img {
+      object-fit: contain;
+      height: 100%;
+    }
+    @include tablet-port {
+      // 960
+      height: 100%;
+      width: 100%;
+    }
   }
   button {
     border: 2px solid rgba(255, 255, 255, 0);
@@ -48,12 +92,20 @@ section.overview.expand {
     h3 {
       @include Ossie(2.5rem, normal, $charcoal, normal, normal, left);
       text-transform: uppercase;
+      @include tablet-port {
+        // 960
+        text-align: center;
+      }
     }
   }
 }
 
 .gallery.pic1 {
   height: 400px;
+  @include tablet-land {
+    // 1250
+    height: 330px;
+  }
 }
 
 .gallery.pic2 {
@@ -72,12 +124,39 @@ section.overview.expand {
   width: 100%;
 }
 
+.overGallery.gallery2 .gallery.pic3 box {
+  img {
+    object-fit: cover;
+  }
+}
+
 .splashTitle {
   position: absolute;
   top: 550px;
   left: 0;
   z-index: 0;
+  transition: all 1s;
+  @include tablet-land {
+    // 1250
+    top: 500px;
+  }
+  @include tablet-port {
+    // 960
+    width: 100%;
+    top: -140px;
+    
+  }
   h1 {
+    transition: all 1s;
     @include Monti(15rem, normal, $grey2, normal, normal, left);
+    @include tablet-land {
+      // 1250
+      font-size: 12rem;
+    }
+    @include tablet-port {
+      // 960
+      width: 100%;
+      text-align: center;    
+    }
   }
 }

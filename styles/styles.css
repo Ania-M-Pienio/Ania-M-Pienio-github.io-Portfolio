@@ -563,6 +563,12 @@ section.overview {
   margin-bottom: 100px;
 }
 
+@media (max-width: 960px) {
+  section.overview {
+    margin-bottom: -40px;
+  }
+}
+
 .wrapper.overview {
   padding: 0 80px;
   height: 100%;
@@ -574,8 +580,28 @@ section.overview {
           justify-content: center;
 }
 
+@media (max-width: 960px) {
+  .wrapper.overview {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    padding: 0;
+    margin-top: 180px;
+    position: relative;
+  }
+}
+
 section.overview.expand {
   margin-top: -100px;
+}
+
+@media (max-width: 960px) {
+  section.overview.expand {
+    margin-top: -50px;
+  }
 }
 
 .overGallery {
@@ -601,17 +627,65 @@ section.overview.expand {
   margin-top: 130px;
 }
 
+@media (max-width: 960px) {
+  .overGallery.gallery2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 70px;
+    position: static;
+  }
+}
+
 .overGallery .gallery {
   width: 500px;
   height: 500px;
   padding: 20px;
   padding: 20px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+@media (max-width: 1250px) {
+  .overGallery .gallery {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 960px) {
+  .overGallery .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .overGallery .gallery .box {
   height: 100%;
   width: 100%;
   background-color: #f8f8f8;
+}
+
+.overGallery .gallery .box img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+}
+
+@media (max-width: 960px) {
+  .overGallery .gallery .box {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .overGallery .gallery button {
@@ -635,8 +709,20 @@ section.overview.expand {
   text-transform: uppercase;
 }
 
+@media (max-width: 960px) {
+  .overGallery .gallery button h3 {
+    text-align: center;
+  }
+}
+
 .gallery.pic1 {
   height: 400px;
+}
+
+@media (max-width: 1250px) {
+  .gallery.pic1 {
+    height: 330px;
+  }
 }
 
 .gallery.pic2 {
@@ -657,14 +743,36 @@ section.overview.expand {
   width: 100%;
 }
 
+.overGallery.gallery2 .gallery.pic3 box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .splashTitle {
   position: absolute;
   top: 550px;
   left: 0;
   z-index: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+@media (max-width: 1250px) {
+  .splashTitle {
+    top: 500px;
+  }
+}
+
+@media (max-width: 960px) {
+  .splashTitle {
+    width: 100%;
+    top: -140px;
+  }
 }
 
 .splashTitle h1 {
+  -webkit-transition: all 1s;
+  transition: all 1s;
   font-family: 'Montserrat', sans-serif;
   font-size: 15rem;
   font-weight: normal;
@@ -672,6 +780,19 @@ section.overview.expand {
   letter-spacing: normal;
   line-height: normal;
   text-align: left;
+}
+
+@media (max-width: 1250px) {
+  .splashTitle h1 {
+    font-size: 12rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .splashTitle h1 {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .quote {
