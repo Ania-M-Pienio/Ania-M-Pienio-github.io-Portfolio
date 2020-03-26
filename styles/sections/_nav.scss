@@ -45,6 +45,10 @@ nav {
     justify-content: space-around;
     align-items: center;
   }
+  @include mobile-port {
+    // 480
+    padding: 40px 10px;
+  }
 }
 
 // MENU-LOGO
@@ -76,7 +80,8 @@ nav {
   }
 }
 .navMenuLogo.expand {
-  @include mobile-land { // 690
+  @include mobile-land {
+    // 690
     height: 650px;
   }
 }
@@ -202,17 +207,19 @@ nav {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap-reverse;
-    align-content: flex-start;  
-    @include mobile-land { // 690
+    align-content: flex-start;
+    @include mobile-land {
+      // 690
       margin-top: 20px;
-    }  
+    }
     li {
       @include mobile-port-h2 {
         // 650vh
         padding-right: 30px;
         width: 130px;
       }
-      @include mobile-land { // 690
+      @include mobile-land {
+        // 690
         width: 100%;
         margin: 0;
         padding: 0;
@@ -380,6 +387,10 @@ nav {
     // 680
     position: static;
     margin-top: 20px;
+  }
+  @include mobile-port {
+    // 480
+    margin-top: 0;
   }
   ul {
     display: flex;

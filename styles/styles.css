@@ -454,6 +454,12 @@ nav {
   }
 }
 
+@media (max-width: 480px) {
+  .nav.wrapper {
+    padding: 40px 10px;
+  }
+}
+
 .navMenuLogo {
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -922,6 +928,12 @@ nav {
   .navSocial {
     position: static;
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navSocial {
+    margin-top: 0;
   }
 }
 
