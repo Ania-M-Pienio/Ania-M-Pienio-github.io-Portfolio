@@ -1248,15 +1248,43 @@ section.overview.expand {
           justify-content: space-between;
 }
 
+@media (max-width: 960px) {
+  .quoteContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
 .quotePhoto {
   width: 400px;
   height: auto;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+@media (max-width: 960px) {
+  .quotePhoto {
+    width: 100%;
+  }
 }
 
 .quotePhoto img {
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+@media (max-width: 960px) {
+  .quotePhoto img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 
 .quoteContentContainer {
@@ -1272,6 +1300,32 @@ section.overview.expand {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+@media (max-width: 960px) {
+  .quoteContentContainer {
+    padding: 0;
+    height: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 960px) {
+  .quoteContentContainer .quoteLogoContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.quoteContentContainer .quoteLogoContainer .mainLogo {
+  position: relative;
+  width: 100%;
+  margin: 30px 0;
 }
 
 .quoteContentContainer .quoteContent {
@@ -1294,6 +1348,12 @@ section.overview.expand {
   letter-spacing: normal;
   line-height: 1.6;
   text-align: center;
+}
+
+@media (max-width: 690px) {
+  .quoteContentContainer .quoteContent .quotePara {
+    font-size: 1.7rem;
+  }
 }
 
 .quoteContentContainer .quoteContent .quotation {
