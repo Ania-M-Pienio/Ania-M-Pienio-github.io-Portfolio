@@ -72,16 +72,24 @@
     // 690
     display: block;
   }
-  //[ 1 ]
+  /// PROJECT IMAGE [ 1 ]
   .projectImage {
     flex: 1;
+    z-index: 6000;
+    position: relative;
     box-shadow: $shadow;
     background-color: $tint;
+    transition: all 1s;
     @include tablet-port {
       // 960
       flex: 0;
       height: 0;
       width: 0;
+    }
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+ 
     }
     .picture {
       object-fit: contain;
@@ -91,14 +99,13 @@
       position: relative;
       transition: all 1s;
       z-index: 5000;
-
       @include tablet-port {
         // 960
         opacity: 0;
       }
     }
   }
-  //[ 2 ]
+  /// PROJECT INFO [ 2 ]
   .projectInfo {
     flex: 2;
     height: auto;
@@ -128,6 +135,7 @@
       box-shadow: $shadow;
       position: absolute;
     }
+    //// PROJECT TITLE TOP BAR [ 1 ]
     .infoTitle {
       display: flex;
       justify-content: space-between;
@@ -136,21 +144,26 @@
         // 960
         flex-direction: column-reverse;
       }
-      // PROJECT TITLE [ 2 ]
+      /////// TITLE [ 1 ]
       .title {
         width: 60%;
         text-transform: uppercase;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        transition: all 1s;
         @include Ossie(3.5rem, bold, $grey2, 1.5, normal, left);
         @include tablet-port {
           // 960
           margin: 30px 0 0 0;
           width: 100%;
         }
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
       }
-      // PROJECT SKILLS [ 2 ]
+      /////// SKILLS [ 2 ]
       .skillWrapper {
         width: 60%;
         height: 100%;
@@ -200,7 +213,7 @@
         }
       }
     }
-    // PROJECT DESCRIPTION
+    // PROJECT CONTENT INFO [ 2 ]
     .infoContent {
       flex: 2;
       height: auto;
@@ -212,6 +225,7 @@
         flex: 0;
         width: 100%;
       }
+      ///////////// PROJECT DESCRIPTION [ 1 ]
       p {
         margin-top: 20px;
         @include Domi(2rem, normal, $tint, 1.5, 1.6, left);
@@ -223,6 +237,7 @@
           font-size: 1.8rem;
         }
       }
+      ///////////// PROJECT LINK [ 2 ]
       a {
         width: 100%;
         margin-top: 20px;
