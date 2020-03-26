@@ -1758,7 +1758,10 @@ section.overview.expand {
 
 @media (max-width: 690px) {
   .project {
-    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 

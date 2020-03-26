@@ -70,7 +70,7 @@
   margin-top: 50px;
   @include mobile-land {
     // 690
-    display: block;
+    flex-direction: column;
   }
   /// PROJECT IMAGE [ 1 ]
   .projectImage {
