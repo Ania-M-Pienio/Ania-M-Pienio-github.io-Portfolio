@@ -88,6 +88,10 @@ a {
   right: 0;
   z-index: 7000;
   visibility: hidden;
+  @include mobile-port {
+    // 480
+    display:none;
+  }
   button {
     padding: 5%;
     ion-icon {

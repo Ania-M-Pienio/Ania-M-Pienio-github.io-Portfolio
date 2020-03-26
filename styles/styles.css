@@ -2681,6 +2681,12 @@ a:focus, a:hover {
   visibility: hidden;
 }
 
+@media (max-width: 480px) {
+  .scrollTop {
+    display: none;
+  }
+}
+
 .scrollTop button {
   padding: 5%;
 }
