@@ -61,7 +61,7 @@
 
 
 @mixin mobile-port {
-  @media (max-width: 350px) {
+  @media (max-width: 480px) {
     @content;
   }
 }

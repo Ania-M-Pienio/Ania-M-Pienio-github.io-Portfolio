@@ -13,15 +13,35 @@
   top: 10px;
   left: 0;
   opacity: 0.85;
+  @include tablet-land {
+    // 1250
+    width: 100%;
+    position: relative;
+  }
+  h1 {
+    @include tablet-land {
+      // 1250
+      width: 100%;
+      text-align: center;
+    }
+    @include mobile-port {
+      // 480
+      font-size: 6rem;
+    }
+  }
 }
 
 .wrapper.projects {
   padding: 100px 80px;
   height: 100%;
+  @include tablet-port {
+    // 960
+    padding: 50px 80px;
+  }
 }
 
 .projectContainer {
-  // ul main
+  // ul
   width: 100%;
   height: 100%;
   display: flex;
@@ -29,11 +49,15 @@
   justify-content: space-evenly;
   align-content: space-between;
   margin-top: 300px;
-  transition: margin-top 2s;
+  transition: all 2s;
 }
 // ANIMATE ON SCROLL
 .projectContainer.expand {
   margin-top: 100px;
+  @include tablet-port {
+    // 960
+    margin-top: 70px;
+  }
 }
 
 // EACH PROJECT
@@ -44,24 +68,40 @@
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  @include mobile-land {
+    // 690
+    display: block;
+  }
   //[ 1 ]
   .projectImage {
     flex: 1;
     box-shadow: $shadow;
     background-color: $tint;
+    @include tablet-port {
+      // 960
+      flex: 0;
+      height: 0;
+      width: 0;
+    }
     .picture {
       object-fit: contain;
       min-width: 100%;
       height: 100%;
       border: 5px solid $tint;
       position: relative;
+      transition: all 1s;
       z-index: 5000;
+
+      @include tablet-port {
+        // 960
+        opacity: 0;
+      }
     }
   }
   //[ 2 ]
   .projectInfo {
     flex: 2;
-    height: 100%;
+    height: auto;
     padding: 80px;
     padding-top: 40px;
     padding-left: 80px;
@@ -69,8 +109,18 @@
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
-    background: linear-gradient(to right, #2121214d, #2121214f, rgba(255, 255, 255, 0));
     z-index: 2000;
+    background: linear-gradient(
+      to right,
+      #2121214d,
+      #2121214f,
+      rgba(255, 255, 255, 0)
+    );
+    @include tablet-port {
+      // 960
+      width: 100%;
+      padding: 5%;
+    }
     .infoBar {
       height: 4px;
       width: 100%;
@@ -82,7 +132,11 @@
       display: flex;
       justify-content: space-between;
       position: relative;
-      flex: 1;
+      @include tablet-port {
+        // 960
+        flex-direction: column-reverse;
+      }
+      // PROJECT TITLE [ 2 ]
       .title {
         width: 60%;
         text-transform: uppercase;
@@ -90,20 +144,36 @@
         flex-direction: column;
         justify-content: flex-end;
         @include Ossie(3.5rem, bold, $grey2, 1.5, normal, left);
+        @include tablet-port {
+          // 960
+          margin: 30px 0 0 0;
+          width: 100%;
+        }
       }
-      // PROJECT SKILLS
+      // PROJECT SKILLS [ 2 ]
       .skillWrapper {
         width: 60%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        @include tablet-port {
+          // 960
+          width: 100%;
+        }
         .skillContainer {
-          height: 100%;     // ul
+          height: 100%; // ul
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
-          .skill {  // li
+          @include tablet-port {
+            // 960
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+          }
+          .skill {
+            // li
             width: 75px;
             height: 60px;
             display: flex;
@@ -133,12 +203,25 @@
     // PROJECT DESCRIPTION
     .infoContent {
       flex: 2;
+      height: auto;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      @include mobile-land {
+        // 690
+        flex: 0;
+        width: 100%;
+      }
       p {
         margin-top: 20px;
         @include Domi(2rem, normal, $tint, 1.5, 1.6, left);
+        @include mobile-land {
+          // 690
+          height: auto;
+          width: 100%;
+          padding: 5% 5% 5% 0;
+          font-size: 1.8rem;
+        }
       }
       a {
         width: 100%;
@@ -158,7 +241,17 @@
 // EVERY OTHER PROJECT
 .projectInfo.alt {
   padding-left: 50px;
-  background: linear-gradient(to left, #2121214d, #2121214f, rgba(255, 255, 255, 0));
+  height: auto;
+  background: linear-gradient(
+    to left,
+    #2121214d,
+    #2121214f,
+    rgba(255, 255, 255, 0)
+  );
+  @include tablet-port {
+    // 960
+    padding: 5%;
+  }
 }
 
 .infoBar.top {
