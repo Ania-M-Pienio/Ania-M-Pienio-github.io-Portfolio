@@ -36,7 +36,8 @@
 }
 
 .edu2 {
-   @include tablet-port {
+   @include mobile-land {
+     // 690
      height: 200px;     
   }
 }

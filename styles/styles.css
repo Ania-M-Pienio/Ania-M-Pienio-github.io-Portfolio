@@ -2192,7 +2192,7 @@ section.overview.expand {
   height: 100%;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 690px) {
   .edu2 {
     height: 200px;
   }
@@ -2204,6 +2204,18 @@ section.overview.expand {
 
 .wrapper.blog {
   padding: 40px 80px 60px;
+}
+
+@media (max-width: 690px) {
+  .wrapper.blog {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper.blog {
+    padding: 0;
+  }
 }
 
 .blogTitle {
@@ -2230,6 +2242,13 @@ section.overview.expand {
 .blogContentContainer ul {
   height: 100%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .blogContentContainer ul li {
@@ -2245,13 +2264,45 @@ section.overview.expand {
   padding: 2%;
 }
 
+@media (max-width: 960px) {
+  .blogContentContainer ul li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+}
+
 .blogImage {
   width: 40%;
 }
 
+@media (max-width: 1250px) {
+  .blogImage {
+    height: 250px;
+  }
+}
+
+@media (max-width: 960px) {
+  .blogImage {
+    width: 100%;
+    height: 50%;
+    padding: 5%;
+  }
+}
+
 .blogImage img {
+  min-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (max-width: 960px) {
+  .blogImage img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 
 .blogContent {
@@ -2272,6 +2323,15 @@ section.overview.expand {
           justify-content: flex-start;
 }
 
+@media (max-width: 960px) {
+  .blogContent {
+    height: auto;
+    width: 100%;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+  }
+}
+
 .blogContent h3 {
   font-family: "Oswald", sans-serif;
   font-size: 2.5rem;
@@ -2283,8 +2343,15 @@ section.overview.expand {
   text-transform: uppercase;
 }
 
+@media (max-width: 960px) {
+  .blogContent h3 {
+    padding-top: 20px;
+  }
+}
+
 .blogContent p {
   margin-top: 40px;
+  margin-bottom: 20px;
   font-family: 'Domine', serif;
   font-size: 1.7rem;
   font-weight: normal;
