@@ -7,6 +7,18 @@
   padding-top: 300px;
   height: 100%;
   transition: padding-top 2s;
+  @include tablet-land {
+    // 1250
+    padding: 300px 100px 100px 100px;
+  }
+  @include tablet-port {
+    // 960
+    padding: 200px 80px 100px 80px;
+  }
+  @include mobile-land {
+    // 690
+    padding: 200px 60px 100px 60px;
+  }
 }
 
 .skills ul {
@@ -21,6 +33,18 @@
     width: 25%;
     text-align: center;
     margin-bottom: 100px;
+    @include tablet-port {
+      // 960
+      margin-bottom: 80px;
+      width: 20%;
+      min-width: 160px;
+    }
+    @include mobile-land {
+      // 690
+      margin-bottom: 80px;
+      width: 20%;
+      min-width: 120px;
+    }
     ion-icon {
       font-size: 8rem;
       color: lighten($charcoal, 40);

@@ -1611,6 +1611,24 @@ section.overview.expand {
   transition: padding-top 2s;
 }
 
+@media (max-width: 1250px) {
+  .skills .wrapper {
+    padding: 300px 100px 100px 100px;
+  }
+}
+
+@media (max-width: 960px) {
+  .skills .wrapper {
+    padding: 200px 80px 100px 80px;
+  }
+}
+
+@media (max-width: 690px) {
+  .skills .wrapper {
+    padding: 200px 60px 100px 60px;
+  }
+}
+
 .skills ul {
   width: 100%;
   display: -webkit-box;
@@ -1630,6 +1648,22 @@ section.overview.expand {
   width: 25%;
   text-align: center;
   margin-bottom: 100px;
+}
+
+@media (max-width: 960px) {
+  .skills ul li {
+    margin-bottom: 80px;
+    width: 20%;
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 690px) {
+  .skills ul li {
+    margin-bottom: 80px;
+    width: 20%;
+    min-width: 120px;
+  }
 }
 
 .skills ul li ion-icon {
