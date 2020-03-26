@@ -164,7 +164,8 @@ section.overview.expand {
       width: 100%;
       text-align: center;
     }
-    @include mobile-land { // 690
+    @include mobile-land {
+      // 690
       font-size: 8rem;
     }
   }
