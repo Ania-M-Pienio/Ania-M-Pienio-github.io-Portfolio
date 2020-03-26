@@ -369,15 +369,17 @@ input::-moz-focus-inner {
   width: 100%;
 }
 
-.bar.quoteBar {
+.bar.quoteBar,
+.bar.contactBar {
   width: 0;
-  background: #dcdcdc;
+  background: #f8f8f8;
   height: 2.5px;
   border-radius: 2.5px;
   top: 0px;
 }
 
-.bar.quoteBar.expand {
+.bar.quoteBar.expand,
+.bar.contactBar.expand {
   width: 100%;
 }
 
@@ -2416,6 +2418,15 @@ section.overview.expand {
           justify-content: space-between;
 }
 
+@media (max-width: 960px) {
+  .wrapper.contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .container {
   width: 33%;
   display: -webkit-box;
@@ -2427,10 +2438,18 @@ section.overview.expand {
           flex-direction: column;
 }
 
+@media (max-width: 960px) {
+  .container {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
+
 .container h3 {
   width: 100%;
   font-family: "Oswald", sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: normal;
   color: #f8f8f8;
   letter-spacing: normal;
@@ -2453,8 +2472,28 @@ section.overview.expand {
           flex-direction: column;
 }
 
+@media (max-width: 960px) {
+  .container ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+  }
+}
+
 .container ul li {
   margin-top: 15px;
+}
+
+@media (max-width: 960px) {
+  .container ul li {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .container ul li a {
@@ -2470,6 +2509,12 @@ section.overview.expand {
   letter-spacing: 1.5;
   line-height: 1.6;
   text-align: left;
+}
+
+@media (max-width: 960px) {
+  .container ul li a {
+    text-align: center;
+  }
 }
 
 .container ul li a:hover, .container ul li a:focus {
@@ -2491,22 +2536,32 @@ section.overview.expand {
   text-align: left;
 }
 
+@media (max-width: 960px) {
+  .container ul li button {
+    text-align: center;
+  }
+}
+
 .container ul li button:hover, .container ul li button:focus {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
 }
 
-.contactContainer li button {
+.contactContainer ul {
+  padding: 0;
+}
+
+.contactContainer ul li button {
   color: #f8f8f8;
 }
 
-.contactContainer li button:focus ion-icon,
-.contactContainer li button:hover ion-icon {
+.contactContainer ul li button:focus ion-icon,
+.contactContainer ul li button:hover ion-icon {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
 
-.contactContainer li button ion-icon {
+.contactContainer ul li button ion-icon {
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;

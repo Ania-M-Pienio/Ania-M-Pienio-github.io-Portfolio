@@ -131,15 +131,17 @@
   width: 100%;
 }
 
-.bar.quoteBar {
+.bar.quoteBar,
+.bar.contactBar {
   width: 0;
-  background: $grey;
+  background: $tint;
   height: 2.5px;
   border-radius: 2.5px;
   top: 0px;
 }
 
-.bar.quoteBar.expand {
+.bar.quoteBar.expand,
+.bar.contactBar.expand {
   width: 100%;
 }
 

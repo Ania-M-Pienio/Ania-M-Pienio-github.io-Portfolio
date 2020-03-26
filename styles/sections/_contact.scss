@@ -10,15 +10,24 @@
   padding: 60px 80px 60px;
   display: flex;
   justify-content: space-between;
+  @include tablet-port {
+    flex-direction: column;
+  }
 }
 
+// EACH CONTAINER
 .container {
   width: 33%;
   display: flex;
   flex-direction: column;
+  @include tablet-port {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
   h3 {
     width: 100%;
-    @include Ossie(3rem, normal, $tint, normal, normal, center);
+    @include Ossie(4rem, normal, $tint, normal, normal, center);
     text-transform: uppercase;
   }
   ul {
@@ -28,12 +37,25 @@
     padding-right: 5%;
     display: flex;
     flex-direction: column;
+    @include tablet-port {
+      margin: 0;
+      padding: 0;
+      margin-top: 5px;
+    }
     li {
       margin-top: 15px;
+      @include tablet-port {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
       a {
         transition: transform 0.5s;
         display: inline-block;
         @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
+        @include tablet-port {
+          text-align: center;
+        }
         &:hover,
         &:focus {
           transform: scale(1.25);
@@ -42,6 +64,9 @@
       button {
         transition: transform 0.5s;
         @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
+        @include tablet-port {
+          text-align: center;
+        }
         &:hover,
         &:focus {
           transform: scale(1.25);
@@ -51,17 +76,22 @@
   }
 }
 
-.contactContainer li {
-  button {
-    color: $tint;
-    &:focus ion-icon,
-    &:hover ion-icon {
-      transform: scale(1.5);
-    }
-    ion-icon {
-      transition: transform 0.5s;
-      margin-right: 10px;
-      color: $tint;
+.contactContainer {
+  ul {
+    padding: 0;
+    li {
+      button {
+        color: $tint;
+        &:focus ion-icon,
+        &:hover ion-icon {
+          transform: scale(1.5);
+        }
+        ion-icon {
+          transition: transform 0.5s;
+          margin-right: 10px;
+          color: $tint;
+        }
+      }
     }
   }
 }
