@@ -150,15 +150,22 @@ section.overview.expand {
   }
   h1 {
     transition: all 1s;
-    @include Monti(15rem, normal, $grey2, normal, normal, left);
+    @include Monti(12rem, normal, $grey2, normal, normal, left);
+    @include proj-land {
+      // 1600
+      font-size: 15rem;
+    }
     @include tablet-land {
       // 1250
-      font-size: 12rem;
+      font-size: 9.5rem;
     }
     @include tablet-port {
       // 960
       width: 100%;
       text-align: center;
+    }
+    @include mobile-land { // 690
+      font-size: 8rem;
     }
   }
 }

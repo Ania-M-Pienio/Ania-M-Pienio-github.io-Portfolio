@@ -1205,7 +1205,7 @@ section.overview.expand {
   -webkit-transition: all 1s;
   transition: all 1s;
   font-family: 'Montserrat', sans-serif;
-  font-size: 15rem;
+  font-size: 12rem;
   font-weight: normal;
   color: #e7e7e7;
   letter-spacing: normal;
@@ -1213,9 +1213,15 @@ section.overview.expand {
   text-align: left;
 }
 
+@media (min-width: 1600px) {
+  .splashTitle h1 {
+    font-size: 15rem;
+  }
+}
+
 @media (max-width: 1250px) {
   .splashTitle h1 {
-    font-size: 12rem;
+    font-size: 9.5rem;
   }
 }
 
@@ -1223,6 +1229,12 @@ section.overview.expand {
   .splashTitle h1 {
     width: 100%;
     text-align: center;
+  }
+}
+
+@media (max-width: 690px) {
+  .splashTitle h1 {
+    font-size: 8rem;
   }
 }
 

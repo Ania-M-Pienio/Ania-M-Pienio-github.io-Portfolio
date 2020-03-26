@@ -33,6 +33,12 @@
 
 // horizontal x-axis
 
+@mixin proj-land {
+  @media (min-width: 1600px) {
+    @content;
+  }
+}
+
 @mixin tablet-land {
   @media (max-width: 1250px) {
     @content;
