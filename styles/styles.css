@@ -1716,6 +1716,12 @@ section.overview.expand {
   }
 }
 
+@media (max-width: 480px) {
+  .wrapper.projects {
+    padding: 20px;
+  }
+}
+
 .projectContainer {
   width: 100%;
   height: 100%;
@@ -1741,6 +1747,12 @@ section.overview.expand {
 @media (max-width: 960px) {
   .projectContainer.expand {
     margin-top: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectContainer.expand {
+    margin-top: 20px;
   }
 }
 
