@@ -74,3 +74,34 @@ a {
     outline: 0;
   }
 }
+
+.scrollTop {
+  height: 80px;
+  width: 50px;
+  background: $charcoal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 7000;
+  visibility: hidden;
+  button {
+    padding: 5%;
+    ion-icon {
+        color: $tint;
+        font-size: 1.8rem;
+        transition: transform 1s;
+    }
+    h4 {
+      @include Ossie(1.5rem, normal, $tint, normal, normal, center);
+      padding: 2%;
+    }
+    &:hover ion-icon,
+    &:focus ion-icon {
+      transform: scale(1.6);      
+    }
+  }
+}

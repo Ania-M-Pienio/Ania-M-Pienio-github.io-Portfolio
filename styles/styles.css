@@ -2656,3 +2656,57 @@ a {
 a:focus, a:hover {
   outline: 0;
 }
+
+.scrollTop {
+  height: 80px;
+  width: 50px;
+  background: #212121;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 7000;
+  visibility: hidden;
+}
+
+.scrollTop button {
+  padding: 5%;
+}
+
+.scrollTop button ion-icon {
+  color: #f8f8f8;
+  font-size: 1.8rem;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.scrollTop button h4 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #f8f8f8;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  padding: 2%;
+}
+
+.scrollTop button:hover ion-icon,
+.scrollTop button:focus ion-icon {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+}

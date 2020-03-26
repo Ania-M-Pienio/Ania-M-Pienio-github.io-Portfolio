@@ -20,6 +20,7 @@ app.sections = {
     run: function() {
       $("section.overview").addClass("expand");
       $(".gallery.pic2 .galleryBar").addClass("expand");
+      $(".scrollTop").css("visibility", "visible");
     }
   },
   skills: {
@@ -108,6 +109,7 @@ app.animateMenu = function() {
 app.resetAll = function() {
   $("main *").removeClass("expand");
   $("footer *").removeClass("expand");
+  $(".scrollTop").css("visibility", "hidden");
 };
 
 /****************************************************************/
@@ -176,7 +178,7 @@ app.handleLogo = function() {
     $(".logo").blur();
   });
 
-  $(".mainLogo button").on("click", function() {
+  $(".mainLogo button, .scrollTop button").on("click", function() {
     $(this).blur();
     setTimeout(() => {
       app.scrollToElem("home");
