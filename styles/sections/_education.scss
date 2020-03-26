@@ -7,6 +7,10 @@
   width: 100%;
   height: auto;
   padding: 5% 180px;
+  @include tablet-port {
+    // 960
+    padding: 2% 80px;
+  }
 }
 
 .eduBoxContainer {
@@ -14,8 +18,16 @@
   height: 100%;
   display: flex;
   justify-content: space-between;
+  @include tablet-port {
+    // 690
+    flex-direction: column;
+  }
   .eduBox {
     height: 150px;
+    @include tablet-port {
+      // 690
+      margin: 15px 0;
+    }
     img {
       object-fit: contain;
       height: 100%;
@@ -23,6 +35,8 @@
   }
 }
 
-.eduBox:nth-child(2) {
-  margin: 0 60px;
+.edu2 {
+   @include tablet-port {
+     height: 200px;     
+  }
 }

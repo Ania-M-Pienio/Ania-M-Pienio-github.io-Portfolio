@@ -2150,6 +2150,12 @@ section.overview.expand {
   padding: 5% 180px;
 }
 
+@media (max-width: 960px) {
+  .wrapper.education {
+    padding: 2% 80px;
+  }
+}
+
 .eduBoxContainer {
   width: 100%;
   height: 100%;
@@ -2161,8 +2167,23 @@ section.overview.expand {
           justify-content: space-between;
 }
 
+@media (max-width: 960px) {
+  .eduBoxContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .eduBoxContainer .eduBox {
   height: 150px;
+}
+
+@media (max-width: 960px) {
+  .eduBoxContainer .eduBox {
+    margin: 15px 0;
+  }
 }
 
 .eduBoxContainer .eduBox img {
@@ -2171,8 +2192,10 @@ section.overview.expand {
   height: 100%;
 }
 
-.eduBox:nth-child(2) {
-  margin: 0 60px;
+@media (max-width: 960px) {
+  .edu2 {
+    height: 200px;
+  }
 }
 
 .blog {
