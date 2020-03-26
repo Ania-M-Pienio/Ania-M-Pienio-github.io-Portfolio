@@ -175,6 +175,13 @@ app.handleLogo = function() {
     $(`#${id} .logo3 img`).attr("src", `assets/${folder}/4.png`);
     $(".logo").blur();
   });
+
+  $(".mainLogo button").on("click", function() {
+    $(this).blur();
+    setTimeout(() => {
+      app.scrollToElem("home");
+    }, 200);
+  });
 };
 
 app.handleMenu = function() {
@@ -223,10 +230,8 @@ app.handleMenu = function() {
   });
 
   $(".socialContainer a").on("click", function() {
-    $(this).blur();    
+    $(this).blur();
   });
-
-
 }; // end of menu handlers
 
 app.handleContacts = function() {
