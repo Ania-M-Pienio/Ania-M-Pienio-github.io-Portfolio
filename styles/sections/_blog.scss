@@ -107,16 +107,21 @@
   a {
     margin-top: 20px;
     display: block;
-    width: 90px;
     @include Ossie(2rem, normal, $charcoal, normal, normal, left);
     text-transform: uppercase;
     background-color: none;
+    display: flex;
     &:hover,
     &:focus {
-      border-bottom: 2px solid $charcoal;
+      text-decoration: underline double;
     }
     h4 {
       font-weight: normal;
+      text-decoration: underline;
+    }
+    ion-icon {
+      font-size: 3rem;
+      margin-left: 10px;
     }
   }
 }

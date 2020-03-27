@@ -2525,7 +2525,6 @@ section.overview.expand {
 .blogContent a {
   margin-top: 20px;
   display: block;
-  width: 90px;
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
   font-weight: normal;
@@ -2535,14 +2534,24 @@ section.overview.expand {
   text-align: left;
   text-transform: uppercase;
   background-color: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .blogContent a:hover, .blogContent a:focus {
-  border-bottom: 2px solid #212121;
+  -webkit-text-decoration: underline double;
+          text-decoration: underline double;
 }
 
 .blogContent a h4 {
   font-weight: normal;
+  text-decoration: underline;
+}
+
+.blogContent a ion-icon {
+  font-size: 3rem;
+  margin-left: 10px;
 }
 
 .blogBar {
