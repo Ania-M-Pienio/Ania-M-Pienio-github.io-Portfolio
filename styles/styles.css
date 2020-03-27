@@ -1789,6 +1789,12 @@ section.overview.expand {
           box-shadow: 0px 5px 20px black inset;
 }
 
+@media (min-width: 1600px) {
+  .projects {
+    background-repeat: repeat;
+  }
+}
+
 .projects .splashTitle {
   top: 10px;
   left: 80px;
