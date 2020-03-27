@@ -1782,9 +1782,9 @@ section.overview.expand {
   position: relative;
   height: auto;
   background-image: url(../assets/projects/strip.png);
-  background-size: cover;
-  background-position: top left;
-  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat-y;
   -webkit-box-shadow: 0px 5px 20px black inset;
           box-shadow: 0px 5px 20px black inset;
 }
@@ -1982,6 +1982,8 @@ section.overview.expand {
   .project .projectInfo {
     width: 100%;
     padding: 1%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2121214d), color-stop(#2121214f), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(#2121214d, #2121214f, rgba(255, 255, 255, 0));
   }
 }
 
@@ -2273,6 +2275,8 @@ section.overview.expand {
 @media (max-width: 690px) {
   .projectInfo.alt {
     padding: 1%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2121214d), color-stop(#2121214f), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(#2121214d, #2121214f, rgba(255, 255, 255, 0));
   }
 }
 
