@@ -136,11 +136,16 @@
     @include tablet-port {
       // 960
       width: 100%;
-      padding: 5%;
+      padding: 4%;
+    }
+    @include mobile-land {
+      // 690
+      width: 100%;
+      padding: 1%;
     }
     @include mobile-port {
       // 480
-      padding: 6%;
+      // padding: 3%;
     }
     .infoBar {
       height: 4px;
@@ -176,6 +181,13 @@
         &:focus {
           color: #b3fcff;
         }
+        h3 {
+          @include mobile-land {
+            // 690
+            width: 100%;
+            text-align: center;
+          }
+        }
       }
       /////// SKILLS [ 2 ]
       .skillWrapper {
@@ -198,6 +210,11 @@
             width: 100%;
             flex-wrap: wrap;
             justify-content: flex-start;
+          }
+          @include mobile-land {
+            // 690
+            justify-content: center;
+            padding-top: 20px;
           }
           .skill {
             // li
@@ -248,8 +265,9 @@
           // 690
           height: auto;
           width: 100%;
-          padding: 5% 5% 5% 0;
+          padding: 5%;
           font-size: 1.8rem;
+          text-align: justify;
         }
         @include mobile-port {
           // 480
@@ -264,19 +282,26 @@
         transition: all 1s;
         display: inline-block;
         @include Ossie(2.2rem, normal, $tint, normal, normal, left);
+        @include mobile-land {
+          // 690
+          text-align: center;
+        }
         &:hover,
         &:focus {
           color: #b3fcff;
         }
         ion-icon {
           font-size: 5rem;
-          // transform: rotate(60deg);
           position: relative;
           top: 15px;
         }
         span {
-          // margin-right: 5px;
           text-decoration: underline;
+          @include mobile-land {
+            // 690
+            margin-top: 20px;
+            display: inline-block;
+          }
         }
       }
     }
@@ -295,7 +320,15 @@
   );
   @include tablet-port {
     // 960
-    padding: 5%;
+    padding: 4%;
+  }
+  @include mobile-land {
+    // 690
+    padding: 1%;
+  }
+  @include mobile-port {
+    // 480
+    // padding: 3%;
   }
 }
 

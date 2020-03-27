@@ -1903,13 +1903,14 @@ section.overview.expand {
 @media (max-width: 960px) {
   .project .projectInfo {
     width: 100%;
-    padding: 5%;
+    padding: 4%;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 690px) {
   .project .projectInfo {
-    padding: 6%;
+    width: 100%;
+    padding: 1%;
   }
 }
 
@@ -1975,6 +1976,13 @@ section.overview.expand {
   color: #b3fcff;
 }
 
+@media (max-width: 690px) {
+  .project .projectInfo .infoTitle .title h3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .project .projectInfo .infoTitle .skillWrapper {
   width: 60%;
   height: 100%;
@@ -2017,6 +2025,15 @@ section.overview.expand {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+}
+
+@media (max-width: 690px) {
+  .project .projectInfo .infoTitle .skillWrapper .skillContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 20px;
   }
 }
 
@@ -2105,8 +2122,9 @@ section.overview.expand {
   .project .projectInfo .infoContent p {
     height: auto;
     width: 100%;
-    padding: 5% 5% 5% 0;
+    padding: 5%;
     font-size: 1.8rem;
+    text-align: justify;
   }
 }
 
@@ -2132,6 +2150,12 @@ section.overview.expand {
   text-align: left;
 }
 
+@media (max-width: 690px) {
+  .project .projectInfo .infoContent a {
+    text-align: center;
+  }
+}
+
 .project .projectInfo .infoContent a:hover, .project .projectInfo .infoContent a:focus {
   color: #b3fcff;
 }
@@ -2146,6 +2170,13 @@ section.overview.expand {
   text-decoration: underline;
 }
 
+@media (max-width: 690px) {
+  .project .projectInfo .infoContent a span {
+    margin-top: 20px;
+    display: inline-block;
+  }
+}
+
 .projectInfo.alt {
   padding-left: 50px;
   height: auto;
@@ -2155,7 +2186,13 @@ section.overview.expand {
 
 @media (max-width: 960px) {
   .projectInfo.alt {
-    padding: 5%;
+    padding: 4%;
+  }
+}
+
+@media (max-width: 690px) {
+  .projectInfo.alt {
+    padding: 1%;
   }
 }
 
