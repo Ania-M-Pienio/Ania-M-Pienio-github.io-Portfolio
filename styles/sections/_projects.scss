@@ -181,7 +181,7 @@
         justify-content: flex-start;
         align-items: flex-end;
         transition: all 1s;
-        @include Ossie(3.5rem, bold, $grey2, 1.5, normal, left);
+        @include Ossie(4rem, bold, $grey2, 1.5, normal, left);
         @include tablet-port {
           // 960
           margin: 30px 0 0 0;
@@ -190,6 +190,7 @@
         &:hover,
         &:focus {
           color: #b3fcff;
+          text-decoration: underline;
         }
         h3 {
           @include mobile-land {
@@ -297,7 +298,7 @@
         // text-transform: lowercase;
         transition: all 1s;
         display: inline-block;
-        @include Ossie(2.4rem, normal, $tint, normal, normal, left);
+        @include Ossie(2.7rem, normal, $tint, normal, normal, left);
         @include mobile-land {
           // 690
           text-align: center;
@@ -305,6 +306,7 @@
         &:hover,
         &:focus {
           color: #b3fcff;
+          text-decoration: underline double;
         }
         ion-icon {
           font-size: 5rem;

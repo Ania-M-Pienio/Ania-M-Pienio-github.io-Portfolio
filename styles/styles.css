@@ -2036,7 +2036,7 @@ section.overview.expand {
   -webkit-transition: all 1s;
   transition: all 1s;
   font-family: "Oswald", sans-serif;
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: bold;
   color: #e7e7e7;
   letter-spacing: 1.5;
@@ -2053,6 +2053,7 @@ section.overview.expand {
 
 .project .projectInfo .infoTitle .title:hover, .project .projectInfo .infoTitle .title:focus {
   color: #b3fcff;
+  text-decoration: underline;
 }
 
 @media (max-width: 690px) {
@@ -2230,7 +2231,7 @@ section.overview.expand {
   transition: all 1s;
   display: inline-block;
   font-family: "Oswald", sans-serif;
-  font-size: 2.4rem;
+  font-size: 2.7rem;
   font-weight: normal;
   color: #f8f8f8;
   letter-spacing: normal;
@@ -2246,6 +2247,8 @@ section.overview.expand {
 
 .project .projectInfo .infoContent a:hover, .project .projectInfo .infoContent a:focus {
   color: #b3fcff;
+  -webkit-text-decoration: underline double;
+          text-decoration: underline double;
 }
 
 .project .projectInfo .infoContent a ion-icon {
