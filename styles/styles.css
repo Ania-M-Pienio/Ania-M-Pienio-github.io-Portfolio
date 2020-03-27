@@ -293,8 +293,8 @@ input::-moz-focus-inner {
   width: 0;
   height: 5px;
   background: #3b3b3b;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   border-radius: 5px;
 }
 
@@ -551,8 +551,8 @@ nav {
   height: auto;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: all 1.2s;
-  transition: all 1.2s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 @media (max-width: 690px) {
@@ -575,10 +575,8 @@ nav {
   padding: 0;
   margin-right: -12px;
   margin-top: -12px;
-  -webkit-transition: margin-right 0.5s, -webkit-transform 1s;
-  transition: margin-right 0.5s, -webkit-transform 1s;
-  transition: transform 1s, margin-right 0.5s;
-  transition: transform 1s, margin-right 0.5s, -webkit-transform 1s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .navMenu .menu .dropMenu.expand {
@@ -617,6 +615,7 @@ nav {
 
 .navMenu .menu .drop ul {
   height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -631,9 +630,16 @@ nav {
 }
 
 @media (max-height: 650px) {
+  .navMenu .menu .drop ul {
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
+@media (max-height: 650px) {
   .navMenu .menu .drop ul li {
-    padding-right: 30px;
-    width: 130px;
+    width: 50%;
+    padding: 0;
   }
 }
 
@@ -646,10 +652,14 @@ nav {
   line-height: 2.2;
   text-align: right;
   text-transform: capitalize;
-  -webkit-transition: color 1.5s, margin-right 0.5s, -webkit-transform 0.5s;
-  transition: color 1.5s, margin-right 0.5s, -webkit-transform 0.5s;
-  transition: color 1.5s, transform 0.5s, margin-right 0.5s;
-  transition: color 1.5s, transform 0.5s, margin-right 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media (max-height: 650px) {
+  .navMenu .menu .drop ul li button {
+    text-align: center;
+  }
 }
 
 @media (max-height: 650px) {
@@ -683,6 +693,13 @@ nav {
       align-content: flex-start;
 }
 
+@media (max-height: 650px) {
+  .navMenu .menu .drop.expand ul {
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
 @media (max-width: 690px) {
   .navMenu .menu .drop.expand ul {
     margin-top: 20px;
@@ -691,7 +708,7 @@ nav {
 
 @media (max-height: 650px) {
   .navMenu .menu .drop.expand ul li {
-    padding-right: 30px;
+    padding: 0;
     width: 130px;
   }
 }
@@ -708,6 +725,13 @@ nav {
   color: #191919;
 }
 
+@media (max-height: 650px) {
+  .navMenu .menu .drop.expand ul li button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .navMenu .menu .drop.expand ul li button:hover, .navMenu .menu .drop.expand ul li button:focus {
   color: #878787;
   -webkit-transform: scale(1.2);
@@ -715,13 +739,19 @@ nav {
   margin-right: 8px;
 }
 
+@media (max-height: 650px) {
+  .navMenu .menu .drop.expand ul li button:hover, .navMenu .menu .drop.expand ul li button:focus {
+    margin-right: 0;
+  }
+}
+
 .dropBar {
   position: relative;
   width: 0;
   height: 5px;
   background: #3b3b3b;
-  -webkit-transition: width 2s;
-  transition: width 2s;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
   border-radius: 5px;
   margin-bottom: 10px;
 }
