@@ -2772,7 +2772,7 @@ a:focus, a:hover {
 
 .scrollTop {
   height: 80px;
-  width: 50px;
+  width: 60px;
   background: #212121;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2788,10 +2788,11 @@ a:focus, a:hover {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 40px;
+  right: 10px;
   z-index: 7000;
   visibility: hidden;
+  opacity: 0.8;
 }
 
 @media (max-width: 480px) {

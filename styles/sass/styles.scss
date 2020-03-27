@@ -77,17 +77,18 @@ a {
 
 .scrollTop {
   height: 80px;
-  width: 50px;
+  width: 60px;
   background: $charcoal;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 40px;
+  right: 10px;
   z-index: 7000;
   visibility: hidden;
+  opacity: 0.8;
   @include mobile-port {
     // 480
     display:none;
