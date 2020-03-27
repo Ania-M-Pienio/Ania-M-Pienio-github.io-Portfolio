@@ -19,6 +19,9 @@
     // 690
     padding: 200px 60px 100px 60px;
   }
+  @include mobile-port {
+    padding: 200px 30px 100px 30px;
+  }
 }
 
 .skills ul {
@@ -45,9 +48,18 @@
       width: 20%;
       min-width: 120px;
     }
+    @include mobile-port {
+      // 480
+      width: 15%;
+      min-width: 80px;
+    }
     ion-icon {
       font-size: 8rem;
       color: lighten($charcoal, 40);
+      @include mobile-port {
+        // 480
+        font-size: 6rem;
+      }
     }
     img {
       margin: 0 auto;
@@ -56,6 +68,11 @@
       min-width: 80px;
       width: 20%;
       padding: 0;
+      @include mobile-port {
+        // 480
+        min-width: 50px;
+        min-height: 60px;
+      }
     }
     h3 {
       @include Ossie(
@@ -66,6 +83,10 @@
         normal,
         center
       );
+      @include mobile-port {
+        // 480
+        font-size: 1.6rem;
+      }
     }
   }
 }

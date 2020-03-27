@@ -1661,6 +1661,12 @@ section.overview.expand {
   }
 }
 
+@media (max-width: 480px) {
+  .skills .wrapper {
+    padding: 200px 30px 100px 30px;
+  }
+}
+
 .skills ul {
   width: 100%;
   display: -webkit-box;
@@ -1698,9 +1704,22 @@ section.overview.expand {
   }
 }
 
+@media (max-width: 480px) {
+  .skills ul li {
+    width: 15%;
+    min-width: 80px;
+  }
+}
+
 .skills ul li ion-icon {
   font-size: 8rem;
   color: #878787;
+}
+
+@media (max-width: 480px) {
+  .skills ul li ion-icon {
+    font-size: 6rem;
+  }
 }
 
 .skills ul li img {
@@ -1715,6 +1734,13 @@ section.overview.expand {
   padding: 0;
 }
 
+@media (max-width: 480px) {
+  .skills ul li img {
+    min-width: 50px;
+    min-height: 60px;
+  }
+}
+
 .skills ul li h3 {
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
@@ -1723,6 +1749,12 @@ section.overview.expand {
   letter-spacing: normal;
   line-height: normal;
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .skills ul li h3 {
+    font-size: 1.6rem;
+  }
 }
 
 .skillsTitle {
