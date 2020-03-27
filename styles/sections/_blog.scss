@@ -90,7 +90,7 @@
   }
   ///// BLOG TITLE [ 1 ]
   h3 {
-    @include Ossie(2.5rem, normal, $charcoal, normal, normal, left);
+    @include Ossie(2.8rem, normal, $charcoal, normal, normal, left);
     text-transform: uppercase;
     @include tablet-port {
       // 960
@@ -107,7 +107,7 @@
   a {
     margin-top: 20px;
     display: block;
-    @include Ossie(2rem, normal, $charcoal, normal, normal, left);
+    @include Ossie(2.2rem, normal, $charcoal, normal, normal, left);
     text-transform: uppercase;
     background-color: none;
     display: flex;
@@ -120,7 +120,7 @@
       text-decoration: underline;
     }
     ion-icon {
-      font-size: 3rem;
+      font-size: 3.2rem;
       margin-left: 10px;
     }
   }

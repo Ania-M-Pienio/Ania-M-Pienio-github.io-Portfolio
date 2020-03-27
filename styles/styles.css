@@ -2495,7 +2495,7 @@ section.overview.expand {
 
 .blogContent h3 {
   font-family: "Oswald", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: normal;
   color: #212121;
   letter-spacing: normal;
@@ -2526,7 +2526,7 @@ section.overview.expand {
   margin-top: 20px;
   display: block;
   font-family: "Oswald", sans-serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: normal;
   color: #212121;
   letter-spacing: normal;
@@ -2550,7 +2550,7 @@ section.overview.expand {
 }
 
 .blogContent a ion-icon {
-  font-size: 3rem;
+  font-size: 3.2rem;
   margin-left: 10px;
 }
 
