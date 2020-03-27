@@ -115,7 +115,7 @@
       z-index: 5000;
       @include tablet-land {
         // 1250
-        height: 25%;        
+        height: 25%;
       }
       @include tablet-port {
         // 960
@@ -245,6 +245,12 @@
               width: 100%;
               align-self: center;
               @include Ossie(1.6rem, normal, $grey2, normal, normal, center);
+            }
+          }
+          .skill:first-of-type {
+            margin-left: 0;
+            @include mobile-land {
+              margin-left: 10px;
             }
           }
         }

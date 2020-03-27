@@ -2089,6 +2089,16 @@ section.overview.expand {
   text-align: center;
 }
 
+.project .projectInfo .infoTitle .skillWrapper .skillContainer .skill:first-of-type {
+  margin-left: 0;
+}
+
+@media (max-width: 690px) {
+  .project .projectInfo .infoTitle .skillWrapper .skillContainer .skill:first-of-type {
+    margin-left: 10px;
+  }
+}
+
 .project .projectInfo .infoContent {
   -webkit-box-flex: 2;
       -ms-flex: 2;
