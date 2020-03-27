@@ -91,7 +91,7 @@
     background-color: $tint;
     transition: all 1s;
     @include tablet-land {
-      // 1250 
+      // 1250
       min-width: 100px;
       flex: 0;
     }
@@ -138,6 +138,10 @@
       width: 100%;
       padding: 5%;
     }
+    @include mobile-port {
+      // 480
+      padding: 6%;
+    }
     .infoBar {
       height: 4px;
       width: 100%;
@@ -170,11 +174,7 @@
         }
         &:hover,
         &:focus {
-          color: $accent;
-        }
-        ion-icon {
-          font-size: 6rem;
-          transform: rotate(-45deg)
+          color: #b3fcff;
         }
       }
       /////// SKILLS [ 2 ]
@@ -251,17 +251,31 @@
           padding: 5% 5% 5% 0;
           font-size: 1.8rem;
         }
+        @include mobile-port {
+          // 480
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
       }
       ///////////// PROJECT LINK [ 2 ]
       a {
         width: 100%;
-        margin-top: 20px;
         text-transform: uppercase;
-        transition: all 1.5s;
-        text-decoration: underline;
-        @include Ossie(3.2rem, normal, $tint, normal, normal, left);
+        transition: all 1s;
+        display: inline-block;
+        @include Ossie(2.2rem, normal, $tint, normal, normal, left);
         &:hover,
         &:focus {
+          color: #b3fcff;
+        }
+        ion-icon {
+          font-size: 5rem;
+          // transform: rotate(60deg);
+          position: relative;
+          top: 15px;
+        }
+        span {
+          // margin-right: 5px;
           text-decoration: underline;
         }
       }
