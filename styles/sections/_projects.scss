@@ -38,7 +38,7 @@
   height: 100%;
   @include tablet-port {
     // 960
-    padding: 50px 80px;
+    padding: 70px 80px;
   }
   @include mobile-port {
     // 480
@@ -59,10 +59,10 @@
 }
 // ANIMATE ON SCROLL
 .projectContainer.expand {
-  margin-top: 100px;
+  margin-top: 130px;
   @include tablet-port {
-    // 960
-    margin-top: 70px;
+    // 690
+    margin-top: 100px;
   }
   @include mobile-port {
     // 480
@@ -81,6 +81,7 @@
   @include mobile-land {
     // 690
     flex-direction: column;
+    margin-bottom: 150px;
   }
   /// PROJECT IMAGE [ 1 ]
   .projectImage {
@@ -90,6 +91,7 @@
     box-shadow: $shadow;
     background-color: $tint;
     transition: all 1s;
+    transform: scale(1.05);
     @include tablet-land {
       // 1250
       min-width: 100px;
@@ -101,7 +103,7 @@
     }
     &:hover,
     &:focus {
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
     .picture {
       object-fit: contain;
@@ -111,9 +113,13 @@
       position: relative;
       transition: all 1s;
       z-index: 5000;
+      @include tablet-land {
+        // 1250
+        height: 25%;        
+      }
       @include tablet-port {
         // 960
-        opacity: 0;
+        display: none;
       }
     }
   }
@@ -267,7 +273,7 @@
           width: 100%;
           padding: 5%;
           font-size: 1.8rem;
-          text-align: justify;
+          text-align: center;
         }
         @include mobile-port {
           // 480
@@ -278,10 +284,10 @@
       ///////////// PROJECT LINK [ 2 ]
       a {
         width: 100%;
-        text-transform: uppercase;
+        // text-transform: lowercase;
         transition: all 1s;
         display: inline-block;
-        @include Ossie(2.2rem, normal, $tint, normal, normal, left);
+        @include Ossie(2.4rem, normal, $tint, normal, normal, left);
         @include mobile-land {
           // 690
           text-align: center;
@@ -325,10 +331,6 @@
   @include mobile-land {
     // 690
     padding: 1%;
-  }
-  @include mobile-port {
-    // 480
-    // padding: 3%;
   }
 }
 

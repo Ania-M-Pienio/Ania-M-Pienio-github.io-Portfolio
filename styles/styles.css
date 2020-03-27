@@ -1762,7 +1762,7 @@ section.overview.expand {
 
 @media (max-width: 960px) {
   .wrapper.projects {
-    padding: 50px 80px;
+    padding: 70px 80px;
   }
 }
 
@@ -1791,12 +1791,12 @@ section.overview.expand {
 }
 
 .projectContainer.expand {
-  margin-top: 100px;
+  margin-top: 130px;
 }
 
 @media (max-width: 960px) {
   .projectContainer.expand {
-    margin-top: 70px;
+    margin-top: 100px;
   }
 }
 
@@ -1824,6 +1824,7 @@ section.overview.expand {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 150px;
   }
 }
 
@@ -1838,6 +1839,8 @@ section.overview.expand {
   background-color: #f8f8f8;
   -webkit-transition: all 1s;
   transition: all 1s;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 @media (max-width: 1250px) {
@@ -1856,8 +1859,8 @@ section.overview.expand {
 }
 
 .project .projectImage:hover, .project .projectImage:focus {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .project .projectImage .picture {
@@ -1872,9 +1875,15 @@ section.overview.expand {
   z-index: 5000;
 }
 
+@media (max-width: 1250px) {
+  .project .projectImage .picture {
+    height: 25%;
+  }
+}
+
 @media (max-width: 960px) {
   .project .projectImage .picture {
-    opacity: 0;
+    display: none;
   }
 }
 
@@ -2124,7 +2133,7 @@ section.overview.expand {
     width: 100%;
     padding: 5%;
     font-size: 1.8rem;
-    text-align: justify;
+    text-align: center;
   }
 }
 
@@ -2137,12 +2146,11 @@ section.overview.expand {
 
 .project .projectInfo .infoContent a {
   width: 100%;
-  text-transform: uppercase;
   -webkit-transition: all 1s;
   transition: all 1s;
   display: inline-block;
   font-family: "Oswald", sans-serif;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: normal;
   color: #f8f8f8;
   letter-spacing: normal;
