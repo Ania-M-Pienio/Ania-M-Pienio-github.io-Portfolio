@@ -986,7 +986,7 @@ nav {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 50px;
+    height: 70px;
   }
 }
 
@@ -1009,7 +1009,7 @@ nav {
 }
 
 .navSocial ul li ion-icon {
-  font-size: 3rem;
+  font-size: 3.6rem;
   color: #191919;
   -webkit-transition: color 1s, -webkit-transform 1.5s;
   transition: color 1s, -webkit-transform 1.5s;

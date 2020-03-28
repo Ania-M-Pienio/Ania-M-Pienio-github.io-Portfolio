@@ -424,7 +424,7 @@ nav {
     @include mobile-land {
       // 690
       justify-content: center;
-      height: 50px;
+      height: 70px;
     }
     li {
       margin-right: 30px;
@@ -439,7 +439,7 @@ nav {
         padding: 0;
       }
       ion-icon {
-        font-size: 3rem;
+        font-size: 3.6rem;
         color: $font;
         transition: transform 1.5s, color 1s;
         border: 1px solid rgba(255, 255, 255, 0);
