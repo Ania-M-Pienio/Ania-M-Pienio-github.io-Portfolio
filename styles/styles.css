@@ -304,11 +304,6 @@ input::-moz-focus-inner {
   }
 }
 
-.mainLogo span {
-  position: absolute;
-  opacity: 0;
-}
-
 .logo2.expand {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
