@@ -1055,8 +1055,6 @@ section.overview {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-line-pack: center;
-        align-content: center;
     padding: 0;
     margin-top: 180px;
     position: relative;
@@ -1086,12 +1084,20 @@ section.overview.expand {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 960px) {
+  .overGallery {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: auto;
+    margin-top: 40px;
+  }
 }
 
 .overGallery.gallery2 {
@@ -1108,8 +1114,8 @@ section.overview.expand {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 70px;
     position: static;
+    margin-top: 0;
   }
 }
 
@@ -1131,16 +1137,9 @@ section.overview.expand {
 
 @media (max-width: 960px) {
   .overGallery .gallery {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     width: 100%;
     padding: 0;
-    margin: 0;
+    position: relative;
   }
 }
 
@@ -1153,14 +1152,8 @@ section.overview.expand {
 .overGallery .gallery .box img {
   -o-object-fit: contain;
      object-fit: contain;
-  height: 100%;
-}
-
-@media (max-width: 960px) {
-  .overGallery .gallery .box {
-    height: 100%;
-    width: 100%;
-  }
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .overGallery .gallery button {
@@ -1200,27 +1193,67 @@ section.overview.expand {
   }
 }
 
+@media (max-width: 960px) {
+  .gallery.pic1 {
+    height: 400px;
+  }
+}
+
 .gallery.pic2 {
   margin-top: 70px;
 }
 
 .gallery.pic2 .galleryBar {
-  margin: 0;
   height: 5px;
   width: 0;
   background: #3b3b3b;
   border-radius: 5px;
-  -webkit-transition: width 2s;
-  transition: width 2s;
+  -webkit-transition: all 2s;
+  transition: all 2s;
 }
 
 .gallery.pic2 .galleryBar.expand {
   width: 100%;
 }
 
+@media (max-width: 960px) {
+  .gallery.pic2 .galleryBar.expand {
+    position: absolute;
+    top: -5px;
+    z-index: 6000;
+  }
+}
+
 .overGallery.gallery2 .gallery.pic3 box img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (max-width: 960px) {
+  .gallery.pic1,
+  .gallery.pic2,
+  .gallery.pic3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery.pic1,
+  .gallery.pic2,
+  .gallery.pic3 {
+    margin-top: 80px;
+  }
+}
+
+.gallery.pic1 {
+  margin-top: 0;
 }
 
 .splashTitle {
@@ -1241,7 +1274,7 @@ section.overview.expand {
 @media (max-width: 960px) {
   .splashTitle {
     width: 100%;
-    top: -140px;
+    top: -100px;
   }
 }
 

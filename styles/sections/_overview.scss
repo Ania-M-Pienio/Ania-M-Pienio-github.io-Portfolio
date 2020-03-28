@@ -15,10 +15,9 @@ section.overview {
   @include tablet-port {
     // 960
     flex-direction: column;
-    align-content: center;
     padding: 0;
     margin-top: 180px;
-    position: relative;
+    position: relative; // for title
   }
 }
 
@@ -35,8 +34,13 @@ section.overview.expand {
 .overGallery {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  flex-flow: column wrap;
+  flex-direction: column;
+  @include tablet-port {
+    // 960
+    justify-content: space-between;
+    height: auto;
+    margin-top: 40px;
+  }
 }
 
 // [ 2 ]
@@ -47,8 +51,8 @@ section.overview.expand {
   @include tablet-port {
     // 960
     flex-direction: column;
-    margin-top: 70px;
     position: static;
+    margin-top: 0;
   }
 }
 
@@ -65,11 +69,9 @@ section.overview.expand {
   }
   @include tablet-port {
     // 960
-    display: flex;
-    flex-direction: column;
     width: 100%;
     padding: 0;
-    margin: 0;
+    position: relative; // for bar
   }
   .box {
     height: 100%;
@@ -77,12 +79,8 @@ section.overview.expand {
     background-color: $tint;
     img {
       object-fit: contain;
-      height: 100%;
-    }
-    @include tablet-port {
-      // 960
-      height: 100%;
-      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
     }
   }
   button {
@@ -109,22 +107,31 @@ section.overview.expand {
     // 1250
     height: 330px;
   }
+  @include tablet-port {
+    // 960
+    height: 400px;
+  }
 }
 
 .gallery.pic2 {
   margin-top: 70px;
   .galleryBar {
-    margin: 0;
     height: 5px;
     width: 0;
     background: lighten($charcoal, 10);
     border-radius: 5px;
-    transition: width 2s;
+    transition: all 2s;
   }
 }
 
 .gallery.pic2 .galleryBar.expand {
   width: 100%;
+  @include tablet-port {
+    // 960
+    position: absolute;
+    top: -5px;
+    z-index: 6000;
+  }
 }
 
 .overGallery.gallery2 .gallery.pic3 box {
@@ -132,6 +139,27 @@ section.overview.expand {
     object-fit: cover;
   }
 }
+
+.gallery.pic1,
+.gallery.pic2,
+.gallery.pic3 {
+  @include tablet-port {
+    // 960
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+  }
+  @include mobile-port {
+    // 480
+    margin-top: 80px;
+  }
+}
+
+.gallery.pic1 {
+  margin-top: 0;
+}
+
+/// OVERVIEW TITLE
 
 .splashTitle {
   position: absolute;
@@ -146,7 +174,7 @@ section.overview.expand {
   @include tablet-port {
     // 960
     width: 100%;
-    top: -140px;
+    top: -100px;
   }
   h1 {
     transition: all 1s;
