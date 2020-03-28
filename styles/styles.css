@@ -225,6 +225,10 @@ input::-moz-focus-inner {
           transform: scale(1.2);
 }
 
+.mainLogo h3 {
+  opacity: 0;
+}
+
 .mainLogo .logo1 {
   position: relative;
   display: inline-block;
