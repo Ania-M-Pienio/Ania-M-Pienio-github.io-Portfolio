@@ -1159,6 +1159,12 @@ section.overview.expand {
   border: 2px solid rgba(255, 255, 255, 0);
   -webkit-transition: border-bottom 1s;
   transition: border-bottom 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .overGallery .gallery button:hover, .overGallery .gallery button:focus {
@@ -1180,6 +1186,11 @@ section.overview.expand {
   .overGallery .gallery button h3 {
     text-align: center;
   }
+}
+
+.overGallery .gallery button ion-icon {
+  font-size: 4rem;
+  margin-left: 15px;
 }
 
 .gallery.pic1 {
