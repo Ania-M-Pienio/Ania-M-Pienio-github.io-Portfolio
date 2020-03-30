@@ -244,83 +244,46 @@ app.handleContacts = function() {
     app.showMessage("copied");
   });
 
-  // process the request for resume
-  $("form").on("submit", function(e) {
-    e.preventDefault();
-    $(".resume").blur();
-    const email = $("#emailInput").val();
-    if (email.trim()) {
-      const subscriber = {
-        FirstName: "",
-        LastName: "",
-        Company: "",
-        Email: $("#emailInput").val(),
-        Date: new Date()
-      };
-      app.saveSubscriber(subscriber);
-    } else {
-      app.showMessage("email is required");
-      app.expand($("form ion-icon"), 2000).then(() => {
-        setTimeout(() => {
-          $("form ion-icon").removeClass("expand");
-        }, 500);
-      });
-    }
-  });
-};
+  /****************************************************************/
+  /*****************           HELPERS          *******************/
+  /****************************************************************/
 
-/****************************************************************/
-/*****************           HELPERS          *******************/
-/****************************************************************/
+  // receives the message, shows it, and then removes it
+  app.showMessage = function(message) {
+    $(".mssg h4").html(message);
+    app.expand($(".mssg"), 300).then(() => {
+      setTimeout(() => {
+        $(".mssg").removeClass("expand");
+      }, 1500);
+    });
+  };
 
-// receives the message, shows it, and then removes it
-app.showMessage = function(message) {
-  $(".mssg h4").html(message);
-  app.expand($(".mssg"), 300).then(() => {
-    setTimeout(() => {
-      $(".mssg").removeClass("expand");
-    }, 1500);
-  });
-};
+  // 'expands' the given element after a delay period returns promise once completed
+  app.expand = function($el, delay) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve($el.addClass("expand"));
+      }, delay);
+    });
+  };
 
-// 'expands' the given element after a delay period returns promise once completed
-app.expand = function($el, delay) {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve($el.addClass("expand"));
-    }, delay);
-  });
-};
+  // scrolls to the element with the given id
+  app.scrollToElem = function(id) {
+    $("html, body").animate(
+      {
+        scrollTop: $(`#${id}`).offset().top - app.sections[id].offset
+      },
+      app.sections[id].delay
+    );
+  };
 
-// saves the subscriber
-app.saveSubscriber = function(subscriber) {
-  saveData("subscribers", subscriber)
-    .then(response => {
-      if (response == `added`) {
-        app.showMessage("request sent");
-      } else if (response == `duplicate key`) {
-        app.showMessage("request already sent");
-      }
-    })
-    .catch(err => {});
-};
-
-// scrolls to the element with the given id
-app.scrollToElem = function(id) {
-  $("html, body").animate(
-    {
-      scrollTop: $(`#${id}`).offset().top - app.sections[id].offset
-    },
-    app.sections[id].delay
-  );
-};
-
-// copy email to user's cliboard
-app.copyEmail = function() {
-  const copyEmail = document.getElementById("email");
-  copyEmail.select();
-  copyEmail.setSelectionRange(0, 99999);
-  document.execCommand("copy");
+  // copy email to user's cliboard
+  app.copyEmail = function() {
+    const copyEmail = document.getElementById("email");
+    copyEmail.select();
+    copyEmail.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+  };
 };
 
 /****************************************************************/

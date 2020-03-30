@@ -2730,7 +2730,7 @@ section.overview.expand {
   }
 }
 
-.container ul li a {
+.container ul li a:not(.resume) {
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -2746,17 +2746,17 @@ section.overview.expand {
 }
 
 @media (max-width: 960px) {
-  .container ul li a {
+  .container ul li a:not(.resume) {
     text-align: center;
   }
 }
 
-.container ul li a:hover, .container ul li a:focus {
+.container ul li a:not(.resume):hover, .container ul li a:not(.resume):focus {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
 }
 
-.container ul li button:not(.resume) {
+.container ul li button {
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -2771,12 +2771,12 @@ section.overview.expand {
 }
 
 @media (max-width: 960px) {
-  .container ul li button:not(.resume) {
+  .container ul li button {
     text-align: center;
   }
 }
 
-.container ul li button:not(.resume):hover, .container ul li button:not(.resume):focus {
+.container ul li button:hover, .container ul li button:focus {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
 }
@@ -2813,7 +2813,7 @@ section.overview.expand {
   font-size: 2rem;
 }
 
-.contactContainer ul li button:not(.resume) {
+.contactContainer ul li button {
   color: #f8f8f8;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2823,13 +2823,13 @@ section.overview.expand {
           justify-content: center;
 }
 
-.contactContainer ul li button:not(.resume):focus ion-icon,
-.contactContainer ul li button:not(.resume):hover ion-icon {
+.contactContainer ul li button:focus ion-icon,
+.contactContainer ul li button:hover ion-icon {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
 
-.contactContainer ul li button:not(.resume) ion-icon {
+.contactContainer ul li button ion-icon {
   display: inline-block;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
@@ -2839,7 +2839,7 @@ section.overview.expand {
   color: #f8f8f8;
 }
 
-.contactContainer ul li button:not(.resume) h5 {
+.contactContainer ul li button h5 {
   display: inline-block;
   font-family: 'Domine', serif;
   font-size: 1.8rem;
@@ -2877,7 +2877,8 @@ section.overview.expand {
           transform: scale(1);
 }
 
-form {
+.viewResume {
+  width: 100%;
   position: relative;
   margin-top: 20px;
   display: -webkit-box;
@@ -2892,69 +2893,17 @@ form {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  padding: 0 10%;
 }
 
-@media (max-width: 960px) {
-  form {
-    margin: 20px 15%;
-  }
-}
-
-@media (max-width: 690px) {
-  form {
-    margin: 20px 5%;
-  }
-}
-
-@media (max-width: 480px) {
-  form {
-    margin: 0;
-  }
-}
-
-form label {
-  color: #212121;
-  position: absolute;
-  bottom: -50px;
-}
-
-form input {
-  height: 40px;
-  padding-left: 45px;
-  border: 2px solid #f8f8f8;
-  font-size: 1.5rem;
-}
-
-form input::-webkit-input-placeholder {
-  color: #9c9c9c;
-}
-
-form input:-ms-input-placeholder {
-  color: #9c9c9c;
-}
-
-form input::-ms-input-placeholder {
-  color: #9c9c9c;
-}
-
-form input::placeholder {
-  color: #9c9c9c;
-}
-
-form ion-icon {
-  font-size: 3rem;
-  position: absolute;
-  color: #212121;
-  bottom: 44px;
-  left: 10px;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-form button.resume {
-  height: 40px;
+.viewResume a.resume {
+  width: 100%;
+  display: inline-block;
   border: 2px solid #f8f8f8;
   text-transform: uppercase;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  padding: 1%;
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
   font-weight: normal;
@@ -2964,15 +2913,9 @@ form button.resume {
   text-align: center;
 }
 
-form button.resume:hover, form button.resume:focus {
+.viewResume a.resume:hover, .viewResume a.resume:focus {
   background-color: #f8f8f8;
   color: #212121;
-  border-top: 2px solid #212121;
-}
-
-form ion-icon.expand {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
 }
 
 html {
