@@ -245,6 +245,19 @@ app.handleContacts = function() {
       }, 1200);
     });
   });
+
+  $("form").on("submit", function() {
+    saveData("subscribers", subscriber)
+      .then(response => {
+        this.isSubmitted = true;
+        if (response == `added`) {
+          this.response = `added`;
+        } else if (response == `duplicate key`) {
+          this.response = `duplicate`;
+        }
+      })
+      .catch(err => {});
+  });
 };
 
 app.showCopied = function() {
