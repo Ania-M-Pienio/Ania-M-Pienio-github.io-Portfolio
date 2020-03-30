@@ -24,7 +24,7 @@
   display: none;
   @include tablet-port {
     // 960
-    display: static;
+    display: block;
   }
 }
 

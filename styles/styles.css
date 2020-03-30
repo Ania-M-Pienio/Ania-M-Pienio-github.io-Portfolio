@@ -2649,7 +2649,7 @@ section.overview.expand {
 
 @media (max-width: 960px) {
   .contactLogoContainer {
-    display: static;
+    display: block;
   }
 }
 
