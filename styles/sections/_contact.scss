@@ -7,11 +7,15 @@
 
 .wrapper.contact {
   width: 100%;
-  padding: 60px 80px 60px;
+  padding: 80px;
   display: flex;
   justify-content: space-between;
   @include tablet-port {
+    // 960
     flex-direction: column;
+  }
+  @include mobile-port {
+    padding: 40px;
   }
 }
 
@@ -21,11 +25,13 @@
   display: flex;
   flex-direction: column;
   @include tablet-port {
+    // 960
     width: 100%;
     margin-bottom: 30px;
     margin-top: 30px;
   }
-  h3 {
+  h3,
+  h4 {
     width: 100%;
     @include Ossie(4rem, normal, $tint, normal, normal, center);
     text-transform: uppercase;
@@ -38,13 +44,16 @@
     display: flex;
     flex-direction: column;
     @include tablet-port {
+      // 960
       margin: 0;
       padding: 0;
       margin-top: 5px;
     }
     li {
       margin-top: 15px;
+      @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
       @include tablet-port {
+        // 960
         width: 100%;
         display: flex;
         justify-content: center;
@@ -54,6 +63,7 @@
         display: inline-block;
         @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
         @include tablet-port {
+          // 960
           text-align: center;
         }
         &:hover,
@@ -61,10 +71,11 @@
           transform: scale(1.25);
         }
       }
-      button {
+      button:not(.resume) {
         transition: transform 0.5s;
         @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
         @include tablet-port {
+          // 960
           text-align: center;
         }
         &:hover,
@@ -79,17 +90,36 @@
 .contactContainer {
   ul {
     padding: 0;
+    margin: 0;
+    margin-top: 30px;
     li {
-      button {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      @include Domi(1.8rem, normal, $tint, 1.5, 1.6, center);
+      h3 {
+        font-size: 2.5rem;
+      }
+      h4 {
+        font-size: 2rem;
+      }
+      button:not(.resume) {
         color: $tint;
+        display: flex;
+        justify-content: center;
         &:focus ion-icon,
         &:hover ion-icon {
           transform: scale(1.5);
         }
         ion-icon {
+          display: inline-block;
           transition: transform 0.5s;
           margin-right: 10px;
           color: $tint;
+        }
+        h5 {
+          display: inline-block;
+          @include Domi(1.8rem, normal, $tint, 1.5, 1.6, center);
         }
       }
     }
@@ -101,16 +131,74 @@
   left: -2000px;
 }
 
-li.copied {
+.mssg {
+  height: 40px;
   display: block;
-  margin-top: -50px;
   text-transform: uppercase;
   @include Ossie(2rem, normal, $tint, normal, normal, center);
   transform: scale(0);
   transition: all 0.8s;
 }
 
-li.copied.expand {
+.mssg.expand {
   transform: scale(1);
+}
+
+form {
+  position: relative;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  @include tablet-port {
+    // 960
+    margin: 20px 15%;
+  }
+  @include mobile-land {
+    // 690
+    margin: 20px 5%;
+  }
+  @include mobile-port {
+    // 480
+    margin: 0;
+  }
+  label {
+    color: $charcoal;
+    position: absolute;
+    bottom: -50px;
+  }
+  input {
+    height: 40px;
+    padding-left: 45px;
+    border: 2px solid $tint;
+    font-size: 1.5rem;
+  }
+  input::placeholder {
+    color: darken($grey, 25);
+  }
+  ion-icon {
+    font-size: 3rem;
+    position: absolute;
+    color: $charcoal;
+    bottom: 44px;
+    left: 10px;
+    transition: all 1s;
+  }
+  button.resume {
+    height: 40px;
+    border: 2px solid $tint;
+    text-transform: uppercase;
+    @include Ossie(2rem, normal, $tint, normal, normal, center);
+    &:hover,
+    &:focus {
+      background-color: $tint;
+      color: $charcoal;
+      border-top: 2px solid $charcoal;
+    }
+  }
+}
+
+form ion-icon.expand {
+  transform: scale(1.5);
 }

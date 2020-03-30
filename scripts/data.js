@@ -14,4 +14,3 @@ const saveData = function(what, body) {
     return response.json();
   });
 }; // end of function saveData
-export { saveData };
