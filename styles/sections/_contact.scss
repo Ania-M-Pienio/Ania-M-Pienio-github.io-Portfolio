@@ -15,11 +15,20 @@
     flex-direction: column;
   }
   @include mobile-port {
+    // 480
     padding: 40px;
   }
 }
 
-// EACH CONTAINER
+.contactLogoContainer {
+  display: none;
+  @include tablet-port {
+    // 960
+    display: static;
+  }
+}
+
+// EACH CONTACT CONTAINER
 .container {
   width: 33%;
   display: flex;

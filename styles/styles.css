@@ -2643,6 +2643,16 @@ section.overview.expand {
   }
 }
 
+.contactLogoContainer {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .contactLogoContainer {
+    display: static;
+  }
+}
+
 .container {
   width: 33%;
   display: -webkit-box;
