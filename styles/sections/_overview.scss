@@ -8,16 +8,16 @@ section.overview {
 }
 
 .wrapper.overview {
-  padding: 0 80px;
   height: 100%;
+  padding: 0 80px;
   display: flex;
   justify-content: center;
   @include tablet-port {
     // 960
-    flex-direction: column;
-    padding: 0;
     margin-top: 180px;
+    padding: 0;
     position: relative; // for title
+    flex-direction: column;
   }
 }
 
@@ -37,35 +37,35 @@ section.overview.expand {
   flex-direction: column;
   @include tablet-port {
     // 960
-    justify-content: space-between;
     height: auto;
     margin-top: 40px;
+    justify-content: space-between;
   }
 }
 
 // [ 2 ]
 .overGallery.gallery2 {
+  margin-top: 130px;
   position: relative;
   justify-content: flex-start;
-  margin-top: 130px;
   @include tablet-port {
     // 960
-    flex-direction: column;
-    position: static;
     margin-top: 0;
+    position: static;
+    flex-direction: column;
   }
 }
 
 .overGallery .gallery {
-  width: 500px;
   height: 500px;
+  width: 500px;
   padding: 20px;
   padding: 20px;
   transition: all 1s;
   @include tablet-land {
     // 1250
-    width: 400px;
     height: 400px;
+    width: 400px;
   }
   @include tablet-port {
     // 960
@@ -78,9 +78,9 @@ section.overview.expand {
     width: 100%;
     background-color: $tint;
     img {
-      object-fit: contain;
-      max-width: 100%;
       max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
     }
   }
   button {
@@ -151,9 +151,9 @@ section.overview.expand {
 .gallery.pic3 {
   @include tablet-port {
     // 960
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
-    margin-top: 150px;
   }
   @include mobile-port {
     // 480

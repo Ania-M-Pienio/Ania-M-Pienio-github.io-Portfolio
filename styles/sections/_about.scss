@@ -12,8 +12,8 @@
 .wrapper.about {
   height: 100%;
   display: flex;
-  justify-content: space-between;
   padding: 0;
+  justify-content: space-between;
   @include tablet-port {
     // 960
     flex-direction: column;
@@ -22,8 +22,8 @@
 
 .about article,
 .about aside {
-  width: 50%;
   height: auto;
+  width: 50%;
   @include tablet-port {
     // 960
     width: 100%;
@@ -45,13 +45,13 @@
 
 .about article {
   background-color: white;
-  display: flex;
   padding-right: 40px;
+  display: flex;
   @include tablet-port {
     // 960
     width: 100%;
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
   .aboutTitle {
     min-width: 100%;
@@ -67,8 +67,8 @@
       padding: 0;
     }
     h2 {
-      text-transform: uppercase;
       @include Ossie(5rem, normal, $font, normal, normal, center);
+      text-transform: uppercase;
     }
   }
 }
@@ -82,31 +82,26 @@
   @include tablet-port {
     // 960
     max-width: 100%;
-    padding: 80px;
-    padding-top: 60px;
     margin: 0;
+    padding: 60px 80px 80px 80px;
   }
 }
 
-.aboutTeam {
-  width: 100%;
-  height: auto;
-}
-
 .aboutQuality,
-.aboutDocs {
+.aboutDocs,
+.aboutTeam {
   height: auto;
   width: 100%;
 }
 
 .aboutRest {
-  display: flex;
   margin-top: 40px;
+  display: flex;
   @include tablet-land {
     // 1250
+    margin-top: 0;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 0;
   }
 }
 
@@ -125,8 +120,8 @@
     padding-right: 40px;
     @include tablet-port {
       // 960
-      padding: 0;
       margin: 0;
+      padding: 0;
     }
   }
 }

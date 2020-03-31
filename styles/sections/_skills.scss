@@ -3,9 +3,8 @@
   background-color: $tint;
 }
 .skills .wrapper {
-  padding: 0 130px 100px 130px;
-  padding-top: 300px;
   height: 100%;
+  padding: 300px 130px 100px 130px;
   transition: padding-top 2s;
   @include tablet-land {
     // 1250
@@ -26,27 +25,27 @@
 
 .skills ul {
   width: 100%;
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 50px;
   li {
-    margin: 0 auto;
-    min-width: 200px;
     width: 25%;
+    min-width: 200px;
+    margin: 0 auto;
     text-align: center;
     margin-bottom: 100px;
     @include tablet-port {
       // 960
-      margin-bottom: 80px;
       width: 20%;
       min-width: 160px;
+      margin-bottom: 80px;
     }
     @include mobile-land {
       // 690
-      margin-bottom: 80px;
       width: 20%;
       min-width: 120px;
+      margin-bottom: 80px;
     }
     @include mobile-port {
       // 480
@@ -62,16 +61,16 @@
       }
     }
     img {
+      width: 20%;
+      min-width: 80px;
       margin: 0 auto;
+      padding: 0;
       align-self: center;
       object-fit: contain;
-      min-width: 80px;
-      width: 20%;
-      padding: 0;
       @include mobile-port {
         // 480
-        min-width: 50px;
         min-height: 60px;
+        min-width: 50px;
       }
     }
     h3 {

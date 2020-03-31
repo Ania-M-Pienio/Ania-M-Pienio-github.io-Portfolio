@@ -1,12 +1,12 @@
 // GENERAL NAV
 nav {
-  transition: all 1s;
-  height: calc(100vh);
+  height: 100vh;
   background-color: $grey;
   background-image: url(../assets/nav/ME19.png);
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: bottom right;
+  transition: all 1s;
   @include mobile-land-h {
     // 1000vh
     background-size: 65%;
@@ -21,19 +21,19 @@ nav {
   }
   @include mobile-port-hh {
     //500vh
-    background-image: none;
     height: auto;
+    background-image: none;
   }
   @include mobile-land {
     // 690
-    background-image: none;
     height: auto;
+    background-image: none;
   }
 }
 
 .nav.wrapper {
-  padding: 20px 80px;
   height: 100%;
+  padding: 20px 80px;
   @include mobile-port-h {
     // 860
     padding: 15px 60px;
@@ -53,11 +53,11 @@ nav {
 
 // MENU-LOGO
 .navMenuLogo {
-  transition: all 1s;
-  position: relative;
   height: 200px;
   width: 100%;
+  position: relative;
   padding-top: 30px;
+  transition: all 1s;
   @include mobile-port-hh {
     // 500vh
     padding-top: 20px;
@@ -88,37 +88,37 @@ nav {
 
 // [ 2 ] MENU
 .navMenu {
-  position: absolute;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  position: absolute;
   @include mobile-land {
     // 690
     height: auto;
+    margin-top: 50px;
     position: static;
     padding: 0;
-    margin-top: 50px;
   }
   .menu {
-    text-align: right;
     height: 300px;
+    text-align: right;
     @include mobile-land {
       // 690
+      height: 100px;
+      position: relative;
       display: flex;
       flex-direction: column;
       text-align: center;
-      height: 100px;
-      position: relative;
     }
     // [ 1 ]
     button.dropMenu {
-      position: relative;
       height: auto;
       transform: scale(0);
+      position: relative;
       transition: all 0.5s;
       @include mobile-land {
         // 690
-        position: relative;
         height: auto;
+        position: relative;
       }
       &:hover ion-icon,
       &:focus ion-icon {
@@ -126,11 +126,11 @@ nav {
         transform: scale(1.2);
       }
       ion-icon {
-        font-size: 10rem;
         color: $font;
-        padding: 0;
+        font-size: 10rem;
         margin-right: -12px;
         margin-top: -12px;
+        padding: 0;
         transition: all 0.5s;
       }
     }
@@ -143,16 +143,16 @@ nav {
 
 // DROP MENU
 .navMenu .menu .drop {
-  position: absolute;
-  width: 200px;
   height: 500px;
+  width: 200px;
+  position: absolute;
   right: 0;
   top: 170px;
   z-index: 1000;
   @include mobile-port-h2 {
     // 650vh
-    width: 290px;
     height: 150px;
+    width: 290px;
   }
   @include mobile-port-hh {
     // 500vh
@@ -160,8 +160,8 @@ nav {
   }
   @include mobile-land {
     // 690
-    position: relative;
     height: 300px;
+    position: relative;
   }
   ul {
     height: 100%;
@@ -201,18 +201,18 @@ nav {
 // DROP MENU expanded
 .navMenu .menu .drop.expand {
   @include mobile-port-h2 {
-    width: 290px;
     height: 150px;
+    width: 290px;
   }
   @include mobile-land {
     // 690
-    position: static;
     height: 300px;
     margin: 10px auto;
+    position: static;
   }
   ul {
-    width: 100%;
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap-reverse;
@@ -229,8 +229,8 @@ nav {
     li {
       @include mobile-port-h2 {
         // 650vh
-        padding: 0;
         width: 130px;
+        padding: 0;
       }
       @include mobile-land {
         // 690
@@ -248,8 +248,8 @@ nav {
         &:hover,
         &:focus {
           color: lighten($charcoal, 40);
-          transform: scale(1.2);
           margin-right: 8px;
+          transform: scale(1.2);
           @include mobile-port-h2 {
             // 650vh
             margin-right: 0;
@@ -262,13 +262,13 @@ nav {
 
 // BAR above the drop menu
 .dropBar {
-  position: relative;
-  width: 0;
   height: 5px;
+  width: 0;
   background: lighten($charcoal, 10);
-  transition: width 0.5s;
   border-radius: 5px;
   margin-bottom: 10px;
+  position: relative;
+  transition: width 0.5s;
   @include mobile-port-h {
     // 1000vh
     border-radius: 0;
@@ -283,18 +283,18 @@ nav {
 // TITLE
 .navTitle {
   height: calc(100% - 230px);
+  margin-top: 30px;
   position: relative;
   z-index: 500;
   transition: all 1s;
-  margin-top: 30px;
   @include mobile-land-h {
     // 1000vh
     height: 30%;
   }
   @include mobile-land {
     // 690
-    position: static;
     height: auto;
+    position: static;
   }
   &::before,
   .title {
@@ -313,8 +313,8 @@ nav {
   // positional element created only to align title to something
   &::before {
     content: "";
-    width: 0;
     height: 100%;
+    width: 0;
   }
 }
 

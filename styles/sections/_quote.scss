@@ -1,14 +1,14 @@
 .quote {
-  background-color: $charcoal;
   height: auto;
   min-height: 400px;
   margin-top: 200px;
+  background-color: $charcoal;
 }
 
 .wrapper.quote {
-  padding: 80px 80px;
   height: auto;
   width: 100%;
+  padding: 80px 80px;
 }
 
 .quoteContainer {
@@ -22,8 +22,8 @@
 }
 
 .quotePhoto {
-  width: 400px;
   height: auto;
+  width: 400px;
   transition: all 1s;
   @include tablet-port {
     // 960
@@ -49,10 +49,9 @@
   // .quoteLogoContainer {  logo  } see _logo.scss
   @include tablet-port {
     // 960
-    padding: 0;
     height: auto;
-    justify-content: space-between;
     padding: 20px;
+    justify-content: space-between;
   }
   .quoteLogoContainer {
     @include tablet-port {
@@ -60,9 +59,9 @@
       flex-direction: column;
     }
     .mainLogo {
-      position: relative;
       width: 100%;
       margin: 30px 0;
+      position: relative;
     }
   }
   .quoteContent {

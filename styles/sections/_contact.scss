@@ -1,6 +1,6 @@
 .contact {
-  width: 100%;
   height: auto;
+  width: 100%;
   background-color: $charcoal;
   position: relative;
 }
@@ -54,9 +54,8 @@
     flex-direction: column;
     @include tablet-port {
       // 960
-      margin: 0;
+      margin: 5px 0 0 0;
       padding: 0;
-      margin-top: 5px;
     }
     li {
       margin-top: 15px;
@@ -68,9 +67,9 @@
         justify-content: center;
       }
       a:not(.resume) {
-        transition: transform 0.5s;
-        display: inline-block;
         @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
+        display: inline-block;
+        transition: transform 0.5s;
         @include tablet-port {
           // 960
           text-align: center;
@@ -81,8 +80,8 @@
         }
       }
       button {
-        transition: transform 0.5s;
         @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
+        transition: transform 0.5s;
         @include tablet-port {
           // 960
           text-align: center;
@@ -98,13 +97,12 @@
 
 .contactContainer {
   ul {
+    margin: 30px 0 0 0;
     padding: 0;
-    margin: 0;
-    margin-top: 30px;
     li {
+      padding: 0;
       display: flex;
       flex-direction: column;
-      padding: 0;
       @include Domi(1.8rem, normal, $tint, 1.5, 1.6, center);
       h3 {
         font-size: 2.5rem;
@@ -122,13 +120,13 @@
         }
         ion-icon {
           display: inline-block;
-          transition: transform 0.5s;
-          margin-right: 10px;
           color: $tint;
+          margin-right: 10px;
+          transition: transform 0.5s;
         }
         h5 {
-          display: inline-block;
           @include Domi(1.8rem, normal, $tint, 1.5, 1.6, center);
+          display: inline-block;
         }
       }
     }
@@ -142,10 +140,10 @@
 
 .mssg {
   height: 40px;
-  display: block;
-  text-transform: uppercase;
   @include Ossie(2rem, normal, $tint, normal, normal, center);
+  text-transform: uppercase;
   transform: scale(0);
+  display: block;
   transition: all 0.8s;
 }
 
@@ -155,20 +153,20 @@
 
 .viewResume {
   width: 100%;
-  position: relative;
   margin-top: 20px;
+  position: relative;
+  padding: 0 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  padding: 0 10%;
   a.resume {
     width: 100%;
-    display: inline-block;
     border: 2px solid $tint;
     text-transform: uppercase;
-    transition: all 1s;
     padding: 1%;
+    display: inline-block;
+    transition: all 1s;
     @include Ossie(2rem, normal, $tint, normal, normal, center);
     &:hover,
     &:focus {
@@ -177,6 +175,3 @@
     }
   }
 }
-
-
-

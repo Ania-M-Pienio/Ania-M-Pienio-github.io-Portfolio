@@ -4,8 +4,8 @@
 }
 
 .wrapper.education {
-  width: 100%;
   height: auto;
+  width: 100%;
   padding: 5% 180px;
   @include tablet-port {
     // 960
@@ -14,8 +14,8 @@
 }
 
 .eduBoxContainer {
-  width: 100%;
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   @include tablet-port {
@@ -29,8 +29,8 @@
       margin: 15px 0;
     }
     img {
-      object-fit: contain;
       height: 100%;
+      object-fit: contain;
     }
   }
 }

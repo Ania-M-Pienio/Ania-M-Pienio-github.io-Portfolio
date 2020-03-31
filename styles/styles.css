@@ -230,10 +230,10 @@ input::-moz-focus-inner {
 }
 
 .mainLogo .logo1 {
-  position: relative;
-  display: inline-block;
   height: 180px;
   width: 230px;
+  position: relative;
+  display: inline-block;
   z-index: 5000;
   -webkit-transition: all 1.5s;
   transition: all 1.5s;
@@ -247,13 +247,13 @@ input::-moz-focus-inner {
 }
 
 .mainLogo .logo2 {
-  position: absolute;
-  top: 0;
   height: 180px;
   width: 230px;
-  z-index: 6000;
   -webkit-transform: scale(0);
           transform: scale(0);
+  position: absolute;
+  top: 0;
+  z-index: 6000;
   -webkit-transition: all 1.5s;
   transition: all 1.5s;
 }
@@ -266,13 +266,13 @@ input::-moz-focus-inner {
 }
 
 .mainLogo .logo3 {
-  position: absolute;
-  top: 0;
   height: 180px;
   width: 230px;
-  z-index: 7000;
   -webkit-transform: scale(0);
           transform: scale(0);
+  position: absolute;
+  top: 0;
+  z-index: 7000;
   -webkit-transition: all 1.5s;
   transition: all 1.5s;
 }
@@ -291,12 +291,12 @@ input::-moz-focus-inner {
 }
 
 .mainLogo .bar {
+  height: 5px;
+  width: 0;
+  background: #3b3b3b;
   position: relative;
   top: -18px;
   display: inline-block;
-  width: 0;
-  height: 5px;
-  background: #3b3b3b;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   border-radius: 5px;
@@ -328,13 +328,14 @@ input::-moz-focus-inner {
 
 .quoteLogoContainer,
 .contactLogoContainer {
-  width: 100%;
   height: 50%;
+  width: 100%;
   position: relative;
 }
 
 .quoteLogoContainer .mainLogo,
 .contactLogoContainer .mainLogo {
+  height: 100px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -342,7 +343,6 @@ input::-moz-focus-inner {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100px;
 }
 
 .quoteLogoContainer .mainLogo .logo .logo1,
@@ -370,9 +370,9 @@ input::-moz-focus-inner {
 
 .bar.quoteBar,
 .bar.contactBar {
+  height: 2.5px;
   width: 0;
   background: #f8f8f8;
-  height: 2.5px;
   border-radius: 2.5px;
   top: 0px;
 }
@@ -387,14 +387,14 @@ input::-moz-focus-inner {
 }
 
 nav {
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  height: calc(100vh);
+  height: 100vh;
   background-color: #dcdcdc;
   background-image: url(../assets/nav/ME19.png);
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: bottom right;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 @media (max-height: 1000px) {
@@ -417,21 +417,21 @@ nav {
 
 @media (max-height: 500px) {
   nav {
-    background-image: none;
     height: auto;
+    background-image: none;
   }
 }
 
 @media (max-width: 690px) {
   nav {
-    background-image: none;
     height: auto;
+    background-image: none;
   }
 }
 
 .nav.wrapper {
-  padding: 20px 80px;
   height: 100%;
+  padding: 20px 80px;
 }
 
 @media (max-height: 820px) {
@@ -462,12 +462,12 @@ nav {
 }
 
 .navMenuLogo {
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  position: relative;
   height: 200px;
   width: 100%;
+  position: relative;
   padding-top: 30px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 @media (max-height: 500px) {
@@ -511,27 +511,29 @@ nav {
 }
 
 .navMenu {
-  position: absolute;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 @media (max-width: 690px) {
   .navMenu {
     height: auto;
+    margin-top: 50px;
     position: static;
     padding: 0;
-    margin-top: 50px;
   }
 }
 
 .navMenu .menu {
-  text-align: right;
   height: 300px;
+  text-align: right;
 }
 
 @media (max-width: 690px) {
   .navMenu .menu {
+    height: 100px;
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -540,24 +542,22 @@ nav {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
-    height: 100px;
-    position: relative;
   }
 }
 
 .navMenu .menu button.dropMenu {
-  position: relative;
   height: auto;
   -webkit-transform: scale(0);
           transform: scale(0);
+  position: relative;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 @media (max-width: 690px) {
   .navMenu .menu button.dropMenu {
-    position: relative;
     height: auto;
+    position: relative;
   }
 }
 
@@ -569,11 +569,11 @@ nav {
 }
 
 .navMenu .menu button.dropMenu ion-icon {
-  font-size: 10rem;
   color: #191919;
-  padding: 0;
+  font-size: 10rem;
   margin-right: -12px;
   margin-top: -12px;
+  padding: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -584,9 +584,9 @@ nav {
 }
 
 .navMenu .menu .drop {
-  position: absolute;
-  width: 200px;
   height: 500px;
+  width: 200px;
+  position: absolute;
   right: 0;
   top: 170px;
   z-index: 1000;
@@ -594,8 +594,8 @@ nav {
 
 @media (max-height: 650px) {
   .navMenu .menu .drop {
-    width: 290px;
     height: 150px;
+    width: 290px;
   }
 }
 
@@ -607,8 +607,8 @@ nav {
 
 @media (max-width: 690px) {
   .navMenu .menu .drop {
-    position: relative;
     height: 300px;
+    position: relative;
   }
 }
 
@@ -663,22 +663,22 @@ nav {
 
 @media (max-height: 650px) {
   .navMenu .menu .drop.expand {
-    width: 290px;
     height: 150px;
+    width: 290px;
   }
 }
 
 @media (max-width: 690px) {
   .navMenu .menu .drop.expand {
-    position: static;
     height: 300px;
     margin: 10px auto;
+    position: static;
   }
 }
 
 .navMenu .menu .drop.expand ul {
-  width: 100%;
   height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -707,8 +707,8 @@ nav {
 
 @media (max-height: 650px) {
   .navMenu .menu .drop.expand ul li {
-    padding: 0;
     width: 130px;
+    padding: 0;
   }
 }
 
@@ -733,9 +733,9 @@ nav {
 
 .navMenu .menu .drop.expand ul li button:hover, .navMenu .menu .drop.expand ul li button:focus {
   color: #878787;
+  margin-right: 8px;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  margin-right: 8px;
 }
 
 @media (max-height: 650px) {
@@ -745,14 +745,14 @@ nav {
 }
 
 .dropBar {
-  position: relative;
-  width: 0;
   height: 5px;
+  width: 0;
   background: #3b3b3b;
-  -webkit-transition: width 0.5s;
-  transition: width 0.5s;
   border-radius: 5px;
   margin-bottom: 10px;
+  position: relative;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
 }
 
 @media (max-height: 820px) {
@@ -767,11 +767,11 @@ nav {
 
 .navTitle {
   height: calc(100% - 230px);
+  margin-top: 30px;
   position: relative;
   z-index: 500;
   -webkit-transition: all 1s;
   transition: all 1s;
-  margin-top: 30px;
 }
 
 @media (max-height: 1000px) {
@@ -782,8 +782,8 @@ nav {
 
 @media (max-width: 690px) {
   .navTitle {
-    position: static;
     height: auto;
+    position: static;
   }
 }
 
@@ -810,8 +810,8 @@ nav {
 
 .navTitle::before {
   content: "";
-  width: 0;
   height: 100%;
+  width: 0;
 }
 
 .title .titleContainer {
@@ -1038,8 +1038,8 @@ section.overview {
 }
 
 .wrapper.overview {
-  padding: 0 80px;
   height: 100%;
+  padding: 0 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1050,13 +1050,13 @@ section.overview {
 
 @media (max-width: 960px) {
   .wrapper.overview {
+    margin-top: 180px;
+    padding: 0;
+    position: relative;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 0;
-    margin-top: 180px;
-    position: relative;
   }
 }
 
@@ -1091,36 +1091,36 @@ section.overview.expand {
 
 @media (max-width: 960px) {
   .overGallery {
+    height: auto;
+    margin-top: 40px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    height: auto;
-    margin-top: 40px;
   }
 }
 
 .overGallery.gallery2 {
+  margin-top: 130px;
   position: relative;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-top: 130px;
 }
 
 @media (max-width: 960px) {
   .overGallery.gallery2 {
+    margin-top: 0;
+    position: static;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    position: static;
-    margin-top: 0;
   }
 }
 
 .overGallery .gallery {
-  width: 500px;
   height: 500px;
+  width: 500px;
   padding: 20px;
   padding: 20px;
   -webkit-transition: all 1s;
@@ -1129,8 +1129,8 @@ section.overview.expand {
 
 @media (max-width: 1250px) {
   .overGallery .gallery {
-    width: 400px;
     height: 400px;
+    width: 400px;
   }
 }
 
@@ -1149,10 +1149,10 @@ section.overview.expand {
 }
 
 .overGallery .gallery .box img {
+  max-height: 100%;
+  max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .overGallery .gallery button {
@@ -1243,6 +1243,7 @@ section.overview.expand {
   .gallery.pic1,
   .gallery.pic2,
   .gallery.pic3 {
+    margin-top: 150px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1250,7 +1251,6 @@ section.overview.expand {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 150px;
   }
 }
 
@@ -1326,16 +1326,16 @@ section.overview.expand {
 }
 
 .quote {
-  background-color: #212121;
   height: auto;
   min-height: 400px;
   margin-top: 200px;
+  background-color: #212121;
 }
 
 .wrapper.quote {
-  padding: 80px 80px;
   height: auto;
   width: 100%;
+  padding: 80px 80px;
 }
 
 .quoteContainer {
@@ -1359,8 +1359,8 @@ section.overview.expand {
 }
 
 .quotePhoto {
-  width: 400px;
   height: auto;
+  width: 400px;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -1403,12 +1403,11 @@ section.overview.expand {
 
 @media (max-width: 960px) {
   .quoteContentContainer {
-    padding: 0;
     height: auto;
+    padding: 20px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 20px;
   }
 }
 
@@ -1422,9 +1421,9 @@ section.overview.expand {
 }
 
 .quoteContentContainer .quoteLogoContainer .mainLogo {
-  position: relative;
   width: 100%;
   margin: 30px 0;
+  position: relative;
 }
 
 .quoteContentContainer .quoteContent {
@@ -1495,10 +1494,10 @@ section.overview.expand {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0;
 }
 
 @media (max-width: 960px) {
@@ -1512,8 +1511,8 @@ section.overview.expand {
 
 .about article,
 .about aside {
-  width: 50%;
   height: auto;
+  width: 50%;
 }
 
 @media (max-width: 960px) {
@@ -1540,17 +1539,17 @@ section.overview.expand {
 
 .about article {
   background-color: white;
+  padding-right: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 40px;
 }
 
 @media (max-width: 960px) {
   .about article {
     width: 100%;
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 }
 
@@ -1574,7 +1573,6 @@ section.overview.expand {
 }
 
 .about article .aboutTitle h2 {
-  text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   font-size: 5rem;
   font-weight: normal;
@@ -1582,6 +1580,7 @@ section.overview.expand {
   letter-spacing: normal;
   line-height: normal;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .wrapper.aboutContent {
@@ -1600,32 +1599,28 @@ section.overview.expand {
 @media (max-width: 960px) {
   .wrapper.aboutContent {
     max-width: 100%;
-    padding: 80px;
-    padding-top: 60px;
     margin: 0;
+    padding: 60px 80px 80px 80px;
   }
 }
 
-.aboutTeam {
-  width: 100%;
-  height: auto;
-}
-
 .aboutQuality,
-.aboutDocs {
+.aboutDocs,
+.aboutTeam {
   height: auto;
   width: 100%;
 }
 
 .aboutRest {
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 40px;
 }
 
 @media (max-width: 1250px) {
   .aboutRest {
+    margin-top: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1633,7 +1628,6 @@ section.overview.expand {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-top: 0;
   }
 }
 
@@ -1668,8 +1662,8 @@ section.overview.expand {
 
 @media (max-width: 960px) {
   .aboutSection p {
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 }
 
@@ -1679,9 +1673,8 @@ section.overview.expand {
 }
 
 .skills .wrapper {
-  padding: 0 130px 100px 130px;
-  padding-top: 300px;
   height: 100%;
+  padding: 300px 130px 100px 130px;
   -webkit-transition: padding-top 2s;
   transition: padding-top 2s;
 }
@@ -1712,6 +1705,7 @@ section.overview.expand {
 
 .skills ul {
   width: 100%;
+  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1720,30 +1714,29 @@ section.overview.expand {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 50px;
 }
 
 .skills ul li {
-  margin: 0 auto;
-  min-width: 200px;
   width: 25%;
+  min-width: 200px;
+  margin: 0 auto;
   text-align: center;
   margin-bottom: 100px;
 }
 
 @media (max-width: 960px) {
   .skills ul li {
-    margin-bottom: 80px;
     width: 20%;
     min-width: 160px;
+    margin-bottom: 80px;
   }
 }
 
 @media (max-width: 690px) {
   .skills ul li {
-    margin-bottom: 80px;
     width: 20%;
     min-width: 120px;
+    margin-bottom: 80px;
   }
 }
 
@@ -1766,21 +1759,21 @@ section.overview.expand {
 }
 
 .skills ul li img {
+  width: 20%;
+  min-width: 80px;
   margin: 0 auto;
+  padding: 0;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   -o-object-fit: contain;
      object-fit: contain;
-  min-width: 80px;
-  width: 20%;
-  padding: 0;
 }
 
 @media (max-width: 480px) {
   .skills ul li img {
-    min-width: 50px;
     min-height: 60px;
+    min-width: 50px;
   }
 }
 
@@ -1822,8 +1815,8 @@ section.overview.expand {
 }
 
 .projects {
-  position: relative;
   height: auto;
+  position: relative;
   background-image: url(../assets/projects/strip.png);
   background-size: contain;
   background-position: center;
@@ -1839,9 +1832,9 @@ section.overview.expand {
 }
 
 .projects .splashTitle {
+  opacity: 0.85;
   top: 10px;
   left: 80px;
-  opacity: 0.85;
 }
 
 @media (max-width: 1250px) {
@@ -1867,8 +1860,8 @@ section.overview.expand {
 }
 
 .wrapper.projects {
-  padding: 100px 80px;
   height: 100%;
+  padding: 100px 80px;
 }
 
 @media (max-width: 960px) {
@@ -1884,8 +1877,9 @@ section.overview.expand {
 }
 
 .projectContainer {
-  width: 100%;
   height: 100%;
+  width: 100%;
+  margin-top: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1896,7 +1890,6 @@ section.overview.expand {
           justify-content: space-evenly;
   -ms-flex-line-pack: justify;
       align-content: space-between;
-  margin-top: 300px;
   -webkit-transition: all 2s;
   transition: all 2s;
 }
@@ -1918,24 +1911,24 @@ section.overview.expand {
 }
 
 .project {
-  width: 100%;
   height: auto;
+  width: 100%;
+  margin-bottom: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 100px;
 }
 
 @media (max-width: 690px) {
   .project {
+    margin-bottom: 150px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 150px;
   }
 }
 
@@ -1943,15 +1936,15 @@ section.overview.expand {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  z-index: 6000;
-  position: relative;
+  background-color: #f8f8f8;
   -webkit-box-shadow: 2px 2px 10px 1px black;
           box-shadow: 2px 2px 10px 1px black;
-  background-color: #f8f8f8;
-  -webkit-transition: all 1s;
-  transition: all 1s;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  position: relative;
+  z-index: 6000;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 @media (max-width: 1250px) {
@@ -1975,15 +1968,15 @@ section.overview.expand {
 }
 
 .project .projectImage .picture {
+  height: 100%;
+  min-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  min-width: 100%;
-  height: 100%;
   border: 5px solid #f8f8f8;
   position: relative;
+  z-index: 5000;
   -webkit-transition: all 1s;
   transition: all 1s;
-  z-index: 5000;
 }
 
 @media (max-width: 1250px) {
@@ -1999,11 +1992,14 @@ section.overview.expand {
 }
 
 .project .projectInfo {
+  height: auto;
+  background: -webkit-gradient(linear, left top, right top, from(#2121214d), color-stop(#2121214f), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, #2121214d, #2121214f, rgba(255, 255, 255, 0));
+  position: relative;
+  padding: 100px;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  height: auto;
-  padding: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2014,10 +2010,7 @@ section.overview.expand {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  position: relative;
   z-index: 2000;
-  background: -webkit-gradient(linear, left top, right top, from(#2121214d), color-stop(#2121214f), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to right, #2121214d, #2121214f, rgba(255, 255, 255, 0));
 }
 
 @media (max-width: 960px) {
@@ -2089,8 +2082,8 @@ section.overview.expand {
 
 @media (max-width: 960px) {
   .project .projectInfo .infoTitle .title {
-    margin: 30px 0 0 0;
     width: 100%;
+    margin: 30px 0 0 0;
   }
 }
 
@@ -2107,8 +2100,8 @@ section.overview.expand {
 }
 
 .project .projectInfo .infoTitle .skillWrapper {
-  width: 60%;
   height: 100%;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2153,16 +2146,17 @@ section.overview.expand {
 
 @media (max-width: 690px) {
   .project .projectInfo .infoTitle .skillWrapper .skillContainer {
+    padding-top: 20px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 20px;
   }
 }
 
 .project .projectInfo .infoTitle .skillWrapper .skillContainer .skill {
-  width: 75px;
   height: 60px;
+  width: 75px;
+  margin: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2170,20 +2164,19 @@ section.overview.expand {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px;
 }
 
 .project .projectInfo .infoTitle .skillWrapper .skillContainer .skill ion-icon {
-  width: 100%;
   height: 40px;
+  width: 100%;
   color: #dcdcdc;
   font-size: 5.1rem;
 }
 
 .project .projectInfo .infoTitle .skillWrapper .skillContainer .skill img {
-  border: none;
-  width: 35px;
   height: 35px;
+  width: 35px;
+  border: none;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -2214,10 +2207,10 @@ section.overview.expand {
 }
 
 .project .projectInfo .infoContent {
+  height: auto;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2232,10 +2225,10 @@ section.overview.expand {
 
 @media (max-width: 690px) {
   .project .projectInfo .infoContent {
+    width: 100%;
     -webkit-box-flex: 0;
         -ms-flex: 0;
             flex: 0;
-    width: 100%;
   }
 }
 
@@ -2255,9 +2248,9 @@ section.overview.expand {
   .project .projectInfo .infoContent p {
     height: auto;
     width: 100%;
-    padding: 5%;
     font-size: 1.8rem;
     text-align: center;
+    padding: 5%;
   }
 }
 
@@ -2270,9 +2263,9 @@ section.overview.expand {
 
 .project .projectInfo .infoContent a {
   width: 100%;
+  display: inline-block;
   -webkit-transition: all 1s;
   transition: all 1s;
-  display: inline-block;
   font-family: "Oswald", sans-serif;
   font-size: 2.7rem;
   font-weight: normal;
@@ -2312,8 +2305,8 @@ section.overview.expand {
 }
 
 .projectInfo.alt {
-  padding-left: 50px;
   height: auto;
+  padding-left: 50px;
   background: -webkit-gradient(linear, right top, left top, from(#2121214d), color-stop(#2121214f), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to left, #2121214d, #2121214f, rgba(255, 255, 255, 0));
 }
@@ -2348,8 +2341,8 @@ section.overview.expand {
 }
 
 .wrapper.education {
-  width: 100%;
   height: auto;
+  width: 100%;
   padding: 5% 180px;
 }
 
@@ -2360,8 +2353,8 @@ section.overview.expand {
 }
 
 .eduBoxContainer {
-  width: 100%;
   height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2390,9 +2383,9 @@ section.overview.expand {
 }
 
 .eduBoxContainer .eduBox img {
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  height: 100%;
 }
 
 @media (max-width: 690px) {
@@ -2426,6 +2419,7 @@ section.overview.expand {
 }
 
 .blogTitle h2 {
+  width: 100%;
   font-family: "Oswald", sans-serif;
   font-size: 5rem;
   font-weight: normal;
@@ -2433,13 +2427,12 @@ section.overview.expand {
   letter-spacing: normal;
   line-height: normal;
   text-align: center;
-  width: 100%;
   text-transform: uppercase;
 }
 
 .blogContentContainer {
-  margin-top: 50px;
   width: 100%;
+  margin-top: 50px;
 }
 
 .blogContentContainer ul {
@@ -2455,25 +2448,25 @@ section.overview.expand {
 }
 
 .blogContentContainer ul li {
+  width: 100%;
   background-color: #f8f8f8;
   margin: 80px 0;
-  width: 100%;
+  padding: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2%;
 }
 
 @media (max-width: 960px) {
   .blogContentContainer ul li {
+    height: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: auto;
   }
 }
 
@@ -2489,8 +2482,8 @@ section.overview.expand {
 
 @media (max-width: 960px) {
   .blogImage {
-    width: 100%;
     height: 50%;
+    width: 100%;
     padding: 5%;
   }
 }
@@ -2509,11 +2502,11 @@ section.overview.expand {
 }
 
 .blogContent {
-  -ms-flex-preferred-size: 800px;
-      flex-basis: 800px;
+  width: 60%;
   padding-left: 40px;
   padding-right: 40px;
-  width: 60%;
+  -ms-flex-preferred-size: 800px;
+      flex-basis: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2528,11 +2521,11 @@ section.overview.expand {
 
 @media (max-width: 960px) {
   .blogContent {
-    -ms-flex-preferred-size: 0;
-        flex-basis: 0;
     height: auto;
     width: 100%;
     padding-bottom: 40px;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
   }
 }
 
@@ -2567,7 +2560,7 @@ section.overview.expand {
 
 .blogContent a {
   margin-top: 20px;
-  display: block;
+  background-color: none;
   font-family: "Oswald", sans-serif;
   font-size: 2.2rem;
   font-weight: normal;
@@ -2576,7 +2569,7 @@ section.overview.expand {
   line-height: normal;
   text-align: left;
   text-transform: uppercase;
-  background-color: none;
+  display: block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2599,9 +2592,9 @@ section.overview.expand {
 
 .blogBar {
   height: 4px;
-  border-radius: 3px;
   width: 0;
   background-color: #545454;
+  border-radius: 3px;
   -webkit-transition: width 3s;
   transition: width 3s;
 }
@@ -2611,8 +2604,8 @@ section.overview.expand {
 }
 
 .contact {
-  width: 100%;
   height: auto;
+  width: 100%;
   background-color: #212121;
   position: relative;
 }
@@ -2701,9 +2694,8 @@ section.overview.expand {
 
 @media (max-width: 960px) {
   .container ul {
-    margin: 0;
+    margin: 5px 0 0 0;
     padding: 0;
-    margin-top: 5px;
   }
 }
 
@@ -2731,11 +2723,6 @@ section.overview.expand {
 }
 
 .container ul li a:not(.resume) {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-  display: inline-block;
   font-family: 'Domine', serif;
   font-size: 1.8rem;
   font-weight: normal;
@@ -2743,6 +2730,11 @@ section.overview.expand {
   letter-spacing: 1.5;
   line-height: 1.6;
   text-align: left;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 @media (max-width: 960px) {
@@ -2757,10 +2749,6 @@ section.overview.expand {
 }
 
 .container ul li button {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
   font-family: 'Domine', serif;
   font-size: 1.8rem;
   font-weight: normal;
@@ -2768,6 +2756,10 @@ section.overview.expand {
   letter-spacing: 1.5;
   line-height: 1.6;
   text-align: left;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 @media (max-width: 960px) {
@@ -2782,12 +2774,12 @@ section.overview.expand {
 }
 
 .contactContainer ul {
+  margin: 30px 0 0 0;
   padding: 0;
-  margin: 0;
-  margin-top: 30px;
 }
 
 .contactContainer ul li {
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2795,7 +2787,6 @@ section.overview.expand {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0;
   font-family: 'Domine', serif;
   font-size: 1.8rem;
   font-weight: normal;
@@ -2831,16 +2822,15 @@ section.overview.expand {
 
 .contactContainer ul li button ion-icon {
   display: inline-block;
+  color: #f8f8f8;
+  margin-right: 10px;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
-  margin-right: 10px;
-  color: #f8f8f8;
 }
 
 .contactContainer ul li button h5 {
-  display: inline-block;
   font-family: 'Domine', serif;
   font-size: 1.8rem;
   font-weight: normal;
@@ -2848,6 +2838,7 @@ section.overview.expand {
   letter-spacing: 1.5;
   line-height: 1.6;
   text-align: center;
+  display: inline-block;
 }
 
 .contact textarea {
@@ -2857,8 +2848,6 @@ section.overview.expand {
 
 .mssg {
   height: 40px;
-  display: block;
-  text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
   font-weight: normal;
@@ -2866,8 +2855,10 @@ section.overview.expand {
   letter-spacing: normal;
   line-height: normal;
   text-align: center;
+  text-transform: uppercase;
   -webkit-transform: scale(0);
           transform: scale(0);
+  display: block;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }
@@ -2879,8 +2870,9 @@ section.overview.expand {
 
 .viewResume {
   width: 100%;
-  position: relative;
   margin-top: 20px;
+  position: relative;
+  padding: 0 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2893,17 +2885,16 @@ section.overview.expand {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding: 0 10%;
 }
 
 .viewResume a.resume {
   width: 100%;
-  display: inline-block;
   border: 2px solid #f8f8f8;
   text-transform: uppercase;
+  padding: 1%;
+  display: inline-block;
   -webkit-transition: all 1s;
   transition: all 1s;
-  padding: 1%;
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
   font-weight: normal;
@@ -2957,13 +2948,13 @@ button:hover, button:focus {
 
 ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 p {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 a {
@@ -2982,6 +2973,11 @@ a:focus, a:hover {
   height: 80px;
   width: 60px;
   background: #212121;
+  visibility: hidden;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2995,12 +2991,7 @@ a:focus, a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
-  bottom: 40px;
-  right: 10px;
   z-index: 7000;
-  visibility: hidden;
-  opacity: 0.8;
 }
 
 @media (max-width: 480px) {
