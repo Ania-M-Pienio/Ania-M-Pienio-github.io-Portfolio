@@ -116,7 +116,7 @@ app.resetAll = function() {
 /*****************          HANDLERS          *******************/
 /****************************************************************/
 
-// listeners manifest
+// listener categories
 app.listeners = function() {
   app.handleLogo();
   app.handleMenu();
@@ -187,10 +187,11 @@ app.handleLogo = function() {
 };
 
 app.handleMenu = function() {
+
   // menu icon
   $(".dropMenu").on("click", function() {
-    $(".drop").toggleClass("expand");
     $(this).blur();
+    $(".drop").toggleClass("expand");
     $("#navLogo .bar").toggleClass("expand");
     $(".dropBar").toggleClass("expand");
     $(".navMenuLogo").toggleClass("expand");
@@ -251,7 +252,7 @@ app.handleContacts = function() {
   // receives the message, shows it, and then removes it
   app.showMessage = function(message) {
     $(".mssg h4").html(message);
-    app.expand($(".mssg"), 300).then(() => {
+    app.delayedExpand($(".mssg"), 300).then(() => {
       setTimeout(() => {
         $(".mssg").removeClass("expand");
       }, 1500);
@@ -259,7 +260,7 @@ app.handleContacts = function() {
   };
 
   // 'expands' the given element after a delay period returns promise once completed
-  app.expand = function($el, delay) {
+  app.delayedExpand = function($el, delay) {
     return new Promise(resolve => {
       setTimeout(() => {
         resolve($el.addClass("expand"));

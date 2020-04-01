@@ -246,7 +246,8 @@ input::-moz-focus-inner {
   }
 }
 
-.mainLogo .logo2 {
+.mainLogo .logo2,
+.mainLogo .logo3 {
   height: 180px;
   width: 230px;
   -webkit-transform: scale(0);
@@ -259,29 +260,15 @@ input::-moz-focus-inner {
 }
 
 @media (max-height: 500px) {
-  .mainLogo .logo2 {
+  .mainLogo .logo2,
+  .mainLogo .logo3 {
     height: 110px;
     width: 160px;
   }
 }
 
 .mainLogo .logo3 {
-  height: 180px;
-  width: 230px;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  position: absolute;
-  top: 0;
   z-index: 7000;
-  -webkit-transition: all 1.5s;
-  transition: all 1.5s;
-}
-
-@media (max-height: 500px) {
-  .mainLogo .logo3 {
-    height: 110px;
-    width: 160px;
-  }
 }
 
 .mainLogo .bars {
@@ -308,11 +295,7 @@ input::-moz-focus-inner {
   }
 }
 
-.logo2.expand {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
+.logo2.expand,
 .logo3.expand {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -346,18 +329,10 @@ input::-moz-focus-inner {
 }
 
 .quoteLogoContainer .mainLogo .logo .logo1,
-.contactLogoContainer .mainLogo .logo .logo1 {
-  height: 100px;
-  width: 130px;
-}
-
 .quoteLogoContainer .mainLogo .logo .logo2,
-.contactLogoContainer .mainLogo .logo .logo2 {
-  height: 100px;
-  width: 130px;
-}
-
 .quoteLogoContainer .mainLogo .logo .logo3,
+.contactLogoContainer .mainLogo .logo .logo1,
+.contactLogoContainer .mainLogo .logo .logo2,
 .contactLogoContainer .mainLogo .logo .logo3 {
   height: 100px;
   width: 130px;
