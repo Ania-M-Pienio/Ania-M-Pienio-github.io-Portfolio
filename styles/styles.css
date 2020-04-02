@@ -361,7 +361,7 @@ input::-moz-focus-inner {
   position: relative;
 }
 
-nav {
+header {
   height: 100vh;
   background-color: #dcdcdc;
   background-image: url(../assets/nav/ME19.png);
@@ -373,50 +373,50 @@ nav {
 }
 
 @media (max-height: 1000px) {
-  nav {
+  header {
     background-size: 65%;
   }
 }
 
 @media (max-height: 820px) {
-  nav {
+  header {
     background-size: 35%;
   }
 }
 
 @media (max-height: 650px) {
-  nav {
+  header {
     background-size: 30%;
   }
 }
 
 @media (max-height: 500px) {
-  nav {
+  header {
     height: auto;
     background-image: none;
   }
 }
 
 @media (max-width: 690px) {
-  nav {
+  header {
     height: auto;
     background-image: none;
   }
 }
 
-.nav.wrapper {
+header .wrapper {
   height: 100%;
   padding: 20px 80px;
 }
 
 @media (max-height: 820px) {
-  .nav.wrapper {
+  header .wrapper {
     padding: 15px 60px;
   }
 }
 
 @media (max-width: 690px) {
-  .nav.wrapper {
+  header .wrapper {
     padding: 40px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -431,7 +431,7 @@ nav {
 }
 
 @media (max-width: 480px) {
-  .nav.wrapper {
+  header .wrapper {
     padding: 40px 10px;
   }
 }

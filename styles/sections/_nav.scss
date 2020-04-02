@@ -1,5 +1,5 @@
 // GENERAL NAV
-nav {
+header {
   height: 100vh;
   background-color: $grey;
   background-image: url(../assets/nav/ME19.png);
@@ -31,7 +31,7 @@ nav {
   }
 }
 
-.nav.wrapper {
+header .wrapper {
   height: 100%;
   padding: 20px 80px;
   @include mobile-port-h {
