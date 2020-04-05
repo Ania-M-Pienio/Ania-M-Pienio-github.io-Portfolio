@@ -1,4 +1,4 @@
-// FONTS 
+// FONTS
 @mixin Ossie($size, $weight, $color, $ltr-spacing, $ln-height, $align) {
   font-family: "Oswald", sans-serif;
   font-size: $size;
@@ -10,7 +10,7 @@
 }
 
 @mixin Domi($size, $weight, $color, $ltr-spacing, $ln-height, $align) {
-  font-family: 'Domine', serif;
+  font-family: "Domine", serif;
   font-size: $size;
   font-weight: $weight;
   color: $color;
@@ -20,7 +20,7 @@
 }
 
 @mixin Monti($size, $weight, $color, $ltr-spacing, $ln-height, $align) {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: $size;
   font-weight: $weight;
   color: $color;
@@ -45,20 +45,17 @@
   }
 }
 
-
 @mixin tablet-port {
   @media (max-width: 960px) {
     @content;
   }
 }
 
-
 @mixin mobile-land {
   @media (max-width: 690px) {
     @content;
   }
 }
-
 
 @mixin mobile-port {
   @media (max-width: 480px) {
@@ -88,6 +85,14 @@
 
 @mixin mobile-port-hh {
   @media (max-height: 500px) {
+    @content;
+  }
+}
+
+// reduced motion option ON for accessibility
+
+@mixin reduce {
+  @media (prefers-reduced-motion: reduce) {
     @content;
   }
 }

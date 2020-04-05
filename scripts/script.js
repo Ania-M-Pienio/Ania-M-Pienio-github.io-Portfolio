@@ -145,39 +145,7 @@ app.handleWaypoints = function() {
   );
 };
 
-app.handleLogo = function() {
-  // hovers and focus over logo
-  $(".logo").focus(function() {
-    const id = $(this).attr("id");
-    $(`#${id} .logo1 img`).attr("src", "assets/hover/2.png");
-    $(`#${id} .logo2 img`).attr("src", "assets/hover/3.png");
-    $(`#${id} .logo3 img`).attr("src", "assets/hover/4.png");
-  });
-
-  $(".logo").blur(function() {
-    const id = $(this).attr("id");
-    const folder = id === "n" ? "nav" : "quote";
-    $(`#${id} .logo1 img`).attr("src", `assets/${folder}/2.png`);
-    $(`#${id} .logo2 img`).attr("src", `assets/${folder}/3.png`);
-    $(`#${id} .logo3 img`).attr("src", `assets/${folder}/4.png`);
-  });
-
-  $(".logo").mouseover(function() {
-    const id = $(this).attr("id");
-    $(`#${id} .logo1 img`).attr("src", "assets/hover/2.png");
-    $(`#${id} .logo2 img`).attr("src", "assets/hover/3.png");
-    $(`#${id} .logo3 img`).attr("src", "assets/hover/4.png");
-  });
-
-  $(".logo").mouseleave(function() {
-    const id = $(this).attr("id");
-    const folder = id === "n" ? "nav" : "quote";
-    $(`#${id} .logo1 img`).attr("src", `assets/${folder}/2.png`);
-    $(`#${id} .logo2 img`).attr("src", `assets/${folder}/3.png`);
-    $(`#${id} .logo3 img`).attr("src", `assets/${folder}/4.png`);
-    $(".logo").blur();
-  });
-
+app.handleLogo = function() { 
   $(".mainLogo button, .scrollTop button").on("click", function() {
     $(this).blur();
     setTimeout(() => {

@@ -214,15 +214,10 @@ input::-moz-focus-inner {
   position: absolute;
 }
 
-.mainLogo button:hover .bar,
-.mainLogo button:focus .bar {
-  background: #878787;
-}
-
 .mainLogo button:hover .logo1,
 .mainLogo button:focus .logo1 {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.55);
+          transform: scale(1.55);
 }
 
 .mainLogo h3 {
@@ -237,6 +232,12 @@ input::-moz-focus-inner {
   z-index: 5000;
   -webkit-transition: all 1.5s;
   transition: all 1.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mainLogo .logo1 {
+    margin-left: 0;
+  }
 }
 
 @media (max-height: 500px) {
@@ -257,6 +258,14 @@ input::-moz-focus-inner {
   z-index: 6000;
   -webkit-transition: all 1.5s;
   transition: all 1.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mainLogo .logo2,
+  .mainLogo .logo3 {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 @media (max-height: 500px) {
@@ -289,6 +298,12 @@ input::-moz-focus-inner {
   border-radius: 5px;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .mainLogo .bar {
+    width: 100%;
+  }
+}
+
 @media (max-height: 500px) {
   .mainLogo .bar {
     margin-top: 25px;
@@ -297,8 +312,8 @@ input::-moz-focus-inner {
 
 .logo2.expand,
 .logo3.expand {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .bar.expand {
@@ -307,6 +322,12 @@ input::-moz-focus-inner {
 
 .bar.expand:not(.quoteBar):not(.contactBar) {
   margin-left: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar.expand:not(.quoteBar):not(.contactBar) {
+    margin-left: 0;
+  }
 }
 
 .quoteLogoContainer,
@@ -350,6 +371,13 @@ input::-moz-focus-inner {
   background: #f8f8f8;
   border-radius: 2.5px;
   top: 0px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar.quoteBar,
+  .bar.contactBar {
+    width: 100%;
+  }
 }
 
 .bar.quoteBar.expand,
@@ -529,6 +557,13 @@ header .wrapper {
   transition: all 0.5s;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .navMenu .menu button.dropMenu {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 @media (max-width: 690px) {
   .navMenu .menu button.dropMenu {
     height: auto;
@@ -538,9 +573,8 @@ header .wrapper {
 
 .navMenu .menu button.dropMenu:hover ion-icon,
 .navMenu .menu button.dropMenu:focus ion-icon {
-  color: #878787;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 .navMenu .menu button.dropMenu ion-icon {
@@ -618,7 +652,7 @@ header .wrapper {
 }
 
 .navMenu .menu .drop ul li button {
-  font-family: 'Domine', serif;
+  font-family: "Domine", serif;
   font-size: 1.9rem;
   font-weight: normal;
   color: rgba(255, 255, 255, 0);
@@ -707,10 +741,9 @@ header .wrapper {
 }
 
 .navMenu .menu .drop.expand ul li button:hover, .navMenu .menu .drop.expand ul li button:focus {
-  color: #878787;
   margin-right: 8px;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 @media (max-height: 650px) {
@@ -728,6 +761,13 @@ header .wrapper {
   position: relative;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dropBar {
+    -webkit-transition: width 0s;
+    transition: width 0s;
+  }
 }
 
 @media (max-height: 820px) {
@@ -994,9 +1034,8 @@ header .wrapper {
 
 .navSocial ul li a:focus ion-icon,
 .navSocial ul li a:hover ion-icon {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  color: #878787;
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
 }
 
 section.overview {
@@ -1006,9 +1045,21 @@ section.overview {
   margin-bottom: 100px;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  section.overview {
+    margin-top: 40px;
+  }
+}
+
 @media (max-width: 960px) {
   section.overview {
     margin-bottom: -40px;
+  }
+}
+
+@media (max-width: 960px) and (prefers-reduced-motion: reduce) {
+  section.overview {
+    margin-top: 100px;
   }
 }
 
@@ -1035,8 +1086,20 @@ section.overview {
   }
 }
 
+@media (max-width: 960px) and (prefers-reduced-motion: reduce) {
+  .wrapper.overview {
+    margin-top: 40px;
+  }
+}
+
 section.overview.expand {
   margin-top: -90px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  section.overview.expand {
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: 960px) {
@@ -1045,9 +1108,21 @@ section.overview.expand {
   }
 }
 
+@media (max-width: 960px) and (prefers-reduced-motion: reduce) {
+  section.overview.expand {
+    margin-top: 100px;
+  }
+}
+
 @media (max-height: 820px) {
   section.overview.expand {
     margin-top: -20px;
+  }
+}
+
+@media (max-height: 820px) and (prefers-reduced-motion: reduce) {
+  section.overview.expand {
+    margin-top: 100px;
   }
 }
 
@@ -1197,6 +1272,12 @@ section.overview.expand {
   transition: all 2s;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .gallery.pic2 .galleryBar {
+    width: 100%;
+  }
+}
+
 .gallery.pic2 .galleryBar.expand {
   width: 100%;
 }
@@ -1266,7 +1347,7 @@ section.overview.expand {
 .splashTitle h1 {
   -webkit-transition: all 1s;
   transition: all 1s;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12rem;
   font-weight: normal;
   color: #e7e7e7;
@@ -1414,7 +1495,7 @@ section.overview.expand {
 .quoteContentContainer .quoteContent .quotePara {
   width: auto;
   padding: 5px;
-  font-family: 'Domine', serif;
+  font-family: "Domine", serif;
   font-size: 2rem;
   font-weight: normal;
   color: #e7e7e7;
@@ -1440,7 +1521,7 @@ section.overview.expand {
 }
 
 .quoteContentContainer h4 {
-  font-family: 'Domine', serif;
+  font-family: "Domine", serif;
   font-size: 1.4rem;
   font-weight: normal;
   color: #e7e7e7;
@@ -1625,7 +1706,7 @@ section.overview.expand {
 }
 
 .aboutSection p {
-  font-family: 'Domine', serif;
+  font-family: "Domine", serif;
   font-size: 1.7rem;
   font-weight: normal;
   color: #6e6e6e;
@@ -1654,9 +1735,21 @@ section.overview.expand {
   transition: padding-top 2s;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .skills .wrapper {
+    padding-top: 0;
+  }
+}
+
 @media (max-width: 1250px) {
   .skills .wrapper {
     padding: 300px 100px 100px 100px;
+  }
+}
+
+@media (max-width: 1250px) and (prefers-reduced-motion: reduce) {
+  .skills .wrapper {
+    padding-top: 0;
   }
 }
 
@@ -1666,15 +1759,33 @@ section.overview.expand {
   }
 }
 
+@media (max-width: 960px) and (prefers-reduced-motion: reduce) {
+  .skills .wrapper {
+    padding-top: 0;
+  }
+}
+
 @media (max-width: 690px) {
   .skills .wrapper {
     padding: 200px 60px 100px 60px;
   }
 }
 
+@media (max-width: 690px) and (prefers-reduced-motion: reduce) {
+  .skills .wrapper {
+    padding-top: 0;
+  }
+}
+
 @media (max-width: 480px) {
   .skills .wrapper {
     padding: 200px 30px 100px 30px;
+  }
+}
+
+@media (max-width: 480px) and (prefers-reduced-motion: reduce) {
+  .skills .wrapper {
+    padding-top: 0;
   }
 }
 
@@ -1869,6 +1980,12 @@ section.overview.expand {
   transition: all 2s;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .projectContainer {
+    margin-top: 130px;
+  }
+}
+
 .projectContainer.expand {
   margin-top: 130px;
 }
@@ -1879,9 +1996,21 @@ section.overview.expand {
   }
 }
 
+@media (max-width: 960px) and (prefers-reduced-motion: reduce) {
+  .projectContainer.expand {
+    margin-top: 130px;
+  }
+}
+
 @media (max-width: 480px) {
   .projectContainer.expand {
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) and (prefers-reduced-motion: reduce) {
+  .projectContainer.expand {
+    margin-top: 130px;
   }
 }
 
@@ -2210,7 +2339,7 @@ section.overview.expand {
 .project .projectInfo .infoContent p {
   margin-top: 40px;
   margin-bottom: 40px;
-  font-family: 'Domine', serif;
+  font-family: "Domine", serif;
   font-size: 2rem;
   font-weight: normal;
   color: #f8f8f8;
@@ -2524,7 +2653,7 @@ section.overview.expand {
 .blogContent p {
   margin-top: 40px;
   margin-bottom: 20px;
-  font-family: 'Domine', serif;
+  font-family: "Domine", serif;
   font-size: 1.7rem;
   font-weight: normal;
   color: #6e6e6e;
@@ -2572,6 +2701,12 @@ section.overview.expand {
   border-radius: 3px;
   -webkit-transition: width 3s;
   transition: width 3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blogBar {
+    width: 100%;
+  }
 }
 
 .blogBar.expand {
@@ -2676,7 +2811,7 @@ section.overview.expand {
 
 .container ul li {
   margin-top: 15px;
-  font-family: 'Domine', serif;
+  font-family: "Domine", serif;
   font-size: 1.8rem;
   font-weight: normal;
   color: #f8f8f8;
@@ -2698,7 +2833,7 @@ section.overview.expand {
 }
 
 .container ul li a:not(.resume) {
-  font-family: 'Domine', serif;
+  font-family: "Domine", serif;
   font-size: 1.8rem;
   font-weight: normal;
   color: #f8f8f8;
@@ -2724,7 +2859,7 @@ section.overview.expand {
 }
 
 .container ul li button {
-  font-family: 'Domine', serif;
+  font-family: "Domine", serif;
   font-size: 1.8rem;
   font-weight: normal;
   color: #f8f8f8;
@@ -2762,7 +2897,7 @@ section.overview.expand {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: 'Domine', serif;
+  font-family: "Domine", serif;
   font-size: 1.8rem;
   font-weight: normal;
   color: #f8f8f8;
@@ -2806,7 +2941,7 @@ section.overview.expand {
 }
 
 .contactContainer ul li button h5 {
-  font-family: 'Domine', serif;
+  font-family: "Domine", serif;
   font-size: 1.8rem;
   font-weight: normal;
   color: #f8f8f8;
@@ -2918,7 +3053,7 @@ button {
 }
 
 button:hover, button:focus {
-  background-color: rgba(255, 255, 255, 0.02);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 ul {

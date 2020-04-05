@@ -132,6 +132,9 @@
   background-color: lighten($charcoal, 20);
   border-radius: 3px;
   transition: width 3s;
+  @include reduce {
+    width: 100%;
+  }
 }
 
 .blogBar.expand {

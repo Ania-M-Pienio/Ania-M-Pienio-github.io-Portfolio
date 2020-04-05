@@ -6,20 +6,35 @@
   height: 100%;
   padding: 300px 130px 100px 130px;
   transition: padding-top 2s;
+  @include reduce {
+    padding-top: 0;
+  }
   @include tablet-land {
     // 1250
     padding: 300px 100px 100px 100px;
+    @include reduce {
+      padding-top: 0;
+    }
   }
   @include tablet-port {
     // 960
     padding: 200px 80px 100px 80px;
+    @include reduce {
+      padding-top: 0;
+    }
   }
   @include mobile-land {
     // 690
     padding: 200px 60px 100px 60px;
+    @include reduce {
+      padding-top: 0;
+    }
   }
   @include mobile-port {
     padding: 200px 30px 100px 30px;
+    @include reduce {
+      padding-top: 0;
+    }
   }
 }
 

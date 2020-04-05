@@ -2,8 +2,14 @@ section.overview {
   height: auto;
   transition: margin-top 1.5s;
   margin-bottom: 100px;
+  @include reduce {
+    margin-top: 40px;
+  }
   @include tablet-port {
     margin-bottom: -40px;
+    @include reduce {
+      margin-top: 100px;
+    }
   }
 }
 
@@ -18,16 +24,29 @@ section.overview {
     padding: 0;
     position: relative; // for title
     flex-direction: column;
+    @include reduce {
+      margin-top: 40px;
+    }
   }
 }
 
 section.overview.expand {
   margin-top: -90px;
+  @include reduce {
+    margin-top: 40px;
+  }
   @include tablet-port {
+    // 960
     margin-top: -50px;
+    @include reduce {
+      margin-top: 100px;
+    }
   }
   @include mobile-port-h {
     margin-top: -20px;
+    @include reduce {
+      margin-top: 100px;
+    }
   }
 }
 
@@ -127,6 +146,9 @@ section.overview.expand {
     background: lighten($charcoal, 10);
     border-radius: 5px;
     transition: all 2s;
+    @include reduce {
+      width: 100%;
+    }
   }
 }
 
