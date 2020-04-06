@@ -112,11 +112,13 @@
     display: block;
     display: flex;
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       text-decoration: underline double;
     }
     &:hover ion-icon,
-    &:focus ion-icon {
+    &:focus ion-icon,
+    &:active ion-icon {
       transform: scale(1.4) rotate(90deg);
     }
     h4 {

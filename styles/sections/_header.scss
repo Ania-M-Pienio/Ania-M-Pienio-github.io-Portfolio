@@ -248,7 +248,8 @@ header .wrapper {
           text-align: center;
         }
         &:hover,
-        &:focus {
+        &:focus,
+        &:active {
           margin-right: 8px;
           transform: scale(1.3);
           @include mobile-port-h2 {
@@ -455,7 +456,8 @@ header .wrapper {
 .navSocial {
   ul li a {
     &:focus ion-icon,
-    &:hover ion-icon {
+    &:hover ion-icon,
+    &:active ion-icon {
       transform: scale(1.6);
     }
   }

@@ -108,7 +108,8 @@ section.overview.expand {
     display: flex;
     justify-content: center;
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       border-bottom: 2px solid $charcoal;
     }
     h3 {
