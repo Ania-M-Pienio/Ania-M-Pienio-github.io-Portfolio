@@ -2755,6 +2755,18 @@ section.overview.expand {
   padding: 60px 180px;
 }
 
+@media (max-width: 1250px) {
+  .wrapper.resume {
+    padding: 50px 160px;
+  }
+}
+
+@media (max-width: 960px) {
+  .wrapper.resume {
+    padding: 50px 80px;
+  }
+}
+
 .viewResume {
   width: 100%;
   margin-top: 50px;
@@ -2811,7 +2823,7 @@ section.overview.expand {
 }
 
 .wrapper.message {
-  padding: 30px 80px;
+  padding: 40px 80px 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2869,13 +2881,20 @@ fieldset {
 }
 
 fieldset label {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #191919;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
   text-align: left;
   margin-top: 20px;
   width: 100%;
 }
 
 fieldset input {
-  position: relative;
   padding: 3% 4%;
   width: 100%;
   border: 2px solid #212121;
@@ -2888,7 +2907,7 @@ fieldset textarea {
 }
 
 fieldset button {
-  width: 49%;
+  width: 47%;
   border: 2px solid #212121;
   text-transform: uppercase;
   margin-top: 30px;

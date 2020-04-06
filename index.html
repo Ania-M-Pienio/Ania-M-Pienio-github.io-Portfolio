@@ -858,12 +858,13 @@
         <div class="wrapper message" id="message">
           <article>
             <div class="messageTitle">
-              <h2>MESSAGE ME</h2>
+              <h2>CONTACT ME</h2>
             </div>
-            <form action="https://formspree.io/xqkdpjpb" method="POST">
+            <form>
               <fieldset>
                 <label for="name">
                   Name
+                    </label>
                   <input
                     id="name"
                     type="text"
@@ -871,9 +872,10 @@
                     required
                     name="name"
                   />
-                </label>
+              
                 <label for="replyTo">
                   Email
+                   </label>
                   <input
                     id="replyTo"
                     type="email"
@@ -881,7 +883,7 @@
                     required
                     name="_replyto"
                   />
-                </label>
+               
                 <label for="theMessage">Message </label>
                 <textarea
                   id="theMessage"
@@ -893,8 +895,8 @@
                   value=""
                 ></textarea>
                 <div class="formButtons">
-                  <button type="submit">Send</button>
-                  <button type="reset">Reset</button>
+                  <button id="submitMssg" type="submit">Send</button>
+                  <button id="resetMssg" type="reset">Reset</button>
                 </div>
               </fieldset>
             </form>
@@ -911,20 +913,21 @@
       <div class="wrapper contact waypoint" id="contact">
         <!-- CONTACT [ 1 ] -->
         <div class="container contactContainer">
-          <h3>contact</h3>
+          <h3>contact info</h3>
           <ul>
             <li>
               <button class="emailCopy" type="button">
                 <ion-icon name="copy"></ion-icon>
-                <h5>ania.m.pienio@gmail.com</h5>
+                <h5>ania.m.pienio[at]gmail.com</h5>
               </button>
+            </li>
+            <li>
               <div class="mssg">
                 <h4>
                   <!-- dynamic mssg -->
                 </h4>
               </div>
             </li>
-            <li></li>
           </ul>
         </div>
 

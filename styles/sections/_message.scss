@@ -10,7 +10,7 @@
 }
 
 .wrapper.message {
-  padding: 30px 80px;
+  padding: 40px 80px 60px;
   display: flex;
 }
 
@@ -46,33 +46,25 @@ fieldset {
   flex-direction: column;
   @include Domi(1.8rem, normal, $charcoal, 1.5, 1.6, left);
   label {
+    @include Ossie(2rem, normal, $font, normal, normal, center);
+    text-transform: uppercase;
     text-align: left;
     margin-top: 20px;
     width: 100%;
   }
   input {
-    position: relative;
     padding: 3% 4%;
     width: 100%;
     border: 2px solid $charcoal;
   }
 
-  // input:valid,
-  // textarea:valid {
-  //   border: 2px solid $link2;
-  // }
-  // input:invalid,
-  // textarea:invalid {
-  //   border: 2px solid red;
-  // }
-  
   textarea {
     padding: 3% 4%;
     resize: vertical;
     border: 2px solid $charcoal;
   }
   button {
-    width: 49%;
+    width: 47%;
     border: 2px solid $charcoal;
     text-transform: uppercase;
     margin-top: 30px;

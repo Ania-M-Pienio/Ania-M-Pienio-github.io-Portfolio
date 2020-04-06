@@ -4,6 +4,14 @@
 
 .wrapper.resume {
   padding: 60px 180px;
+  @include tablet-land {
+    // 1250
+    padding: 50px 160px;
+  }
+  @include tablet-port {
+    // 960
+    padding: 50px 80px;
+  }
 }
 
 .viewResume {
