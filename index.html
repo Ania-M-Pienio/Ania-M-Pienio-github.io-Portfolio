@@ -244,7 +244,7 @@
                   As organizations shift a bulk of their team work to the Cloud,
                   iterative and self-organized individuals become critical
                   components of success. For this reason, I am deeply committed
-                  to Agile and its 12 Principles of software development.
+                  to Agile and its 12 Principles of Software Development.
                 </p>
               </div>
               <div class="aboutRest">
@@ -813,33 +813,102 @@
         </div>
       </section>
       <!-- -------------------------------------------- -->
+      <!-------------------   RESUME  -------------------->
+      <!-- -------------------------------------------- -->
+      <section class="resume">
+        <div class="wrapper resume waypoint" id="resume">
+          <!-- LOGO -->
+          <div class="contactLogoContainer">
+            <div class="mainLogo" id="contactLogo">
+              <button class="logo" id="c">
+                <div class="logo1">
+                  <img src="assets/quote/2.png" alt="Go" />
+                </div>
+                <div class="logo2">
+                  <img src="assets/quote/3.png" alt="Back" />
+                </div>
+                <div class="logo3">
+                  <img src="assets/quote/4.png" alt="to Top" />
+                </div>
+                <div class="bars">
+                  <div class="bar contactBar"></div>
+                </div>
+                <h3>Home</h3>
+              </button>
+            </div>
+          </div>
+          <!-- / logo ends -->
+
+          <div class="viewResume">
+            <a
+              class="resume"
+              href="assets/resume/Ania_M_Pienio_Resume_v2-dark-E.pdf"
+              target="_blank"
+              type="submit"
+              ><h5>View Resume</h5></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------- -->
+      <!-------------------  MESSAGE  -------------------->
+      <!-- -------------------------------------------- -->
+      <section class="message">
+        <div class="wrapper message" id="message">
+          <article>
+            <div class="messageTitle">
+              <h2>MESSAGE ME</h2>
+            </div>
+            <form action="https://formspree.io/xqkdpjpb" method="POST">
+              <fieldset>
+                <label for="name">
+                  Name
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                    name="name"
+                  />
+                </label>
+                <label for="replyTo">
+                  Email
+                  <input
+                    id="replyTo"
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                    name="_replyto"
+                  />
+                </label>
+                <label for="theMessage">Message </label>
+                <textarea
+                  id="theMessage"
+                  name="message"
+                  placeholder="Your message ..."
+                  rows="5"
+                  wrap
+                  required
+                  value=""
+                ></textarea>
+                <div class="formButtons">
+                  <button type="submit">Send</button>
+                  <button type="reset">Reset</button>
+                </div>
+              </fieldset>
+            </form>
+          </article>
+          <aside></aside>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------- -->
       <!-------------------  CONTACT  -------------------->
       <!-- -------------------------------------------- -->
     </main>
     <footer class="contact">
       <div class="wrapper contact waypoint" id="contact">
-        <!-- LOGO -->
-        <div class="contactLogoContainer">
-          <div class="mainLogo" id="contactLogo">
-            <button class="logo" id="c">
-              <div class="logo1">
-                <img src="assets/quote/2.png" alt="Go" />
-              </div>
-              <div class="logo2">
-                <img src="assets/quote/3.png" alt="Back" />
-              </div>
-              <div class="logo3">
-                <img src="assets/quote/4.png" alt="to Top" />
-              </div>
-              <div class="bars">
-                <div class="bar contactBar"></div>
-              </div>
-              <h3>Home</h3>
-            </button>
-          </div>
-        </div>
-        <!-- / logo ends -->
-
         <!-- CONTACT [ 1 ] -->
         <div class="container contactContainer">
           <h3>contact</h3>
@@ -849,25 +918,13 @@
                 <ion-icon name="copy"></ion-icon>
                 <h5>ania.m.pienio@gmail.com</h5>
               </button>
-            </li>
-            <li>
               <div class="mssg">
                 <h4>
                   <!-- dynamic mssg -->
                 </h4>
               </div>
             </li>
-            <li>
-              <div class="viewResume">
-                <a
-                  class="resume"
-                  href="assets/resume/Ania_M_Pienio_Resume_v2-dark-E.pdf"
-                  target="_blank"
-                  type="submit"
-                  >View Resume</a
-                >
-              </div>
-            </li>
+            <li></li>
           </ul>
         </div>
 
@@ -913,7 +970,6 @@
       </div>
     </footer>
 
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="scripts/jquery.waypoints.min.js"></script>
     <script

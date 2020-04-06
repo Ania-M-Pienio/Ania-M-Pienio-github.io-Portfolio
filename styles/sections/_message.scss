@@ -1,0 +1,114 @@
+.message {
+  height: auto;
+  background-image: linear-gradient(
+    to right,
+    $tint 0%,
+    $tint 50%,
+    #e4e4e4 50%,
+    #e4e4e4 100%
+  );
+}
+
+.wrapper.message {
+  padding: 30px 80px;
+  display: flex;
+}
+
+.messageTitle {
+  width: 100%;
+  h2 {
+    @include Ossie(5rem, normal, $font, normal, normal, center);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+}
+
+.message aside {
+  width: 50%;
+  background-image: url(../assets/message/elk.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: #e4e4e4;
+}
+
+.message article {
+  width: 50%;
+  padding: 20px;
+  padding-right: 80px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  @include Domi(1.8rem, normal, $charcoal, 1.5, 1.6, left);
+  label {
+    text-align: left;
+    margin-top: 20px;
+    width: 100%;
+  }
+  input {
+    position: relative;
+    padding: 3% 4%;
+    width: 100%;
+    border: 2px solid $charcoal;
+  }
+
+  // input:valid,
+  // textarea:valid {
+  //   border: 2px solid $link2;
+  // }
+  // input:invalid,
+  // textarea:invalid {
+  //   border: 2px solid red;
+  // }
+  
+  textarea {
+    padding: 3% 4%;
+    resize: vertical;
+    border: 2px solid $charcoal;
+  }
+  button {
+    width: 49%;
+    border: 2px solid $charcoal;
+    text-transform: uppercase;
+    margin-top: 30px;
+    display: inline-block;
+    transition: all 1s;
+    height: 50px;
+    @include Ossie(2rem, normal, $charcoal, normal, normal, center);
+    &:hover,
+    &:focus {
+      background-color: $charcoal;
+      color: $tint;
+    }
+    @include tablet-land {
+      width: 100%;
+    }
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: lighten($charcoal, 20);
+  opacity: 1;
+}
+
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+  background-color: $charcoal;
+  color: $tint;
+}
+
+.formButtons {
+  display: flex;
+  justify-content: space-between;
+  @include tablet-land {
+    flex-direction: column;
+  }
+}

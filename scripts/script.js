@@ -8,75 +8,84 @@ app.sections = {
     offset: 0,
     delay: 1000,
     trigger: "90%",
-    run: function() {
+    run: function () {
       // no animation
-    }
+    },
   },
   overview: {
     el: $("#overview"),
     offset: 50,
     delay: 1500,
     trigger: "80%",
-    run: function() {
+    run: function () {
       $("section.overview").addClass("expand");
       $(".gallery.pic2 .galleryBar").addClass("expand");
       $(".scrollTop").css("visibility", "visible");
-    }
+    },
   },
   skills: {
     el: $("#skills"),
     offset: 30,
     delay: 1500,
     trigger: "90%",
-    run: function() {
+    run: function () {
       $(".skills.wrapper").addClass("expand");
-    }
+    },
   },
   about: {
     el: $("#about"),
     offset: 10,
     delay: 1500,
     trigger: "90%",
-    run: function() {
+    run: function () {
       // no animation
-    }
+    },
   },
   quote: {
     el: $("#quote"),
     offset: 0,
     delay: 0,
     trigger: "90%",
-    run: function() {
+    run: function () {
       app.animateLogo("quoteLogo");
-    }
+    },
   },
   projects: {
     el: $("#projects"),
     offset: 300,
     delay: 400,
     trigger: "90%",
-    run: function() {
+    run: function () {
       $(".projectContainer").addClass("expand");
-    }
+    },
   },
   blog: {
     el: $("#blog"),
     offset: 300,
     delay: 500,
     trigger: "90%",
-    run: function() {
+    run: function () {
       $(".blogBar").addClass("expand");
-    }
+    },
+  },
+  resume: {
+    el: $("#resume"),
+    offset: 0,
+    delay: 2000,
+    trigger: "100%",
+    run: function () {
+      app.animateLogo("contactLogo");
+    },
   },
   contact: {
     el: $("#contact"),
-    offset: -50,
+    offset: 0,
     delay: 2000,
     trigger: "100%",
-    run: function() {
-      app.animateLogo("contactLogo");
-    }
-  }
+    run: function () {
+      // no animations
+    },
+  },
 };
 
 app.logo = $("#navLogo");

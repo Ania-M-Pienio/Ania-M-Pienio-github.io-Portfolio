@@ -20,13 +20,6 @@
   }
 }
 
-.contactLogoContainer {
-  display: none;
-  @include tablet-port {
-    // 960
-    display: block;
-  }
-}
 
 // EACH CONTACT CONTAINER
 .container {
@@ -135,7 +128,7 @@
   }
 }
 
-.contact textarea {
+.contact textarea#email {
   position: absolute;
   left: -2000px;
 }
@@ -153,27 +146,4 @@
   transform: scale(1);
 }
 
-.viewResume {
-  width: 100%;
-  margin-top: 20px;
-  position: relative;
-  padding: 0 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  a.resume {
-    width: 100%;
-    border: 2px solid $tint;
-    text-transform: uppercase;
-    padding: 1%;
-    display: inline-block;
-    transition: all 1s;
-    @include Ossie(2rem, normal, $tint, normal, normal, center);
-    &:hover,
-    &:focus {
-      background-color: $tint;
-      color: $charcoal;
-    }
-  }
-}
+
