@@ -206,7 +206,7 @@ section.overview.expand {
   }
   h1 {
     transition: all 1s;
-    @include Monti(12rem, normal, $grey2, normal, normal, left);
+    @include Monti(12rem, normal, lighten($charcoal, 20), normal, normal, left);
     @include proj-land {
       // 1600
       font-size: 15rem;

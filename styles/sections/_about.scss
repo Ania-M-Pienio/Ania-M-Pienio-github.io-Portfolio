@@ -116,7 +116,7 @@
     margin-bottom: 15px;
   }
   p {
-    @include Domi(1.7rem, normal, lighten($charcoal, 30), 1.5, 1.6, left);
+    @include Domi(1.7rem, normal, lighten($charcoal, 20), 1.5, 1.6, left);
     padding-right: 40px;
     @include tablet-port {
       // 960

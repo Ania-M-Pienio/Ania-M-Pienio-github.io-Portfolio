@@ -69,7 +69,7 @@
     }
     ion-icon {
       font-size: 8rem;
-      color: lighten($charcoal, 40);
+      color: $charcoal;
       @include mobile-port {
         // 480
         font-size: 6rem;
@@ -92,7 +92,7 @@
       @include Ossie(
         2rem,
         normal,
-        lighten($charcoal, 40),
+        lighten($charcoal, 20),
         normal,
         normal,
         center
