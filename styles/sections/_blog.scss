@@ -107,7 +107,7 @@
   a {
     margin-top: 20px;
     background-color: none;
-    @include Ossie(2.2rem, normal, $charcoal, normal, normal, left);
+    @include Ossie(2.2rem, normal, $link2, normal, normal, left);
     text-transform: uppercase;
     display: block;
     display: flex;
@@ -115,11 +115,16 @@
     &:focus {
       text-decoration: underline double;
     }
+    &:hover ion-icon,
+    &:focus ion-icon {
+      transform: scale(1.4) rotate(90deg);
+    }
     h4 {
       font-weight: normal;
       text-decoration: underline;
     }
     ion-icon {
+      transition: all 1s;
       font-size: 3.2rem;
       margin-left: 10px;
     }

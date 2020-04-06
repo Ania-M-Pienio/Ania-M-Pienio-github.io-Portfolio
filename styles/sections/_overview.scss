@@ -224,5 +224,9 @@ section.overview.expand {
       // 690
       font-size: 8rem;
     }
+    @include mobile-port {
+      // 480
+      font-size: 6rem;
+    }
   }
 }

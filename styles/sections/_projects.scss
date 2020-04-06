@@ -140,10 +140,13 @@
   /// PROJECT INFO [ 2 ]
   .projectInfo {
     height: auto;
+    border-right: 5px solid darken($tint, 10);
     background: linear-gradient(
       to right,
-      #2121214d,
-      #2121214f,
+      #212121b9,
+      #212121b9,
+      #212121b9,
+      #21212170,
       rgba(255, 255, 255, 0)
     );
     position: relative;
@@ -157,12 +160,13 @@
       // 960
       width: 100%;
       padding: 4%;
+      border: none;
     }
     @include mobile-land {
       // 690
       width: 100%;
       padding: 1%;
-      background: linear-gradient(#2121214d, #2121214f, rgba(255, 255, 255, 0));
+      background: linear-gradient(#212121c9, #21212188);
     }
     @include mobile-port {
       // 480
@@ -199,7 +203,7 @@
         }
         &:hover,
         &:focus {
-          color: #b3fcff;
+          color: $link;
           text-decoration: underline;
         }
         h3 {
@@ -302,25 +306,30 @@
           margin-bottom: 10px;
         }
       }
+
       ///////////// PROJECT LINK [ 2 ]
       a {
         width: 100%;
         display: inline-block;
         transition: all 1s;
-        @include Ossie(2.7rem, normal, lighten($tint, 60), normal, normal, left);
+        @include Ossie(2.7rem, normal, $link, normal, normal, left);
         @include mobile-land {
           // 690
           text-align: center;
         }
         &:hover,
         &:focus {
-          color: #d3feff;
           text-decoration: underline double;
+        }
+        &:hover ion-icon,
+        &:focus ion-icon{
+          transform: scale(1.2) rotate(90deg);
         }
         ion-icon {
           font-size: 5rem;
           position: relative;
           top: 15px;
+          transition: all 1s;
         }
         span {
           text-decoration: underline;
@@ -339,20 +348,16 @@
 .projectInfo.alt {
   height: auto;
   padding-left: 50px;
-  background: linear-gradient(
-    to left,
-    #2121214d,
-    #2121214f,
-    rgba(255, 255, 255, 0)
-  );
+  border-left: 5px solid darken($tint, 10);
+  border-right: none;
   @include tablet-port {
     // 960
     padding: 4%;
+    border: none;
   }
   @include mobile-land {
     // 690
     padding: 1%;
-    background: linear-gradient(#2121214d, #2121214f, rgba(255, 255, 255, 0));
   }
 }
 

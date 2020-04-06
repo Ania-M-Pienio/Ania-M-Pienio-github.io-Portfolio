@@ -1381,6 +1381,12 @@ section.overview.expand {
   }
 }
 
+@media (max-width: 480px) {
+  .splashTitle h1 {
+    font-size: 6rem;
+  }
+}
+
 .quote {
   height: auto;
   min-height: 400px;
@@ -1712,9 +1718,9 @@ section.overview.expand {
 
 .aboutSection p {
   font-family: "Domine", serif;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: normal;
-  color: #545454;
+  color: #3b3b3b;
   letter-spacing: 1.5;
   line-height: 1.6;
   text-align: left;
@@ -1840,7 +1846,7 @@ section.overview.expand {
 
 .skills ul li ion-icon {
   font-size: 8rem;
-  color: #212121;
+  color: #474747;
 }
 
 @media (max-width: 480px) {
@@ -2106,8 +2112,9 @@ section.overview.expand {
 
 .project .projectInfo {
   height: auto;
-  background: -webkit-gradient(linear, left top, right top, from(#2121214d), color-stop(#2121214f), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to right, #2121214d, #2121214f, rgba(255, 255, 255, 0));
+  border-right: 5px solid #dfdfdf;
+  background: -webkit-gradient(linear, left top, right top, from(#212121b9), color-stop(#212121b9), color-stop(#212121b9), color-stop(#21212170), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, #212121b9, #212121b9, #212121b9, #21212170, rgba(255, 255, 255, 0));
   position: relative;
   padding: 100px;
   -webkit-box-flex: 2;
@@ -2130,6 +2137,7 @@ section.overview.expand {
   .project .projectInfo {
     width: 100%;
     padding: 4%;
+    border: none;
   }
 }
 
@@ -2137,8 +2145,8 @@ section.overview.expand {
   .project .projectInfo {
     width: 100%;
     padding: 1%;
-    background: -webkit-gradient(linear, left top, left bottom, from(#2121214d), color-stop(#2121214f), to(rgba(255, 255, 255, 0)));
-    background: linear-gradient(#2121214d, #2121214f, rgba(255, 255, 255, 0));
+    background: -webkit-gradient(linear, left top, left bottom, from(#212121c9), to(#21212188));
+    background: linear-gradient(#212121c9, #21212188);
   }
 }
 
@@ -2201,7 +2209,7 @@ section.overview.expand {
 }
 
 .project .projectInfo .infoTitle .title:hover, .project .projectInfo .infoTitle .title:focus {
-  color: #b3fcff;
+  color: #c2cfe7;
   text-decoration: underline;
 }
 
@@ -2382,7 +2390,7 @@ section.overview.expand {
   font-family: "Oswald", sans-serif;
   font-size: 2.7rem;
   font-weight: normal;
-  color: white;
+  color: #c2cfe7;
   letter-spacing: normal;
   line-height: normal;
   text-align: left;
@@ -2395,15 +2403,22 @@ section.overview.expand {
 }
 
 .project .projectInfo .infoContent a:hover, .project .projectInfo .infoContent a:focus {
-  color: #d3feff;
   -webkit-text-decoration: underline double;
           text-decoration: underline double;
+}
+
+.project .projectInfo .infoContent a:hover ion-icon,
+.project .projectInfo .infoContent a:focus ion-icon {
+  -webkit-transform: scale(1.2) rotate(90deg);
+          transform: scale(1.2) rotate(90deg);
 }
 
 .project .projectInfo .infoContent a ion-icon {
   font-size: 5rem;
   position: relative;
   top: 15px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .project .projectInfo .infoContent a span {
@@ -2420,21 +2435,20 @@ section.overview.expand {
 .projectInfo.alt {
   height: auto;
   padding-left: 50px;
-  background: -webkit-gradient(linear, right top, left top, from(#2121214d), color-stop(#2121214f), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to left, #2121214d, #2121214f, rgba(255, 255, 255, 0));
+  border-left: 5px solid #dfdfdf;
+  border-right: none;
 }
 
 @media (max-width: 960px) {
   .projectInfo.alt {
     padding: 4%;
+    border: none;
   }
 }
 
 @media (max-width: 690px) {
   .projectInfo.alt {
     padding: 1%;
-    background: -webkit-gradient(linear, left top, left bottom, from(#2121214d), color-stop(#2121214f), to(rgba(255, 255, 255, 0)));
-    background: linear-gradient(#2121214d, #2121214f, rgba(255, 255, 255, 0));
   }
 }
 
@@ -2677,7 +2691,7 @@ section.overview.expand {
   font-family: "Oswald", sans-serif;
   font-size: 2.2rem;
   font-weight: normal;
-  color: #212121;
+  color: #466CB0;
   letter-spacing: normal;
   line-height: normal;
   text-align: left;
@@ -2693,12 +2707,20 @@ section.overview.expand {
           text-decoration: underline double;
 }
 
+.blogContent a:hover ion-icon,
+.blogContent a:focus ion-icon {
+  -webkit-transform: scale(1.4) rotate(90deg);
+          transform: scale(1.4) rotate(90deg);
+}
+
 .blogContent a h4 {
   font-weight: normal;
   text-decoration: underline;
 }
 
 .blogContent a ion-icon {
+  -webkit-transition: all 1s;
+  transition: all 1s;
   font-size: 3.2rem;
   margin-left: 10px;
 }
@@ -3093,7 +3115,6 @@ a:focus, a:hover {
   width: 60px;
   background: #212121;
   visibility: hidden;
-  opacity: 0.8;
   position: fixed;
   bottom: 40px;
   right: 10px;
@@ -3134,9 +3155,9 @@ a:focus, a:hover {
 
 .scrollTop button h4 {
   font-family: "Oswald", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: normal;
-  color: #f8f8f8;
+  color: white;
   letter-spacing: normal;
   line-height: normal;
   text-align: center;
