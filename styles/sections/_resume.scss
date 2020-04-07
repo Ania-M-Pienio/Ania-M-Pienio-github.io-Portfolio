@@ -3,14 +3,18 @@
 }
 
 .wrapper.resume {
-  padding: 60px 180px;
+  padding: 60px 80px;
   @include tablet-land {
     // 1250
-    padding: 50px 160px;
+    padding: 50px 80px;
   }
   @include tablet-port {
     // 960
     padding: 50px 80px;
+  }
+  @include mobile-port {
+    // 480
+    padding: 40px;
   }
 }
 
@@ -32,8 +36,8 @@
     }
     &:hover,
     &:focus {
-     background-color: $tint;
-    }   
+      background-color: $tint;
+    }
 
     h5 {
       text-transform: uppercase;

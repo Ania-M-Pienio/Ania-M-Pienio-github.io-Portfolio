@@ -68,22 +68,13 @@ app.sections = {
       $(".blogBar").addClass("expand");
     },
   },
-  resume: {
-    el: $("#resume"),
-    offset: 0,
-    delay: 2000,
-    trigger: "100%",
-    run: function () {
-      app.animateLogo("contactLogo");
-    },
-  },
   contact: {
     el: $("#contact"),
     offset: 0,
     delay: 2000,
-    trigger: "100%",
+    trigger: "90%",
     run: function () {
-      // no animations
+      app.animateLogo("contactLogo");
     },
   },
 };

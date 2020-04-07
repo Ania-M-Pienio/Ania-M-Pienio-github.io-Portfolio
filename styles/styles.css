@@ -2752,18 +2752,24 @@ section.overview.expand {
 }
 
 .wrapper.resume {
-  padding: 60px 180px;
+  padding: 60px 80px;
 }
 
 @media (max-width: 1250px) {
   .wrapper.resume {
-    padding: 50px 160px;
+    padding: 50px 80px;
   }
 }
 
 @media (max-width: 960px) {
   .wrapper.resume {
     padding: 50px 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper.resume {
+    padding: 40px;
   }
 }
 
@@ -2818,8 +2824,14 @@ section.overview.expand {
 
 .message {
   height: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(#f8f8f8), color-stop(50%, #f8f8f8), color-stop(50%, #e4e4e4), to(#e4e4e4));
-  background-image: linear-gradient(to right, #f8f8f8 0%, #f8f8f8 50%, #e4e4e4 50%, #e4e4e4 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#f8f8f8), color-stop(50%, #f8f8f8), color-stop(50%, #e4e4e4), to(#e4e4e4));
+  background: linear-gradient(to right, #f8f8f8 0%, #f8f8f8 50%, #e4e4e4 50%, #e4e4e4 100%);
+}
+
+@media (max-width: 960px) {
+  .message {
+    background: #e4e4e4;
+  }
 }
 
 .wrapper.message {
@@ -2827,6 +2839,17 @@ section.overview.expand {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 960px) {
+  .wrapper.message {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    padding-bottom: 40px;
+  }
 }
 
 .messageTitle {
@@ -2845,8 +2868,38 @@ section.overview.expand {
   margin-bottom: 20px;
 }
 
-.message aside {
+.message article {
+  padding: 20px 80px 20px 0px;
+}
+
+@media (max-width: 960px) {
+  .message article {
+    height: auto;
+    background-color: #f8f8f8;
+  }
+}
+
+.message aside,
+.message article {
   width: 50%;
+}
+
+@media (max-width: 960px) {
+  .message aside,
+  .message article {
+    width: 100%;
+    padding: 60px 80px 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .message aside,
+  .message article {
+    padding: 40px;
+  }
+}
+
+.message aside {
   background-image: url(../assets/message/elk.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -2854,10 +2907,15 @@ section.overview.expand {
   background-color: #e4e4e4;
 }
 
-.message article {
-  width: 50%;
-  padding: 20px;
-  padding-right: 80px;
+@media (max-width: 960px) {
+  .message aside {
+    height: 350px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-position: center;
+    margin-top: 40px;
+  }
 }
 
 fieldset {
@@ -2901,6 +2959,7 @@ fieldset input {
 }
 
 fieldset textarea {
+  width: 100%;
   padding: 3% 4%;
   resize: vertical;
   border: 2px solid #212121;
