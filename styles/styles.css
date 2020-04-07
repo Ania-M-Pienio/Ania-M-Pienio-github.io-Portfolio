@@ -2952,6 +2952,10 @@ fieldset label {
   width: 100%;
 }
 
+fieldset label span {
+  color: #c82121;
+}
+
 fieldset input {
   padding: 3% 4%;
   width: 100%;
@@ -3042,6 +3046,64 @@ textarea:active {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.error {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #c82121;
+}
+
+.replies {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border: 2px solid rgba(255, 255, 255, 0);
+  padding-top: 3px;
+}
+
+.replies:focus-within {
+  background-color: #212121;
+  border: 2px solid #212121;
+}
+
+.replies:focus-within label {
+  color: #f8f8f8;
+}
+
+.replies input {
+  position: relative;
+  width: 5%;
+  left: -2000px;
+  opacity: 0;
+}
+
+.replies input:focus, .replies input:hover {
+  outline: none;
+}
+
+.replies label {
+  margin: 0 0 0 15px;
+  width: 95%;
+}
+
+.replies label ion-icon {
+  font-size: 3rem;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.replies label ion-icon:first-child {
+  opacity: 0;
 }
 
 .contact {

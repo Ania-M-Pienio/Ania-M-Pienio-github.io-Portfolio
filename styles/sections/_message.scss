@@ -84,6 +84,9 @@ fieldset {
     text-align: left;
     margin-top: 20px;
     width: 100%;
+    span {
+      color: $alert;
+    }
   }
   input {
     padding: 3% 4%;
@@ -136,5 +139,51 @@ textarea:active {
   justify-content: space-between;
   @include tablet-land {
     flex-direction: column;
+  }
+}
+
+.error {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: $alert;
+}
+
+.replies {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  border: 2px solid rgba(255, 255, 255, 0);
+  padding-top: 3px;
+  &:focus-within {
+    background-color: $charcoal;
+    border: 2px solid $charcoal;
+  }
+  &:focus-within label {
+    color: $tint;
+  }
+  input {
+    position: relative;
+    width: 5%;
+    left: -2000px;
+    opacity: 0;
+    &:focus,
+    &:hover {
+      outline: none;
+    }
+  }
+  label {
+    margin: 0 0 0 15px;
+    width: 95%;
+    ion-icon {
+      font-size: 3rem;
+      position: absolute;
+      left: 0;
+      top: 2px;
+      transition: all 0.5s;
+    }
+    ion-icon:first-child {
+      opacity: 0;
+    }
   }
 }

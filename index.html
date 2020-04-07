@@ -862,14 +862,11 @@
             </div>
             <form>
               <fieldset>
-                <label for="name">
-                  Name
-                </label>
+                <label for="name"> Name <span>*</span> </label>
                 <input
                   id="name"
                   type="text"
                   placeholder="Your Name"
-                  required
                   name="name"
                 />
 
@@ -880,18 +877,26 @@
                   id="replyTo"
                   type="email"
                   placeholder="Your Email"
-                  required
                   name="_replyto"
                 />
 
-                <label for="theMessage">Message </label>
+                <div class="replies">
+                  <input type="checkbox" id="expectReply" name="replyStatus" />
+                  <label for="expectReply">
+                    <ion-icon name="checkbox"></ion-icon>
+                    <ion-icon name="square-outline"></ion-icon>
+                    I would like to receive
+                    a reply
+                  </label>
+                </div>
+
+                <label for="theMessage">Message <span>*</span></label>
                 <textarea
                   id="theMessage"
                   name="message"
                   placeholder="Your message ..."
                   rows="5"
                   wrap
-                  required
                   value=""
                 ></textarea>
                 <div class="formButtons">
