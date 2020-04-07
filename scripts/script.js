@@ -72,7 +72,7 @@ app.sections = {
     el: $("#contact"),
     offset: 0,
     delay: 2000,
-    trigger: "90%",
+    trigger: "100%",
     run: function () {
       app.animateLogo("contactLogo");
     },
@@ -171,7 +171,7 @@ app.handleMenu = function() {
     app.isDropped = !app.isDropped;
   });
 
-  // menu items
+   // menu items
   $(".drop li button").on("click", function() {
     $(this).blur();
     const id = $(this).attr("id");
