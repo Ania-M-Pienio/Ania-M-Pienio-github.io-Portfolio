@@ -244,7 +244,7 @@ app.handleContacts = function () {
       name: {
         required: "Please provide your name",
       },
-      _replyto: "Please provide a valid email address to receive a reply",
+      _replyto: { email: "This is not a valid email address", required: "Please provide email to receive a reply"},
       message: {
         required: "Please write a message",
       },
@@ -271,8 +271,7 @@ app.handleContacts = function () {
     },
   });
 
-  $("#resetMssg").on("click", function (e) {
-    e.preventDefault();
+  $("#resetMssg").on("click", function () {
     app.resetForm();
   });
 
@@ -281,7 +280,6 @@ app.handleContacts = function () {
     if (app.form.$reply.is(":checked")) {
       app.form.$email.prev().append("<span>*</span>");
       $("ion-icon[name=checkbox]").css("opacity", "1");
-      console.log($("ion-icon[name=checkbox]"));
     } else {
       app.form.$email.prev().html("Email");
       $(this).removeClass("error");  
@@ -294,10 +292,16 @@ app.handleContacts = function () {
 
 $.validator.addMethod(
   "pattern", // name
-  function (value, element, param) {  
-    return value.trim() ? true : false;
+  function (value, element, param) { 
+    if (value.trim()) {
+      return true;      
+    } else {
+      $(`#${element.id}`).val("");
+      return false;
+    }
+    // return value.trim() ? true : false;
   },
-  "Cannot be blank spaces"
+  "please provide valid text"
 );
 
 /****************************************************************/
@@ -307,6 +311,7 @@ $.validator.addMethod(
 // runs when form is submitted
 app.sendMessage = function () {
   console.log("submit");
+  app.resetForm();
   // $.ajax({
   //   url: "https://formspree.io/xqkdpjpb",
   //   method: "POST",
@@ -321,11 +326,18 @@ app.sendMessage = function () {
   // });
 };
 
-// clears the errors from the message form
+// clears the message form
 app.resetForm = function () {
+  // clears out errors
   $("label.error").css("display", "none");
   $(".error").removeClass("error");
+  // unchecks the reply options
   app.form.$reply.prop("checked", false);
+   $("ion-icon[name=checkbox]").css("opacity", "0");  
+   // empties out the inputs
+  app.form.$email.val("");
+  app.form.$name.val("");
+  app.form.$message.val("");
 };
 
 // receives the message, shows it, and then removes it
