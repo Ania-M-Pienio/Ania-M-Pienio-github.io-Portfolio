@@ -20,7 +20,6 @@
   }
 }
 
-
 // EACH CONTACT CONTAINER
 .container {
   width: 33%;
@@ -59,7 +58,7 @@
         display: flex;
         justify-content: center;
       }
-      a:not(.resume) {
+      a {
         @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
         display: inline-block;
         transition: transform 0.5s;
@@ -70,10 +69,11 @@
         &:hover,
         &:focus,
         &:active {
-          transform: scale(1.25);
+          transform: scale(1.2);
         }
       }
       button {
+        display: flex;
         @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
         transition: transform 0.5s;
         @include tablet-port {
@@ -83,68 +83,22 @@
         &:hover,
         &:focus,
         &:active {
-          transform: scale(1.25);
+          transform: scale(1.2);
+        }
+        h5 {
+          @include Domi(1.8rem, normal, $tint, 1.5, 1.6, left);
+        }
+        ion-icon {
+          font-size: 2.8rem;
+          margin-left: 10px;
         }
       }
     }
   }
 }
 
-.contactContainer {
-  ul {
-    margin: 30px 0 0 0;
-    padding: 0;
-    li {
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      @include Domi(1.8rem, normal, $tint, 1.5, 1.6, center);
-      h3 {
-        font-size: 2.5rem;
-      }
-      h4 {
-        font-size: 2rem;
-      }
-      button {
-        color: $tint;
-        display: flex;
-        justify-content: center;
-        &:focus ion-icon,
-        &:hover ion-icon {
-          transform: scale(1.5);
-        }
-        ion-icon {
-          display: inline-block;
-          color: $tint;
-          margin-right: 10px;
-          transition: transform 0.5s;
-        }
-        h5 {
-          @include Domi(1.8rem, normal, $tint, 1.5, 1.6, center);
-          display: inline-block;
-        }
-      }
-    }
-  }
-}
 
 .contact textarea#email {
   position: absolute;
   left: -2000px;
 }
-
-.mssg {
-  height: 40px;
-  @include Ossie(2rem, normal, $tint, normal, normal, center);
-  text-transform: uppercase;
-  transform: scale(0);
-  display: block;
-  transition: all 0.8s;
-}
-
-.mssg.expand {
-  transform: scale(1);
-}
-
-
-

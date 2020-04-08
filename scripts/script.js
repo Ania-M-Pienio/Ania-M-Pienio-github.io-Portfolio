@@ -12,16 +12,16 @@ app.sections = {
   home: {
     el: $("#home"),
     offset: 0,
-    delay: 1000,
-    trigger: "90%",
+    delay: 200,
+    trigger: "80%",
     run: function () {
       // no animation
     },
   },
   overview: {
     el: $("#overview"),
-    offset: 50,
-    delay: 1500,
+    offset: 0,
+    delay: 200,
     trigger: "80%",
     run: function () {
       $("section.overview").addClass("expand");
@@ -31,53 +31,44 @@ app.sections = {
   },
   skills: {
     el: $("#skills"),
-    offset: 30,
-    delay: 1500,
-    trigger: "90%",
+    offset: 0,
+    delay: 200,
+    trigger: "100%",
     run: function () {
       $(".skills.wrapper").addClass("expand");
     },
   },
   about: {
     el: $("#about"),
-    offset: 10,
-    delay: 1500,
-    trigger: "90%",
-    run: function () {
-      // no animation
-    },
-  },
-  quote: {
-    el: $("#quote"),
     offset: 0,
     delay: 0,
-    trigger: "90%",
+    trigger: "100%",
     run: function () {
       app.animateLogo("quoteLogo");
     },
   },
   projects: {
     el: $("#projects"),
-    offset: 300,
-    delay: 400,
-    trigger: "90%",
+    offset: 500,
+    delay: 200,
+    trigger: "100%",
     run: function () {
       $(".projectContainer").addClass("expand");
     },
   },
   blog: {
     el: $("#blog"),
-    offset: 300,
-    delay: 500,
-    trigger: "90%",
+    offset: 500,
+    delay: 200,
+    trigger: "100%",
     run: function () {
       $(".blogBar").addClass("expand");
     },
   },
   contact: {
     el: $("#contact"),
-    offset: 0,
-    delay: 2000,
+    offset: 500,
+    delay: 200,
     trigger: "100%",
     run: function () {
       app.animateLogo("contactLogo");
@@ -91,6 +82,14 @@ app.currentWaypoint = app.sections.$logo;
 /****************************************************************/
 /*****************          ANIMATORS         *******************/
 /****************************************************************/
+
+// scrolls to the element with the given id
+app.scrollToElem = function (id) {
+  $("html, body").animate({
+      scrollTop: $(`#${id}`).offset().top - app.sections[id].offset,
+    }, app.sections[id].delay
+  );
+};
 
 app.animateLogo = function (location) {
   // logo antlers expand
@@ -251,23 +250,7 @@ app.handleContacts = function () {
     },
     // submits once all validation clears
     submitHandler: function () {
-      const name = app.form.$name.val().trim();
-      const message = app.form.$message.val().trim();
-
-      // if only blank spaces were typed for name
-      if (!name) {
-        app.form.$name.val("");
-      }
-
-      // if only blank spaces were typed for message
-      if (!message) {
-        app.form.$message.val("");
-      }
-
-      // if there is still text after trim on both then ok to send message
-      if (name && message) {
         app.sendMessage();
-      }
     },
   });
 
@@ -311,19 +294,19 @@ $.validator.addMethod(
 // runs when form is submitted
 app.sendMessage = function () {
   console.log("submit");
-  app.resetForm();
-  // $.ajax({
-  //   url: "https://formspree.io/xqkdpjpb",
-  //   method: "POST",
-  //   data: {
-  //     name: app.form.$name,
-  //     _replyto: app.form.$email,
-  //     message: app.form.$message,
-  //   },
-  //   dataType: "json",
-  // }).then((res) => {
-  //   console.log(res);
-  // });
+  // app.resetForm();
+  $.ajax({
+    url: "https://formspree.io/xqkdpjpb",
+    method: "POST",
+    data: {
+      name: app.form.$name.val(),
+      _replyto: app.form.$email.val(),
+      message: app.form.$message.val(),
+    },
+    dataType: "json",
+  }).then((res) => {
+    console.log(res);
+  });
 };
 
 // clears the message form
@@ -359,15 +342,7 @@ app.delayedExpand = function ($el, delay) {
   });
 };
 
-// scrolls to the element with the given id
-app.scrollToElem = function (id) {
-  $("html, body").animate(
-    {
-      scrollTop: $(`#${id}`).offset().top - app.sections[id].offset,
-    },
-    app.sections[id].delay
-  );
-};
+
 
 // copy email to user's cliboard
 app.copyEmail = function () {

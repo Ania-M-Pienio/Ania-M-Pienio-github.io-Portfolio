@@ -1,7 +1,6 @@
 section.overview {
   height: auto;
   transition: margin-top 1.5s;
-  margin-bottom: 100px;
   @include reduce {
     margin-top: 40px;
   }

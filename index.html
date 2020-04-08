@@ -116,7 +116,8 @@
       <!-- -------------------------------------------- -->
       <!-------------------- OVERVIEW -------------------->
       <!-- -------------------------------------------- -->
-      <section class="overview waypoint" id="overview">
+      <div id="overview"></div>
+      <section class="overview">
         <div class="wrapper overview">
           <!-- GALLERY [ 1 ] -->
           <div class="overGallery gallery1">
@@ -168,8 +169,10 @@
       <!-- -------------------------------------------- -->
       <!--------------------   QUOTE  -------------------->
       <!-- -------------------------------------------- -->
-      <section class="quote" id="about">
-        <div class="wrapper quote waypoint" id="quote">
+
+      <section class="quote">
+        <div id="about"></div>
+        <div class="wrapper quote">
           <div class="quoteContainer">
             <!-- [1] PHOTO -->
             <div class="quotePhoto">
@@ -232,7 +235,7 @@
       <!--------------------   ABOUT  -------------------->
       <!-- -------------------------------------------- -->
       <section class="about">
-        <div class="wrapper about waypoint">
+        <div class="wrapper about">
           <article class="aboutContent">
             <div class="wrapper aboutContent">
               <div class="aboutTitle">
@@ -280,9 +283,9 @@
       <!-- -------------------------------------------- -->
       <!--------------------  SKILLS  -------------------->
       <!-- -------------------------------------------- -->
-
+      <div id="skills"></div>
       <section class="skills">
-        <div class="wrapper skills waypoint" id="skills">
+        <div class="wrapper skills waypoint">
           <div class="skillsTitle">
             <h2>skills</h2>
           </div>
@@ -376,8 +379,8 @@
       <!-- -------------------------------------------- -->
       <!------------------- PROJECTS  -------------------->
       <!-- -------------------------------------------- -->
-      <section class="projects">
-        <div class="wrapper projects waypoint" id="projects">
+      <section class="projects" id="projects">
+        <div class="wrapper projects waypoint">
           <!-- PROJECTS TITLE -->
           <div class="splashTitle">
             <h1>projects</h1>
@@ -705,8 +708,8 @@
       <!-- -------------------------------------------- -->
       <!------------------- EDUCATION -------------------->
       <!-- -------------------------------------------- -->
-      <section class="education">
-        <div class="wrapper education" id="education">
+      <section class="education" id="education">
+        <div class="wrapper education">
           <div class="eduBoxContainer">
             <div class="eduBox edu1">
               <img src="assets/edu/1.png" alt="seneca college logo" />
@@ -724,8 +727,8 @@
       <!-- -------------------------------------------- -->
       <!-------------------    BLOG   -------------------->
       <!-- -------------------------------------------- -->
-      <section class="blog">
-        <div class="wrapper blog waypoint" id="blog">
+      <section class="blog" id="blog">
+        <div class="wrapper blog waypoint">
           <!-- SECTION TITLE -->
           <div class="blogTitle">
             <h2>blog</h2>
@@ -815,8 +818,8 @@
       <!-- -------------------------------------------- -->
       <!-------------------   RESUME  -------------------->
       <!-- -------------------------------------------- -->
-      <section class="resume">
-        <div class="wrapper resume waypoint" id="contact">
+      <section class="resume" id="contact">
+        <div class="wrapper resume waypoint">
           <!-- LOGO -->
           <div class="contactLogoContainer">
             <div class="mainLogo" id="contactLogo">
@@ -855,7 +858,7 @@
       <!-------------------  MESSAGE  -------------------->
       <!-- -------------------------------------------- -->
       <section class="message">
-        <div class="wrapper message" id="message">
+        <div class="wrapper message">
           <article>
             <div class="messageTitle">
               <h2>CONTACT ME</h2>
@@ -885,8 +888,7 @@
                   <label for="expectReply">
                     <ion-icon name="checkbox"></ion-icon>
                     <ion-icon name="square-outline"></ion-icon>
-                    I would like to receive
-                    a reply
+                    I would like to receive a reply
                   </label>
                 </div>
 
@@ -901,15 +903,15 @@
                 ></textarea>
                 <div class="formButtons">
                   <button id="submitMssg" type="submit">Send</button>
-                  <button id="resetMssg" type="reset"> Reset</button>
+                  <button id="resetMssg" type="reset">Reset</button>
                 </div>
               </fieldset>
             </form>
             <div class="policy">
-               <a href="privicy.html" target="_blank">
-                 Privicy Policy
-                 <ion-icon name="enter-outline"></ion-icon>                 
-                </a>
+              <a href="privicy.html" target="_blank">
+                Privicy Policy
+                <ion-icon name="enter-outline"></ion-icon>
+              </a>
             </div>
           </article>
           <aside></aside>
@@ -924,14 +926,18 @@
       <div class="wrapper contact">
         <!-- CONTACT [ 1 ] -->
         <div class="container contactContainer">
-          <h3>contact info</h3>
+          <h3>info</h3>
           <ul>
             <li>
               <button class="emailCopy" type="button">
-                <ion-icon name="copy"></ion-icon>
                 <h5>ania.m.pienio[at]gmail.com</h5>
+                <ion-icon name="copy"></ion-icon>
               </button>
             </li>
+            <li>
+              <a href="privicy.html" target="_blank">Privicy Policy</a>
+            </li>
+
             <li>
               <div class="mssg">
                 <h4>
@@ -991,7 +997,6 @@
       type="module"
       src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"
     ></script>
-    <script src="scripts/data.js"></script>
     <script src="scripts/script.js"></script>
   </body>
 </html>
