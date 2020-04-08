@@ -41,9 +41,16 @@ main#privacyMain {
     @include Ossie(5rem, normal, $font, normal, normal, left);
     text-transform: uppercase;
     margin-bottom: 40px;
+    @include mobile-port {
+
+    }
   }
 }
 
 main#privacyMain section {
   margin-top: 40px;
+}
+
+.scrollTop.privacy {
+  visibility: visible !important;
 }

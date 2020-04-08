@@ -3408,6 +3408,10 @@ main#privacyMain section {
   margin-top: 40px;
 }
 
+.scrollTop.privacy {
+  visibility: visible !important;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;

@@ -116,7 +116,7 @@ app.animateMenu = function () {
 app.resetAll = function () {
   $("main *").removeClass("expand");
   $("footer *").removeClass("expand");
-  $(".scrollTop").css("visibility", "hidden");
+  $(".scrollTop:not(.scrollTop.privacy)").css("visibility", "hidden");
 };
 
 /****************************************************************/
