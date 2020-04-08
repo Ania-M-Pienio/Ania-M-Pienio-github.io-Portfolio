@@ -187,3 +187,23 @@ textarea:active {
     }
   }
 }
+
+.policy {
+  display: inline-block;
+  margin-top: 40px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  transition: all 0.5s;
+  &:hover,
+  &:focus-within {
+    border-bottom: 2px solid $font;
+  }
+  a {
+    display: flex;
+    @include Ossie(1.9rem, normal, $font, normal, normal, center);
+    text-transform: uppercase;
+    ion-icon {
+      font-size: 2.8rem;
+      margin-left: 10px;
+    }
+  }
+}

@@ -3106,6 +3106,37 @@ textarea:active {
   opacity: 0;
 }
 
+.policy {
+  display: inline-block;
+  margin-top: 40px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.policy:hover, .policy:focus-within {
+  border-bottom: 2px solid #191919;
+}
+
+.policy a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.9rem;
+  font-weight: normal;
+  color: #191919;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.policy a ion-icon {
+  font-size: 2.8rem;
+  margin-left: 10px;
+}
+
 .contact {
   height: auto;
   width: 100%;
@@ -3359,6 +3390,13 @@ textarea:active {
 .mssg.expand {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+header#privicy {
+  width: 100%;
+  height: 150px;
+  background-color: #dcdcdc;
+  background-size: contain;
 }
 
 html {
