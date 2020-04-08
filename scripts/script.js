@@ -91,6 +91,8 @@ app.scrollToElem = function (id) {
   );
 };
 
+
+// animates a logo at a specific given location
 app.animateLogo = function (location) {
   // logo antlers expand
   $(`#${location} .logo2`).addClass("expand");
@@ -151,12 +153,15 @@ app.handleWaypoints = function () {
 };
 
 app.handleLogo = function () {
+
+  // main logo on click
   $(".mainLogo button, .scrollTop button").on("click", function () {
     $(this).blur();
     setTimeout(() => {
       app.scrollToElem("home");
     }, 200);
   });
+
 };
 
 app.handleMenu = function () {

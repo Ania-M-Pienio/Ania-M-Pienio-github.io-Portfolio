@@ -7,7 +7,14 @@
   button {
     &:hover .logo1,
     &:focus .logo1 {
-      transform: scale(1.55);
+      transform: scale(1.5);
+    }
+  }
+
+  a {
+    &:hover .logo1,
+    &:focus .logo1 {
+      transform: scale(1.5);
     }
   }
 
