@@ -153,7 +153,6 @@ app.handleWaypoints = function () {
 };
 
 app.handleLogo = function () {
-
   // main logo on click
   $(".mainLogo button, .scrollTop button").on("click", function () {
     $(this).blur();
@@ -216,6 +215,7 @@ app.handleMenu = function () {
 }; // end of menu handlers
 
 app.handleContacts = function () {
+
   // process the request to copy email
   $(".emailCopy").on("click", async function () {
     app.copyEmail();
@@ -278,6 +278,11 @@ app.handleContacts = function () {
   });
 };
 
+
+/****************************************************************/
+/*****************           HELPERS          *******************/
+/****************************************************************/
+
 $.validator.addMethod(
   "pattern", // name
   function (value, element, param) { 
@@ -292,9 +297,15 @@ $.validator.addMethod(
   "please provide valid text"
 );
 
-/****************************************************************/
-/*****************           HELPERS          *******************/
-/****************************************************************/
+
+// copy email to user's cliboard
+app.copyEmail = function () {
+  const copyEmail = document.getElementById("email");
+  copyEmail.select();
+  copyEmail.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+};
+
 
 // runs when form is submitted
 app.sendMessage = function () {
@@ -349,13 +360,6 @@ app.delayedExpand = function ($el, delay) {
 
 
 
-// copy email to user's cliboard
-app.copyEmail = function () {
-  const copyEmail = document.getElementById("email");
-  copyEmail.select();
-  copyEmail.setSelectionRange(0, 99999);
-  document.execCommand("copy");
-};
 
 /****************************************************************/
 /*****************           SETUP           ********************/

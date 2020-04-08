@@ -3334,6 +3334,7 @@ header#privacy {
 
 main#privacyMain {
   background-color: #f8f8f8;
+  padding-bottom: 100px;
 }
 
 .wrapper.privacy {
@@ -3392,6 +3393,54 @@ main#privacyMain {
   text-align: left;
 }
 
+section.download {
+  width: 100%;
+  border: 2px solid #212121;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.download a {
+  width: 100%;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.download a:hover h5,
+section.download a:focus h5 {
+  color: #f8f8f8;
+}
+
+section.download a:hover, section.download a:focus {
+  background-color: #212121;
+}
+
+section.download a h5 {
+  text-transform: uppercase;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #212121;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+}
+
 .intro h1 {
   font-family: "Oswald", sans-serif;
   font-size: 5rem;
@@ -3404,12 +3453,26 @@ main#privacyMain {
   margin-bottom: 40px;
 }
 
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 3.75rem;
+  }
+}
+
 main#privacyMain section {
   margin-top: 40px;
 }
 
 .scrollTop.privacy {
-  visibility: visible !important;
+  visibility: visible;
+}
+
+@media (max-width: 480px) {
+  .scrollTop.privacy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 html {
