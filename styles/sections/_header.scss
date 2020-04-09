@@ -115,6 +115,7 @@ header .wrapper {
       transform: scale(0);
       position: relative;
       transition: all 0.5s;
+      z-index: 7000;
       @include reduce {
         transform: scale(1);
       }
