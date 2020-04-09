@@ -92,20 +92,23 @@ section.overview.expand {
     position: relative; // for bar
   }
   .box {
-    height: 100%;
+    height: 80%;
     width: 100%;
     background-color: $tint;
     img {
-      max-height: 100%;
-      max-width: 100%;
       object-fit: contain;
+      max-width: 100%;
+      height: 100%;
     }
   }
   button {
+    height: 10%;
+    min-height: 50px;
     border: 2px solid rgba(255, 255, 255, 0);
     transition: border-bottom 1s;
     display: flex;
     justify-content: center;
+    align-content: flex-end;
     &:hover,
     &:focus,
     &:active {
