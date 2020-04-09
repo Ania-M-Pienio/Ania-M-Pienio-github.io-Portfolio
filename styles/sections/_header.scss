@@ -109,38 +109,39 @@ header .wrapper {
       flex-direction: column;
       text-align: center;
     }
-    // [ 1 ]
-    button.dropMenuButton {
-      height: auto;
-      transform: scale(0);
-      position: relative;
-      transition: all 0.5s;
-      z-index: 7000;
-      @include reduce {
-        transform: scale(1);
-      }
-      @include mobile-land {
-        // 690
+    .dropMenu {
+      // [ 1 ]
+      button.dropMenuButton {
         height: auto;
-        position: relative;
-      }
-      &:hover ion-icon,
-      &:focus ion-icon {
-        transform: scale(1.4);
-      }
-      ion-icon {
-        color: $font;
-        font-size: 10rem;
-        margin-right: -12px;
-        margin-top: -12px;
-        padding: 0;
+        transform: scale(0);
         transition: all 0.5s;
+        z-index: 7000;
+        @include reduce {
+          transform: scale(1);
+        }
+        @include mobile-land {
+          // 690
+          height: auto;
+          position: relative;
+        }
+        &:hover ion-icon,
+        &:focus ion-icon {
+          transform: scale(1.4);
+        }
+        ion-icon {
+          color: $font;
+          font-size: 10rem;
+          margin-right: -12px;
+          margin-top: -12px;
+          padding: 0;
+          transition: all 0.5s;
+        }
       }
     }
   }
 }
 
-.navMenu .menu .dropMenuButton.expand {
+.navMenu .menu .dropMenu .dropMenuButton.expand {
   transform: scale(1);
 }
 
