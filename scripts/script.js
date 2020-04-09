@@ -241,7 +241,6 @@ app.handleContacts = function () {
     app.copyEmail();
     Swal.fire({
       title: "COPIED TO YOUR CLIPBOARD",
-      // text: "ania.m.pienio@gmail.com is now on your clipboard",
       imageUrl: "https://cdn140.picsart.com/309655410116201.jpg",
       imageWidth: 550,
       imageHeight: 300,
@@ -350,9 +349,9 @@ app.sendMessage = function () {
     },
     dataType: "json",
   }).then((res) => {
+    app.resetForm();
     Swal.fire({
       title: "YOUR MESSAGE WAS SENT  THANK YOU!",
-      // text: "your messge has been sent to ania.m.pienio@gmail.com",
       imageUrl:
         "https://66.media.tumblr.com/c43191acd5f7cf1e54afb360df49e6ce/tumblr_nsb0llVRSl1qdt6e2o7_1280.jpg",
       imageWidth: 280,
