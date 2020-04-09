@@ -102,3 +102,16 @@
   position: absolute;
   left: -2000px;
 }
+
+.mssg {
+  height: 40px;
+  @include Ossie(2rem, normal, $tint, normal, normal, center);
+  text-transform: uppercase;
+  transform: scale(0);
+  display: block;
+  transition: all 0.8s;
+}
+
+.mssg.expand {
+  transform: scale(1);
+}

@@ -2,12 +2,14 @@ const app = {};
 
 app.isDropped = false;
 
+// cached jQuery for the Message Form
 app.form = {};
 app.form.$name = $("#name");
 app.form.$email = $("#replyTo");
 app.form.$message = $("#theMessage");
 app.form.$reply = $("#expectReply");
 
+// section scroll behavior and animations
 app.sections = {
   home: {
     el: $("#home"),
@@ -31,7 +33,7 @@ app.sections = {
   },
   skills: {
     el: $("#skills"),
-    offset: 0,
+    offset: 100,
     delay: 200,
     trigger: "100%",
     run: function () {
@@ -74,6 +76,15 @@ app.sections = {
       app.animateLogo("contactLogo");
     },
   },
+  privacy: {
+    el: $("#privacy"),
+    offset: 0,
+    delay: 200,
+    trigger: "100%",
+    run: function () {
+      //no animations
+    },
+  },
 };
 
 app.logo = $("#navLogo");
@@ -85,12 +96,13 @@ app.currentWaypoint = app.sections.$logo;
 
 // scrolls to the element with the given id
 app.scrollToElem = function (id) {
-  $("html, body").animate({
+  $("html, body").animate(
+    {
       scrollTop: $(`#${id}`).offset().top - app.sections[id].offset,
-    }, app.sections[id].delay
+    },
+    app.sections[id].delay
   );
 };
-
 
 // animates a logo at a specific given location
 app.animateLogo = function (location) {
@@ -160,7 +172,6 @@ app.handleLogo = function () {
       app.scrollToElem("home");
     }, 200);
   });
-
 };
 
 app.handleMenu = function () {
@@ -209,17 +220,23 @@ app.handleMenu = function () {
   });
 
   // defocuses all anchors after click
-  $(".socialContainer a").on("click", function () {
+  $(".container a").on("click", function () {
     $(this).blur();
   });
 }; // end of menu handlers
 
 app.handleContacts = function () {
-
   // process the request to copy email
   $(".emailCopy").on("click", async function () {
     app.copyEmail();
-    app.showMessage("copied");
+    Swal.fire({
+      title: "COPIED TO YOUR CLIPBOARD",
+      // text: "ania.m.pienio@gmail.com is now on your clipboard",
+      imageUrl: "https://cdn140.picsart.com/309655410116201.jpg",
+      imageWidth: 550,
+      imageHeight: 300,
+      imageAlt: "Custom image",
+    });
   });
 
   // do form validation
@@ -248,46 +265,50 @@ app.handleContacts = function () {
       name: {
         required: "Please provide your name",
       },
-      _replyto: { email: "This is not a valid email address", required: "Please provide email to receive a reply"},
+      _replyto: {
+        email: "This is not a valid email address",
+        required: "Please provide email to receive a reply",
+      },
       message: {
         required: "Please write a message",
       },
     },
     // submits once all validation clears
     submitHandler: function () {
-        app.sendMessage();
+      app.sendMessage();
     },
   });
 
+  // reset message form
   $("#resetMssg").on("click", function () {
     app.resetForm();
   });
 
   // whenever the "would like a reply" checkbox is changed
-  $("#expectReply").on('change', function() {
+  $("#expectReply").on("change", function () {
     if (app.form.$reply.is(":checked")) {
       app.form.$email.prev().append("<span>*</span>");
       $("ion-icon[name=checkbox]").css("opacity", "1");
     } else {
       app.form.$email.prev().html("Email");
-      $(this).removeClass("error");  
+      $(this).removeClass("error");
       $(this).val("");
       $("label#replyTo-error").css("display", "none");
-      $("ion-icon[name=checkbox]").css("opacity", "0");       
+      $("ion-icon[name=checkbox]").css("opacity", "0");
     }
   });
 };
-
 
 /****************************************************************/
 /*****************           HELPERS          *******************/
 /****************************************************************/
 
+// validate for empty spaces
 $.validator.addMethod(
   "pattern", // name
-  function (value, element, param) { 
+  function (value, element, param) {
     if (value.trim()) {
-      return true;      
+      return true;
     } else {
       $(`#${element.id}`).val("");
       return false;
@@ -297,7 +318,6 @@ $.validator.addMethod(
   "please provide valid text"
 );
 
-
 // copy email to user's cliboard
 app.copyEmail = function () {
   const copyEmail = document.getElementById("email");
@@ -305,7 +325,6 @@ app.copyEmail = function () {
   copyEmail.setSelectionRange(0, 99999);
   document.execCommand("copy");
 };
-
 
 // runs when form is submitted
 app.sendMessage = function () {
@@ -321,7 +340,15 @@ app.sendMessage = function () {
     },
     dataType: "json",
   }).then((res) => {
-    console.log(res);
+    Swal.fire({
+      title: "YOUR MESSAGE WAS SENT  THANK YOU!",
+      // text: "your messge has been sent to ania.m.pienio@gmail.com",
+      imageUrl:
+        "https://66.media.tumblr.com/c43191acd5f7cf1e54afb360df49e6ce/tumblr_nsb0llVRSl1qdt6e2o7_1280.jpg",
+      imageWidth: 280,
+      imageHeight: 300,
+      imageAlt: "Custom image",
+    });
   });
 };
 
@@ -332,34 +359,12 @@ app.resetForm = function () {
   $(".error").removeClass("error");
   // unchecks the reply options
   app.form.$reply.prop("checked", false);
-   $("ion-icon[name=checkbox]").css("opacity", "0");  
-   // empties out the inputs
+  $("ion-icon[name=checkbox]").css("opacity", "0");
+  // empties out the inputs
   app.form.$email.val("");
   app.form.$name.val("");
   app.form.$message.val("");
 };
-
-// receives the message, shows it, and then removes it
-app.showMessage = function (message) {
-  $(".mssg h4").html(message);
-  app.delayedExpand($(".mssg"), 300).then(() => {
-    setTimeout(() => {
-      $(".mssg").removeClass("expand");
-    }, 1500);
-  });
-};
-
-// 'expands' the given element after a delay period returns promise once completed
-app.delayedExpand = function ($el, delay) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve($el.addClass("expand"));
-    }, delay);
-  });
-};
-
-
-
 
 /****************************************************************/
 /*****************           SETUP           ********************/
