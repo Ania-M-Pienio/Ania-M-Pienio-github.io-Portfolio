@@ -110,7 +110,7 @@ header .wrapper {
       text-align: center;
     }
     // [ 1 ]
-    button.dropMenu {
+    button.dropMenuButton {
       height: auto;
       transform: scale(0);
       position: relative;
@@ -140,7 +140,7 @@ header .wrapper {
   }
 }
 
-.navMenu .menu .dropMenu.expand {
+.navMenu .menu .dropMenuButton.expand {
   transform: scale(1);
 }
 

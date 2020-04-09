@@ -554,7 +554,7 @@ header .wrapper {
   }
 }
 
-.navMenu .menu button.dropMenu {
+.navMenu .menu button.dropMenuButton {
   height: auto;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -565,26 +565,26 @@ header .wrapper {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .navMenu .menu button.dropMenu {
+  .navMenu .menu button.dropMenuButton {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
 }
 
 @media (max-width: 690px) {
-  .navMenu .menu button.dropMenu {
+  .navMenu .menu button.dropMenuButton {
     height: auto;
     position: relative;
   }
 }
 
-.navMenu .menu button.dropMenu:hover ion-icon,
-.navMenu .menu button.dropMenu:focus ion-icon {
+.navMenu .menu button.dropMenuButton:hover ion-icon,
+.navMenu .menu button.dropMenuButton:focus ion-icon {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
 }
 
-.navMenu .menu button.dropMenu ion-icon {
+.navMenu .menu button.dropMenuButton ion-icon {
   color: #191919;
   font-size: 10rem;
   margin-right: -12px;
@@ -594,7 +594,7 @@ header .wrapper {
   transition: all 0.5s;
 }
 
-.navMenu .menu .dropMenu.expand {
+.navMenu .menu .dropMenuButton.expand {
   -webkit-transform: scale(1);
           transform: scale(1);
 }

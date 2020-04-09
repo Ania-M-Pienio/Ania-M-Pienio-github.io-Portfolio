@@ -120,7 +120,7 @@ app.animateLogo = function (location) {
 app.animateMenu = function () {
   // bars expand on load
   setTimeout(() => {
-    $("button.dropMenu").addClass("expand");
+    $("button.dropMenuButton").addClass("expand");
     $(".drop button").attr("disabled", true);
   }, 1200);
 };
@@ -176,7 +176,7 @@ app.handleLogo = function () {
 
 app.handleMenu = function () {
   // menu icon
-  $(".dropMenu").on("click", function () {
+  $(".dropMenuButton").on("click", function () {
     $(this).blur();
     if (app.isDropped) {
       $(".drop button").attr("disabled", true);
