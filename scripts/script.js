@@ -178,15 +178,19 @@ app.handleMenu = function () {
   // menu icon
   $(".dropMenu").on("click", function () {
     $(this).blur();
-    $(".drop").toggleClass("expand");
-    $("#navLogo .bar").toggleClass("expand");
-    $(".dropBar").toggleClass("expand");
-    $(".navMenuLogo").toggleClass("expand");
     if (app.isDropped) {
       $(".drop button").attr("disabled", true);
+      $(".drop").css("display", "none");
     } else {
+      $(".drop").css("display", "block");
       $(".drop button").attr("disabled", false);
     }
+    setTimeout(() => {
+      $(".drop").toggleClass("expand");
+      $("#navLogo .bar").toggleClass("expand");
+      $(".dropBar").toggleClass("expand");
+      $(".navMenuLogo").toggleClass("expand");
+    }, 500);
     app.isDropped = !app.isDropped;
   });
 
