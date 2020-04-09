@@ -319,6 +319,10 @@
           // 690
           text-align: center;
         }
+        @include mobile-tiny {
+          // 320
+          font-size: 2rem;
+        }
         &:hover,
         &:focus,
         &:active {

@@ -43,8 +43,8 @@
       // .blogImage [ 1 ] , .blogContent [ 2 ]
       @include tablet-port {
         // 960
+        display: block;
         height: auto;
-        flex-direction: column;
       }
     }
   }

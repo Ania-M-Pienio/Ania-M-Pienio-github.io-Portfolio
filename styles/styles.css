@@ -2408,6 +2408,12 @@ section.overview.expand {
   }
 }
 
+@media (max-width: 320px) {
+  .project .projectInfo .infoContent a {
+    font-size: 2rem;
+  }
+}
+
 .project .projectInfo .infoContent a:hover, .project .projectInfo .infoContent a:focus, .project .projectInfo .infoContent a:active {
   -webkit-text-decoration: underline double;
           text-decoration: underline double;
@@ -2596,11 +2602,8 @@ section.overview.expand {
 
 @media (max-width: 960px) {
   .blogContentContainer ul li {
+    display: block;
     height: auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 
@@ -3085,7 +3088,6 @@ textarea:active {
 .replies input {
   position: relative;
   width: 5%;
-  left: -2000px;
   opacity: 0;
 }
 
@@ -3096,6 +3098,13 @@ textarea:active {
 .replies label {
   margin: 0 0 0 15px;
   width: 95%;
+}
+
+@media (max-width: 320px) {
+  .replies label {
+    font-size: 1.5rem;
+    margin: 0 0 0 25px;
+  }
 }
 
 .replies label ion-icon {
