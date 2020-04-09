@@ -22,7 +22,7 @@ section.overview {
     margin-top: 180px;
     padding: 0;
     position: relative; // for title
-    flex-direction: column;
+    display: block;
     @include reduce {
       margin-top: 40px;
     }
