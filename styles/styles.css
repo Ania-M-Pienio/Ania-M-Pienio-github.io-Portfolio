@@ -606,6 +606,7 @@ header .wrapper {
   right: 0;
   top: 170px;
   z-index: 1000;
+  display: none;
 }
 
 @media (max-height: 650px) {
