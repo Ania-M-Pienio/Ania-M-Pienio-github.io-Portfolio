@@ -3191,7 +3191,7 @@ textarea:focus::placeholder {
 
 .wrapper.contact {
   width: 100%;
-  padding: 80px;
+  padding: 80px 80px 180px 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3211,7 +3211,7 @@ textarea:focus::placeholder {
 
 @media (max-width: 480px) {
   .wrapper.contact {
-    padding: 40px;
+    padding: 40px 40px 100px 40px;
   }
 }
 
@@ -3636,6 +3636,12 @@ a:focus, a:hover {
 
 .scrollTop button {
   padding: 5%;
+}
+
+@media (max-width: 480px) {
+  .scrollTop button {
+    padding: 2% 5% 10%;
+  }
 }
 
 .scrollTop button ion-icon {

@@ -7,7 +7,7 @@
 
 .wrapper.contact {
   width: 100%;
-  padding: 80px;
+  padding: 80px 80px 180px 80px;
   display: flex;
   justify-content: space-between;
   @include tablet-port {
@@ -16,7 +16,7 @@
   }
   @include mobile-port {
     // 480
-    padding: 40px;
+    padding: 40px 40px 100px 40px;
   }
 }
 

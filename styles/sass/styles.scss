@@ -105,6 +105,11 @@ a {
   }
   button {
     padding: 5%;
+     @include mobile-port { 
+       // 480 
+       padding: 2% 5% 10%;
+     }
+
     ion-icon {
         color: $tint;
         font-size: 1.8rem;
