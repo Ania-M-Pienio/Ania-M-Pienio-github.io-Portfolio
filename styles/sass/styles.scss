@@ -98,7 +98,10 @@ a {
   z-index: 7000;
   @include mobile-port {
     // 480
-    display: none;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;    
   }
   button {
     padding: 5%;

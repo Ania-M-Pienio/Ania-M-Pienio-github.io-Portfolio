@@ -3040,6 +3040,26 @@ textarea:active {
   color: #f8f8f8;
 }
 
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: #dfdfdf;
+}
+
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  color: #dfdfdf;
+}
+
+input:focus::-ms-input-placeholder,
+textarea:focus::-ms-input-placeholder {
+  color: #dfdfdf;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: #dfdfdf;
+}
+
 .formButtons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3607,7 +3627,10 @@ a:focus, a:hover {
 
 @media (max-width: 480px) {
   .scrollTop {
-    display: none;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
   }
 }
 

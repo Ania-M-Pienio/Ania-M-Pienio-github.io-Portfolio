@@ -135,6 +135,11 @@ textarea:active {
   color: $tint;
 }
 
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: darken($tint, 10);
+}
+
 .formButtons {
   display: flex;
   justify-content: space-between;
