@@ -9,7 +9,10 @@ app.form.$email = $("#replyTo");
 app.form.$message = $("#theMessage");
 app.form.$reply = $("#expectReply");
 
-// section scroll behavior and animations
+/****************************************************************/
+/*****************           WAYPOINTS        *******************/
+/****************************************************************/
+
 app.sections = {
   home: {
     el: $("#home"),
@@ -125,6 +128,13 @@ app.animateMenu = function () {
   }, 1200);
 };
 
+app.animateDrop = function () {
+  $(".dropBar").toggleClass("expand");
+  $(".drop").toggleClass("expand");
+  $("#navLogo .bar").toggleClass("expand");
+  $(".navMenuLogo").toggleClass("expand");
+};
+
 app.resetAll = function () {
   $("main *").removeClass("expand");
   $("footer *").removeClass("expand");
@@ -176,25 +186,21 @@ app.handleLogo = function () {
 
 app.handleMenu = function () {
   // menu icon
+
   $(".dropMenuButton").on("click", function () {
+    console.log(app.isDropped);
     $(this).blur();
     if (app.isDropped) {
+      app.animateDrop();
       setTimeout(() => {
-        $(".drop").toggleClass("expand");
-        $("#navLogo .bar").toggleClass("expand");
-        $(".dropBar").toggleClass("expand");
-        $(".navMenuLogo").toggleClass("expand");
+        $(".drop button").attr("disabled", true);
+        $(".drop").css("display", "none");
       }, 500);
-      $(".drop button").attr("disabled", true);
-      $(".drop").css("display", "none");
     } else {
       $(".drop").css("display", "block");
       $(".drop button").attr("disabled", false);
       setTimeout(() => {
-        $(".drop").toggleClass("expand");
-        $("#navLogo .bar").toggleClass("expand");
-        $(".dropBar").toggleClass("expand");
-        $(".navMenuLogo").toggleClass("expand");
+        app.animateDrop();
       }, 500);
     }
     app.isDropped = !app.isDropped;
