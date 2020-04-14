@@ -16,7 +16,7 @@ section.overview {
   height: 100%;
   padding: 0 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   @include tablet-port {
     // 960
     margin-top: 180px;
@@ -50,11 +50,13 @@ section.overview.expand {
 }
 
 .overGallery {
+  width: 50%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   @include tablet-port {
     // 960
+    width: 100%;
     height: auto;
     margin-top: 40px;
     justify-content: space-between;
@@ -76,14 +78,14 @@ section.overview.expand {
 
 .overGallery .gallery {
   height: 500px;
-  width: 500px;
+  width: 100%;
   padding: 20px;
   padding: 20px;
   transition: all 1s;
   @include tablet-land {
     // 1250
     height: 400px;
-    width: 400px;
+    width: 90%;
   }
   @include tablet-port {
     // 960
@@ -131,6 +133,7 @@ section.overview.expand {
 
 .gallery.pic1 {
   height: 400px;
+  padding-left: 0;
   @include tablet-land {
     // 1250
     height: 330px;
@@ -143,6 +146,7 @@ section.overview.expand {
 
 .gallery.pic2 {
   margin-top: 70px;
+  padding-left: 0;
   .galleryBar {
     height: 5px;
     width: 0;
@@ -165,7 +169,7 @@ section.overview.expand {
   }
 }
 
-.overGallery.gallery2 .gallery.pic3 box {
+.overGallery.gallery2 .gallery.pic3 .box {
   img {
     object-fit: cover;
   }
