@@ -1,4 +1,4 @@
-// GENERAL NAV
+// // GENERAL NAV
 header {
   height: 100vh;
   background-color: $grey;
@@ -51,7 +51,7 @@ header .wrapper {
   }
 }
 
-// MENU-LOGO
+// // MENU-LOGO
 .navMenuLogo {
   height: 200px;
   width: 100%;
@@ -86,7 +86,7 @@ header .wrapper {
   }
 }
 
-// [ 2 ] MENU
+// // [ 2 ] MENU
 .navMenu {
   height: 100%;
   width: 100%;
@@ -145,7 +145,7 @@ header .wrapper {
   transform: scale(1);
 }
 
-// DROP MENU
+// // DROP MENU
 .navMenu .menu .drop {
   height: 500px;
   width: 200px;
@@ -203,7 +203,8 @@ header .wrapper {
     }
   }
 }
-// DROP MENU expanded
+
+// // DROP MENU expanded
 .navMenu .menu .drop.expand {
   @include mobile-port-h2 {
     height: 150px;
@@ -265,7 +266,7 @@ header .wrapper {
   }
 }
 
-// BAR above the drop menu
+// // BAR above the drop menu
 .dropBar {
   height: 5px;
   width: 0;
@@ -288,7 +289,7 @@ header .wrapper {
   width: 100%;
 }
 
-// TITLE
+// // TITLE
 .navTitle {
   height: calc(100% - 230px);
   margin-top: 30px;
@@ -398,7 +399,7 @@ header .wrapper {
   }
 }
 
-// SOCIAL ICONS
+// // SOCIAL ICONS
 .navSocial {
   transition: all 1s;
   position: absolute;
@@ -449,8 +450,12 @@ header .wrapper {
       ion-icon {
         font-size: 3.6rem;
         color: $font;
-        transition: transform 1.5s, color 1s;
+        transition: transform 1.5s;
         border: 1px solid rgba(255, 255, 255, 0);
+      }
+      img {
+        height: 40px;
+        transition: all 1.5s;
       }
     }
   }
@@ -461,6 +466,11 @@ header .wrapper {
     &:focus ion-icon,
     &:hover ion-icon,
     &:active ion-icon {
+      transform: scale(1.6);
+    }
+    &:focus img,
+    &:hover img,
+    &:active img {
       transform: scale(1.6);
     }
   }
