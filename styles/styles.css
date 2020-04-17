@@ -399,7 +399,7 @@ header {
   height: 100vh;
   background-color: #dcdcdc;
   background-image: url(../assets/nav/ME19.png);
-  background-size: 70%;
+  background-size: 60%;
   background-repeat: no-repeat;
   background-position: bottom right;
   -webkit-transition: all 1s;
@@ -408,7 +408,7 @@ header {
 
 @media (max-height: 1000px) {
   header {
-    background-size: 65%;
+    background-size: 45%;
   }
 }
 
@@ -677,6 +677,12 @@ header .wrapper {
   }
 }
 
+.navMenu .menu .drop.expand {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(220, 220, 220, 0.418)), to(rgba(220, 220, 220, 0)));
+  background: linear-gradient(to left, rgba(220, 220, 220, 0.418), rgba(220, 220, 220, 0));
+  height: 300px;
+}
+
 @media (max-height: 650px) {
   .navMenu .menu .drop.expand {
     height: 150px;
@@ -738,6 +744,7 @@ header .wrapper {
 
 .navMenu .menu .drop.expand ul li button {
   color: #191919;
+  margin-right: 5px;
 }
 
 @media (max-height: 650px) {

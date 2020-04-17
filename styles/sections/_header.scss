@@ -3,13 +3,13 @@ header {
   height: 100vh;
   background-color: $grey;
   background-image: url(../assets/nav/ME19.png);
-  background-size: 70%;
+  background-size: 60%;
   background-repeat: no-repeat;
   background-position: bottom right;
   transition: all 1s;
   @include mobile-land-h {
     // 1000vh
-    background-size: 65%;
+    background-size: 45%;
   }
   @include mobile-port-h {
     // 820vh
@@ -206,6 +206,8 @@ header .wrapper {
 
 // // DROP MENU expanded
 .navMenu .menu .drop.expand {
+  background: linear-gradient( to left,  rgba(220, 220, 220, 0.418),  rgba(220, 220, 220, 0));
+  height: 300px;
   @include mobile-port-h2 {
     height: 150px;
     width: 290px;
@@ -246,6 +248,7 @@ header .wrapper {
       }
       button {
         color: $font;
+        margin-right: 5px;
         @include mobile-port-h2 {
           // 650vh
           width: 100%;
