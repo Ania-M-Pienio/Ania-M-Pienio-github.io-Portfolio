@@ -343,7 +343,6 @@ app.copyEmail = function () {
 
 // runs when form is submitted
 app.sendMessage = function () {
-  app.resetForm();
   $.ajax({
     url: "https://formspree.io/xqkdpjpb",
     method: "POST",
