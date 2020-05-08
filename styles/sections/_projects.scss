@@ -106,6 +106,9 @@
     position: relative;
     z-index: 6000;
     transition: all 1s;
+    border-right: 5px solid darken($tint, 10);
+    border-bottom: 5px solid darken($tint, 10);
+    padding: 5%;
     @include tablet-land {
       // 1250
       min-width: 100px;
@@ -124,7 +127,6 @@
       height: 100%;
       min-width: 100%;
       object-fit: contain;
-      border: 5px solid $tint;
       position: relative;
       z-index: 5000;
       transition: all 1s;
@@ -288,7 +290,7 @@
   /// PROJECT SKILLS [ 3 ]
   .projectSkills {
     flex: 0.4;
-    border: 4px solid $tint;
+    border: 5px solid $tint;
     border-left: none;
     background-color: $tint;
     .skillWrapper {
@@ -329,10 +331,15 @@
 
 // EVERY OTHER PROJECT
 .project.alt {
+  .projectImage {
+    border-right: none;
+    border-left: 4px solid darken($tint, 10);
+  }
   .projectInfo {
     height: auto;
     padding-left: 50px;
     border-left: 5px solid darken($tint, 10);
+    border-bottom: 5px solid darkent($tint, 10);
     border-right: none;
     @include tablet-port {
       // 960
