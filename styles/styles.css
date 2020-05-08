@@ -2147,9 +2147,9 @@ section.overview.expand {
   background: linear-gradient(to right, #212121b9, #212121b9, #212121b9, #21212170, rgba(255, 255, 255, 0));
   position: relative;
   padding: 50px;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  -webkit-box-flex: 1.3;
+      -ms-flex: 1.3;
+          flex: 1.3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2166,17 +2166,18 @@ section.overview.expand {
 @media (max-width: 960px) {
   .project .projectInfo {
     width: 100%;
-    padding: 4%;
+    padding: 8% 5%;
     border: none;
+    border-left: 5px solid #dfdfdf;
   }
 }
 
 @media (max-width: 690px) {
   .project .projectInfo {
-    width: 100%;
-    padding: 1%;
     background: -webkit-gradient(linear, left top, left bottom, from(#212121c9), to(#21212188));
     background: linear-gradient(#212121c9, #21212188);
+    padding-bottom: 10%;
+    border: none;
   }
 }
 
@@ -2184,42 +2185,11 @@ section.overview.expand {
   height: 4px;
   width: 100%;
   background-color: #f8f8f8;
-  -webkit-box-shadow: 2px 2px 10px 1px black;
-          box-shadow: 2px 2px 10px 1px black;
   position: absolute;
 }
 
-.project .projectInfo .infoTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
-}
-
-@media (max-width: 960px) {
-  .project .projectInfo .infoTitle {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-}
-
 .project .projectInfo .infoTitle .title {
-  width: 60%;
   text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   -webkit-transition: all 1s;
   transition: all 1s;
   font-family: "Oswald", sans-serif;
@@ -2231,13 +2201,6 @@ section.overview.expand {
   text-align: left;
 }
 
-@media (max-width: 960px) {
-  .project .projectInfo .infoTitle .title {
-    width: 100%;
-    margin: 30px 0 0 0;
-  }
-}
-
 .project .projectInfo .infoTitle .title:hover, .project .projectInfo .infoTitle .title:focus, .project .projectInfo .infoTitle .title:active {
   color: #c2cfe7;
   text-decoration: underline;
@@ -2247,113 +2210,6 @@ section.overview.expand {
   .project .projectInfo .infoTitle .title h3 {
     width: 100%;
     text-align: center;
-  }
-}
-
-.project .projectInfo .infoTitle .skillWrapper {
-  height: 100%;
-  width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-@media (max-width: 960px) {
-  .project .projectInfo .infoTitle .skillWrapper {
-    width: 100%;
-  }
-}
-
-.project .projectInfo .infoTitle .skillWrapper .skillContainer {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-@media (max-width: 960px) {
-  .project .projectInfo .infoTitle .skillWrapper .skillContainer {
-    width: 100%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-}
-
-@media (max-width: 690px) {
-  .project .projectInfo .infoTitle .skillWrapper .skillContainer {
-    padding-top: 20px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-.project .projectInfo .infoTitle .skillWrapper .skillContainer .skill {
-  height: 60px;
-  width: 75px;
-  margin: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.project .projectInfo .infoTitle .skillWrapper .skillContainer .skill ion-icon {
-  height: 40px;
-  width: 100%;
-  color: white;
-  font-size: 5.1rem;
-}
-
-.project .projectInfo .infoTitle .skillWrapper .skillContainer .skill img {
-  height: 35px;
-  width: 35px;
-  border: none;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.project .projectInfo .infoTitle .skillWrapper .skillContainer .skill h4 {
-  width: 100%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  font-family: "Oswald", sans-serif;
-  font-size: 1.6rem;
-  font-weight: normal;
-  color: white;
-  letter-spacing: normal;
-  line-height: normal;
-  text-align: center;
-}
-
-.project .projectInfo .infoTitle .skillWrapper .skillContainer .skill:first-of-type {
-  margin-left: 0;
-}
-
-@media (max-width: 690px) {
-  .project .projectInfo .infoTitle .skillWrapper .skillContainer .skill:first-of-type {
-    margin-left: 10px;
   }
 }
 
@@ -2401,7 +2257,7 @@ section.overview.expand {
     width: 100%;
     font-size: 1.8rem;
     text-align: center;
-    padding: 5%;
+    padding: 2%;
   }
 }
 
@@ -2421,6 +2277,14 @@ section.overview.expand {
           justify-content: flex-start;
 }
 
+@media (max-width: 690px) {
+  .project .projectInfo .infoContent .infoLinks {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .project .projectInfo .infoContent .infoLinks a {
   display: inline-block;
   -webkit-transition: all 1s;
@@ -2438,6 +2302,8 @@ section.overview.expand {
 @media (max-width: 690px) {
   .project .projectInfo .infoContent .infoLinks a {
     text-align: center;
+    width: 50%;
+    margin-right: 0;
   }
 }
 
@@ -2473,12 +2339,74 @@ section.overview.expand {
 
 @media (max-width: 690px) {
   .project .projectInfo .infoContent .infoLinks a span {
-    margin-top: 15px;
     display: inline-block;
   }
 }
 
-.projectInfo.alt {
+.project .projectSkills {
+  -webkit-box-flex: 0.4;
+      -ms-flex: 0.4;
+          flex: 0.4;
+  border: 4px solid #f8f8f8;
+  border-left: none;
+  background-color: #f8f8f8;
+}
+
+.project .projectSkills .skillWrapper {
+  padding: 10% 2%;
+  height: 100%;
+}
+
+@media (max-width: 690px) {
+  .project .projectSkills .skillWrapper {
+    padding: 2% 10%;
+  }
+}
+
+.project .projectSkills .skillWrapper ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 690px) {
+  .project .projectSkills .skillWrapper ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.project .projectSkills .skillWrapper ul li {
+  margin-top: 10px;
+}
+
+.project .projectSkills .skillWrapper ul li .icon {
+  width: 35px;
+}
+
+.project .projectSkills .skillWrapper ul li .icon h4 {
+  font-size: 1.8rem;
+}
+
+.project .projectSkills .skillWrapper ul li .icon .iconImage {
+  width: 35px;
+}
+
+.project .projectSkills .skillWrapper ul li .icon ion-icon {
+  font-size: 3.5rem;
+}
+
+.project.alt .projectInfo {
   height: auto;
   padding-left: 50px;
   border-left: 5px solid #dfdfdf;
@@ -2486,15 +2414,24 @@ section.overview.expand {
 }
 
 @media (max-width: 960px) {
-  .projectInfo.alt {
-    padding: 4%;
+  .project.alt .projectInfo {
+    border: none;
+    border-right: 5px solid #dfdfdf;
+  }
+}
+
+@media (max-width: 690px) {
+  .project.alt .projectInfo {
+    padding-bottom: 10%;
     border: none;
   }
 }
 
 @media (max-width: 690px) {
-  .projectInfo.alt {
-    padding: 1%;
+  .project.alt .projectSkills {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 
