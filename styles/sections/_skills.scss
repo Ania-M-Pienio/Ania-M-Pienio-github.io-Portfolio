@@ -36,72 +36,11 @@
       padding-top: 0;
     }
   }
-}
-
-.skills ul {
-  width: 100%;
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  li {
-    width: 25%;
-    min-width: 200px;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 100px;
-    @include tablet-port {
-      // 960
-      width: 20%;
-      min-width: 160px;
-      margin-bottom: 80px;
-    }
-    @include mobile-land {
-      // 690
-      width: 20%;
-      min-width: 120px;
-      margin-bottom: 80px;
-    }
-    @include mobile-port {
-      // 480
-      width: 15%;
-      min-width: 80px;
-    }
-    ion-icon {
-      font-size: 8rem;
-      color: lighten($charcoal, 15);
-      @include mobile-port {
-        // 480
-        font-size: 6rem;
-      }
-    }
-    img {
-      width: 20%;
-      min-width: 80px;
-      margin: 0 auto;
-      padding: 0;
-      align-self: center;
-      object-fit: contain;
-      @include mobile-port {
-        // 480
-        min-height: 60px;
-        min-width: 50px;
-      }
-    }
-    h3 {
-      @include Ossie(
-        2rem,
-        normal,
-        lighten($charcoal, 20),
-        normal,
-        normal,
-        center
-      );
-      @include mobile-port {
-        // 480
-        font-size: 1.6rem;
-      }
-    }
+  h3 {
+    @include Ossie(3.2rem, normal, $font, normal, normal, center);
+    width: 100%;
+    text-transform: uppercase;
+    margin: 30px 0;
   }
 }
 
@@ -117,4 +56,16 @@
 
 .wrapper.skills.expand {
   padding-top: 0;
+}
+
+.skills {
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: row;
+    grid-gap: 20px;
+    li {
+    }
+  }
 }
