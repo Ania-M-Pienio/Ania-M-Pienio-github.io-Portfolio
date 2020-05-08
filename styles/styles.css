@@ -2154,7 +2154,7 @@ section.overview.expand {
   background: -webkit-gradient(linear, left top, right top, from(#212121b9), color-stop(#212121b9), color-stop(#212121b9), color-stop(#21212170), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to right, #212121b9, #212121b9, #212121b9, #21212170, rgba(255, 255, 255, 0));
   position: relative;
-  padding: 100px;
+  padding: 50px;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -2421,7 +2421,6 @@ section.overview.expand {
 }
 
 .project .projectInfo .infoContent a {
-  width: 100%;
   display: inline-block;
   -webkit-transition: all 1s;
   transition: all 1s;
