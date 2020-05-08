@@ -4,14 +4,14 @@
 }
 .skills .wrapper {
   height: 100%;
-  padding: 300px 130px 100px 130px;
+  padding: 300px 80px 100px 80px;
   transition: padding-top 2s;
   @include reduce {
     padding-top: 0;
   }
   @include tablet-land {
     // 1250
-    padding: 300px 100px 100px 100px;
+    padding: 300px 80px 100px 80px;
     @include reduce {
       padding-top: 0;
     }
@@ -40,7 +40,7 @@
     @include Ossie(3.2rem, normal, $font, normal, normal, left);
     width: 100%;
     text-transform: uppercase;
-    margin: 60px 0;
+    margin: 60px 0 10px;
   }
 }
 
@@ -65,12 +65,17 @@
     grid-template-rows: 1fr 1fr;
     grid-auto-flow: row;
     grid-gap: 30px;
+    border-bottom: 4px solid $charcoal;
+    border-top: 4px solid $charcoal;    
+
+    padding: 5% 0;
     @include mobile-land {
       //690
       grid-template-columns: 1fr 1fr 1fr;
     }
     @include mobile-port {
       // 480
+      padding: 10% 0;
 
     }
     
