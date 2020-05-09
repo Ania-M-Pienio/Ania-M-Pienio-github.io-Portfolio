@@ -107,12 +107,13 @@
     z-index: 6000;
     transition: all 1s;
     border-right: 5px solid darken($tint, 10);
-    border-bottom: 5px solid darken($tint, 10);
-    padding: 5%;
+    border-bottom: 5px solid darken($tint, 30);
+    padding: 10%;
     @include tablet-land {
       // 1250
       min-width: 100px;
       flex: 0;
+      padding: 10px;
     }
     @include tablet-port {
       // 960
@@ -246,10 +247,13 @@
           justify-content: center;
         }
         a {
-          display: inline-block;
+          width: 150px;
+          display: flex;
           transition: all 1s;
           margin-right: 50px;
           @include Ossie(2.7rem, normal, $link, normal, normal, left);
+          border: 2px solid $link;
+          padding: 2% 5%;
           @include mobile-land {
             // 690
             text-align: center;
@@ -263,7 +267,8 @@
           &:hover,
           &:focus,
           &:active {
-            text-decoration: underline double;
+            background-color: $link;
+            color: $charcoal;
           }
           &:hover ion-icon,
           &:focus ion-icon,
@@ -271,57 +276,58 @@
             transform: scale(1.3);
           }
           ion-icon {
-            font-size: 4.5rem;
-            position: relative;
-            top: 15px;
+            font-size: 3rem;
+            margin-left: 10px;
+            align-self: center;
             transition: all 1s;
-          }
-          span {
-            text-decoration: underline;
-            @include mobile-land {
-              // 690
-              display: inline-block;
-            }
           }
         }
       }
     }
   }
-  /// PROJECT SKILLS [ 3 ]
-  .projectSkills {
-    flex: 0.4;
-    border: 5px solid $tint;
-    border-left: none;
-    background-color: $tint;
-    .skillWrapper {
-      padding: 10% 2%;
+}
+/// PROJECT SKILLS [ 3 ]
+.projectSkills {
+  flex: 0.4;
+  border: none;
+  background-color: $tint;
+  padding-bottom: 5px;
+  .skillWrapper {
+    padding: 10% 2%;
+    height: 100%;
+    @include mobile-land {
+      // 690
+      padding: 4%;
+    }
+    ul {
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       @include mobile-land {
         // 690
-        padding: 2% 10%;
+        flex-direction: row;
       }
-      ul {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+      li {
+        margin-top: 10px;
         @include mobile-land {
-          // 690
-          flex-direction: row;
+          //690
+          margin: 0;
         }
-        li {
-          margin-top: 10px;
-          .icon {
+        .icon {
+          width: 35px;
+          h4 {
+            font-size: 1.8rem;
+            @include mobile-land {
+              //690
+              font-size: 1.4rem;
+            }
+          }
+          .iconImage {
             width: 35px;
-            h4 {
-              font-size: 1.8rem;
-            }
-            .iconImage {
-              width: 35px;
-            }
-            ion-icon {
-              font-size: 3.5rem;
-            }
+          }
+          ion-icon {
+            font-size: 3.5rem;
           }
         }
       }
@@ -348,8 +354,12 @@
     }
     @include mobile-land {
       // 690
-      padding-bottom: 10%;
+      padding-left: 0;
+      padding: 10%;
       border: none;
+    }
+    @include mobile-port {
+      // 480
     }
   }
   .projectSkills {

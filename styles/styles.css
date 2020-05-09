@@ -2095,8 +2095,8 @@ section.overview.expand {
   -webkit-transition: all 1s;
   transition: all 1s;
   border-right: 5px solid #dfdfdf;
-  border-bottom: 5px solid #dfdfdf;
-  padding: 5%;
+  border-bottom: 5px solid #acacac;
+  padding: 10%;
 }
 
 @media (max-width: 1250px) {
@@ -2105,6 +2105,7 @@ section.overview.expand {
     -webkit-box-flex: 0;
         -ms-flex: 0;
             flex: 0;
+    padding: 10px;
   }
 }
 
@@ -2288,7 +2289,10 @@ section.overview.expand {
 }
 
 .project .projectInfo .infoContent .infoLinks a {
-  display: inline-block;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-transition: all 1s;
   transition: all 1s;
   margin-right: 50px;
@@ -2299,6 +2303,8 @@ section.overview.expand {
   letter-spacing: normal;
   line-height: normal;
   text-align: left;
+  border: 2px solid #c2cfe7;
+  padding: 2% 5%;
 }
 
 @media (max-width: 690px) {
@@ -2316,8 +2322,8 @@ section.overview.expand {
 }
 
 .project .projectInfo .infoContent .infoLinks a:hover, .project .projectInfo .infoContent .infoLinks a:focus, .project .projectInfo .infoContent .infoLinks a:active {
-  -webkit-text-decoration: underline double;
-          text-decoration: underline double;
+  background-color: #c2cfe7;
+  color: #212121;
 }
 
 .project .projectInfo .infoContent .infoLinks a:hover ion-icon,
@@ -2328,44 +2334,36 @@ section.overview.expand {
 }
 
 .project .projectInfo .infoContent .infoLinks a ion-icon {
-  font-size: 4.5rem;
-  position: relative;
-  top: 15px;
+  font-size: 3rem;
+  margin-left: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 
-.project .projectInfo .infoContent .infoLinks a span {
-  text-decoration: underline;
-}
-
-@media (max-width: 690px) {
-  .project .projectInfo .infoContent .infoLinks a span {
-    display: inline-block;
-  }
-}
-
-.project .projectSkills {
+.projectSkills {
   -webkit-box-flex: 0.4;
       -ms-flex: 0.4;
           flex: 0.4;
-  border: 5px solid #f8f8f8;
-  border-left: none;
+  border: none;
   background-color: #f8f8f8;
+  padding-bottom: 5px;
 }
 
-.project .projectSkills .skillWrapper {
+.projectSkills .skillWrapper {
   padding: 10% 2%;
   height: 100%;
 }
 
 @media (max-width: 690px) {
-  .project .projectSkills .skillWrapper {
-    padding: 2% 10%;
+  .projectSkills .skillWrapper {
+    padding: 4%;
   }
 }
 
-.project .projectSkills .skillWrapper ul {
+.projectSkills .skillWrapper ul {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2380,7 +2378,7 @@ section.overview.expand {
 }
 
 @media (max-width: 690px) {
-  .project .projectSkills .skillWrapper ul {
+  .projectSkills .skillWrapper ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -2388,23 +2386,35 @@ section.overview.expand {
   }
 }
 
-.project .projectSkills .skillWrapper ul li {
+.projectSkills .skillWrapper ul li {
   margin-top: 10px;
 }
 
-.project .projectSkills .skillWrapper ul li .icon {
+@media (max-width: 690px) {
+  .projectSkills .skillWrapper ul li {
+    margin: 0;
+  }
+}
+
+.projectSkills .skillWrapper ul li .icon {
   width: 35px;
 }
 
-.project .projectSkills .skillWrapper ul li .icon h4 {
+.projectSkills .skillWrapper ul li .icon h4 {
   font-size: 1.8rem;
 }
 
-.project .projectSkills .skillWrapper ul li .icon .iconImage {
+@media (max-width: 690px) {
+  .projectSkills .skillWrapper ul li .icon h4 {
+    font-size: 1.4rem;
+  }
+}
+
+.projectSkills .skillWrapper ul li .icon .iconImage {
   width: 35px;
 }
 
-.project .projectSkills .skillWrapper ul li .icon ion-icon {
+.projectSkills .skillWrapper ul li .icon ion-icon {
   font-size: 3.5rem;
 }
 
@@ -2430,7 +2440,8 @@ section.overview.expand {
 
 @media (max-width: 690px) {
   .project.alt .projectInfo {
-    padding-bottom: 10%;
+    padding-left: 0;
+    padding: 10%;
     border: none;
   }
 }
@@ -2698,8 +2709,8 @@ section.overview.expand {
 .blogContent a:hover ion-icon,
 .blogContent a:focus ion-icon,
 .blogContent a:active ion-icon {
-  -webkit-transform: scale(1.4) rotate(90deg);
-          transform: scale(1.4) rotate(90deg);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 .blogContent a h4 {
