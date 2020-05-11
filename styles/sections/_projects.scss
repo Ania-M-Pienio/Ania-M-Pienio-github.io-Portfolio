@@ -186,10 +186,16 @@
     }
     /////// PROJECT TITLE [ 2.2 ]
     .infoTitle {
-      .title {
+      display: flex;
+      color: lighten($tint, 60);
+      align-content: center;
+      @include mobile-land {
+        flex-direction: column;
+      }
+      a.title {
         text-transform: uppercase;
         transition: all 1s;
-        @include Ossie(4rem, bold, lighten($tint, 60), 1.5, normal, left);
+        @include Ossie(4rem, bold, lighten($tint, 60), 1.5, normal, center);
         &:hover,
         &:focus,
         &:active {
@@ -201,6 +207,42 @@
             // 690
             width: 100%;
             text-align: center;
+          }
+        }
+      }
+      a.winner {
+        display: flex;
+        position: relative;
+        margin-left: 30px;
+        // @include
+        &:hover ion-icon,
+        &:focus ion-icon,
+        &:active ion-icon {
+          color: darken($link, 40);
+          text-decoration: underline;
+        }
+        &:hover h4,
+        &:focus h4,
+        &:active h4 {
+          opacity: 1;
+        }
+        ion-icon {
+          color: lighten($tint, 60);
+          font-size: 4.3rem;
+          align-self: center;
+          margin-left: 45px;
+        }
+        h4 {
+          opacity: 0;
+          transition: all 1s;
+          @include Ossie(2.2rem, bold, lighten($tint, 60), 1.5, normal, center);
+          text-transform: uppercase;
+          position: absolute;
+          display: flex;
+          ion-icon {
+            color: $link !important;
+            font-size: 6rem;
+            margin-left: 10px;
           }
         }
       }
@@ -362,7 +404,6 @@
       border: none;
       padding: 8% 10%;
       padding-bottom: 10%;
-      
     }
     @include mobile-port {
       // 480

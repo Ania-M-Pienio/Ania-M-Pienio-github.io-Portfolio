@@ -2191,7 +2191,25 @@ section.overview.expand {
   position: absolute;
 }
 
-.project .projectInfo .infoTitle .title {
+.project .projectInfo .infoTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media (max-width: 690px) {
+  .project .projectInfo .infoTitle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.project .projectInfo .infoTitle a.title {
   text-transform: uppercase;
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -2201,19 +2219,73 @@ section.overview.expand {
   color: white;
   letter-spacing: 1.5;
   line-height: normal;
-  text-align: left;
+  text-align: center;
 }
 
-.project .projectInfo .infoTitle .title:hover, .project .projectInfo .infoTitle .title:focus, .project .projectInfo .infoTitle .title:active {
+.project .projectInfo .infoTitle a.title:hover, .project .projectInfo .infoTitle a.title:focus, .project .projectInfo .infoTitle a.title:active {
   color: #c2cfe7;
   text-decoration: underline;
 }
 
 @media (max-width: 690px) {
-  .project .projectInfo .infoTitle .title h3 {
+  .project .projectInfo .infoTitle a.title h3 {
     width: 100%;
     text-align: center;
   }
+}
+
+.project .projectInfo .infoTitle a.winner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-left: 30px;
+}
+
+.project .projectInfo .infoTitle a.winner:hover ion-icon,
+.project .projectInfo .infoTitle a.winner:focus ion-icon,
+.project .projectInfo .infoTitle a.winner:active ion-icon {
+  color: #3f619e;
+  text-decoration: underline;
+}
+
+.project .projectInfo .infoTitle a.winner:hover h4,
+.project .projectInfo .infoTitle a.winner:focus h4,
+.project .projectInfo .infoTitle a.winner:active h4 {
+  opacity: 1;
+}
+
+.project .projectInfo .infoTitle a.winner ion-icon {
+  color: white;
+  font-size: 4.3rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 45px;
+}
+
+.project .projectInfo .infoTitle a.winner h4 {
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1.5;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.project .projectInfo .infoTitle a.winner h4 ion-icon {
+  color: #c2cfe7 !important;
+  font-size: 6rem;
+  margin-left: 10px;
 }
 
 .project .projectInfo .infoContent {
