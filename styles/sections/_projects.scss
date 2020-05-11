@@ -108,7 +108,7 @@
     transition: all 1s;
     border-right: 5px solid darken($tint, 10);
     border-bottom: 5px solid darken($tint, 30);
-    padding: 10%;
+    padding: 8%;
     @include tablet-land {
       // 1250
       min-width: 100px;
@@ -214,7 +214,11 @@
         display: flex;
         position: relative;
         margin-left: 30px;
-        // @include
+        @include mobile-land {
+          // 690
+          margin: 0 auto;
+          padding-top: 10px;
+        }
         &:hover ion-icon,
         &:focus ion-icon,
         &:active ion-icon {
@@ -231,6 +235,10 @@
           font-size: 4.3rem;
           align-self: center;
           margin-left: 45px;
+          @include mobile-land {
+            // 690
+            margin: 0 auto;
+          }
         }
         h4 {
           opacity: 0;
@@ -239,6 +247,11 @@
           text-transform: uppercase;
           position: absolute;
           display: flex;
+          @include mobile-land {
+            // 690
+            left: -40px;
+            top: -5px;
+          }
           ion-icon {
             color: $link !important;
             font-size: 6rem;
@@ -273,6 +286,8 @@
           font-size: 1.8rem;
           text-align: center;
           padding: 2%;
+          margin-top: 30px;
+          margin-bottom: 40px;
         }
         @include mobile-port {
           // 480
@@ -286,7 +301,7 @@
         display: flex;
         justify-content: flex-start;
         @include mobile-land {
-          justify-content: space-between;
+          justify-content: space-evenly;
         }
         a {
           width: 150px;
@@ -299,7 +314,7 @@
           @include mobile-land {
             // 690
             text-align: center;
-            width: 45%;
+            width: 40%;
             margin-right: 0;
           }
           @include mobile-tiny {

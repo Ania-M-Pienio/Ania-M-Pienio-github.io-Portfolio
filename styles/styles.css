@@ -2096,7 +2096,7 @@ section.overview.expand {
   transition: all 1s;
   border-right: 5px solid #dfdfdf;
   border-bottom: 5px solid #acacac;
-  padding: 10%;
+  padding: 8%;
 }
 
 @media (max-width: 1250px) {
@@ -2242,6 +2242,13 @@ section.overview.expand {
   margin-left: 30px;
 }
 
+@media (max-width: 690px) {
+  .project .projectInfo .infoTitle a.winner {
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+}
+
 .project .projectInfo .infoTitle a.winner:hover ion-icon,
 .project .projectInfo .infoTitle a.winner:focus ion-icon,
 .project .projectInfo .infoTitle a.winner:active ion-icon {
@@ -2264,6 +2271,12 @@ section.overview.expand {
   margin-left: 45px;
 }
 
+@media (max-width: 690px) {
+  .project .projectInfo .infoTitle a.winner ion-icon {
+    margin: 0 auto;
+  }
+}
+
 .project .projectInfo .infoTitle a.winner h4 {
   opacity: 0;
   -webkit-transition: all 1s;
@@ -2280,6 +2293,13 @@ section.overview.expand {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 690px) {
+  .project .projectInfo .infoTitle a.winner h4 {
+    left: -40px;
+    top: -5px;
+  }
 }
 
 .project .projectInfo .infoTitle a.winner h4 ion-icon {
@@ -2333,6 +2353,8 @@ section.overview.expand {
     font-size: 1.8rem;
     text-align: center;
     padding: 2%;
+    margin-top: 30px;
+    margin-bottom: 40px;
   }
 }
 
@@ -2354,9 +2376,9 @@ section.overview.expand {
 
 @media (max-width: 690px) {
   .project .projectInfo .infoContent .infoLinks {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
@@ -2382,7 +2404,7 @@ section.overview.expand {
 @media (max-width: 690px) {
   .project .projectInfo .infoContent .infoLinks a {
     text-align: center;
-    width: 45%;
+    width: 40%;
     margin-right: 0;
   }
 }
