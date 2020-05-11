@@ -106,10 +106,14 @@
     position: relative;
     z-index: 6000;
     transition: all 1s;
+    border-right: 5px solid darken($tint, 10);
+    border-bottom: 5px solid darken($tint, 30);
+    padding: 10%;
     @include tablet-land {
       // 1250
       min-width: 100px;
       flex: 0;
+      padding: 10px;
     }
     @include tablet-port {
       // 960
@@ -124,7 +128,6 @@
       height: 100%;
       min-width: 100%;
       object-fit: contain;
-      border: 5px solid $tint;
       position: relative;
       z-index: 5000;
       transition: all 1s;
@@ -152,7 +155,7 @@
     );
     position: relative;
     padding: 50px;
-    flex: 2;
+    flex: 1.3;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -160,48 +163,33 @@
     @include tablet-port {
       // 960
       width: 100%;
-      padding: 4%;
+      padding: 8% 5%;
       border: none;
+      border-left: 5px solid darken($tint, 10);
     }
     @include mobile-land {
       // 690
-      width: 100%;
-      padding: 1%;
       background: linear-gradient(#212121c9, #21212188);
+      padding-bottom: 10%;
+      border: none;
     }
     @include mobile-port {
       // 480
     }
+    //// PROJECT TITLE TOP BAR [ 2.1 & 2.4 ]
     .infoBar {
       height: 4px;
       width: 100%;
       background-color: $tint;
-      box-shadow: $shadow;
+      // box-shadow: $shadow;
       position: absolute;
     }
-    //// PROJECT TITLE TOP BAR [ 1 ]
+    /////// PROJECT TITLE [ 2.2 ]
     .infoTitle {
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-      @include tablet-port {
-        // 960
-        flex-direction: column-reverse;
-      }
-      /////// TITLE [ 1 ]
       .title {
-        width: 60%;
         text-transform: uppercase;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
         transition: all 1s;
         @include Ossie(4rem, bold, lighten($tint, 60), 1.5, normal, left);
-        @include tablet-port {
-          // 960
-          width: 100%;
-          margin: 30px 0 0 0;
-        }
         &:hover,
         &:focus,
         &:active {
@@ -216,68 +204,8 @@
           }
         }
       }
-      /////// SKILLS [ 2 ]
-      .skillWrapper {
-        height: 100%;
-        width: 60%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        @include tablet-port {
-          // 960
-          width: 100%;
-        }
-        .skillContainer {
-          height: 100%; // ul
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-end;
-          @include tablet-port {
-            // 960
-            width: 100%;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-          }
-          @include mobile-land {
-            // 690
-            padding-top: 20px;
-            justify-content: center;
-          }
-          .skill {
-            // li
-            height: 60px;
-            width: 75px;
-            margin: 10px;
-            display: flex;
-            flex-direction: column;
-            ion-icon {
-              height: 40px;
-              width: 100%;
-              color: lighten($tint, 60);
-              font-size: 5.1rem;
-            }
-            img {
-              height: 35px;
-              width: 35px;
-              border: none;
-              align-self: center;
-            }
-            h4 {
-              width: 100%;
-              align-self: center;
-              @include Ossie(1.6rem, normal, lighten($tint, 60), normal, normal, center);
-            }
-          }
-          .skill:first-of-type {
-            margin-left: 0;
-            @include mobile-land {
-              margin-left: 10px;
-            }
-          }
-        }
-      }
     }
-    // PROJECT CONTENT INFO [ 2 ]
+    // PROJECT INFO CONTENT [ 2.3 ]
     .infoContent {
       height: auto;
       flex: 2;
@@ -289,7 +217,9 @@
         width: 100%;
         flex: 0;
       }
-      ///////////// PROJECT DESCRIPTION [ 1 ]
+      ///////////// PROJECT INFO DESCRIPTION [ 2.2 ]
+
+      // PROJECT INFO PARAGRAPH
       p {
         margin-top: 40px;
         margin-bottom: 40px;
@@ -300,7 +230,7 @@
           width: 100%;
           font-size: 1.8rem;
           text-align: center;
-          padding: 5%;
+          padding: 2%;
         }
         @include mobile-port {
           // 480
@@ -309,41 +239,95 @@
         }
       }
 
-      ///////////// PROJECT LINK [ 2 ]
-      a {
-        display: inline-block;
-        transition: all 1s;
-        @include Ossie(2.7rem, normal, $link, normal, normal, left);
+      // PROJECT INFO LINKS
+      .infoLinks {
+        display: flex;
+        justify-content: flex-start;
         @include mobile-land {
-          // 690
-          text-align: center;
+          justify-content: center;
         }
-        @include mobile-tiny {
-          // 320
-          font-size: 2rem;
-        }
-        &:hover,
-        &:focus,
-        &:active {
-          text-decoration: underline double;
-        }
-        &:hover ion-icon,
-        &:focus ion-icon, 
-        &:active ion-icon {
-          transform: scale(1.3);
-        }
-        ion-icon {
-          font-size: 5rem;
-          position: relative;
-          top: 15px;
+        a {
+          width: 150px;
+          display: flex;
           transition: all 1s;
-        }
-        span {
-          text-decoration: underline;
+          margin-right: 50px;
+          @include Ossie(2.7rem, normal, $link, normal, normal, left);
+          border: 2px solid $link;
+          padding: 2% 5%;
           @include mobile-land {
             // 690
-            margin-top: 20px;
-            display: inline-block;
+            text-align: center;
+            width: 50%;
+            margin-right: 0;
+          }
+          @include mobile-tiny {
+            // 320
+            font-size: 2rem;
+          }
+          &:hover,
+          &:focus,
+          &:active {
+            background-color: $link;
+            color: $charcoal;
+          }
+          &:hover ion-icon,
+          &:focus ion-icon,
+          &:active ion-icon {
+            transform: scale(1.3);
+          }
+          ion-icon {
+            font-size: 3rem;
+            margin-left: 10px;
+            align-self: center;
+            transition: all 1s;
+          }
+        }
+      }
+    }
+  }
+}
+/// PROJECT SKILLS [ 3 ]
+.projectSkills {
+  flex: 0.4;
+  border: none;
+  background-color: $tint;
+  padding-bottom: 5px;
+  .skillWrapper {
+    padding: 10% 2%;
+    height: 100%;
+    @include mobile-land {
+      // 690
+      padding: 4%;
+    }
+    ul {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include mobile-land {
+        // 690
+        flex-direction: row;
+      }
+      li {
+        margin-top: 10px;
+        @include mobile-land {
+          //690
+          margin: 0;
+        }
+        .icon {
+          width: 35px;
+          h4 {
+            font-size: 1.8rem;
+            @include mobile-land {
+              //690
+              font-size: 1.4rem;
+            }
+          }
+          .iconImage {
+            width: 35px;
+          }
+          ion-icon {
+            font-size: 3.5rem;
           }
         }
       }
@@ -352,19 +336,36 @@
 }
 
 // EVERY OTHER PROJECT
-.projectInfo.alt {
-  height: auto;
-  padding-left: 50px;
-  border-left: 5px solid darken($tint, 10);
-  border-right: none;
-  @include tablet-port {
-    // 960
-    padding: 4%;
-    border: none;
+.project.alt {
+  .projectImage {
+    border-right: none;
+    border-left: 4px solid darken($tint, 10);
   }
-  @include mobile-land {
-    // 690
-    padding: 1%;
+  .projectInfo {
+    height: auto;
+    padding-left: 50px;
+    border-left: 5px solid darken($tint, 10);
+    border-bottom: 5px solid darkent($tint, 10);
+    border-right: none;
+    @include tablet-port {
+      // 960
+      border: none;
+      border-right: 5px solid darken($tint, 10);
+    }
+    @include mobile-land {
+      // 690
+      padding-left: 0;
+      padding: 10%;
+      border: none;
+    }
+    @include mobile-port {
+      // 480
+    }
+  }
+  .projectSkills {
+    @include mobile-land {
+      order: 1;
+    }
   }
 }
 
