@@ -163,7 +163,7 @@
     @include tablet-port {
       // 960
       width: 100%;
-      padding: 8% 5%;
+      padding: 8% 10%;
       border: none;
       border-left: 5px solid darken($tint, 10);
     }
@@ -215,7 +215,7 @@
       @include mobile-land {
         // 690
         width: 100%;
-        flex: 0;
+        flex: 1;
       }
       ///////////// PROJECT INFO DESCRIPTION [ 2.2 ]
 
@@ -244,7 +244,7 @@
         display: flex;
         justify-content: flex-start;
         @include mobile-land {
-          justify-content: center;
+          justify-content: space-between;
         }
         a {
           width: 150px;
@@ -257,7 +257,7 @@
           @include mobile-land {
             // 690
             text-align: center;
-            width: 50%;
+            width: 45%;
             margin-right: 0;
           }
           @include mobile-tiny {
@@ -292,6 +292,11 @@
   border: none;
   background-color: $tint;
   padding-bottom: 5px;
+  @include tablet-port {
+    // 960
+    min-width: 120px;
+  }
+
   .skillWrapper {
     padding: 10% 2%;
     height: 100%;
@@ -354,9 +359,10 @@
     }
     @include mobile-land {
       // 690
-      padding-left: 0;
-      padding: 10%;
       border: none;
+      padding: 8% 10%;
+      padding-bottom: 10%;
+      
     }
     @include mobile-port {
       // 480
