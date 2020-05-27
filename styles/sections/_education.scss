@@ -3,17 +3,102 @@
   background-color: $charcoal;
 }
 
-.wrapper.education {
+.eduTitle {
+  width: 100%;
+  @include tablet-port {
+    // 960
+    margin-top: 60px;
+  }
+  h2 {
+    width: 100%;
+    @include Ossie(5rem, normal, $tint, normal, normal, center);
+    text-transform: uppercase;
+  }
+}
+
+.next {
+  background-color: darken($tint, 25);
+  .eduTitle h2 {
+    color: white;
+  }
+}
+
+.wrapper.education, .wrapper.next {
   height: auto;
   width: 100%;
-  padding: 5% 180px;
+  padding: 5% 80px;
   @include tablet-port {
     // 960
     padding: 2% 80px;
   }
 }
 
+.eduEventsContainer {
+  height: auto;
+  margin-bottom: 60px;
+  ul {
+    height: 300px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    @include tablet-port {
+      // 960
+      flex-direction: column;
+      height: 1000px;
+      justify-content: center;
+      align-content: center;
+    }
+    li {
+      width: 30%;
+      height: 350px;
+      @include tablet-port {
+        // 960
+        width: 100%;
+      }
+      .eventImage {
+        width: 100%;
+        height: 200px;
+        transition: all 1s;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        @include tablet-land {
+          // 1250
+          height: 150px;
+        }
+        @include tablet-port {
+          // 960
+          width: 300px;
+          height: 150px;
+          margin: 0 auto;
+        }
+        img {
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .eventInfo {
+        margin-top: 30px;
+        h4 {
+          @include Ossie(
+            2.2rem,
+            normal,
+            lighten($tint, 20),
+            normal,
+            normal,
+            center
+          );
+        }
+      }
+    }
+  }
+}
+
+
+
 .eduBoxContainer {
+  margin-top: 40px;
+  margin-bottom: 120px;
   height: 100%;
   width: 100%;
   display: flex;
@@ -23,6 +108,7 @@
     flex-direction: column;
   }
   .eduBox {
+    margin-top: 60px;
     height: 150px;
     @include tablet-port {
       // 690
@@ -36,8 +122,8 @@
 }
 
 .edu2 {
-   @include mobile-land {
-     // 690
-     height: 200px;     
+  @include mobile-land {
+    // 690
+    height: 200px;
   }
 }
